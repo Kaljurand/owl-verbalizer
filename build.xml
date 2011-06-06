@@ -1,0 +1,25 @@
+<project name="OWL verbalizer" default="dist" basedir=".">
+	<description>OWL verbalizer build file</description>
+
+	<property name="dist" location="dist"/>
+
+	<target name="init">
+		<!-- <tstamp><format property="build.time" pattern="yyMMdd-HHmm"/></tstamp> -->
+		<tstamp><format property="build.time" pattern="yyyyMMdd"/></tstamp>
+		<mkdir dir="${dist}"/>
+	</target>
+
+	<target name="dist" depends="init" description="Generate the zip-file.">
+		<zip
+			destfile="${dist}/owl_verbalizer-${build.time}.zip"
+			basedir="."
+			includes="**"
+			excludes="ontologies/**, dist/**, .hg/**, xslt/**, notes/**, clex_to_owl/**, test.bash, build.xml, *.exe"
+		/>
+	</target>
+
+	<target name="clean" description="Clean up.">
+		<delete dir="${dist}"/>
+		<delete file="owl_to_ace.exe"/>
+	</target>
+</project>

@@ -1,7 +1,7 @@
 % OWL 2 XML verbalizer command-line client
 %
 % Author: Kaarel Kaljurand
-% Version: 2009-10-22
+% Version: 2011-06-06
 %
 % Building the command-line client:
 %
@@ -170,10 +170,10 @@ process_input(InputList) :-
 %
 show_help :-
 	show_version,
-	write('Copyright 2008-2010 Kaarel Kaljurand <kaljurand@gmail.com>\n'),
+	write('Copyright 2008-2011 Kaarel Kaljurand <kaljurand@gmail.com>\n'),
 	write('This program comes with ABSOLUTELY NO WARRANTY.\n'),
 	write('This is free software, and you are welcome to redistribute it under certain conditions.\n'),
-	write('Please visit http://attempto.ifi.uzh.ch for details.\n'),
+	write('Please visit http://code.google.com/p/owlverbalizer/ for details.\n'),
 	nl,
 	write('Command-line arguments:\n'),
 	argument(Arg, Value, Desc),
@@ -187,7 +187,7 @@ show_help :-
 % Prints the version information.
 %
 show_version :-
-	format("OWL verbalizer, ver ~w~n", ['0.9']).
+	format("OWL verbalizer, ver ~w~n", ['0.9.1']).
 
 
 %% get_arglist(+RawArgList, -ArgList)
