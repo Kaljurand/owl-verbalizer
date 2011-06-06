@@ -60,4 +60,9 @@
             <Class abbreviatedIRI="owl:Nothing"/>
         </ObjectMinCardinality>
     </SubClassOf>
+
+    <ClassAssertion>
+        <Class abbreviatedIRI="t:man"/>
+        <AnonymousIndividual nodeID="12345"/>
+    </ClassAssertion>
 </Ontology>

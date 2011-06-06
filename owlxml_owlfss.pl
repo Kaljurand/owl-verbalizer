@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2010, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -20,7 +20,7 @@
 /** <module> owlxml_owlfss
 
 @author Kaarel Kaljurand
-@version 2010-06-15
+@version 2011-06-06
 
 TODO:
 
@@ -93,6 +93,9 @@ el_term(element('Prefix', AttrList, _), E-E, 'Prefix'(Name, IRI)) :-
 el_term(element('AbbreviatedIRI', [], [PCDATA]), E-E, 'IRI'(IRI)) :-
 	airi_name(PCDATA, NS:Name),
 	concat_atom([NS, Name], IRI),
+	!.
+
+el_term(element('AnonymousIndividual', [nodeID = NodeId], _), E-E, 'AnonymousIndividual'(NodeId)) :-
 	!.
 
 el_term(element('Literal', Attrs, Data), E-E, ParsedLiteral) :-
