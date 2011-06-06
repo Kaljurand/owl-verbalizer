@@ -433,6 +433,17 @@ propn('ObjectOneOf'(['NamedIndividual'(Lemma)])) -->
 	[Token],
 	{ pn_sg(Lemma, Token), Token \= itself, Token \= themselves }.
 
+/*
+TODO: this way of handling Anonymous individuals does not work:
+1) they must be ACE variables (of the form [A-Z][0-9]*)
+2) in OWL axiom ordering does not matter, but we need to make
+sure that a ClassAssertion is verbalized before SubClassOf in case both
+reference the same anonymous individual
+
+propn('ObjectOneOf'(['AnonymousIndividual'(NodeId)])) -->
+	[NodeId].
+*/
+
 % Nouns (including `something')
 % For nouns we have to describe 2 forms: {num=sg, num=pl}
 n(num=sg, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) -->

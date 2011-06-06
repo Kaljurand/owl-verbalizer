@@ -194,6 +194,15 @@ table_1('ClassAssertion'(C, 'NamedIndividual'(A)), [
 	'SubClassOf'('ObjectOneOf'(['NamedIndividual'(A)]), C)
 	]).
 
+table_1('ClassAssertion'('AnonymousIndividual'(A), C), [
+	'SubClassOf'('ObjectOneOf'(['AnonymousIndividual'(A)]), C)
+	]).
+
+% BUG: We also support the other order.
+table_1('ClassAssertion'(C, 'AnonymousIndividual'(A)), [
+	'SubClassOf'('ObjectOneOf'(['AnonymousIndividual'(A)]), C)
+	]).
+
 table_1('ObjectPropertyAssertion'(R, A, B), [
 	'SubClassOf'(
 		'ObjectOneOf'([A]),

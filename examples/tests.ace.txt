@@ -6,4 +6,5 @@ Everything that is eaten by a man is something that is not something.
 
 Every man eats at least 3 things that are not something.
 
-/* BUG: axiom unsupported: ClassAssertion(Class(http://www.example.org/test.owl# : man),AnonymousIndividual(12345)) */
+/* BUG: axiom too complex: SubClassOf(ObjectOneOf([AnonymousIndividual(12345)]),Class(http://www.example.org/test.owl# : man)) */
+
