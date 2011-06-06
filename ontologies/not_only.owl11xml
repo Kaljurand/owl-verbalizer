@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY test "http://attempto.ifi.uzh.ch/ontologies/owl11/test#" >
+    <!ENTITY null "http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182270573638.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 1 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:null="http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182270573638.owl#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:test="http://attempto.ifi.uzh.ch/ontologies/owl11/test#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182270573638.owl">
+    <SubClassOf>
+        <OWLClass URI="&test;cat"/>
+        <ObjectComplementOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&test;like"/>
+                <OWLClass URI="&test;woman"/>
+            </ObjectAllValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+</Ontology>

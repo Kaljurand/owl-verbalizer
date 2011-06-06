@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY demo "http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+	 URI="http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl">
+	 <SameIndividual/>
+	 <SameIndividual>
+		<Individual URI="&demo;Mary"/>
+	</SameIndividual>
+	 <SameIndividual>
+		<Individual URI="&demo;Mary"/>
+		<Individual URI="&demo;Mary"/>
+	</SameIndividual>
+	 <DifferentIndividuals>
+		<Individual URI="&demo;Mary"/>
+		<Individual URI="&demo;Mary"/>
+	</DifferentIndividuals>
+</Ontology>

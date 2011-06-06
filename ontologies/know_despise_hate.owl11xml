@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1182277241806 "http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 5 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Ontology1182277241806="http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl">
+    <DisjointObjectProperties>
+        <ObjectProperty URI="&Ontology1182277241806;hate"/>
+        <ObjectProperty URI="&Ontology1182277241806;despise"/>
+    </DisjointObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182277241806;know"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182277241806;hate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182277241806;despise"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <SubObjectPropertyChain>
+            <ObjectProperty URI="&Ontology1182277241806;know"/>
+            <ObjectProperty URI="&Ontology1182277241806;despise"/>
+        </SubObjectPropertyChain>
+        <ObjectProperty URI="&Ontology1182277241806;hate"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182277241806;know"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182277241806;hate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182277241806;despise"/>
+    </Declaration>
+</Ontology>

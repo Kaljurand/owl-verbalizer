@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY catches "http://www.example.org/catches.owl#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+
+
+
+<!-- Axioms: 6 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:catches="http://www.example.org/catches.owl#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.example.org/catches.owl">
+    <SubClassOf>
+        <OWLClass URI="&catches;man"/>
+        <OWLClass URI="&catches;human"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&catches;mouse"/>
+        <OWLClass URI="&catches;animal"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&catches;like"/>
+                    <ObjectIntersectionOf>
+                        <OWLClass URI="&catches;dog"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty URI="&catches;catch"/>
+                            <OWLClass URI="&catches;thief"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&catches;like"/>
+                    <ObjectIntersectionOf>
+                        <OWLClass URI="&catches;cat"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty URI="&catches;catch"/>
+                            <OWLClass URI="&catches;mouse"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <OWLClass URI="&catches;man"/>
+        </ObjectIntersectionOf>
+        <Individual URI="&catches;John"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&catches;dog"/>
+        <OWLClass URI="&catches;animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&catches;cat"/>
+        <OWLClass URI="&catches;animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&catches;thief"/>
+        <OWLClass URI="&catches;human"/>
+    </SubClassOf>
+</Ontology>

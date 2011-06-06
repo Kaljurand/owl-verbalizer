@@ -1,0 +1,28 @@
+Every animal is something that is a cat or that is a goat.
+
+Everything that is eaten by a goat is a leaf.
+Everything that eats nothing but leaves is a goat.
+
+Every human is a person that own an automobile.
+
+Every human is something that is John or that is Mary.
+
+Every man is a person.
+
+Everything eats at most 1 thing.
+
+Everything is eaten by at most 1 thing.
+
+If X eats something that eats Y then X eats Y.
+
+Everything that eats something is an animal.
+
+Everything that is eaten by something is a food that is not an automobile.
+
+If X hate Y then Y eats X.
+If X eats Y then Y hate X.
+
+John is a man.
+
+Everything that is an apple or that is a leaf is a food.
+

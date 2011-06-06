@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2009/9/Ontology1256067985348.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2009/9/Ontology1256067985348.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#fireman"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#man"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#woman"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#like"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#love"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#see"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id_code"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mary"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#man"/>
+        <ObjectMinCardinality cardinality="3">
+            <ObjectProperty IRI="#like"/>
+            <Class IRI="#woman"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#woman"/>
+        <ObjectHasSelf>
+            <ObjectProperty IRI="#like"/>
+        </ObjectHasSelf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#man"/>
+        <ObjectMinCardinality cardinality="3">
+            <ObjectProperty IRI="#man"/>
+        	<ObjectMinCardinality cardinality="3">
+				<ObjectProperty IRI="#man"/>
+        		<Class IRI="#man"/>
+			</ObjectMinCardinality>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fireman"/>
+        <Class IRI="#man"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fireman"/>
+        <ObjectHasSelf>
+            <ObjectProperty IRI="#like"/>
+        </ObjectHasSelf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#woman"/>
+        <ObjectComplementOf>
+            <Class IRI="#man"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#John"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#woman"/>
+        <NamedIndividual IRI="#Mary"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#love"/>
+        <NamedIndividual IRI="#Mary"/>
+        <NamedIndividual IRI="#John"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id_code"/>
+        <NamedIndividual IRI="#John"/>
+        <Literal datatypeIRI="&xsd;nonNegativeInteger">0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hate"/>
+        <ObjectProperty IRI="#see"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#like"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#love"/>
+        <ObjectProperty IRI="#like"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#see"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </ReflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#love"/>
+    </IrreflexiveObjectProperty>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hate"/>
+        <ObjectProperty IRI="#like"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#id_code"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#id_code"/>
+    </FunctionalDataProperty>
+    <HasKey>
+        <Class IRI="#fireman"/>
+        <DataProperty IRI="#id_code"/>
+    </HasKey>
+	<SubClassOf>
+		<Class IRI="#man"/>
+		<ObjectSomeValuesFrom>
+			<ObjectProperty IRI="#know"/>
+			<ObjectComplementOf>
+				<ObjectOneOf>
+					<NamedIndividual IRI="#Mary"/>
+				</ObjectOneOf>
+			</ObjectComplementOf>
+		</ObjectSomeValuesFrom>
+	</SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg"/>
+        <IRI>#John</IRI>
+        <Literal datatypeIRI="&xsd;string">John</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg"/>
+        <IRI>#Leaf</IRI>
+        <Literal datatypeIRI="&xsd;string">x_Leaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#fireman</IRI>
+        <Literal datatypeIRI="&xsd;string">firemen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#fireman</IRI>
+        <Literal datatypeIRI="&xsd;string">fireman</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#leave</IRI>
+        <Literal datatypeIRI="&xsd;string">x_leave</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#leave</IRI>
+        <Literal datatypeIRI="&xsd;string">x_leaves</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+		<IRI>#leave</IRI>
+        <Literal datatypeIRI="&xsd;string">x_left</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#like</IRI>
+        <Literal datatypeIRI="&xsd;string">like</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#like</IRI>
+        <Literal datatypeIRI="&xsd;string">likes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#like</IRI>
+        <Literal datatypeIRI="&xsd;string">liked</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#love</IRI>
+        <Literal datatypeIRI="&xsd;string">love</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#love</IRI>
+        <Literal datatypeIRI="&xsd;string">loves</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#love</IRI>
+        <Literal datatypeIRI="&xsd;string">loved</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#man</IRI>
+        <Literal datatypeIRI="&xsd;string">men</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#man</IRI>
+        <Literal datatypeIRI="&xsd;string">man</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#man</IRI>
+        <Literal datatypeIRI="&xsd;string">man</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#man</IRI>
+        <Literal datatypeIRI="&xsd;string">mans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl"/>
+        <IRI>#see</IRI>
+        <Literal datatypeIRI="&xsd;string">see</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg"/>
+        <IRI>#see</IRI>
+        <Literal datatypeIRI="&xsd;string">sees</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg"/>
+        <IRI>#see</IRI>
+        <Literal datatypeIRI="&xsd;string">seen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl"/>
+        <IRI>#leaf</IRI>
+		<Literal datatypeIRI="&xsd;string">x_leaves</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg"/>
+        <IRI>#leaf</IRI>
+        <Literal datatypeIRI="&xsd;string">x_leaf</Literal>
+    </AnnotationAssertion>
+
+	<ClassAssertion>
+		<ObjectMaxCardinality cardinality="3">
+			<ObjectProperty IRI="#leave"/>
+			<ObjectIntersectionOf>
+				<Class IRI="#leaf"/>
+				<ObjectSomeValuesFrom>
+					<ObjectProperty IRI="#leave"/>
+					<ObjectIntersectionOf>
+						<Class IRI="#leaf"/>
+						<ObjectSomeValuesFrom>
+							<InverseObjectProperty>
+								<ObjectProperty IRI="#leave"/>
+							</InverseObjectProperty>
+							<ObjectOneOf>
+								<NamedIndividual IRI="#Leaf"/>
+							</ObjectOneOf>
+						</ObjectSomeValuesFrom>
+					</ObjectIntersectionOf>
+				</ObjectSomeValuesFrom>
+			</ObjectIntersectionOf>
+		</ObjectMaxCardinality>
+		<NamedIndividual URI="#Leaf"/>
+	</ClassAssertion>
+</Ontology>
+
+<!-- Generated by the OWL API (version 3.0.0.1291) http://owlapi.sourceforge.net -->
+<!-- Later manually modified by Kaarel Kaljurand -->

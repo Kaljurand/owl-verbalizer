@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY test "http://attempto.ifi.uzh.ch/ontologies/owl11/test#" >
+    <!ENTITY null "http://www.semanticweb.org/ontologies/2007/5/16/Ontology1181997223641.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 7 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:null="http://www.semanticweb.org/ontologies/2007/5/16/Ontology1181997223641.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:test="http://attempto.ifi.uzh.ch/ontologies/owl11/test#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/5/16/Ontology1181997223641.owl">
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant Datatype="&xsd;string"
+            >Does it follow from the following ACE text that Bill&apos;s parents are John
+and Mary (who are different from each other)?
+
+Everybody is John or is Mary or is Bill.
+Everybody who is Bill has-parent at most 2 things and has-parent at least 2 things.
+Bill does not has-parent himself.
+
+</Constant>
+    </Annotation>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant Datatype="&xsd;string"
+            >Does it follow from the following ACE text that Bill&apos;s parents are John
+and Mary (who are different from each other)?
+
+Everybody is John or is Mary or is Bill.
+Everybody who is Bill has-parent at most 2 things and has-parent at least 2 things.
+Bill does not has-parent himself.
+
+</Constant>
+    </Annotation>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;Mary"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <ObjectOneOf>
+                <Individual URI="&test;Bill"/>
+            </ObjectOneOf>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectIntersectionOf>
+        <ObjectIntersectionOf>
+            <ObjectMaxCardinality cardinality="2">
+                <ObjectProperty URI="&test;has-parent"/>
+                <OWLClass URI="&owl;Thing"/>
+            </ObjectMaxCardinality>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty URI="&test;has-parent"/>
+                <OWLClass URI="&owl;Thing"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&owl;Thing"/>
+        <ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectOneOf>
+                    <Individual URI="&test;Bill"/>
+                </ObjectOneOf>
+                <ObjectOneOf>
+                    <Individual URI="&test;Mary"/>
+                </ObjectOneOf>
+            </ObjectUnionOf>
+            <ObjectOneOf>
+                <Individual URI="&test;John"/>
+            </ObjectOneOf>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <ObjectExistsSelf>
+                <ObjectProperty URI="&test;has-parent"/>
+            </ObjectExistsSelf>
+        </ObjectComplementOf>
+        <Individual URI="&test;Bill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;John"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;Bill"/>
+    </ClassAssertion>
+</Ontology>

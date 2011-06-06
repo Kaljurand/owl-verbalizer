@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY ace_lexicon "http://attempto.ifi.uzh.ch/ace_lexicon#" >
+    <!ENTITY example "http://www.example.org/ontologies/2007/8/example1.owx#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:example="http://www.example.org/ontologies/2007/8/example1.owx#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.example.org/ontologies/2007/8/example1.owx">
+    <Declaration>
+        <Class URI="&example;man"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <Class URI="&example;woman"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <Class URI="&example;woman"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <Declaration>
+        <ObjectProperty URI="&example;know"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&example;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <Class URI="&example;woman"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <ObjectOneOf>
+                <Individual URI="&example;Mary"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&example;Mary"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <Class URI="&example;woman"/>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&example;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <ObjectComplementOf>
+                <Class URI="&example;woman"/>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <ObjectOneOf>
+                <Individual URI="&example;Mary"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&example;woman"/>
+    </Declaration>
+
+
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <Class URI="&example;woman"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&example;know"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&example;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <Class URI="&example;woman"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <ObjectOneOf>
+                <Individual URI="&example;Mary"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&example;Mary"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <Class URI="&example;woman"/>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&example;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&example;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <ObjectComplementOf>
+                <Class URI="&example;woman"/>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&example;know"/>
+            <ObjectOneOf>
+                <Individual URI="&example;Mary"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class URI="&example;man"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty URI="&example;know"/>
+            <ObjectIntersectionOf>
+                <Class URI="&example;woman"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&example;own"/>
+                    <Class URI="&example;cat"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+
+    <EntityAnnotation>
+        <Class URI="&example;woman"/>
+        <Annotation annotationURI="&ace_lexicon;pl">
+             <Constant>women</Constant>
+        </Annotation>
+    </EntityAnnotation>
+
+    <EntityAnnotation>
+        <ObjectProperty URI="&example;know"/>
+        <Annotation annotationURI="&ace_lexicon;sg">
+             <Constant>knows</Constant>
+        </Annotation>
+    </EntityAnnotation>
+
+    <EntityAnnotation>
+        <ObjectProperty URI="&example;know"/>
+        <Annotation annotationURI="&ace_lexicon;vbg">
+             <Constant>known</Constant>
+        </Annotation>
+    </EntityAnnotation>
+</Ontology>

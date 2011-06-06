@@ -1,0 +1,1906 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="file:/Users/seanb/Desktop/Cercedilla2005/hands-on/people.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="file:/Users/seanb/Desktop/Cercedilla2005/hands-on/people.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal_lover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bicycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#brain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus_company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus_driver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat_liker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat_owner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog_liker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog_owner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#driver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#duck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#elderly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#female"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#giraffe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#grass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#grownup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#kid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#leaf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#lorry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#mad_cow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#magazine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#male"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#man"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#newspaper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#old_lady"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#pet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#pet_owner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#publication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#red_top"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#sheep"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tiger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#truck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van_driver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vegetarian"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#white_thing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#white_van_man"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#woman"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#young"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eaten_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_child"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_father"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_mother"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_parent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#likes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#reads"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#works_for"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Dewey"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fido"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Flossie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fluffy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fred"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Huey"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Joe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Kevin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Louie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Minnie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Pete"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Rex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Spike"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Sun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Times"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tibbs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Walt"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal_lover"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus_driver"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat_liker"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#likes"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat_owner"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog_liker"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#likes"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog_owner"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#driver"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#grownup"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#truck"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#works_for"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+                    <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_company"/>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#works_for"/>
+            <ObjectUnionOf>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_company"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+                    <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_company"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#kid"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#young"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#lorry"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#mad_cow"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cow"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#brain"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+                        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#sheep"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#man"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#male"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#old_lady"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#elderly"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#female"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#pet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#pet_owner"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van_driver"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vegetarian"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+                <ObjectComplementOf>
+                    <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+                        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#white_van_man"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#man"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van"/>
+                    <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#white_thing"/>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#woman"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#female"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bicycle"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#newspaper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bus_company"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#car"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cow"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vegetarian"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#bone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#driver"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#duck"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#elderly"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#giraffe"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#giraffe"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#leaf"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#grass"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#plant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#haulage_company"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#company"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#leaf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tree"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#lorry"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#magazine"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#newspaper"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#publication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#newspaper"/>
+        <ObjectUnionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#old_lady"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#red_top"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#sheep"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#sheep"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#grass"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#newspaper"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tiger"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tree"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#plant"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#truck"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#white_van_man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#reads"/>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#adult"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#young"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <ObjectUnionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+        <ObjectUnionOf>
+            <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#plant"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+                <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#plant"/>
+            </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#duck"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Dewey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fido"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cow"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Flossie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tiger"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fluffy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fred"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#duck"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Huey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Joe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        </ObjectMaxCardinality>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Joe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Kevin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#duck"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Louie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#male"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#elderly"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Minnie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#female"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Minnie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Pete"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#van"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#white_thing"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#dog"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Rex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Spike"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#tabloid"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Sun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#broadsheet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Times"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#cat"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tibbs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Walt"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Dewey"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fido"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Flossie"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fluffy"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fred"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Huey"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Joe"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Kevin"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Louie"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Minnie"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Rex"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Sun"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#The_Times"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tibbs"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Walt"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fred"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tibbs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Joe"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fido"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Kevin"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Flossie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Kevin"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Fluffy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#drives"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#reads"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Minnie"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Tom"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Rex"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Spike"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Pete"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Walt"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Louie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Walt"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Huey"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Walt"/>
+        <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Dewey"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_father"/>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_parent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_mother"/>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_parent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#likes"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eaten_by"/>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_part"/>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#part_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#eats"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_father"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_mother"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#has_pet"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#animal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://owl.man.ac.uk/2005/07/sssw/people#reads"/>
+        <Class IRI="http://owl.man.ac.uk/2005/07/sssw/people#publication"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The paper read by Mick (a white van man).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Daily Mirror</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Dewey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Dewey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Dewey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Fido</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Fido</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Fido</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Flossie</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Flossie</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Flossie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Fluffy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Fluffy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Fluffy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Fred</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Fred</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Fred</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Huey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Huey</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Huey</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Joe</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Joe</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Joe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Kevin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Kevin</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Kevin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Louie</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Louie</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Louie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Mick</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mick is male and drives a white van. Due to the axiom concerning drivers, we know that Mick must be a man, and is therefore a white van man. The axiom about the reading material of a white van man then allows us to infer things about the Daily Mirror.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Mick</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mick</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Minnie</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Minnie</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Minnie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Pete</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Pete</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Pete</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A white van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Q123 ABC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Rex</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Rex</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Spike</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Spike</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Spike</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The Guardian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#The_Sun</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#The_Sun</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The Sun</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#The_Times</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#The_Times</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The Times</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Tibbs</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Tibbs</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tibbs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Tom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Tom</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Walt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#Walt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Walt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#adult</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Things that are adult.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#adult</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">adult</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#animal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#animal</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">animal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#animal_lover</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Someone who really likes animals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#animal_lover</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">animal lover</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bicycle</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A human propelled vehicle, with two wheels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bicycle</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bicycle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bone</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bone</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#brain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#brain</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">brain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#broadsheet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A newspaper. Broadsheets are usually considered to be more &quot;high-brow&quot; than tabloids.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#broadsheet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">broadsheet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bus</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bus_company</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bus_company</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bus company</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bus_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Someone who drives a bus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#bus_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bus driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#car</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#car</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">car</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cat</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cat_liker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cat_liker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cat liker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cat_owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cat_owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cat owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#company</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#company</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">company</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cows are naturally vegetarians.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#cow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#dog</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#dog</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#dog_liker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#dog_liker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dog liker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#dog_owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#dog_owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">dog owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#drives</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#drives</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">drives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#duck</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#duck</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">duck</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#eaten_by</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#eaten_by</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eaten_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#eats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#eats</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">eats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#elderly</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#elderly</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">elderly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#female</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#female</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">female</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#giraffe</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#giraffe</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">giraffe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#grass</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#grass</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">grass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#grownup</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#grownup</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">grownup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_child</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_child</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_child</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_father</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_father</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_father</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_mother</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_mother</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_mother</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_parent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_parent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_part</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_part</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_pet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Anyone that has a pet must like that pet.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#has_pet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">has_pet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#haulage_company</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#haulage_company</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">haulage company</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">haulage truck driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">haulage worker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">is_pet_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#kid</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#kid</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">kid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#leaf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#leaf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">leaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#likes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#likes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">likes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#lorry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#lorry</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">lorry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">lorry driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#mad_cow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A mad cow is a cow that has been eating the brains of sheep.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#mad_cow</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">mad cow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#magazine</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#magazine</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">magazine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#male</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The class of all male things.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#male</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">male</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#man</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#man</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">man</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#newspaper</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">All newspapers are either broadsheets or tabloids.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#newspaper</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">newspaper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#old_lady</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#old_lady</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">old lady</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#part_of</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#part_of</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">part_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#person</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#person</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#pet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#pet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#pet_owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#pet_owner</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pet owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#plant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#plant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">plant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#publication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#publication</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">publication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">quality broadsheet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#reads</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#reads</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">reads</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#red_top</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#red_top</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">red top</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#sheep</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#sheep</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sheep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#tabloid</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A newspaper. Tabloids are usually thought of as more &quot;down-market&quot; than broadsheets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#tabloid</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">tabloid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#tiger</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#tiger</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">tiger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#tree</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#tree</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">tree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#truck</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#truck</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">truck</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#van</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#van</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">van</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#van_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#van_driver</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">van driver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#vegetarian</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A vegetarian is defined as an animal that eats no other animals, or parts of animals.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#vegetarian</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">vegetarian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#vehicle</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#vehicle</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">vehicle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#white_thing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#white_thing</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">white thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#white_van_man</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">A white van man is a man who drives a white van.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#white_van_man</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">white van man</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#woman</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#woman</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">woman</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#works_for</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#works_for</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">works_for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#young</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://owl.man.ac.uk/2005/07/sssw/people#young</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">young</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1450) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY test "http://attempto.ifi.uzh.ch/ontologies/owl11/test#" >
+    <!ENTITY null "http://www.semanticweb.org/ontologies/2007/5/13/Ontology1181771647638.owl#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:null="http://www.semanticweb.org/ontologies/2007/5/13/Ontology1181771647638.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:test="http://attempto.ifi.uzh.ch/ontologies/owl11/test#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/5/13/Ontology1181771647638.owl">
+    <SubClassOf>
+        <OWLClass URI="&owl;Thing"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&owl;Thing"/>
+            <ObjectUnionOf>
+                <ObjectOneOf>
+                    <Individual URI="&test;Bill"/>
+                </ObjectOneOf>
+                <ObjectUnionOf>
+                    <ObjectOneOf>
+                        <Individual URI="&test;John"/>
+                    </ObjectOneOf>
+                    <ObjectOneOf>
+                        <Individual URI="&test;Mary"/>
+                    </ObjectOneOf>
+                </ObjectUnionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&test;first-guard"/>
+        <Individual URI="&test;genid3"/>
+    </ClassAssertion>
+    <SameIndividuals>
+        <Individual URI="&test;genid3"/>
+        <Individual URI="&test;John"/>
+    </SameIndividuals>
+    <SubClassOf>
+        <OWLClass URI="&test;first-guard"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+		<InverseObjectProperty>
+                    <ObjectProperty URI="&test;shield"/>
+                </InverseObjectProperty>
+                    <OWLClass URI="&test;guard"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <OWLClass URI="&test;guard"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&test;guard"/>
+        <ObjectMaxCardinality cardinality="3">
+            <ObjectProperty URI="&test;shield"/>
+            <OWLClass URI="&test;man"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;genid3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;Mary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;John"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&test;Bill"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&test;guard"/>
+        <ObjectIntersectionOf>
+            <ObjectMaxCardinality cardinality="1">
+		<InverseObjectProperty>
+                    <ObjectProperty URI="&test;shield"/>
+                </InverseObjectProperty>
+                <OWLClass URI="&test;guard"/>
+            </ObjectMaxCardinality>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&test;shield"/>
+                <OWLClass URI="&test;guard"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+</Ontology>

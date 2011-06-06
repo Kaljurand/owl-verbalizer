@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1193305925829 "http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 13 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:Ontology1193305925829="http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl">
+    <DisjointDataProperties>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+        <DataProperty URI="&Ontology1193305925829;phone-number"/>
+    </DisjointDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+        <DataProperty URI="&Ontology1193305925829;vanus"/>
+    </EquivalentDataProperties>
+    <Declaration>
+        <DataProperty URI="&Ontology1193305925829;small-age"/>
+    </Declaration>
+    <SubDataPropertyOf>
+        <DataProperty URI="&Ontology1193305925829;small-age"/>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+    </SubDataPropertyOf>
+    <EquivalentDataProperties>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+        <DataProperty URI="&Ontology1193305925829;alter"/>
+    </EquivalentDataProperties>
+    <Declaration>
+        <DataProperty URI="&Ontology1193305925829;phone-number"/>
+    </Declaration>
+    <EntityAnnotation>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant Datatype="&xsd;string"
+                >This is a comment.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&Ontology1193305925829;vanus"/>
+    </Declaration>
+    <FunctionalDataProperty>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+    </FunctionalDataProperty>
+    <EntityAnnotation>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+        <Constant>
+            <Individual URI="&Ontology1193305925829;genid1193305962004851000"/>
+        </Constant>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&Ontology1193305925829;alter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1193305925829;age"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&Ontology1193305925829;John"/>
+    </Declaration>
+</Ontology>

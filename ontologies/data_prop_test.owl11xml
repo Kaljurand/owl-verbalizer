@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1181052506695 "http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 32 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Ontology1181052506695="http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl">
+    <ClassAssertion>
+        <OWLClass URI="&Ontology1181052506695;test"/>
+        <Individual URI="&Ontology1181052506695;John"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <DataAllValuesFrom>
+            <DataProperty URI="&Ontology1181052506695;age"/>
+            <Datatype URI="&xsd;double"/>
+        </DataAllValuesFrom>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&Ontology1181052506695;P"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;test"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;test"/>
+        <ObjectIntersectionOf>
+            <DataAllValuesFrom>
+                <DataProperty URI="&Ontology1181052506695;age"/>
+                <DatatypeRestriction>
+                    <Datatype URI="&xsd;integer"/>
+                    <DatatypeFacetRestriction facet="&owl11;minExclusive">
+                        <Constant Datatype="&xsd;int">10</Constant>
+                    </DatatypeFacetRestriction>
+                    <DatatypeFacetRestriction facet="&owl11;maxExclusive">
+                        <Constant Datatype="&xsd;int">10</Constant>
+                    </DatatypeFacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty URI="&Ontology1181052506695;age"/>
+                <Datatype URI="&xsd;integer"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <Declaration>
+        <DataProperty URI="&Ontology1181052506695;writing"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&Ontology1181052506695;writing"/>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+    </DataPropertyDomain>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty URI="&Ontology1181052506695;age"/>
+                <Constant Datatype="&xsd;int">10</Constant>
+            </DataHasValue>
+            <OWLClass URI="&Ontology1181052506695;man"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&Ontology1181052506695;John"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;test"/>
+    </Declaration>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&Ontology1181052506695;man"/>
+            <DataSomeValuesFrom>
+                <DataProperty URI="&Ontology1181052506695;age"/>
+                <Datatype URI="&xsd;integer"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+    </SubClassOf>
+    <FunctionalDataProperty>
+        <DataProperty URI="&Ontology1181052506695;age"/>
+    </FunctionalDataProperty>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty URI="&Ontology1181052506695;age"/>
+                <Constant Datatype="&xsd;float">232.334</Constant>
+            </DataHasValue>
+            <OWLClass URI="&Ontology1181052506695;man"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+        <DataAllValuesFrom>
+            <DataProperty URI="&Ontology1181052506695;writing"/>
+            <DatatypeRestriction>
+                <Datatype URI="&xsd;string"/>
+                <DatatypeFacetRestriction facet="&owl11;pattern">
+                    <Constant Datatype="&xsd;boolean">true</Constant>
+                </DatatypeFacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <DataProperty URI="&Ontology1181052506695;age"/>
+    </Declaration>
+    <DataPropertyRange>
+        <DataProperty URI="&Ontology1181052506695;writing"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1181052506695;writing"/>
+        <Individual URI="&Ontology1181052506695;P"/>
+        <Constant Datatype="&xsd;string">blah</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+    </Declaration>
+    <SubClassOf>
+        <ObjectComplementOf>
+            <OWLClass URI="&Ontology1181052506695;man"/>
+        </ObjectComplementOf>
+        <ObjectComplementOf>
+            <ObjectComplementOf>
+                <OWLClass URI="&Ontology1181052506695;man"/>
+            </ObjectComplementOf>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <DataPropertyRange>
+        <DataProperty URI="&Ontology1181052506695;age"/>
+        <Datatype URI="&xsd;integer"/>
+    </DataPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+        <DataSomeValuesFrom>
+            <DataProperty URI="&Ontology1181052506695;writing"/>
+            <DatatypeRestriction>
+                <Datatype URI="&xsd;string"/>
+                <DatatypeFacetRestriction facet="&owl11;length">
+                    <Constant Datatype="&xsd;int">4</Constant>
+                </DatatypeFacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <DataPropertyDomain>
+        <DataProperty URI="&Ontology1181052506695;age"/>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+    </DataPropertyDomain>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+        <DataAllValuesFrom>
+            <DataProperty URI="&Ontology1181052506695;writing"/>
+            <DatatypeRestriction>
+                <Datatype URI="&xsd;string"/>
+                <DatatypeFacetRestriction facet="&owl11;pattern">
+                    <Constant Datatype="&xsd;float">3.333</Constant>
+                </DatatypeFacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+        <DataAllValuesFrom>
+            <DataProperty URI="&Ontology1181052506695;writing"/>
+            <DatatypeRestriction>
+                <Datatype URI="&xsd;string"/>
+                <DatatypeFacetRestriction facet="&owl11;minExclusive">
+                    <Constant Datatype="&xsd;int">10</Constant>
+                </DatatypeFacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <DataAllValuesFrom>
+                <DataProperty URI="&Ontology1181052506695;age"/>
+                <DatatypeRestriction>
+                    <Datatype URI="&xsd;integer"/>
+                    <DatatypeFacetRestriction facet="&owl11;minExclusive">
+                        <Constant Datatype="&xsd;int">10</Constant>
+                    </DatatypeFacetRestriction>
+                    <DatatypeFacetRestriction facet="&owl11;maxExclusive">
+                        <Constant Datatype="&xsd;int">20</Constant>
+                    </DatatypeFacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <OWLClass URI="&Ontology1181052506695;man"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <DataSomeValuesFrom>
+            <DataProperty URI="&Ontology1181052506695;age"/>
+            <DatatypeRestriction>
+                <Datatype URI="&xsd;nonNegativeInteger"/>
+                <DatatypeFacetRestriction facet="&owl11;minExclusive">
+                    <Constant Datatype="&xsd;int">2</Constant>
+                </DatatypeFacetRestriction>
+                <DatatypeFacetRestriction facet="&owl11;minInclusive">
+                    <Constant Datatype="&xsd;int">3</Constant>
+                </DatatypeFacetRestriction>
+                <DatatypeFacetRestriction facet="&owl11;minExclusive">
+                    <Constant Datatype="&xsd;int">1</Constant>
+                </DatatypeFacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;man"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;teenager"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&Ontology1181052506695;P"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1181052506695;age"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&Ontology1181052506695;John"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;test"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1181052506695;writing"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1181052506695;post-it"/>
+    </Declaration>
+</Ontology>

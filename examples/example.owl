@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://org.semanticweb.ontologies/Ontology1256143016364769000"
+	 xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+    <Prefix name="story" IRI="http://www.example.org/story.owl#"/>
+    <Prefix name="ace_lexicon" IRI="http://attempto.ifi.uzh.ch/ace_lexicon#"/>
+
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+		<IRI>http://www.example.org/story.owl#eat</IRI>
+        <Literal>eats</Literal>
+    </AnnotationAssertion>
+
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+		<IRI>http://www.example.org/story.owl#eat</IRI>
+        <Literal>eat</Literal>
+    </AnnotationAssertion>
+
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+		<IRI>http://www.example.org/story.owl#eat</IRI>
+        <Literal>eaten</Literal>
+    </AnnotationAssertion>
+
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+		<IRI>http://www.example.org/story.owl#leaf</IRI>
+        <Literal>leaves</Literal>
+    </AnnotationAssertion>
+
+    <SubClassOf>
+        <Class abbreviatedIRI="story:animal"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="story:cat"/>
+            <Class abbreviatedIRI="story:goat"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="story:goat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="story:eat"/>
+            <Class abbreviatedIRI="story:leaf"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="story:human"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="story:person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="story:own"/>
+                <Class abbreviatedIRI="story:automobile"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="story:human"/>
+        <ObjectOneOf>
+            <NamedIndividual abbreviatedIRI="story:John"/>
+            <NamedIndividual abbreviatedIRI="story:Mary"/>
+        </ObjectOneOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="story:man"/>
+        <Class abbreviatedIRI="story:person"/>
+    </SubClassOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+        <Class abbreviatedIRI="story:animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="story:food"/>
+            <ObjectComplementOf>
+                <Class abbreviatedIRI="story:automobile"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="story:hate"/>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+    </InverseObjectProperties>
+    <ClassAssertion>
+        <Class abbreviatedIRI="story:man"/>
+        <NamedIndividual abbreviatedIRI="story:John"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="story:apple"/>
+            <Class abbreviatedIRI="story:leaf"/>
+        </ObjectUnionOf>
+        <Class abbreviatedIRI="story:food"/>
+    </SubClassOf>
+</Ontology>

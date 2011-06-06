@@ -1,0 +1,1523 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY food "http://www.w3.org/2001/sw/WebOnt/guide-src/food#" >
+    <!ENTITY wine "http://www.w3.org/2001/sw/WebOnt/guide-src/wine#" >
+]>
+
+
+
+
+
+<!-- Axioms: 233 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:wine="http://www.w3.org/2001/sw/WebOnt/guide-src/wine#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:food="http://www.w3.org/2001/sw/WebOnt/guide-src/food#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.w3.org/2001/sw/WebOnt/guide-src/food">
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >Derived from the DAML Wine ontology at 
+      http://ontolingua.stanford.edu/doc/chimaera/ontologies/wines.daml
+      Substantially modified.</Constant>
+    </Annotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;PastaWithHeavyCreamSauce"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;PastaWithHeavyCreamCourse"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <OWLClass URI="&food;Pasta"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;RedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&food;hasDrink"/>
+        <OWLClass URI="&food;MealCourse"/>
+    </ObjectPropertyDomain>
+    <SubClassOf>
+        <OWLClass URI="&food;SpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Full"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&wine;Wine"/>
+        <OWLClass URI="&food;Wine"/>
+    </EquivalentClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Medium"/>
+        <Individual URI="&wine;Medium"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;LightMeatFowl"/>
+        <Individual URI="&food;Chicken"/>
+    </ClassAssertion>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;Fruit"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;FruitCourse"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;LightMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSpicyRedMeat"/>
+        <OWLClass URI="&food;RedMeat"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;CheeseNutsDessert"/>
+        <Individual URI="&food;Cheese"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;CheeseNutsDessertCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;RedMeat"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;RedMeatCourse"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PotableLiquid"/>
+        <OWLClass URI="&food;ConsumableThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonBlandFish"/>
+        <OWLClass URI="&food;Fish"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonBlandFish"/>
+        <Individual URI="&food;Tuna"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+        <OWLClass URI="&food;Meat"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;SweetDessert"/>
+        <OWLClass URI="&food;CheeseNutsDessert"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;LightMeatFowl"/>
+        <OWLClass URI="&food;Fowl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;DessertCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Sweet"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fowl"/>
+        <OWLClass URI="&food;Dessert"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSweetFruit"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <OWLClass URI="&food;Fowl"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Red"/>
+        <Individual URI="&wine;Red"/>
+    </ObjectPropertyAssertion>
+    <EquivalentClasses>
+        <OWLClass URI="&food;DarkMeatFowlCourse"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;DarkMeatFowl"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;Pasta"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithRedSauce"/>
+        <OWLClass URI="&food;Pasta"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;Shellfish"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;ShellfishCourse"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;PastaWithSpicyRedSauce"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;PastaWithSpicyRedSauceCourse"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&food;NonSpicyRedMeatCourse"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;NonSpicyRedMeat"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;DessertCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Full"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;EatingGrape"/>
+        <OWLClass URI="&food;Grape"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;SpicyRedMeat"/>
+        <Individual URI="&food;BeefCurry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Moderate"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;NonRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithHeavyCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;SweetDessertCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;SweetFruit"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Seafood"/>
+        <OWLClass URI="&food;Dessert"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Dry"/>
+        <Individual URI="&wine;Dry"/>
+    </ObjectPropertyAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;SweetFruitCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Sweet"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonSpicyRedMeat"/>
+        <Individual URI="&food;RoastBeef"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <ObjectOneOf>
+                    <Individual URI="&food;Strong"/>
+                    <Individual URI="&food;Moderate"/>
+                </ObjectOneOf>
+            </ObjectAllValuesFrom>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Rose"/>
+    </ClassAssertion>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;SpicyRedMeat"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;SpicyRedMeatCourse"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;Seafood"/>
+        <OWLClass URI="&food;Meat"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauce"/>
+        <OWLClass URI="&food;PastaWithRedSauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;LightMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&food;NonSweetFruitCourse"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;NonSweetFruit"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;Shellfish"/>
+        <OWLClass URI="&food;Fish"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonRedMeat"/>
+        <Individual URI="&food;Pork"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonSpicyRedMeat"/>
+        <Individual URI="&food;Veal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;BlandFish"/>
+        <Individual URI="&food;Scrod"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithHeavyCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;SpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithHeavyCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;OysterShellfish"/>
+        <OWLClass URI="&food;NonOysterShellfish"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;PastaWithHeavyCreamSauce"/>
+        <Individual URI="&food;FettucineAlfRedo"/>
+    </ClassAssertion>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >Derived from the DAML Wine ontology at 
+      http://ontolingua.stanford.edu/doc/chimaera/ontologies/wines.daml
+      Substantially modified.</Constant>
+    </Annotation>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <OWLClass URI="&food;Dessert"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;Fowl"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Seafood"/>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&food;hasFood"/>
+        <OWLClass URI="&food;MealCourse"/>
+    </ObjectPropertyDomain>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithLightCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Delicate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;SweetFruit"/>
+        <Individual URI="&food;Peaches"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Strong"/>
+        <Individual URI="&wine;Strong"/>
+    </ObjectPropertyAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;MealCourse"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty URI="&food;hasDrink"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;BlandFish"/>
+        <OWLClass URI="&food;NonBlandFish"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <OWLClass URI="&food;Meat"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithLightCreamSauce"/>
+        <OWLClass URI="&food;PastaWithWhiteSauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;DarkMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonOysterShellfish"/>
+        <Individual URI="&food;Crab"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;DarkMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Delicate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Sweet"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;SpicyRedMeat"/>
+        <OWLClass URI="&food;RedMeat"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;LightMeatFowl"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;LightMeatFowlCourse"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonOysterShellfish"/>
+        <Individual URI="&food;Mussels"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;NonBlandFishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Delicate"/>
+        <Individual URI="&wine;Delicate"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;SweetFruit"/>
+        <Individual URI="&food;MixedFruit"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fowl"/>
+        <OWLClass URI="&food;Pasta"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;OtherTomatoBasedFoodCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;BlandFish"/>
+        <OWLClass URI="&food;Fish"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithHeavyCreamSauce"/>
+        <OWLClass URI="&food;PastaWithWhiteSauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithLightCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&food;SeafoodCourse"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;Seafood"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;DarkMeatFowl"/>
+        <Individual URI="&food;Goose"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+        <OWLClass URI="&food;Dessert"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauce"/>
+        <OWLClass URI="&food;PastaWithSpicyRedSauce"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;EatingGrape"/>
+        <Individual URI="&food;ThompsonSeedless"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;MealCourse"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty URI="&food;hasFood"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;LightMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Seafood"/>
+        <OWLClass URI="&food;Pasta"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;White"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithSpicyRedSauce"/>
+        <OWLClass URI="&food;PastaWithRedSauce"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonOysterShellfish"/>
+        <Individual URI="&food;Lobster"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Dry"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;OysterShellfishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Sweet"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;OysterShellfish"/>
+        <Individual URI="&food;Oysters"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;PastaWithSpicyRedSauce"/>
+        <Individual URI="&food;FraDiavolo"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;CheeseNutsDessert"/>
+        <OWLClass URI="&food;Dessert"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Red"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonBlandFish"/>
+        <Individual URI="&food;Swordfish"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Strong"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithHeavyCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;SpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;EdibleThing"/>
+        <OWLClass URI="&food;MealCourse"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithWhiteSauce"/>
+        <OWLClass URI="&food;Pasta"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Dessert"/>
+        <OWLClass URI="&food;Meat"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;PotableLiquid"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+        <Individual URI="&food;Pizza"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;NonRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Strong"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;OysterShellfish"/>
+        <OWLClass URI="&food;Shellfish"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;Meal"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty URI="&food;course"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;Meat"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&food;NonRedMeatCourse"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;NonRedMeat"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;SeafoodCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;DarkMeatFowl"/>
+        <OWLClass URI="&food;Fowl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;ShellfishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <ObjectOneOf>
+                    <Individual URI="&food;Strong"/>
+                    <Individual URI="&food;Moderate"/>
+                </ObjectOneOf>
+            </ObjectAllValuesFrom>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Strong"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;Meal"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;course"/>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&food;NonConsumableThing"/>
+        <ObjectComplementOf>
+            <OWLClass URI="&food;ConsumableThing"/>
+        </ObjectComplementOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;Seafood"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;FruitCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;CheeseNutsDessert"/>
+        <Individual URI="&food;Nuts"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithLightCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Light"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSweetFruitCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Delicate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonOysterShellfishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <OWLClass URI="&food;Seafood"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;Seafood"/>
+        <OWLClass URI="&food;Fowl"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;EdibleThing"/>
+        <OWLClass URI="&food;ConsumableThing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;RedMeat"/>
+        <OWLClass URI="&food;NonRedMeat"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Full"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;EdibleThing"/>
+        <OWLClass URI="&food;Meal"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Moderate"/>
+        <Individual URI="&wine;Moderate"/>
+    </ObjectPropertyAssertion>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;SweetDessert"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;SweetDessertCourse"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauce"/>
+        <Individual URI="&food;SpaghettiWithTomatoSauce"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSweetFruitCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;OffDry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;SpicyRedMeat"/>
+        <Individual URI="&food;GarlickyRoast"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;OtherTomatoBasedFoodCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;PotableLiquid"/>
+        <OWLClass URI="&food;Meal"/>
+    </DisjointClasses>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&food;madeFromFruit"/>
+        <OWLClass URI="&food;Fruit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;White"/>
+        <Individual URI="&wine;White"/>
+    </ObjectPropertyAssertion>
+    <EquivalentClasses>
+        <OWLClass URI="&food;NonBlandFishCourse"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;NonBlandFish"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;DarkMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&food;hasFood"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </ObjectPropertyRange>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Full"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;NonSpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;Dessert"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;DessertCourse"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fowl"/>
+        <OWLClass URI="&food;Meat"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;OysterShellfish"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;OysterShellfishCourse"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Sweet"/>
+        <Individual URI="&wine;Sweet"/>
+    </ObjectPropertyAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;BlandFishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Delicate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;OffDry"/>
+        <Individual URI="&wine;OffDry"/>
+    </ObjectPropertyAssertion>
+    <EquivalentClasses>
+        <OWLClass URI="&food;PastaWithLightCreamCourse"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;PastaWithLightCreamSauce"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Rose"/>
+        <Individual URI="&wine;Rose"/>
+    </ObjectPropertyAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;PastaWithWhiteSauce"/>
+        <OWLClass URI="&food;PastaWithRedSauce"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;SpicyRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;SweetFruitCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Moderate"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&food;hasDrink"/>
+        <OWLClass URI="&food;PotableLiquid"/>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&food;Fish"/>
+        <OWLClass URI="&food;Seafood"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;Juice"/>
+        <OWLClass URI="&food;PotableLiquid"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&food;course"/>
+        <OWLClass URI="&food;Meal"/>
+    </ObjectPropertyDomain>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Delicate"/>
+    </ClassAssertion>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;PastaWithNonSpicyRedSauce"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauceCourse"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;Light"/>
+    </ClassAssertion>
+    <EquivalentClasses>
+        <OWLClass URI="&food;Fruit"/>
+        <ObjectUnionOf>
+            <OWLClass URI="&food;SweetFruit"/>
+            <OWLClass URI="&food;NonSweetFruit"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&food;course"/>
+        <OWLClass URI="&food;MealCourse"/>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&food;DarkMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Light"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&food;FishCourse"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;Fish"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Light"/>
+        <Individual URI="&wine;Light"/>
+    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <OWLClass URI="&food;SweetDessert"/>
+        <Individual URI="&food;Pie"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+        <OWLClass URI="&food;Pasta"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;LightMeatFowl"/>
+        <OWLClass URI="&food;DarkMeatFowl"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;DessertCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasFlavor"/>
+                <Individual URI="&food;Strong"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonRedMeat"/>
+        <OWLClass URI="&food;Meat"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Meat"/>
+        <OWLClass URI="&food;Pasta"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;MealCourse"/>
+        <OWLClass URI="&food;ConsumableThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;FishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;LightMeatFowlCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonOysterShellfish"/>
+        <Individual URI="&food;Clams"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;ShellfishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Full"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;Shellfish"/>
+        <OWLClass URI="&food;Seafood"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&food;OtherTomatoBasedFoodCourse"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;OtherTomatoBasedFood"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;NonSpicyRedMeat"/>
+        <Individual URI="&food;Steak"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;OtherTomatoBasedFoodCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;PotableLiquid"/>
+        <OWLClass URI="&food;MealCourse"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;NonOysterShellfish"/>
+        <OWLClass URI="&food;Shellfish"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;SweetDessert"/>
+        <Individual URI="&food;Cake"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;Meal"/>
+        <OWLClass URI="&food;MealCourse"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;CheeseNutsDessert"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;CheeseNutsDessertCourse"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;Dessert"/>
+        <OWLClass URI="&food;EdibleThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;OtherTomatoBasedFoodCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;RedMeat"/>
+        <OWLClass URI="&food;Meat"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&food;madeFromFruit"/>
+        <OWLClass URI="&food;ConsumableThing"/>
+    </ObjectPropertyDomain>
+    <SubClassOf>
+        <OWLClass URI="&food;FishCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasSugar"/>
+                <Individual URI="&food;Dry"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;BlandFish"/>
+        <Individual URI="&food;Halibut"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;MealCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <OWLClass URI="&food;Wine"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;NonRedMeatCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;Fowl"/>
+        <OWLClass URI="&food;OtherTomatoBasedFood"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;Dessert"/>
+        <OWLClass URI="&food;Pasta"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithNonSpicyRedSauceCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;Red"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;NonOysterShellfish"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;NonOysterShellfishCourse"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;Meal"/>
+        <OWLClass URI="&food;ConsumableThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&food;Grape"/>
+        <OWLClass URI="&food;SweetFruit"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;PastaWithLightCreamSauce"/>
+        <Individual URI="&food;PastaWithWhiteClamSauce"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;PastaWithLightCreamCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasColor"/>
+                <Individual URI="&food;White"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&food;SweetFruit"/>
+        <OWLClass URI="&food;NonSweetFruit"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;Juice"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty URI="&food;madeFromFruit"/>
+            <OWLClass URI="&owl;Thing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;SweetFruit"/>
+        <Individual URI="&food;Bananas"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&food;SweetDessert"/>
+        <OWLClass URI="&food;Dessert"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;LightMeatFowl"/>
+        <Individual URI="&food;Turkey"/>
+    </ClassAssertion>
+    <EquivalentClasses>
+        <OWLClass URI="&food;BlandFishCourse"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;BlandFish"/>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&food;MealCourse"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&food;PastaWithLightCreamSauce"/>
+        <OWLClass URI="&food;PastaWithHeavyCreamSauce"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&food;FruitCourse"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&food;hasDrink"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&wine;hasBody"/>
+                <Individual URI="&food;Medium"/>
+            </ObjectHasValue>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&food;BlandFish"/>
+        <Individual URI="&food;Flounder"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&owl;sameIndividualAs"/>
+        <Individual URI="&food;Full"/>
+        <Individual URI="&wine;Full"/>
+    </ObjectPropertyAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&food;SpicyRedMeat"/>
+        <OWLClass URI="&food;NonSpicyRedMeat"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&food;DarkMeatFowl"/>
+        <Individual URI="&food;Duck"/>
+    </ClassAssertion>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&food;MealCourse"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&food;hasFood"/>
+                <OWLClass URI="&food;SweetFruit"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&food;SweetFruitCourse"/>
+    </EquivalentClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&food;OffDry"/>
+    </ClassAssertion>
+</Ontology>

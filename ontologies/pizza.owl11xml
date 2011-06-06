@@ -1,0 +1,4483 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pizza "http://www.co-ode.org/ontologies/pizza/pizza.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 836 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:pizza="http://www.co-ode.org/ontologies/pizza/pizza.owl#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.co-ode.org/ontologies/pizza/pizza.owl">
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant
+            >v.1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional</Constant>
+    </Annotation>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >An example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://www.co-ode.org/resources/tutorials/)</Constant>
+    </Annotation>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant Datatype="&xsd;string">version 1.5</Constant>
+    </Annotation>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant
+            >v.1.5. Removed protege.owl import and references. Made ontology URI date-independent</Constant>
+    </Annotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;CaperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <ObjectProperty URI="&pizza;hasTopping"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Note that hasTopping is inverse functional because isToppingOf is functional</Constant>
+        </Annotation>
+    </EntityAnnotation>
+	<EntityAnnotation>
+		<ObjectProperty URI="&pizza;hasTopping"/>
+		<Annotation annotationURI="http://attempto.ifi.uzh.ch/ace_lexicon#pl">
+	        <Constant>have_topping</Constant>
+	     </Annotation>
+	</EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SweetPepperTopping"/>
+        <OWLClass URI="&pizza;PepperTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;AnchoviesTopping"/>
+        <OWLClass URI="&pizza;MixedSeafoodTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GarlicTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;isBaseOf"/>
+    </InverseFunctionalObjectProperty>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;RosemaryTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;OliveTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCalabreza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>SloppyGiuseppe</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectHasValue>
+            <ObjectProperty URI="&pizza;hasCountryOfOrigin"/>
+            <Individual URI="&pizza;America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ChickenTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza that does not have fish topping and does not have meat topping is a VegetarianPizza. Members of this class do not need to have any toppings at all.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;OnionTopping"/>
+                <OWLClass URI="&pizza;GreenPepperTopping"/>
+                <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;hasBase"/>
+    </InverseFunctionalObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MushroomTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;HamTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaPrinceCarlo</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrawnsTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SlicedTomatoTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ParmaHamTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePrezuntoParma</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;isBaseOf"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </ObjectPropertyRange>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+        <OWLClass URI="&pizza;Food"/>
+    </ObjectPropertyRange>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCaper</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;DeepPanBase"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>BaseEspessa</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&pizza;hasBase"/>
+                <OWLClass URI="&pizza;ThinAndCrispyBase"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;ThinAndCrispyPizza"/>
+    </EquivalentClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Cogumelo</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DifferentIndividuals>
+        <Individual URI="&pizza;France"/>
+        <Individual URI="&pizza;America"/>
+        <Individual URI="&pizza;Italy"/>
+        <Individual URI="&pizza;England"/>
+        <Individual URI="&pizza;Germany"/>
+    </DifferentIndividuals>
+    <ClassAssertion>
+        <OWLClass URI="&pizza;Country"/>
+        <Individual URI="&pizza;Germany"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant Datatype="&xsd;string"
+                >An unclosed Pizza cannot be inferred to be either a VegetarianPizza or a NonVegetarianPizza, because it might have other toppings.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <TransitiveObjectProperty>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+    </TransitiveObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PeperonataTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PizzaBase"/>
+        <OWLClass URI="&pizza;Food"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CajunSpiceTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCajun</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;AnchoviesTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LeekTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;HotGreenPepperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;LaReine"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>LaReine</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;AnchoviesTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeAnchovies</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruitTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;LeekTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>CoberturaDeLeek</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Medium"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Media</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;RosemaryTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaRosemary</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;HamTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PetitPoisTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ParmaHamTopping"/>
+        <OWLClass URI="&pizza;HamTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Pizza"/>
+        <OWLClass URI="&pizza;Food"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeVegetais</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;ParmesanTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;HotGreenPepperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;PeperonataTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;MushroomTopping"/>
+                <OWLClass URI="&pizza;LeekTopping"/>
+                <OWLClass URI="&pizza;SlicedTomatoTopping"/>
+                <OWLClass URI="&pizza;PetitPoisTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&pizza;America"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpicyPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>PizzaTemperada</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;IceCream"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Capricciosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeParmesao</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Mild"/>
+        <OWLClass URI="&pizza;Spiciness"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Parmense"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Parmense</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;RocketTopping"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&pizza;Italy"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SlicedTomatoTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeTomateFatiado</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;hasSpiciness"/>
+        <OWLClass URI="&pizza;Spiciness"/>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&pizza;hasSpiciness"/>
+                <OWLClass URI="&pizza;Hot"/>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&pizza;PizzaTopping"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;SpicyTopping"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        <OWLClass URI="&pizza;SweetPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RosemaryTopping"/>
+        <OWLClass URI="&pizza;CajunSpiceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;isToppingOf"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;CajunSpiceTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GarlicTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <OWLClass URI="&pizza;FruitTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+                <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+                <OWLClass URI="&pizza;HotGreenPepperTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;GarlicTopping"/>
+                <OWLClass URI="&pizza;ChickenTopping"/>
+                <OWLClass URI="&pizza;RedOnionTopping"/>
+                <OWLClass URI="&pizza;SweetPepperTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;CajunSpiceTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MushroomTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FishTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpicyPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza that has a spicy topping is a SpicyPizza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;hasTopping"/>
+    </InverseFunctionalObjectProperty>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&pizza;hasBase"/>
+        <ObjectProperty URI="&pizza;isBaseOf"/>
+    </InverseObjectProperties>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant
+            >v.1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional</Constant>
+    </Annotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Rosa"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PizzaBase"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>CoberturaRocket</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PeperonataTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaPeperonata</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GreenPepperTopping"/>
+        <OWLClass URI="&pizza;PepperTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;HotGreenPepperTopping"/>
+        <OWLClass URI="&pizza;GreenPepperTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SultanaTopping"/>
+        <OWLClass URI="&pizza;FruitTopping"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;InterestingPizza"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <OWLClass URI="&owl;Thing"/>
+            </ObjectMinCardinality>
+            <OWLClass URI="&pizza;Pizza"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Rosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GorgonzolaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;IceCream"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A class to demonstrate mistakes made with setting a property domain. The property hasTopping has a domain of Pizza. This means that the reasoner can infer that all individuals using the hasTopping property must be of type Pizza. Because of the restriction on this class, all members of IceCream must use the hasTopping property, and therefore must also be members of Pizza. However, Pizza and IceCream are disjoint, so this causes an inconsistency. If they were not disjoint, IceCream would be inferred to be a subclass of Pizza.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Fiorentina</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;FourCheesesTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >AmericanaPicante</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeGorgonzola</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Rosa"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Medium"/>
+        <OWLClass URI="&pizza;Mild"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;RocketTopping"/>
+    </DisjointClasses>
+    <FunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;hasBase"/>
+    </FunctionalObjectProperty>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Rosa"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <ObjectProperty URI="&pizza;hasSpiciness"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A property created to be used with the ValuePartition - Spiciness.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SweetPepperTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePimentaoDoce</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PizzaBase"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>BaseDaPizza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LeekTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <OWLClass URI="&pizza;MeatTopping"/>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&pizza;Pizza"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;MeatyPizza"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;FishTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePeixe</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MixedSeafoodTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;GreenPepperTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePimentaoVerde</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpicyPizzaEquivalent"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >An alternative definition for the SpicyPizza which does away with needing a definition of SpicyTopping and uses a slightly more complicated restriction: Pizzas that have at least one topping that is both a PizzaTopping and has spiciness hot are members of this class.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AnchoviesTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PrawnsTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCamarao</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Capricciosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>FrutosDoMar</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Caprina"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;SundriedTomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CheeseyVegetableTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;HamTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+        <OWLClass URI="&pizza;Food"/>
+    </ObjectPropertyDomain>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;NonVegetarianPizza"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectComplementOf>
+                <OWLClass URI="&pizza;VegetarianPizza"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;hasTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </ObjectPropertyRange>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianPizzaEquivalent2"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaVegetarianaEquivalente2</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ParmaHamTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&pizza;isToppingOf"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </ObjectPropertyDomain>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Capricciosa"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PineKernels"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&pizza;Germany"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;HamTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;MushroomTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;HamTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;ParmesanTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Parmense"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;American"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Rosa"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;GorgonzolaTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GarlicTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaEmMolho</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Rosa"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Rosa</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NonVegetarianPizza"/>
+        <OWLClass URI="&pizza;VegetarianPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;American"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Medium"/>
+        <OWLClass URI="&pizza;Spiciness"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;PepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Pizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasBase"/>
+            <OWLClass URI="&pizza;PizzaBase"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant
+            >v.1.5. Removed protege.owl import and references. Made ontology URI date-independent</Constant>
+    </Annotation>
+    <EntityAnnotation>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The inverse property tree to hasIngredient - all subproperties and attributes of the properties should reflect those under hasIngredient.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrawnsTopping"/>
+        <OWLClass URI="&pizza;MixedSeafoodTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;GarlicTopping"/>
+                <OWLClass URI="&pizza;AnchoviesTopping"/>
+                <OWLClass URI="&pizza;HamTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;ArtichokeTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;hasBase"/>
+        <OWLClass URI="&pizza;PizzaBase"/>
+    </ObjectPropertyRange>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeJalapeno</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+    </InverseObjectProperties>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;American"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CheeseyVegetableTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaQuatroQueijos</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;RedOnionTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Hot"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Picante</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeArtichoke</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PeperonataTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;AnchoviesTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MeatTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeQueijoDeCabra</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MeatTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;GarlicTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;MixedSeafoodTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;NonVegetarianPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any Pizza that is not a VegetarianPizza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Rosa"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;American"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CheeseyPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza that has at least 1 cheese topping.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CajunSpiceTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeAspargos</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OnionTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Siciliana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;American"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Mild"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>NaoPicante</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ThinAndCrispyBase"/>
+        <OWLClass URI="&pizza;DeepPanBase"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Caprina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;SundriedTomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        <OWLClass URI="&pizza;GreenPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;IceCream"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;Country"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;DomainConcept"/>
+            <ObjectOneOf>
+                <Individual URI="&pizza;France"/>
+                <Individual URI="&pizza;America"/>
+                <Individual URI="&pizza;Italy"/>
+                <Individual URI="&pizza;England"/>
+                <Individual URI="&pizza;Germany"/>
+            </ObjectOneOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SultanaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CheeseyPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>PizzaComQueijo</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Caprina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectHasValue>
+            <ObjectProperty URI="&pizza;hasCountryOfOrigin"/>
+            <Individual URI="&pizza;Italy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ThinAndCrispyBase"/>
+        <OWLClass URI="&pizza;PizzaBase"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;HotGreenPepperTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePimentaoVerdePicante</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;HamTopping"/>
+        <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LeekTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Annotation annotationURI="&owl;versionInfo">
+        <Constant Datatype="&xsd;string">version 1.5</Constant>
+    </Annotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OnionTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>PizzaAberta</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SultanaTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaSultana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Parmense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;NutTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;TobascoPepperSauce"/>
+        <OWLClass URI="&pizza;SauceTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Capricciosa"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;RedOnionTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&pizza;isToppingOf"/>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+    </SubObjectPropertyOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        <OWLClass URI="&pizza;PepperTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mild"/>
+        <OWLClass URI="&pizza;Hot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Medium"/>
+        <OWLClass URI="&pizza;Hot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;GarlicTopping"/>
+                <OWLClass URI="&pizza;ParmesanTopping"/>
+                <OWLClass URI="&pizza;RocketTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Giardiniera</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <TransitiveObjectProperty>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+    </TransitiveObjectProperty>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&pizza;hasTopping"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </ObjectPropertyDomain>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ChickenTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeFrango</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;RealItalianPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaItalianaReal</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;InterestingPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza that has at least 3 toppings. Note that this is a cardinality constraint on the hasTopping property and NOT a qualified cardinality constraint (QCR). A QCR would specify from which class the members in this relationship must be. eg has at least 3 toppings from PizzaTopping. This is currently not supported in OWL.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Mushroom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;RosemaryTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectUnionOf>
+            <OWLClass URI="&pizza;Medium"/>
+            <OWLClass URI="&pizza;Mild"/>
+            <OWLClass URI="&pizza;Hot"/>
+        </ObjectUnionOf>
+        <OWLClass URI="&pizza;Spiciness"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LeekTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaVegetariana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;RocketTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;ParmesanTopping"/>
+                <OWLClass URI="&pizza;RosemaryTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;LeekTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ThinAndCrispyBase"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >BaseFinaEQuebradica</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;LeekTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&pizza;isBaseOf"/>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+    </SubObjectPropertyOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeErvas</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&pizza;hasBase"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </ObjectPropertyDomain>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;SweetPepperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+        <OWLClass URI="&pizza;Food"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PizzaBase"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;CheeseyPizza"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <OWLClass URI="&pizza;CheeseTopping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;HamTopping"/>
+                <OWLClass URI="&pizza;ParmesanTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;AsparagusTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Country"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A class that is equivalent to the set of individuals that are described in the enumeration - ie Countries can only be either America, England, France, Germany or Italy and nothing else. Note that these individuals have been asserted to be allDifferent from each other.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;MeatyPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza that has at least one meat topping</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;FruitTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&pizza;isIngredientOf"/>
+        <OWLClass URI="&pizza;Food"/>
+    </ObjectPropertyRange>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruitTopping"/>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Food"/>
+        <OWLClass URI="&pizza;DomainConcept"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&pizza;Country"/>
+        <Individual URI="&pizza;Italy"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;TobascoPepperSauce"/>
+                <OWLClass URI="&pizza;PeperonataTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;OnionTopping"/>
+                <OWLClass URI="&pizza;PrawnsTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaVegetariana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LeekTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;IceCream"/>
+        <OWLClass URI="&pizza;PizzaBase"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Veneziana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeAzeitona</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianPizzaEquivalent2"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >An alternative to VegetarianPizzaEquiv1 that does not require a definition of VegetarianTopping. Perhaps more difficult to maintain. Not equivalent to VegetarianPizza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;RealItalianPizza"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasBase"/>
+            <OWLClass URI="&pizza;ThinAndCrispyBase"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Hot"/>
+        <OWLClass URI="&pizza;Spiciness"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&pizza;Country"/>
+        <Individual URI="&pizza;America"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;TobascoPepperSauce"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Caprina"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Caprina</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;IceCream"/>
+        <OWLClass URI="&pizza;Food"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&pizza;Country"/>
+        <Individual URI="&pizza;France"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PeperonataTopping"/>
+        <OWLClass URI="&pizza;SweetPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        <OWLClass URI="&pizza;ChickenTopping"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&pizza;France"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;SpinachTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCastanha</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;OliveTopping"/>
+    </DisjointClasses>
+    <FunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;isToppingOf"/>
+    </FunctionalObjectProperty>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PeperonataTopping"/>
+        <OWLClass URI="&pizza;PepperTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Napoletana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Rosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MushroomTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Rosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;AnchoviesTopping"/>
+                <OWLClass URI="&pizza;CaperTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;SultanaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Spiciness"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A ValuePartition that describes only values from Hot, Medium or Mild. NB Subclasses can themselves be divided up into further partitions.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;AnchoviesTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ChickenTopping"/>
+        <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SweetPepperTopping"/>
+        <OWLClass URI="&pizza;GreenPepperTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;ArtichokeTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&pizza;hasTopping"/>
+                    <OWLClass URI="&pizza;MeatTopping"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&pizza;hasTopping"/>
+                    <OWLClass URI="&pizza;FishTopping"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;VegetarianPizza"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SundriedTomatoTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeTomateRessecadoAoSol</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Spiciness"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Tempero</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;NamedPizza"/>
+        <OWLClass URI="&pizza;Pizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>QuatroQueijos</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FishTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CajunSpiceTopping"/>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FishTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;HamTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePresunto</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianTopping"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >An example of a covering axiom. VegetarianTopping is equivalent to the union of all toppings in the given axiom. VegetarianToppings can only be Cheese or Vegetable or....etc.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <ObjectHasValue>
+            <ObjectProperty URI="&pizza;hasCountryOfOrigin"/>
+            <Individual URI="&pizza;Italy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&pizza;hasTopping"/>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+    </SubObjectPropertyOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Capricciosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ChickenTopping"/>
+        <OWLClass URI="&pizza;HamTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ValuePartition"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant Datatype="&xsd;string"
+                >A ValuePartition is a pattern that describes a restricted set of classes from which a property can be associated. The parent class is used in restrictions, and the covering axiom means that only members of the subclasses may be used as values. The possible subclasses cannot be extended without updating the ValuePartition class.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Margherita"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;MeatyPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>PizzaDeCarne</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&pizza;hasBase"/>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+    </SubObjectPropertyOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;CaperTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        <OWLClass URI="&pizza;HamTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpicyTopping"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza topping that has spiciness Hot</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SlicedTomatoTopping"/>
+        <OWLClass URI="&pizza;SundriedTomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;FourCheesesTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;American"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianPizzaEquivalent1"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaVegetarianaEquivalente1</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeEspinafre</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDePimentao</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruitTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SundriedTomatoTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >NB Transitive - the ingredients of ingredients are ingredients of the whole</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Spiciness"/>
+        <OWLClass URI="&pizza;ValuePartition"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Pizza"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <FunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;isBaseOf"/>
+    </FunctionalObjectProperty>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;RosemaryTopping"/>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;AnchoviesTopping"/>
+        <OWLClass URI="&pizza;PrawnsTopping"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&owl;Thing"/>
+        <Individual URI="&pizza;England"/>
+    </ClassAssertion>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Mushroom"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;American"/>
+        <ObjectHasValue>
+            <ObjectProperty URI="&pizza;hasCountryOfOrigin"/>
+            <Individual URI="&pizza;America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;GarlicTopping"/>
+                <OWLClass URI="&pizza;ParmesanTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;SpinachTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;PepperTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDaPizza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PineKernels"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaPineKernels</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;InterestingPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaInteressante</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;IceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;FruitTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Medium"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeTomate</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectHasValue>
+            <ObjectProperty URI="&pizza;hasCountryOfOrigin"/>
+            <Individual URI="&pizza;Italy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&pizza;hasTopping"/>
+        <ObjectProperty URI="&pizza;isToppingOf"/>
+    </InverseObjectProperties>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;HerbSpiceTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PeperonataTopping"/>
+        <OWLClass URI="&pizza;GreenPepperTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;FourSeasons"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Margherita"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Margherita</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PeperonataTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MushroomTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeBifePicante</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;IceCream"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Sorvete</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;TobascoPepperSauce"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >MolhoTobascoPepper</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>CoberturaDeAlho</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourCheesesTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Fiorentina"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;FruitTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SundriedTomatoTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Pizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Pizza</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Country"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Pais</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;SpinachTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;MushroomTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Caprina"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Soho"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Soho</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;MixedSeafoodTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeFrutosDoMarMistos</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SweetPepperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;FruitTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeFrutas</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;American"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&pizza;hasIngredient"/>
+        <OWLClass URI="&pizza;Food"/>
+    </ObjectPropertyDomain>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+                <OWLClass URI="&pizza;AnchoviesTopping"/>
+                <OWLClass URI="&pizza;CaperTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;MushroomTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;ChickenTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <ObjectProperty URI="&pizza;isToppingOf"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any given instance of topping should only be added to a single pizza (no cheap half-measures on our pizzas)</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCebola</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GreenPepperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        <OWLClass URI="&pizza;HotSpicedBeefTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        <OWLClass URI="&pizza;PeperonataTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;MeatTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCarne</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;ParmesanTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;American"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Americana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;LaReine"/>
+    </DisjointClasses>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >An example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://www.co-ode.org/resources/tutorials/)</Constant>
+    </Annotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Parmense"/>
+        <OWLClass URI="&pizza;Veneziana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        <OWLClass URI="&pizza;ParmesanTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;AmericanHot"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TobascoPepperSauce"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Margherita"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;MixedSeafoodTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CheeseyVegetableTopping"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >This class will be inconsistent. This is because we have given it 2 disjoint parents, which means it could never have any members (as nothing can simultaneously be a CheeseTopping and a VegetableTopping). NB Called ProbeInconsistentTopping in the ProtegeOWL Tutorial.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PineKernels"/>
+        <OWLClass URI="&pizza;NutTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Capricciosa</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;Soho"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Cajun"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PrawnsTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SlicedTomatoTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Caprina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CheeseyVegetableTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeQueijoComVegetais</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>QuatroQueijos</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;SauceTopping"/>
+                <OWLClass URI="&pizza;NutTopping"/>
+                <OWLClass URI="&pizza;VegetableTopping"/>
+                <OWLClass URI="&pizza;FruitTopping"/>
+                <OWLClass URI="&pizza;HerbSpiceTopping"/>
+                <OWLClass URI="&pizza;CheeseTopping"/>
+            </ObjectUnionOf>
+            <OWLClass URI="&pizza;PizzaTopping"/>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;VegetarianTopping"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;OliveTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;VegetarianPizzaEquivalent2"/>
+        <ObjectIntersectionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <ObjectUnionOf>
+                    <OWLClass URI="&pizza;SauceTopping"/>
+                    <OWLClass URI="&pizza;NutTopping"/>
+                    <OWLClass URI="&pizza;VegetableTopping"/>
+                    <OWLClass URI="&pizza;FruitTopping"/>
+                    <OWLClass URI="&pizza;HerbSpiceTopping"/>
+                    <OWLClass URI="&pizza;CheeseTopping"/>
+                </ObjectUnionOf>
+            </ObjectAllValuesFrom>
+            <OWLClass URI="&pizza;Pizza"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Soho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;RocketTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&pizza;isBaseOf"/>
+        <OWLClass URI="&pizza;PizzaBase"/>
+    </ObjectPropertyDomain>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Margherita"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;RealItalianPizza"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectHasValue>
+                <ObjectProperty URI="&pizza;hasCountryOfOrigin"/>
+                <Individual URI="&pizza;Italy"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OnionTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;DomainConcept"/>
+        <OWLClass URI="&pizza;ValuePartition"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;DeepPanBase"/>
+        <OWLClass URI="&pizza;PizzaBase"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ChickenTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;CaperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PeperoniSausageTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;LaReine"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;CheeseTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeQueijo</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;CaperTopping"/>
+                <OWLClass URI="&pizza;PineKernels"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+                <OWLClass URI="&pizza;OnionTopping"/>
+                <OWLClass URI="&pizza;SultanaTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PepperTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;NamedPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>PizzaComUmNome</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Caprina"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;VegetarianPizzaEquivalent1"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >Any pizza that only has vegetarian toppings or no toppings is a VegetarianPizzaEquiv1. Should be inferred to be equivalent to VegetarianPizzaEquiv2.  Not equivalent to VegetarianPizza because PizzaTopping is not covering</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;HamTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;RocketTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;SauceTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCogumelo</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FruitTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <OWLClass URI="&pizza;Country"/>
+        <Individual URI="&pizza;England"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;CaperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Siciliana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;AmericanHot"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PetitPoisTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaPetitPois</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;AsparagusTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;CaperTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;AnchoviesTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;OliveTopping"/>
+        <OWLClass URI="&pizza;TomatoTopping"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Mild"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&pizza;MozzarellaTopping"/>
+                <OWLClass URI="&pizza;AnchoviesTopping"/>
+                <OWLClass URI="&pizza;CaperTopping"/>
+                <OWLClass URI="&pizza;HamTopping"/>
+                <OWLClass URI="&pizza;PeperonataTopping"/>
+                <OWLClass URI="&pizza;OliveTopping"/>
+                <OWLClass URI="&pizza;TomatoTopping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;ParmesanTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;NamedPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >A pizza that can be found on a pizza menu</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Veneziana"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Margherita"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <OWLClass URI="&pizza;Parmense"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;PolloAdAstra"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>PolloAdAstra</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;UnclosedPizza"/>
+        <OWLClass URI="&pizza;QuattroFormaggi"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;ArtichokeTopping"/>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;JalapenoPepperTopping"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasSpiciness"/>
+            <OWLClass URI="&pizza;Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpicyPizzaEquivalent"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaTemperadaEquivalente</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Soho"/>
+        <OWLClass URI="&pizza;Napoletana"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MushroomTopping"/>
+        <OWLClass URI="&pizza;LeekTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Mushroom"/>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <OWLClass URI="&pizza;SpicyTopping"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;SpicyPizza"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Caprina"/>
+        <OWLClass URI="&pizza;Parmense"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;TomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Napoletana"/>
+        <OWLClass URI="&pizza;Rosa"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;SpicyTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaTemperada</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GarlicTopping"/>
+        <OWLClass URI="&pizza;OnionTopping"/>
+    </DisjointClasses>
+    <FunctionalObjectProperty>
+        <ObjectProperty URI="&pizza;hasSpiciness"/>
+    </FunctionalObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&pizza;VegetableTopping"/>
+        <OWLClass URI="&pizza;PizzaTopping"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;MozzarellaTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeMozzarella</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruitTopping"/>
+        <OWLClass URI="&pizza;MeatTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;NutTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </DisjointClasses>
+    <EquivalentClasses>
+        <OWLClass URI="&pizza;SpicyPizzaEquivalent"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty URI="&pizza;hasSpiciness"/>
+                        <OWLClass URI="&pizza;Hot"/>
+                    </ObjectSomeValuesFrom>
+                    <OWLClass URI="&pizza;PizzaTopping"/>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <OWLClass URI="&pizza;Pizza"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OliveTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <OWLClass URI="&pizza;American"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Parmense"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;MozzarellaTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;RedOnionTopping"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >CoberturaDeCebolaVermelha</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;MeatTopping"/>
+        <OWLClass URI="&pizza;FishTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+        <OWLClass URI="&pizza;Margherita"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Giardiniera"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;SlicedTomatoTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;LeekTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;ValuePartition"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>ValorDaParticao</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;NonVegetarianPizza"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant
+                >PizzaNaoVegetariana</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Siciliana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GarlicTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;OnionTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&pizza;Pizza"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&pizza;hasTopping"/>
+                <OWLClass URI="&pizza;VegetarianTopping"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+        <OWLClass URI="&pizza;VegetarianPizzaEquivalent1"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        <OWLClass URI="&pizza;GorgonzolaTopping"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;Cajun"/>
+        <OWLClass URI="&pizza;FruttiDiMare"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;CaperTopping"/>
+        <OWLClass URI="&pizza;AsparagusTopping"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;RealItalianPizza"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >This defined class has conditions that are part of the definition: ie any Pizza that has the country of origin, Italy is a RealItalianPizza. It also has conditions that merely describe the members - that all RealItalianPizzas must only have ThinAndCrispy bases. In essence, all pizzas from Italy must have ThinAndCrispy bases.</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;SloppyGiuseppe"/>
+        <OWLClass URI="&pizza;NamedPizza"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;PrinceCarlo"/>
+        <OWLClass URI="&pizza;Giardiniera"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Capricciosa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;PeperonataTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Caprina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GoatsCheeseTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <OWLClass URI="&pizza;FourSeasons"/>
+        <OWLClass URI="&pizza;Mushroom"/>
+    </DisjointClasses>
+    <EntityAnnotation>
+        <OWLClass URI="&pizza;Cajun"/>
+        <Annotation annotationURI="&rdfs;label">
+            <Constant>Cajun</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&pizza;Fiorentina"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&pizza;hasTopping"/>
+            <OWLClass URI="&pizza;GarlicTopping"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+</Ontology>

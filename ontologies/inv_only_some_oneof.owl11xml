@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY ace_lexicon "http://attempto.ifi.uzh.ch/ace_lexicon#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1190715883068 "http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Ontology1190715883068="http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl">
+    <Declaration>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <OWLClass URI="&Ontology1190715883068;woman"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1190715883068;know"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&Ontology1190715883068;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <OWLClass URI="&Ontology1190715883068;woman"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <ObjectOneOf>
+                <Individual URI="&Ontology1190715883068;Mary"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&Ontology1190715883068;Mary"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <OWLClass URI="&Ontology1190715883068;woman"/>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&Ontology1190715883068;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <ObjectComplementOf>
+                <OWLClass URI="&Ontology1190715883068;woman"/>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <ObjectOneOf>
+                <Individual URI="&Ontology1190715883068;Mary"/>
+            </ObjectOneOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&Ontology1190715883068;woman"/>
+    </Declaration>
+
+
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <OWLClass URI="&Ontology1190715883068;woman"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1190715883068;know"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&Ontology1190715883068;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <OWLClass URI="&Ontology1190715883068;woman"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <ObjectOneOf>
+                <Individual URI="&Ontology1190715883068;Mary"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&Ontology1190715883068;Mary"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <OWLClass URI="&Ontology1190715883068;woman"/>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+	    <InverseObjectProperty>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            </InverseObjectProperty>
+            <ObjectComplementOf>
+                <ObjectOneOf>
+                    <Individual URI="&Ontology1190715883068;Mary"/>
+                </ObjectOneOf>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <ObjectComplementOf>
+                <OWLClass URI="&Ontology1190715883068;woman"/>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1190715883068;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Ontology1190715883068;know"/>
+            <ObjectOneOf>
+                <Individual URI="&Ontology1190715883068;Mary"/>
+            </ObjectOneOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <EntityAnnotation>
+        <ObjectProperty URI="&Ontology1190715883068;know"/>
+        <Annotation annotationURI="&ace_lexicon;sg">
+             <Constant>knowss</Constant>
+        </Annotation>
+    </EntityAnnotation>
+</Ontology>

@@ -1,0 +1,137 @@
+/* BUG: axiom unsupported: Import(http://example.org/otherOntologies/families.owl) */
+/* BUG: axiom unsupported: DatatypeDefinition(Datatype(:personAge),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema# : integer),FacetRestriction(http://www.w3.org/2001/XMLSchema#minInclusive,^^(0,http://www.w3.org/2001/XMLSchema#integer)),FacetRestriction(http://www.w3.org/2001/XMLSchema#maxInclusive,^^(150,http://www.w3.org/2001/XMLSchema#integer))])) */
+/* BUG: axiom unsupported: DatatypeDefinition(Datatype(:majorAge),DataIntersectionOf(Datatype(:personAge),DataComplementOf(Datatype(:minorAge)))) */
+/* BUG: axiom unsupported: DatatypeDefinition(Datatype(:toddlerAge),DataOneOf([^^(1,http://www.w3.org/2001/XMLSchema#integer),^^(2,http://www.w3.org/2001/XMLSchema#integer)])) */
+If X hasSpouse Y then Y hasSpouse X.
+
+If X hasChild Y then it is false that Y hasChild X.
+
+If X hasParent Y then it is false that X hasSpouse Y.
+
+Everything hasRelative itself.
+
+Nothing parentOf itself.
+
+Everything hasHusband at most 1 thing.
+
+Everything is hasHusband by at most 1 thing.
+
+If X hasAncestor something that hasAncestor Y then X hasAncestor Y.
+
+Everything that hasWife something is a Man.
+
+Everything that is hasWife by something is a Woman.
+
+If X hasParent Y then Y hasChild X.
+If X hasChild Y then Y hasParent X.
+
+If X hasSon Y then it is false that X hasDaughter Y.
+
+If X hasChild Y then X child Y.
+If X child Y then X hasChild Y.
+
+If X hasWife Y then X hasSpouse Y.
+
+If X hasFather Y then X hasParent Y.
+
+If X hasParent something that hasParent Y then X hasGrandparent Y.
+
+If X hasFather something that hasBrother Y then X hasUncle Y.
+
+If X hasFather something that hasBrother Y then X hasUncle Y.
+
+/* BUG: axiom unsupported: HasKey(Class(:Person),ObjectProperty(:hasSSN)) */
+/* BUG: axiom unsupported: DataPropertyDomain(DataProperty(:hasAge),Class(:Person)) */
+/* BUG: axiom unsupported: DataPropertyRange(DataProperty(:hasAge),Datatype(http://www.w3.org/2001/XMLSchema# : nonNegativeInteger)) */
+/* BUG: axiom unsupported: FunctionalDataProperty(DataProperty(:hasHusband)) */
+/* BUG: axiom unsupported: EquivalentDataProperties([DataProperty(:hasAge),DataProperty(http://example.org/otherOntologies/families/ : age)]) */
+Every Woman is a Person.
+
+Every Mother is a Woman.
+
+Every Grandfather is a Man that is a Parent.
+
+Every Father is a Man that is a Parent.
+
+Every ChildlessPerson is a Person that is not hasParent by something.
+
+Every Female that is Bill or that is Mary or that is Meg is a Parent that hasChild at most 1 thing and that hasChild nothing but Female.
+
+/* BUG: axiom too complex: SubClassOf(Class(:Teenager),DataSomeValuesFrom(DataProperty(:hasAge),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema# : integer),FacetRestriction(http://www.w3.org/2001/XMLSchema#minExclusive,^^(12,http://www.w3.org/2001/XMLSchema#integer)),FacetRestriction(http://www.w3.org/2001/XMLSchema#maxInclusive,^^(19,http://www.w3.org/2001/XMLSchema#integer))]))) */
+
+/* BUG: axiom unsupported: SubClassOf(Annotation(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema# : comment),^^("States that every man is a person.",xsd:string)),Class(:Man),Class(:Person)) */
+Every HappyPerson is something that hasChild nothing but HappyPerson and that hasChild a HappyPerson.
+Everything that hasChild nothing but HappyPerson and that hasChild a HappyPerson is a HappyPerson.
+
+Every JohnsChildren hasParent John.
+Everything that hasParent John is a JohnsChildren.
+
+Every NarcisticPerson loves itself.
+Everything that loves itself is a NarcisticPerson.
+
+Everything that hasChild an Orphan is a Dead.
+Everything that is hasChild by nothing but Dead is an Orphan.
+
+Every MyBirthdayGuests is something that is Bill or that is John or that is Mary.
+Everything that is Bill or that is John or that is Mary is a MyBirthdayGuests.
+
+Every Adult is a Grownup.
+Every Grownup is an Adult.
+
+Every Parent hasChild a Person.
+Everything that hasChild a Person is a Parent.
+
+Every Parent hasChild a Person.
+Everything that hasChild a Person is a Parent.
+
+Every Person is a Human.
+Every Human is a Person.
+
+Every Mother is a Parent that is a Woman.
+Every Parent that is a Woman is a Mother.
+
+Every Parent is something that is a Father or that is a Mother.
+Everything that is a Father or that is a Mother is a Parent.
+
+Every ChildlessPerson is a Person that is not a Parent.
+Every Person that is not a Parent is a ChildlessPerson.
+
+No Woman is a Man.
+
+/* BUG: axiom unsupported: DisjointClasses([Class(:Father),Class(:Mother),Class(:YoungChild)]) */
+John is not Bill.
+
+James is Jim.
+
+John is JohnBrown.
+
+Mary is MaryBrown.
+
+John hasWife Mary.
+
+John hasAge 51.
+
+Mary is a Person.
+
+Mary is a Woman.
+
+Jack is a Person that is not a Parent.
+
+John hasChild at most 4 Parent.
+
+John hasChild at least 2 Parent.
+
+John hasChild exactly 3 Parent.
+
+John hasChild exactly 5 things.
+
+John is a Father.
+
+Father is a SocialRole.
+
+Bill does not hasWife Mary.
+
+Jack does not hasAge 53.
+
+Bill does not hasDaughter Susan.
+

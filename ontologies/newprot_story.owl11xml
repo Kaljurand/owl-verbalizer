@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY story "http://www.example.org/story.owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<!-- Axioms: 15 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:story="http://www.example.org/story.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.example.org/story.owl">
+    <EquivalentClasses>
+        <OWLClass URI="&story;goat"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&story;eat"/>
+            <OWLClass URI="&story;grass"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&story;animal"/>
+        <ObjectUnionOf>
+            <OWLClass URI="&story;goat"/>
+            <OWLClass URI="&story;cat"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&story;man"/>
+        <Individual URI="&story;John"/>
+    </ClassAssertion>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty URI="&story;eat"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&story;eat"/>
+        <ObjectIntersectionOf>
+            <ObjectComplementOf>
+                <OWLClass URI="&story;automobile"/>
+            </ObjectComplementOf>
+            <OWLClass URI="&story;food"/>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <ObjectUnionOf>
+            <OWLClass URI="&story;grass"/>
+            <OWLClass URI="&story;apple"/>
+        </ObjectUnionOf>
+        <OWLClass URI="&story;food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&story;human"/>
+        <ObjectOneOf>
+            <Individual URI="&story;John"/>
+            <Individual URI="&story;Mary"/>
+        </ObjectOneOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&story;man"/>
+        <OWLClass URI="&story;person"/>
+    </SubClassOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty URI="&story;eat"/>
+    </FunctionalObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&story;human"/>
+        <ObjectIntersectionOf>
+            <OWLClass URI="&story;person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&story;own"/>
+                <OWLClass URI="&story;automobile"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <TransitiveObjectProperty>
+        <ObjectProperty URI="&story;eat"/>
+    </TransitiveObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&story;person"/>
+        <OWLClass URI="&story;human"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&story;person"/>
+        <Individual URI="&story;Mary"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&story;eat"/>
+        <OWLClass URI="&story;animal"/>
+    </ObjectPropertyDomain>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&story;eat"/>
+        <ObjectProperty URI="&story;hate"/>
+    </InverseObjectProperties>
+</Ontology>

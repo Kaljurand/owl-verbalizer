@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE Ontology [
+<!ENTITY Ontology1190711389561 "http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#">
+]>
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#" xmlns:Ontology1190711389561="http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#" xml:base="http://www.w3.org/2006/12/owl11-xml#" URI="http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl">
+  <Declaration>
+    <ObjectProperty URI="&Ontology1190711389561;know"/>
+  </Declaration>
+  <Declaration>
+    <ObjectProperty URI="&Ontology1190711389561;eat"/>
+  </Declaration>
+  <SubObjectPropertyOf>
+    <SubObjectPropertyChain>
+      <ObjectProperty URI="&Ontology1190711389561;know"/>
+      <ObjectProperty URI="&Ontology1190711389561;eat"/>
+      <InverseObjectProperty>
+        <ObjectProperty URI="&Ontology1190711389561;eat"/>
+      </InverseObjectProperty>
+      <ObjectProperty URI="&Ontology1190711389561;know"/>
+    </SubObjectPropertyChain>
+    <InverseObjectProperty>
+      <ObjectProperty URI="&Ontology1190711389561;eat"/>
+    </InverseObjectProperty>
+  </SubObjectPropertyOf>
+</Ontology>

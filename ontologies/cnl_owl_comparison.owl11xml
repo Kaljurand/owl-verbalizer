@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ace_lexicon "http://attempto.ifi.uzh.ch/ace_lexicon#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cnl_comparison_v2 "http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 124 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cnl_comparison_v2="http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl">
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >BUG: the ontology contains no anonymous inverse properties</Constant>
+    </Annotation>
+    <Annotation annotationURI="&rdfs;comment">
+        <Constant
+            >BUG: Did not know how to enter DisjointUnion</Constant>
+    </Annotation>
+    <AntisymmetricObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;is-near-to"/>
+    </AntisymmetricObjectProperty>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;pipe"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;mission"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&cnl_comparison_v2;has-purpose"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&cnl_comparison_v2;charitable-activity"/>
+                <OWLClass URI="&cnl_comparison_v2;christian-worship"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;building"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-near-to"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;river-stretch"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty URI="&cnl_comparison_v2;has-part"/>
+            <OWLClass URI="&cnl_comparison_v2;channel"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <ReflexiveObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;flow-into"/>
+    </ReflexiveObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;ring-road"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&cnl_comparison_v2;is-connected-to"/>
+            <OWLClass URI="&cnl_comparison_v2;ring-road"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;gas-station"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;charitable-activity"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;manufacturing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-located-in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;apply-to"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;building"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;manufacturing"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-connected-to"/>
+    </Declaration>
+    <EquivalentClasses>
+        <OWLClass URI="&cnl_comparison_v2;petrol-station"/>
+        <OWLClass URI="&cnl_comparison_v2;gas-station"/>
+    </EquivalentClasses>
+    <TransitiveObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;is-part-of"/>
+    </TransitiveObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;bourne"/>
+        <OWLClass URI="&cnl_comparison_v2;stream"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;stream"/>
+    </Declaration>
+    <EntityAnnotation>
+        <ObjectProperty URI="&cnl_comparison_v2;apply-to"/>
+        <Annotation annotationURI="&ace_lexicon;sg">
+            <Constant>applies-to</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&cnl_comparison_v2;is-capital-city-of"/>
+        <OWLClass URI="&cnl_comparison_v2;country"/>
+    </ObjectPropertyRange>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;backwater"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&cnl_comparison_v2;has-current"/>
+                <OWLClass URI="&cnl_comparison_v2;current"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;river-stretch"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty URI="&cnl_comparison_v2;has-part"/>
+            <OWLClass URI="&cnl_comparison_v2;bank"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;is-assigned-to"/>
+    </InverseFunctionalObjectProperty>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;child"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;christian-worship"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;UK-country"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&cnl_comparison_v2;is-located-in"/>
+        <Individual URI="&cnl_comparison_v2;Hampshire"/>
+        <Individual URI="&cnl_comparison_v2;Hampshire"/>
+    </ObjectPropertyAssertion>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;country"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;confluence"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;stream"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;basin"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&cnl_comparison_v2;is-connected-to"/>
+            <ObjectUnionOf>
+                <OWLClass URI="&cnl_comparison_v2;channel"/>
+                <OWLClass URI="&cnl_comparison_v2;pipe"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;tributary"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;bank"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;bank"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;bourne"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;has-part"/>
+    </Declaration>
+    <EntityAnnotation>
+        <ObjectProperty URI="&cnl_comparison_v2;flow-into"/>
+        <Annotation annotationURI="&ace_lexicon;sg">
+            <Constant>flows-into</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty URI="&cnl_comparison_v2;is-located-in"/>
+        <Individual URI="&cnl_comparison_v2;Hampshire"/>
+        <Individual URI="&cnl_comparison_v2;Scotland"/>
+    </NegativeObjectPropertyAssertion>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;christian-worship"/>
+    </Declaration>
+    <SymmetricObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;is-adjacent-to"/>
+    </SymmetricObjectProperty>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;contain"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;England"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;spring"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;child"/>
+    </Declaration>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&cnl_comparison_v2;is-capital-city-of"/>
+        <OWLClass URI="&cnl_comparison_v2;capital-city"/>
+    </ObjectPropertyDomain>
+    <EntityAnnotation>
+        <OWLClass URI="&cnl_comparison_v2;bank"/>
+        <Annotation annotationURI="&ace_lexicon;pl">
+            <Constant>banks</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;gas-station"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;Northern-Ireland"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;flow"/>
+    </Declaration>
+    <DisjointObjectProperties>
+        <ObjectProperty URI="&cnl_comparison_v2;contain"/>
+        <ObjectProperty URI="&cnl_comparison_v2;is-contained-in"/>
+    </DisjointObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty URI="&cnl_comparison_v2;flow-into"/>
+        <ObjectProperty URI="&cnl_comparison_v2;flow"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-contained-in"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;loch"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;charitable-activity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-adjacent-to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-part-of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;has-postcode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;has-current"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;has-purpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-assigned-to"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;wetland"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-within"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;education"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;Portsmouth"/>
+    </Declaration>
+    <EquivalentObjectProperties>
+        <ObjectProperty URI="&cnl_comparison_v2;is-inside"/>
+        <ObjectProperty URI="&cnl_comparison_v2;is-within"/>
+    </EquivalentObjectProperties>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;river"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;river"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;factory"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;current"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;floodplain"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <OWLClass URI="&cnl_comparison_v2;country"/>
+        <Individual URI="&cnl_comparison_v2;England"/>
+    </ClassAssertion>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;current"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;Hampshire"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;mission"/>
+    </Declaration>
+    <SameIndividuals>
+        <Individual URI="&cnl_comparison_v2;Pompey"/>
+        <Individual URI="&cnl_comparison_v2;Portsmouth"/>
+    </SameIndividuals>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;capital-city"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;backwater"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;loch"/>
+        <ObjectHasValue>
+            <ObjectProperty URI="&cnl_comparison_v2;is-located-in"/>
+            <Individual URI="&cnl_comparison_v2;Scotland"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;flow-into"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;basin"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;education"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;source"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <SubObjectPropertyChain>
+            <ObjectProperty URI="&cnl_comparison_v2;has-part"/>
+            <ObjectProperty URI="&cnl_comparison_v2;contain"/>
+        </SubObjectPropertyChain>
+        <ObjectProperty URI="&cnl_comparison_v2;contain"/>
+    </SubObjectPropertyOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;country"/>
+    </Declaration>
+    <EntityAnnotation>
+        <OWLClass URI="&cnl_comparison_v2;confluence"/>
+        <Annotation annotationURI="&ace_lexicon;pl">
+            <Constant>confluences</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;tributary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;feed"/>
+    </Declaration>
+    <EquivalentClasses>
+        <OWLClass URI="&cnl_comparison_v2;UK-country"/>
+        <ObjectOneOf>
+            <Individual URI="&cnl_comparison_v2;Scotland"/>
+            <Individual URI="&cnl_comparison_v2;Northern-Ireland"/>
+            <Individual URI="&cnl_comparison_v2;England"/>
+            <Individual URI="&cnl_comparison_v2;Wales"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;petrol-station"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <DifferentIndividuals>
+        <Individual URI="&cnl_comparison_v2;Scotland"/>
+        <Individual URI="&cnl_comparison_v2;England"/>
+    </DifferentIndividuals>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;Wales"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&cnl_comparison_v2;contain"/>
+        <ObjectProperty URI="&cnl_comparison_v2;is-contained-in"/>
+    </InverseObjectProperties>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;floodplain"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;pipe"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-capital-city-of"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;Scotland"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&cnl_comparison_v2;is-inside"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&cnl_comparison_v2;Pompey"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;source"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;channel"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;UK-country"/>
+    </Declaration>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;is-near-to"/>
+    </IrreflexiveObjectProperty>
+    <EntityAnnotation>
+        <OWLClass URI="&cnl_comparison_v2;ring-road"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >BUG: should be is-connected-to SELF, but Protege 4 does not support it yet</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;spring"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;school"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&cnl_comparison_v2;has-purpose"/>
+            <ObjectIntersectionOf>
+                <OWLClass URI="&cnl_comparison_v2;education"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&cnl_comparison_v2;apply-to"/>
+                    <OWLClass URI="&cnl_comparison_v2;child"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty URI="&cnl_comparison_v2;has-postcode"/>
+    </FunctionalObjectProperty>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;ring-road"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;factory"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&cnl_comparison_v2;has-part"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&cnl_comparison_v2;has-purpose"/>
+                    <OWLClass URI="&cnl_comparison_v2;manufacturing"/>
+                </ObjectSomeValuesFrom>
+                <OWLClass URI="&cnl_comparison_v2;building"/>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;river-stretch"/>
+    </Declaration>
+    <EntityAnnotation>
+        <ObjectProperty URI="&cnl_comparison_v2;flow"/>
+        <Annotation annotationURI="&ace_lexicon;sg">
+            <Constant>flows</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;petrol-station"/>
+    </Declaration>
+    <DisjointClasses>
+        <OWLClass URI="&cnl_comparison_v2;floodplain"/>
+        <OWLClass URI="&cnl_comparison_v2;river"/>
+    </DisjointClasses>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;capital-city"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;factory"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&cnl_comparison_v2;has-purpose"/>
+            <OWLClass URI="&cnl_comparison_v2;manufacturing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;confluence"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;wetland"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;school"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&cnl_comparison_v2;channel"/>
+    </Declaration>
+    <EquivalentClasses>
+        <OWLClass URI="&cnl_comparison_v2;source"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <OWLClass URI="&cnl_comparison_v2;spring"/>
+                <OWLClass URI="&cnl_comparison_v2;wetland"/>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&cnl_comparison_v2;feed"/>
+                <ObjectUnionOf>
+                    <OWLClass URI="&cnl_comparison_v2;river"/>
+                    <OWLClass URI="&cnl_comparison_v2;stream"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <OWLClass URI="&cnl_comparison_v2;river-stretch"/>
+        <ObjectMaxCardinality cardinality="2">
+            <ObjectProperty URI="&cnl_comparison_v2;has-part"/>
+            <OWLClass URI="&cnl_comparison_v2;confluence"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+</Ontology>

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1193332409558 "http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 12 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Ontology1193332409558="http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl">
+    <Declaration>
+        <OWLClass URI="&Ontology1193332409558;box"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1193332409558;own"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Ontology1193332409558;own"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&Ontology1193332409558;contain"/>
+                <ObjectComplementOf>
+                    <OWLClass URI="&Ontology1193332409558;box"/>
+                </ObjectComplementOf>
+            </ObjectSomeValuesFrom>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty URI="&Ontology1193332409558;own"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&Ontology1193332409558;contain"/>
+                    <OWLClass URI="&Ontology1193332409558;box"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <ObjectComplementOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&Ontology1193332409558;own"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty URI="&Ontology1193332409558;contain"/>
+                    <OWLClass URI="&Ontology1193332409558;box"/>
+                </ObjectSomeValuesFrom>
+            </ObjectAllValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Ontology1193332409558;own"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty URI="&Ontology1193332409558;contain"/>
+                <ObjectComplementOf>
+                    <OWLClass URI="&Ontology1193332409558;box"/>
+                </ObjectComplementOf>
+            </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty URI="&Ontology1193332409558;own"/>
+            <ObjectComplementOf>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty URI="&Ontology1193332409558;contain"/>
+                    <OWLClass URI="&Ontology1193332409558;box"/>
+                </ObjectAllValuesFrom>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty URI="&Ontology1193332409558;own"/>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty URI="&Ontology1193332409558;contain"/>
+                    <OWLClass URI="&Ontology1193332409558;box"/>
+                </ObjectAllValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;man"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1193332409558;contain"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1193332409558;box"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+</Ontology>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xor "http://www.example.org/xor.owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+
+
+
+<!-- Axioms: 1 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xor="http://www.example.org/xor.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.example.org/xor.owl">
+    <SubClassOf>
+        <OWLClass URI="&xor;pet"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <OWLClass URI="&xor;cat"/>
+                <OWLClass URI="&xor;dog"/>
+            </ObjectUnionOf>
+            <ObjectComplementOf>
+                <ObjectIntersectionOf>
+                    <OWLClass URI="&xor;cat"/>
+                    <OWLClass URI="&xor;dog"/>
+                </ObjectIntersectionOf>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+</Ontology>

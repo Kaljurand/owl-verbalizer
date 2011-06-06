@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1182269408095 "http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#" >
+]>
+
+
+
+
+
+<!-- Axioms: 6 -->
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Ontology1182269408095="http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl">
+    <SubClassOf>
+        <OWLClass URI="&Ontology1182269408095;man"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="4">
+                <ObjectProperty URI="&Ontology1182269408095;like"/>
+                <OWLClass URI="&Ontology1182269408095;dog"/>
+            </ObjectMinCardinality>
+            <ObjectComplementOf>
+                <ObjectMaxCardinality cardinality="10">
+                    <ObjectProperty URI="&Ontology1182269408095;like"/>
+                    <OWLClass URI="&Ontology1182269408095;dog"/>
+                </ObjectMaxCardinality>
+            </ObjectComplementOf>
+            <ObjectMaxCardinality cardinality="3">
+                <ObjectProperty URI="&Ontology1182269408095;like"/>
+                <OWLClass URI="&Ontology1182269408095;dog"/>
+            </ObjectMaxCardinality>
+            <ObjectMinCardinality cardinality="15">
+                <ObjectProperty URI="&Ontology1182269408095;like"/>
+                <ObjectComplementOf>
+                    <OWLClass URI="&Ontology1182269408095;dog"/>
+                </ObjectComplementOf>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1182269408095;dog"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&Ontology1182269408095;man"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182269408095;like"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1182269408095;dog"/>
+    </Declaration>
+    <SubClassOf>
+        <OWLClass URI="&Ontology1182269408095;man"/>
+        <OWLClass URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <OWLClass URI="&Ontology1182269408095;man"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1182269408095;like"/>
+    </Declaration>
+    <Declaration>
+        <OWLClass URI="&Ontology1182269408095;dog"/>
+    </Declaration>
+</Ontology>

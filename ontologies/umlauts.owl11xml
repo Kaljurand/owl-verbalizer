@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl11 "http://www.w3.org/2006/12/owl11#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl11xml "http://www.w3.org/2006/12/owl11-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1199316673723 "http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#" >
+]>
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl11-xml#"
+     xml:base="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:Ontology1199316673723="http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#"
+     xmlns:owl11="http://www.w3.org/2006/12/owl11#"
+     xmlns:owl11xml="http://www.w3.org/2006/12/owl11-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     URI="http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl">
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1199316673723;like"/>
+        <Individual URI="&Ontology1199316673723;Mary"/>
+        <Individual URI="&Ontology1199316673723;&#213;&#196;&#214;&#220;&#245;&#228;&#246;&#252;"/>
+    </ObjectPropertyAssertion>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1199316673723;like"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&Ontology1199316673723;&#213;&#196;&#214;&#220;&#245;&#228;&#246;&#252;"/>
+    </Declaration>
+    <Declaration>
+        <Individual URI="&Ontology1199316673723;Mary"/>
+    </Declaration>
+</Ontology>
