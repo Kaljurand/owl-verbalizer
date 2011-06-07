@@ -2,7 +2,7 @@
 
 Author: Kaarel Kaljurand
 
-Version: 2010-06-01
+Version: 2011-06-07
 
 
 ---++ Introduction
@@ -158,15 +158,21 @@ On Mac OS X, one could use _|launchctl|_ instead.
 As a result, a webserver (SWI HTTP server) is started on port 5123.
 In order to verbalize an ontology,
 post the OWL 2 XML document to the server via the argument `xml'.
+Following are some examples of using 'curl' to achieve this.
 
 ==
-http://localhost:5123/?xml=...
+curl -F "xml=@examples/example.owl" http://localhost:5123
+
+curl -F "xml=<examples/example.owl" http://localhost:5123
+
+cat examples/example.owl | curl -F "xml=<-" http://localhost:5123
+
+curl 'http://owl.cs.manchester.ac.uk/repository/download?ontology=http://www.co-ode.org/ontologies/pizza/pizza.owl&format=OWL/XML' | curl -F "xml=<-" http://localhost:5123
 ==
 
-Look at the source code of <http://attempto.ifi.uzh.ch/site/docs/owl_to_ace.html>
-to see how this can be done from an HTML page.
+Posting from an HTML page: look at the source code of <http://attempto.ifi.uzh.ch/site/docs/owl_to_ace.html>.
 
-In order to use the OWL verbalizer webservice from Java, one can use the Attempto Java Packages
+Posting from Java: use the Attempto Java Packages
 (see e.g. <http://attempto.ifi.uzh.ch/site/docs/java/ch/uzh/ifi/attempto/owl/VerbalizerWebservice.html>).
 
 
