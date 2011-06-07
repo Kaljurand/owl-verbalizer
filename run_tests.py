@@ -17,6 +17,7 @@
 # * commandline arguments
 # * performance measurement
 # * verbalizing multiple inputs in parallel
+# * instead of curl use some Python library for better performance
 #
 import sys
 import argparse
@@ -50,6 +51,21 @@ def wait_until_up(server):
 	time.sleep(2)
 
 
+def process_files(g):
+	"""
+	"""
+	for path in g:
+		cmd = [curl, '-s', '-S', '-F', "xml=@" + path, server_url]
+		print cmd
+		basename, extension = os.path.splitext(path)
+		ace_path = basename + ".ace.txt"
+		f = open(ace_path, 'w')
+		pipe = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=f)
+		ret_code = pipe.wait()
+		f.flush()
+		f.close()
+
+
 def run_as_httpserver(g):
 	"""
 	"""
@@ -58,12 +74,7 @@ def run_as_httpserver(g):
 	print cmd
 	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
 	wait_until_up(server)
-	for path in g:
-		cmd = [curl, '-s', '-S', '-F', "xml=@" + path, server_url]
-		print cmd
-		pipe = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-		basename, extension = os.path.splitext(path)
-		store_in_file(pipe, basename + ".ace.txt")
+	process_files(g)
 	print 'Stopping the server'
 	server.terminate()
 
@@ -126,7 +137,10 @@ print >> sys.stderr, 'TODO: out:', args.out
 
 g = owl_file_generator(args.dir_in)
 
+time_start = time.time()
 if args.mode == 'http':
 	run_as_httpserver(g)
 else:
 	run_as_script(g)
+time_end = time.time()
+print 'Duration: {:.2f} sec'.format(time_end - time_start)
