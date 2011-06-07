@@ -22,6 +22,7 @@
 import sys
 import argparse
 import subprocess
+import threading
 import os
 import re
 import time
@@ -34,15 +35,6 @@ port=8001
 server_url="http://localhost:" + str(port)
 
 
-def store_in_file(pipe, path):
-	"""
-	Store the content of the given pipe into the given file.
-	"""
-	f = open(path, 'w')
-	f.write(pipe.communicate()[0])
-	f.close()
-
-
 def wait_until_up(server):
 	"""
 	TODO: we need something more sophisticated here,
@@ -51,19 +43,31 @@ def wait_until_up(server):
 	time.sleep(2)
 
 
-def process_files(g):
+def post_files_with_curl(g):
 	"""
 	"""
 	for path in g:
 		cmd = [curl, '-s', '-S', '-F', "xml=@" + path, server_url]
-		print cmd
-		basename, extension = os.path.splitext(path)
-		ace_path = basename + ".ace.txt"
-		f = open(ace_path, 'w')
-		pipe = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=f)
-		ret_code = pipe.wait()
-		f.flush()
-		f.close()
+		process_file(cmd, path)
+
+
+def process_file(cmd, path):
+	if args.parallel:
+		t = threading.Thread(target=process_file_aux, args=[cmd, path])
+		t.setDaemon(True)
+		t.start()
+	else:
+		process_file_aux(cmd, path)
+
+
+def process_file_aux(cmd, path):
+	basename, extension = os.path.splitext(path)
+	ace_path = basename + ".ace.txt"
+	f = open(ace_path, 'w')
+	pipe = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=f)
+	ret_code = pipe.wait()
+	f.flush()
+	f.close()
 
 
 def run_as_httpserver(g):
@@ -74,7 +78,7 @@ def run_as_httpserver(g):
 	print cmd
 	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
 	wait_until_up(server)
-	process_files(g)
+	post_files_with_curl(g)
 	print 'Stopping the server'
 	server.terminate()
 
@@ -85,9 +89,7 @@ def run_as_script(g):
 	for path in g:
 		cmd = [owl_to_ace_exe, '-owlfile', path]
 		print cmd
-		pipe = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-		basename, extension = os.path.splitext(path)
-		store_in_file(pipe, basename + ".ace.txt")
+		process_file(cmd, path)
 
 
 def owl_file_generator(top):
@@ -112,8 +114,8 @@ parser.add_argument('-m', '--mode', type=str, action='store', dest='mode',
                    default="cli",
                    help='set the service mode, one of {cli, http} (default: cli)')
 
-parser.add_argument('--async', action='store_true', dest='async', default=False,
-                   help='run the tests in the background without waiting for each to complete (default: false)')
+parser.add_argument('-p', '--parallel', action='store_true', dest='parallel', default=False,
+                   help='run the tests in parallel (default: false)')
 
 parser.add_argument('-f', '--fmt', type=str, action='store', dest='fmt',
                    default="ace",
@@ -131,7 +133,6 @@ if args.dir_in is None:
 	print >> sys.stderr, 'ERROR: argument -i/--in is not specified'
 	exit()
 
-print >> sys.stderr, 'TODO: async:', args.async
 print >> sys.stderr, 'TODO: fmt:', args.fmt
 print >> sys.stderr, 'TODO: out:', args.out
 
@@ -142,5 +143,11 @@ if args.mode == 'http':
 	run_as_httpserver(g)
 else:
 	run_as_script(g)
+
+
+while threading.active_count() > 1:
+	print "Active thread count: ", threading.active_count()
+	time.sleep(.2)
+
 time_end = time.time()
 print 'Duration: {:.2f} sec'.format(time_end - time_start)

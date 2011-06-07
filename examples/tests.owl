@@ -70,4 +70,12 @@
         <AnonymousIndividual nodeID="X12345"/>
         <Class abbreviatedIRI="t:man"/>
     </ClassAssertion>
+
+    <SubClassOf>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty abbreviatedIRI="t:eat"/>
+            <Class abbreviatedIRI="owl:Nothing"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
 </Ontology>
