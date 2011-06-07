@@ -1,0 +1,491 @@
+Every MealCourse that hasFood nothing but PastaWithHeavyCreamSauce is a PastaWithHeavyCreamCourse.
+Every PastaWithHeavyCreamCourse is a MealCourse that hasFood nothing but PastaWithHeavyCreamSauce.
+
+Everything that is hasDrink by a PastaWithSpicyRedSauceCourse is something that hasSugar Dry.
+
+No Fruit is a Pasta.
+
+Everything that is hasDrink by a RedMeatCourse is something that hasColor Red.
+
+Everything that hasDrink something is a MealCourse.
+
+Everything that is hasDrink by a SpicyRedMeatCourse is something that hasBody Full.
+
+Every Wine is a Wine.
+Every Wine is a Wine.
+
+Medium sameIndividualAs Medium.
+
+Chicken is a LightMeatFowl.
+
+Every MealCourse that hasFood nothing but Fruit is a FruitCourse.
+Every FruitCourse is a MealCourse that hasFood nothing but Fruit.
+
+Everything that is hasDrink by a LightMeatFowlCourse is something that hasSugar Dry.
+
+Every NonSpicyRedMeat is a RedMeat.
+
+Medium is something.
+
+Cheese is a CheeseNutsDessert.
+
+Everything that is hasDrink by a CheeseNutsDessertCourse is something that hasColor Red.
+
+Every MealCourse that hasFood nothing but RedMeat is a RedMeatCourse.
+Every RedMeatCourse is a MealCourse that hasFood nothing but RedMeat.
+
+Every PotableLiquid is a ConsumableThing.
+
+Every NonBlandFish is a Fish.
+
+Tuna is a NonBlandFish.
+
+No OtherTomatoBasedFood is a Meat.
+
+No SweetDessert is a CheeseNutsDessert.
+
+Every LightMeatFowl is a Fowl.
+
+Everything that is hasDrink by a DessertCourse is something that hasSugar Sweet.
+
+No Fowl is a Dessert.
+
+Every NonSweetFruit is an EdibleThing.
+
+No Fruit is a Fowl.
+
+Red sameIndividualAs Red.
+
+Every DarkMeatFowlCourse is a MealCourse that hasFood nothing but DarkMeatFowl.
+Every MealCourse that hasFood nothing but DarkMeatFowl is a DarkMeatFowlCourse.
+
+Every Pasta is an EdibleThing.
+
+Everything that is hasDrink by a PastaWithNonSpicyRedSauceCourse is something that hasFlavor Moderate.
+
+Every PastaWithRedSauce is a Pasta.
+
+Every MealCourse that hasFood nothing but Shellfish is a ShellfishCourse.
+Every ShellfishCourse is a MealCourse that hasFood nothing but Shellfish.
+
+Every MealCourse that hasFood nothing but PastaWithSpicyRedSauce is a PastaWithSpicyRedSauceCourse.
+Every PastaWithSpicyRedSauceCourse is a MealCourse that hasFood nothing but PastaWithSpicyRedSauce.
+
+Every NonSpicyRedMeatCourse is a MealCourse that hasFood nothing but NonSpicyRedMeat.
+Every MealCourse that hasFood nothing but NonSpicyRedMeat is a NonSpicyRedMeatCourse.
+
+Everything that is hasDrink by a DessertCourse is something that hasBody Full.
+
+Every EatingGrape is a Grape.
+
+BeefCurry is a SpicyRedMeat.
+
+Moderate is something.
+
+Everything that is hasDrink by a NonRedMeatCourse is something that hasBody Medium.
+
+Everything that is hasDrink by a PastaWithHeavyCreamCourse is something that hasColor White.
+
+Everything that is hasDrink by a SweetDessertCourse is something that hasColor White.
+
+Every SweetFruit is an EdibleThing.
+
+Everything that is hasDrink by a PastaWithNonSpicyRedSauceCourse is something that hasSugar Dry.
+
+No Seafood is a Dessert.
+
+Everything that is hasDrink by a NonSpicyRedMeatCourse is something that hasSugar Dry.
+
+Dry sameIndividualAs Dry.
+
+Everything that is hasDrink by a SweetFruitCourse is something that hasSugar Sweet.
+
+RoastBeef is a NonSpicyRedMeat.
+
+Everything that is hasDrink by a NonSpicyRedMeatCourse is something that hasFlavor nothing but things that are Moderate or that are Strong.
+
+Rose is something.
+
+Every MealCourse that hasFood nothing but SpicyRedMeat is a SpicyRedMeatCourse.
+Every SpicyRedMeatCourse is a MealCourse that hasFood nothing but SpicyRedMeat.
+
+No Seafood is a Meat.
+
+Every PastaWithNonSpicyRedSauce is a PastaWithRedSauce.
+
+Everything that is hasDrink by a LightMeatFowlCourse is something that hasBody Medium.
+
+Every NonSweetFruitCourse is a MealCourse that hasFood nothing but NonSweetFruit.
+Every MealCourse that hasFood nothing but NonSweetFruit is a NonSweetFruitCourse.
+
+No Shellfish is a Fish.
+
+Pork is a NonRedMeat.
+
+Veal is a NonSpicyRedMeat.
+
+Scrod is a BlandFish.
+
+Everything that is hasDrink by a PastaWithHeavyCreamCourse is something that hasSugar Dry.
+
+Everything that is hasDrink by a SpicyRedMeatCourse is something that hasSugar Dry.
+
+Everything that is hasDrink by a PastaWithHeavyCreamCourse is something that hasBody Medium.
+
+No OysterShellfish is a NonOysterShellfish.
+
+FettucineAlfRedo is a PastaWithHeavyCreamSauce.
+
+No Fruit is a Dessert.
+
+Every Fowl is an EdibleThing.
+
+No Seafood is an OtherTomatoBasedFood.
+
+Everything that hasFood something is a MealCourse.
+
+Everything that is hasDrink by a PastaWithLightCreamCourse is something that hasFlavor Delicate.
+
+Peaches is a SweetFruit.
+
+Strong sameIndividualAs Strong.
+
+Every MealCourse hasDrink at least 1 thing.
+
+No BlandFish is a NonBlandFish.
+
+No Fruit is a Meat.
+
+Every PastaWithLightCreamSauce is a PastaWithWhiteSauce.
+
+Everything that is hasDrink by a DarkMeatFowlCourse is something that hasSugar Dry.
+
+Crab is a NonOysterShellfish.
+
+Everything that is hasDrink by a DarkMeatFowlCourse is something that hasFlavor Delicate.
+
+Sweet is something.
+
+Every SpicyRedMeat is a RedMeat.
+
+Every MealCourse that hasFood nothing but LightMeatFowl is a LightMeatFowlCourse.
+Every LightMeatFowlCourse is a MealCourse that hasFood nothing but LightMeatFowl.
+
+Mussels is a NonOysterShellfish.
+
+Everything that is hasDrink by a NonBlandFishCourse is something that hasFlavor Moderate.
+
+Delicate sameIndividualAs Delicate.
+
+MixedFruit is a SweetFruit.
+
+No Fowl is a Pasta.
+
+Everything that is hasDrink by an OtherTomatoBasedFoodCourse is something that hasColor Red.
+
+Every BlandFish is a Fish.
+
+Every PastaWithHeavyCreamSauce is a PastaWithWhiteSauce.
+
+Everything that is hasDrink by a PastaWithLightCreamCourse is something that hasSugar Dry.
+
+Every SeafoodCourse is a MealCourse that hasFood nothing but Seafood.
+Every MealCourse that hasFood nothing but Seafood is a SeafoodCourse.
+
+Goose is a DarkMeatFowl.
+
+No OtherTomatoBasedFood is a Dessert.
+
+No PastaWithNonSpicyRedSauce is a PastaWithSpicyRedSauce.
+
+ThompsonSeedless is an EatingGrape.
+
+Every MealCourse hasFood at least 1 thing.
+
+Everything that is hasDrink by a LightMeatFowlCourse is something that hasFlavor Moderate.
+
+Everything that is hasDrink by a NonSpicyRedMeatCourse is something that hasColor Red.
+
+No Seafood is a Pasta.
+
+Every OtherTomatoBasedFood is an EdibleThing.
+
+White is something.
+
+Every PastaWithSpicyRedSauce is a PastaWithRedSauce.
+
+Lobster is a NonOysterShellfish.
+
+Dry is something.
+
+Everything that is hasDrink by an OysterShellfishCourse is something that hasSugar Sweet.
+
+Oysters is an OysterShellfish.
+
+FraDiavolo is a PastaWithSpicyRedSauce.
+
+Every CheeseNutsDessert is a Dessert.
+
+Red is something.
+
+Swordfish is a NonBlandFish.
+
+Everything that is hasDrink by a PastaWithSpicyRedSauceCourse is something that hasFlavor Strong.
+
+Everything that is hasDrink by a PastaWithHeavyCreamCourse is something that hasFlavor Moderate.
+
+Everything that is hasDrink by a SpicyRedMeatCourse is something that hasFlavor Moderate.
+
+No EdibleThing is a MealCourse.
+
+Every PastaWithWhiteSauce is a Pasta.
+
+No Dessert is a Meat.
+
+No PotableLiquid is an EdibleThing.
+
+Pizza is an OtherTomatoBasedFood.
+
+Everything that is hasDrink by a NonRedMeatCourse is something that hasFlavor Strong.
+
+Every OysterShellfish is a Shellfish.
+
+Every Meal course at least 1 thing.
+
+Everything that is hasDrink by a PastaWithSpicyRedSauceCourse is something that hasColor Red.
+
+Every Meat is an EdibleThing.
+
+Every NonRedMeatCourse is a MealCourse that hasFood nothing but NonRedMeat.
+Every MealCourse that hasFood nothing but NonRedMeat is a NonRedMeatCourse.
+
+Everything that is hasDrink by a SeafoodCourse is something that hasColor White.
+
+Every DarkMeatFowl is a Fowl.
+
+Everything that is hasDrink by a ShellfishCourse is something that hasFlavor nothing but things that are Moderate or that are Strong.
+
+Strong is something.
+
+Everything that is course by a Meal is a MealCourse.
+
+No NonConsumableThing is a ConsumableThing.
+Everything that is not a ConsumableThing is a NonConsumableThing.
+
+Every Seafood is an EdibleThing.
+
+Everything that is hasDrink by a FruitCourse is something that hasColor White.
+
+Nuts is a CheeseNutsDessert.
+
+Everything that is hasDrink by a PastaWithLightCreamCourse is something that hasBody Light.
+
+Everything that is hasDrink by a NonSweetFruitCourse is something that hasFlavor Delicate.
+
+Everything that is hasDrink by a NonOysterShellfishCourse is something that hasSugar Dry.
+
+Everything that is hasDrink by a NonRedMeatCourse is something that hasSugar Dry.
+
+No Fruit is a Seafood.
+
+No Seafood is a Fowl.
+
+Every EdibleThing is a ConsumableThing.
+
+No RedMeat is a NonRedMeat.
+
+Everything that is hasDrink by a PastaWithSpicyRedSauceCourse is something that hasBody Full.
+
+No EdibleThing is a Meal.
+
+Moderate sameIndividualAs Moderate.
+
+Every MealCourse that hasFood nothing but SweetDessert is a SweetDessertCourse.
+Every SweetDessertCourse is a MealCourse that hasFood nothing but SweetDessert.
+
+SpaghettiWithTomatoSauce is a PastaWithNonSpicyRedSauce.
+
+Everything that is hasDrink by a NonSweetFruitCourse is something that hasSugar OffDry.
+
+GarlickyRoast is a SpicyRedMeat.
+
+Everything that is hasDrink by an OtherTomatoBasedFoodCourse is something that hasFlavor Moderate.
+
+No PotableLiquid is a Meal.
+
+Everything that is madeFromFruit by something is a Fruit.
+
+White sameIndividualAs White.
+
+Every NonBlandFishCourse is a MealCourse that hasFood nothing but NonBlandFish.
+Every MealCourse that hasFood nothing but NonBlandFish is a NonBlandFishCourse.
+
+Everything that is hasDrink by a DarkMeatFowlCourse is something that hasColor Red.
+
+Everything that is hasFood by something is an EdibleThing.
+
+No Fruit is an OtherTomatoBasedFood.
+
+Full is something.
+
+Everything that is hasDrink by a NonSpicyRedMeatCourse is something that hasBody Medium.
+
+Every MealCourse that hasFood nothing but Dessert is a DessertCourse.
+Every DessertCourse is a MealCourse that hasFood nothing but Dessert.
+
+No Fowl is a Meat.
+
+Every MealCourse that hasFood nothing but OysterShellfish is an OysterShellfishCourse.
+Every OysterShellfishCourse is a MealCourse that hasFood nothing but OysterShellfish.
+
+Everything that is hasDrink by a PastaWithNonSpicyRedSauceCourse is something that hasBody Medium.
+
+Sweet sameIndividualAs Sweet.
+
+Everything that is hasDrink by a BlandFishCourse is something that hasFlavor Delicate.
+
+OffDry sameIndividualAs OffDry.
+
+Every PastaWithLightCreamCourse is a MealCourse that hasFood nothing but PastaWithLightCreamSauce.
+Every MealCourse that hasFood nothing but PastaWithLightCreamSauce is a PastaWithLightCreamCourse.
+
+Rose sameIndividualAs Rose.
+
+No PastaWithWhiteSauce is a PastaWithRedSauce.
+
+Everything that is hasDrink by a SpicyRedMeatCourse is something that hasColor Red.
+
+Everything that is hasDrink by a SweetFruitCourse is something that hasFlavor Moderate.
+
+Everything that is hasDrink by something is a PotableLiquid.
+
+Every Fish is a Seafood.
+
+Every Juice is a PotableLiquid.
+
+Everything that course something is a Meal.
+
+Delicate is something.
+
+Every MealCourse that hasFood nothing but PastaWithNonSpicyRedSauce is a PastaWithNonSpicyRedSauceCourse.
+Every PastaWithNonSpicyRedSauceCourse is a MealCourse that hasFood nothing but PastaWithNonSpicyRedSauce.
+
+Light is something.
+
+Every Fruit is something that is a NonSweetFruit or that is a SweetFruit.
+Everything that is a NonSweetFruit or that is a SweetFruit is a Fruit.
+
+Everything that is course by something is a MealCourse.
+
+Everything that is hasDrink by a DarkMeatFowlCourse is something that hasBody Light.
+
+Every FishCourse is a MealCourse that hasFood nothing but Fish.
+Every MealCourse that hasFood nothing but Fish is a FishCourse.
+
+Light sameIndividualAs Light.
+
+Pie is a SweetDessert.
+
+No OtherTomatoBasedFood is a Pasta.
+
+No LightMeatFowl is a DarkMeatFowl.
+
+Everything that is hasDrink by a DessertCourse is something that hasFlavor Strong.
+
+Every NonRedMeat is a Meat.
+
+No Meat is a Pasta.
+
+Every MealCourse is a ConsumableThing.
+
+Everything that is hasDrink by a FishCourse is something that hasBody Medium.
+
+Everything that is hasDrink by a LightMeatFowlCourse is something that hasColor White.
+
+Clams is a NonOysterShellfish.
+
+Everything that is hasDrink by a ShellfishCourse is something that hasBody Full.
+
+Every Shellfish is a Seafood.
+
+Every OtherTomatoBasedFoodCourse is a MealCourse that hasFood nothing but OtherTomatoBasedFood.
+Every MealCourse that hasFood nothing but OtherTomatoBasedFood is an OtherTomatoBasedFoodCourse.
+
+Steak is a NonSpicyRedMeat.
+
+Everything that is hasDrink by an OtherTomatoBasedFoodCourse is something that hasBody Medium.
+
+No PotableLiquid is a MealCourse.
+
+Every NonOysterShellfish is a Shellfish.
+
+Cake is a SweetDessert.
+
+No Meal is a MealCourse.
+
+Every MealCourse that hasFood nothing but CheeseNutsDessert is a CheeseNutsDessertCourse.
+Every CheeseNutsDessertCourse is a MealCourse that hasFood nothing but CheeseNutsDessert.
+
+Every Dessert is an EdibleThing.
+
+Everything that is hasDrink by an OtherTomatoBasedFoodCourse is something that hasSugar Dry.
+
+Every RedMeat is a Meat.
+
+Everything that madeFromFruit something is a ConsumableThing.
+
+Everything that is hasDrink by a FishCourse is something that hasSugar Dry.
+
+Halibut is a BlandFish.
+
+Everything that is hasDrink by a MealCourse is a Wine.
+
+Everything that is hasDrink by a NonRedMeatCourse is something that hasColor White.
+
+No Fowl is an OtherTomatoBasedFood.
+
+No Dessert is a Pasta.
+
+Everything that is hasDrink by a PastaWithNonSpicyRedSauceCourse is something that hasColor Red.
+
+Every MealCourse that hasFood nothing but NonOysterShellfish is a NonOysterShellfishCourse.
+Every NonOysterShellfishCourse is a MealCourse that hasFood nothing but NonOysterShellfish.
+
+Every Meal is a ConsumableThing.
+
+Every Grape is a SweetFruit.
+
+PastaWithWhiteClamSauce is a PastaWithLightCreamSauce.
+
+Everything that is hasDrink by a PastaWithLightCreamCourse is something that hasColor White.
+
+No SweetFruit is a NonSweetFruit.
+
+Every Juice madeFromFruit at least 1 thing.
+
+Bananas is a SweetFruit.
+
+Every SweetDessert is a Dessert.
+
+Turkey is a LightMeatFowl.
+
+Every BlandFishCourse is a MealCourse that hasFood nothing but BlandFish.
+Every MealCourse that hasFood nothing but BlandFish is a BlandFishCourse.
+
+No PastaWithLightCreamSauce is a PastaWithHeavyCreamSauce.
+
+Everything that is hasDrink by a FruitCourse is something that hasBody Medium.
+
+Flounder is a BlandFish.
+
+Full sameIndividualAs Full.
+
+No SpicyRedMeat is a NonSpicyRedMeat.
+
+Duck is a DarkMeatFowl.
+
+Every MealCourse that hasFood nothing but SweetFruit is a SweetFruitCourse.
+Every SweetFruitCourse is a MealCourse that hasFood nothing but SweetFruit.
+
+OffDry is something.
+

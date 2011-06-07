@@ -1,0 +1,3601 @@
+No Mountain is a Mill.
+
+No Canal is a Pipe.
+
+Every Rapids is a BodyOfWater.
+
+Everything that is directlyConnectedTo by a Pipe is something that is a Basin or that is a Channel or that is a Pipe.
+
+Every TypicalBalancingPond is a BalancingPond that adjacentTo a Canal.
+Every BalancingPond that adjacentTo a Canal is a TypicalBalancingPond.
+
+Every Whirlpool is a BodyOfWater.
+
+No Direction is a Shape.
+
+No LeisureActivity is an Animal.
+
+No DryCanalStretch is a Bed.
+
+No TemporalConcept is a Hill.
+
+Every WaterSupplyToCanal is a WaterSupply that supplyTo a Canal.
+Every WaterSupply that supplyTo a Canal is a WaterSupplyToCanal.
+
+No ContainmentOfSalmon is an IndustrialArea.
+
+No Rivulet is a Lode.
+
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : builtOver),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Valley)),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Structure),ObjectComplementOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DisusedCanalStretch)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryCanalStretch)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Pipe)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : CanalStretch)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryDisusedCanalStretch))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : CanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Pipe),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DisusedCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryDisusedCanalStretch)])),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : CanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Pipe),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DisusedCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryDisusedCanalStretch)]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Aqueduct)])) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Aqueduct),ObjectIntersectionOf([ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : builtOver),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Valley)),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Structure),ObjectComplementOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DisusedCanalStretch)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryCanalStretch)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Pipe)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : CanalStretch)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryDisusedCanalStretch))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : CanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Pipe),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DisusedCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryDisusedCanalStretch)])),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : supports),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : CanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Pipe),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DisusedCanalStretch),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : DryDisusedCanalStretch)]))])])) */
+
+No FloodPrevention is a Substance.
+
+Every Pool is a BodyOfWater.
+
+No Cliff is a Connection.
+
+No Backwater is a Dub.
+
+TidalRiver hasSynonym "Tidal River".
+
+BoatingLake hasSynonym "Boating Lake".
+
+No FloodPrevention is a FishMigration.
+
+Every GameBird is a Bird.
+
+No StreamCrossing is a Modifier.
+
+No Whirlpool is a Bay.
+
+No Slope is a Hill.
+
+No IrrigationDitch is a Drain.
+
+No Land is a RockStep.
+
+No RiverMouth is a Leat.
+
+No Track is an Escarpment.
+
+No Cover is a Dyke.Rock.
+
+No RiverMouth is a Sea.
+
+No FishMigration is a Process.
+
+No GroundSurface is a Path.
+
+No TemporalConcept is a GroundSurface.
+
+No TemporalConcept is an Animal.
+
+No Property is a PoliticalGeographicArea.
+
+No Mountain is a Cave.
+
+No Mountain is a ContainmentOfWater.
+
+No Property is a Cave.
+
+Every Confluence is a BodyOfWater.
+
+No GroundSurface is a Modifier.
+
+No Substance is a Footprint.
+
+Every MillLade is a MillRace.
+
+No HydrologyConcepts is a Road.
+
+Every Bed isBottomOf something that is a Basin or that is a Channel.
+
+No Path is a Road.
+
+Every Basin enables something that contains a Water.
+
+No Path is an Industry.
+
+No AreaOfLand is a Pipe.
+
+No SalmonLadder is a Weir.
+
+No FloodPrevention is an IndustrialArea.
+
+No Bourne is a Burn.
+
+No GroundSurface is a Mill.
+
+No DryCanalStretch is a Pipe.
+
+No Dyke.Rock is a LeisureActivity.
+
+RiverMouth hasSynonym "Mouth".
+
+Every Whirlpool directlyLocatedIn something that is a River or that is a Stream.
+
+No InlandNavigation is a Process.
+
+No Cave is a Road.
+
+No TemporalConcept is a StreamCrossing.
+
+No HydrologyConcepts is a Path.
+
+No Track is a TemporalConcept.
+
+No Cliff is a Process.
+
+Every Bay is a BodyOfWater.
+
+No Dam.Water is a Dub.
+
+Every DewPond is a Pond.
+
+No GroundSurface is a RiverCrossing.
+
+Every Lock hasPrimaryPurpose a ControlOfWaterLevel.
+
+No RiverMouth is a River.
+
+Every Broad that hasDirectGeographicLocation East_Anglia is a TypicalBroad.
+Every TypicalBroad is a Broad that hasDirectGeographicLocation East_Anglia.
+
+No IndustrialArea is a Modifier.
+
+If X supports Y then Y supportedBy X.
+If X supportedBy Y then Y supports X.
+
+Every Backwater is a Pool.InRiver.
+
+No Flood is a RiverCrossing.
+
+Everything that is a HighWaterPressure or that is a LowWaterPressure or that is a MediumWaterPressure is a WaterPressure.
+Every WaterPressure is something that is a HighWaterPressure or that is a LowWaterPressure or that is a MediumWaterPressure.
+
+Every DryDisusedCanalStretch directlyConnectedTo at most 3 things.
+
+No Spring is a Leat.
+
+No Property is a Modifier.
+
+No Syke is a Beck.
+
+Every BraidedRiverStretch isDirectComponentOf a BraidedRiver.
+
+No Nant is an InfluentStream.
+
+No Floodplain is a Field.
+
+No Embankment is a ContainmentOfWater.
+
+Every Ditch enables a Drainage.
+
+Every ControlOfWaterFlow is a Process.
+
+No Track is a StreamCrossing.
+
+No Cliff is a GroundSurface.
+
+No FloodPrevention is a Slope.
+
+DisusedCanalStretch hasSynonym "Disused Canal Stretch".
+
+No Industry is a Boulder.
+
+No Embankment is a Valley.
+
+No InlandNavigation is a Substance.
+
+No GroundSurface is an Industry.
+
+No Leat is a Confluence.
+
+Every SalmonCatch is a Pond.
+
+Everything that hasPart something that contains a BodyOfWater is an Axiom_1.
+Every Axiom_1 hasPart something that contains a BodyOfWater.
+
+No Track is an Animal.
+
+Every Stream flowsTo something that is an Estuary or that is a Lake or that is a Pond or that is a Pool or that is a Reservoir or that is a River or that is a Sea or that is a Sink or that is a Stream.
+
+Every DuckPond habitatFor a Duck.
+
+No Modifier is a Path.
+
+No Confluence is a Pool.
+
+Every BalancingPond hasPrimaryPurpose a FloodPrevention.
+
+No Inlet is a Whirlpool.
+
+No Lake is a Pool.InRiver.
+
+Every SalmonLadder is a Structure.
+
+Every Leat.Channel hasPrimaryPurpose a TransportOfWater that usedBy an Industry.
+
+No Whirlpool is a Lake.
+
+No ContainmentOfWater is a Boulder.
+
+No Canal is a Bed.
+
+Every CanalStretch is a HydrologyConcepts.
+
+No Lode is a Bourne.
+
+No Hill is a Mill.
+
+Every InfluentStream is a Stream.
+
+No ContainmentOfWater is a Mill.
+
+Every Pot containedIn a Basin.
+
+No Connection is a Mill.
+
+No Modifier is a Flood.
+
+No Marsh contains a Peat.
+
+No Reservoir is a RiverMouth.
+
+No Bay is a Pool.
+
+Every DisusedCanal.Water is a BodyOfWater that containedIn a Canal.Channel and that isDirectComponentOf a DisusedCanalStretch and that does not enables an InlandNavigation.
+Every BodyOfWater that containedIn a Canal.Channel and that isDirectComponentOf a DisusedCanalStretch and that does not enables an InlandNavigation is a DisusedCanal.Water.
+
+Every DewPond locatedOn a Hill.
+
+No Hill is an Industry.
+
+Every Irrigation is a WaterSupply.
+
+No Sea is a Stream.
+
+No Animal is an Escarpment.
+
+No Pond is a Whirlpool.
+
+Every Bank that isEdgeOf a Channel is a ChannelBank.
+Every ChannelBank is a Bank that isEdgeOf a Channel.
+
+Every Rapids hasCurrent a TurbulentCurrent.
+
+No Backwater hasCurrent a Current.
+
+No TemporalConcept is a FishMigration.
+
+No Road is a Mill.
+
+No InlandNavigation is a Valley.
+
+Every MillPond locatedNear a Mill.
+
+No Land is a LeisureActivity.
+
+Every Bay indentsInto a Land.
+
+No Dyke.Rock is a Land.
+
+Every Fen contains a Peat.
+
+No Connection is a PoliticalGeographicArea.
+
+Every Burn hasRegionalSynonym a Stream that hasDirectGeographicLocation Northern_England or that hasDirectGeographicLocation Scotland or that hasDirectGeographicLocation nothing but things that are Northern_England or that are Scotland.
+
+No Bourne is an InfluentStream.
+
+No OverflowChannel is a Moat.
+
+No Slope is a Property.
+
+Everything that is hasWaterPressure by something is a WaterPressure.
+
+No RiverMouth is a Pond.
+
+Every OverflowChannel is a Channel.
+
+No Pond is an Inlet.
+
+No Boulder is a RockStep.
+
+No Bay is a Confluence.
+
+CanalFeeder hasSynonym "Canal Feeder".
+
+No Pool.InRiver hasCurrent a Current.
+
+No Slope is a LeisureActivity.
+
+SalmonCatch hasSynonym "Salmon Catch".
+
+No TemporalConcept is a Path.
+
+No StreamCrossing is a Footprint.
+
+No CanalStretch is a DisusedCanalStretch.
+
+No Embankment is a Connection.
+
+No Slope is a PoliticalGeographicArea.
+
+No HydrologyConcepts is an Escarpment.
+
+No Property is a Hole.
+
+Every Confluence isComponentOf something that is a Canal.Water or that is a River or that is a Stream.
+
+No Embankment is an Industry.
+
+No Flood is a Valley.
+
+No Size is a WaterPressure.
+
+No DryCanalStretch is a Channel.
+
+No Structure is a Bed.
+
+No InlandNavigation is a StreamCrossing.
+
+No FishMigration is a Modifier.
+
+Everything that is locatedAt by a PlungePool is a Waterfall.
+
+No PastureLand is a RiverCrossing.
+
+No Brook is a Lode.
+
+No Boulder is a Mill.
+
+No PastureLand is a Flood.
+
+No Track is an IndustrialArea.
+
+No Embankment is a Footprint.
+
+No StreamCrossing is a Mountain.
+
+No Mill is an Escarpment.
+
+No StreamCrossing is a Boulder.
+
+No Leat is a Stream.
+
+No Cover is a Road.
+
+No TemporalConcept is a Mill.
+
+No Industry is a RockStep.
+
+No Bay is a Stream.
+
+Every ControlOfWaterLevel is a Process.
+
+No ControlOfWaterFlow is a Drainage.
+
+No Basin is a CanalStretch.
+
+No Bourne is a MillStream.
+
+No Track is a RiverCrossing.
+
+No TidalProcess is a Drainage.
+
+Everything hasShape at most 1 thing.
+
+No DryDisusedCanalStretch is a Sink.
+
+No TemporalConcept is a RiverCrossing.
+
+No FishMigration is a Mountain.
+
+No Reservoir is a Lake.
+
+No Slope is a Dyke.Rock.
+
+No Basin is a Bed.
+
+Every Afon is a River.
+
+Every Fen that fedBy a GroundWater is a TypicalFen.
+Every TypicalFen is a Fen that fedBy a GroundWater.
+
+Every Embankment hasFootprint a Footprint.
+
+No HydrologyConcepts is a Connection.
+
+No Path is a LeisureActivity.
+
+No RiverStretch is a Pool.InRiver.
+
+No Spring is a Lake.
+
+Lake hasSynonym "Flash".
+
+No Hill is a Footprint.
+
+No Nant is a Lode.
+
+No Land is a Mill.
+
+No Cave is a Valley.
+
+Every Pipe enables a TransportOfWater.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Mereology.owl# : hasDirectComponent),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : RiverMouth),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Confluence)])),ObjectComplementOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Mereology.owl# : hasDirectComponent),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : RiverMouth)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Mereology.owl# : hasDirectComponent),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Confluence))]))])) */
+
+No Slope is an IndustrialArea.
+
+No InlandNavigation is a Dyke.Rock.
+
+No Pond is a Sea.
+
+No Sea is a Rapids.
+
+No FloodPrevention is a PastureLand.
+
+RiverMouth hasSynonym "River Mouth".
+
+No Canal is a CanalStretch.
+
+No CanalStretch is a Structure.
+
+Every Waterfall flowsOver a RockStep.
+
+SalmonLadder hasSynonym "Salmon Ladder".
+
+No Cover is a ContainmentOfSalmon.
+
+Every Burn is a Stream.
+
+Everything that is hasShape by something is a Shape.
+
+No Land is an Industry.
+
+Every SmallSize is a Size.
+
+No Sea is a Lake.
+
+No Footprint is an Animal.
+
+No Embankment is a PoliticalGeographicArea.
+
+No HydrologyConcepts is a RiverCrossing.
+
+Every Canal is a HydrologyConcepts.
+
+Every Basin that contains a Water is a TypicalBasin.Container.
+Every TypicalBasin.Container is a Basin that contains a Water.
+
+No Path is a RiverCrossing.
+
+Every Tarn is a Lake.
+
+No OverflowChannel is a Conduit.Channel.
+
+No Nant is a Burn.
+
+Every Linn hasRegionalSynonym a Waterfall that hasDirectGeographicLocation Scotland.
+
+No HydrologyConcepts is a PoliticalGeographicArea.
+
+No InlandNavigation is an Escarpment.
+
+No Embankment is a RockStep.
+
+Every Backwater hasFootprint a Footprint.
+
+Every TypicalBog is a Bog that fedBy a RainWater.
+Every Bog that fedBy a RainWater is a TypicalBog.
+
+No StreamCrossing is an Embankment.
+
+No Land is a ContainmentOfWater.
+
+Every Rhyne is something that hasRegionalSynonym an AgriculturalDrain and that hasDirectGeographicLocation Somerset.
+
+No StreamCrossing is a Flood.
+
+No Hill is a RiverCrossing.
+
+No Slope is a TemporalConcept.
+
+No Cave is a Flood.
+
+No ModelBoating is a Fishing.
+
+Every Rivulet is a Stream.
+
+No Estuary is a Rapids.
+
+No Rivulet is an InfluentStream.
+
+No Connection is an Escarpment.
+
+No Cave is a Path.
+
+No Reservoir is a Pond.
+
+No Modifier is a Process.
+
+No Inlet is an Estuary.
+
+No RockStep is a Process.
+
+No Pipe is a Bank.
+
+No Pond is a Lake.
+
+No Canal is an AreaOfLand.
+
+No Pipe is a DryDisusedCanalStretch.
+
+No Canal is a Sink.
+
+If X flowsFrom Y then X directlyConnectedTo Y.
+
+Every Afon hasRegionalSynonym a River that hasDirectGeographicLocation Wales.
+
+No Hill is an Escarpment.
+
+No Footprint is a LeisureActivity.
+
+Every Sea is a BodyOfWater.
+
+No Dyke.Rock is a Cave.
+
+Every SalmonCatch hasPrimaryPurpose a ContainmentOfSalmon.
+
+No Hill is an Embankment.
+
+No Cover is a Mountain.
+
+No IndustrialArea is a Boulder.
+
+Everything that is contains by a MillRace is a MillStream.
+
+No Cover is a Modifier.
+
+No Track is a HydrologyConcepts.
+
+Every MillRace is a Channel.
+
+FishPond hasSynonym "Fish Pond".
+
+No Mountain is a Footprint.
+
+No RiverStretch is a Lake.
+
+BraidedRiverStretch hasSynonym "Braided River Stretch".
+
+No Mountain is a PastureLand.
+
+PlungePool hasSynonym "Plunge Pool".
+
+No Substance is a Path.
+
+Every Bay hasFootprint a Footprint.
+
+Every Stream hasCurrent a Current.
+
+No HydrologyConcepts is a PastureLand.
+
+No LockGate is a SalmonLadder.
+
+No Conduit.Channel is a MillRace.
+
+Everything that is hasSize by something is a Size.
+
+No Property is a Footprint.
+
+Every HighWaterPressure is a WaterPressure.
+
+No Moat is a MillRace.
+
+No FishMigration is an Industry.
+
+No TemporalConcept is a Modifier.
+
+No Castle is a SluiceGate.
+
+No Dyke.Rock is a Flood.
+
+Every Linn is a Waterfall.
+
+No Land is a Valley.
+
+No BodyOfWater is a Channel.
+
+Every PlungePool locatedAt a Waterfall.
+
+No Hill is a Connection.
+
+Every Chalk is a Substance.
+
+No Pond is a Stream.
+
+Every Weir is a Structure.
+
+Every LowWaterPressure is a WaterPressure.
+
+No Cave is a Modifier.
+
+No Industry is a Process.
+
+No RiverCrossing is a Mill.
+
+No CanalStretch is a Sink.
+
+Every Aber is something that is a Confluence or that is a RiverMouth.
+Everything that is a Confluence or that is a RiverMouth is an Aber.
+
+No ContainmentOfSalmon is a Land.
+
+Every Pipe enables a ContainmentOfWater.
+
+No Modifier is an Animal.
+
+No InlandNavigation is a PoliticalGeographicArea.
+
+No HydrologyConcepts is a Substance.
+
+No Reservoir is a Confluence.
+
+TimberPond hasSynonym "Timber Pond".
+
+InfluentStream hasSynonym "Influent Stream".
+
+Every CanalFeeder directlyConnectedTo something that is a River or that is a Stream.
+
+Every Leat containedIn a Channel.
+
+No Sea is a Pool.
+
+No FloodPrevention is a Hill.
+
+No Land is a Process.
+
+No Cliff is a Mountain.
+
+No WaterSupply is a TransportOfWater.
+
+Leat.Channel hasSynonym "Leat".
+
+No Dyke.Rock is a Road.
+
+No GroundSurface is a PastureLand.
+
+No TemporalConcept is an Escarpment.
+
+No HydrologyConcepts is an Embankment.
+
+No Cliff is an Escarpment.
+
+No Connection is a RiverCrossing.
+
+No PoliticalGeographicArea is an Escarpment.
+
+Everything that is directlyConnectedTo by a DisusedCanalStretch is something that is a CanalStretch or that is a DisusedCanalStretch or that is a DryCanalStretch.
+
+No River is a Confluence.
+
+No TemporalConcept is a Flood.
+
+Every CoolingPond directlyLocatedIn an IndustrialArea.
+
+Every Conduit.Pipe is a Pipe.
+
+Every Water is a Substance.
+
+No ContainmentOfWater is a Process.
+
+No Track is a Valley.
+
+No Fen is a Swamp.
+
+No Mountain is a Flood.
+
+DewPond hasSynonym "Dew Pond".
+
+No GroundSurface is a Flood.
+
+No Flood is a Boulder.
+
+NavigationalCut hasSynonym "Navigational Cut".
+
+Every SluiceGate hasPrimaryPurpose a ControlOfWaterFlow.
+
+No MineralSalts is a Peat.
+
+No Cliff is a RockStep.
+
+Every SalmonLadder contains a Water.
+
+No PastureLand is an IndustrialArea.
+
+No Connection is an IndustrialArea.
+
+Every Bog is a Wetland.
+
+No Mountain is a Boulder.
+
+No Track is a Hill.
+
+No Track is a Footprint.
+
+No GroundSurface is a Connection.
+
+No ContainmentOfSalmon is an Embankment.
+
+Every DryLock is a DryCanalStretch.
+
+BalancingPond hasSynonym "Balancing Pond".
+
+No Flood is a LeisureActivity.
+
+SluiceGate hasSynonym "Sluice".
+
+No FishMigration is a Connection.
+
+Every Bank isEdgeOf something that is a Basin or that is a Channel.
+
+No Ford is a DryDisusedCanalStretch.
+
+Every Estuary providesConnection a Connection that connectionFrom a River and that connectionTo exactly 1 Sea.
+
+No Substance is a ContainmentOfWater.
+
+Every Lake is something that enables a Boating and that enables a Fishing.
+
+No Embankment is a Boulder.
+
+Every Lock is a CanalStretch.
+
+Every TidalProcess is a Process.
+
+No Embankment is a PastureLand.
+
+Conduit.Pipe hasSynonym "Conduit".
+
+No LockGate is a Fort.
+
+No Reservoir is an Inlet.
+
+No Cover is a Hill.
+
+No Chalk is a Limestone.
+
+No CanalStretch is a Ford.
+
+Every Bed is a HydrologyConcepts.
+
+No Pool.InRiver is a Rapids.
+
+No ContainmentOfSalmon is an Escarpment.
+
+No Slope is a FishMigration.
+
+Every Bank is a HydrologyConcepts.
+
+No PastureLand is an Escarpment.
+
+No Track is a Dyke.Rock.
+
+No Slope is an Industry.
+
+No HydrologyConcepts is a GroundSurface.
+
+Conduit.Channel hasSynonym "Conduit".
+
+Every MillPond directlyConnectedTo a MillStream.
+
+No SluiceGate is a Dam.
+
+Sink hasSynonym "Sink Hole".
+
+No InlandNavigation is a Path.
+
+Every Pot is a Pool.
+
+Every AreaOfLand is a HydrologyConcepts.
+
+Every RiverMouth is a BodyOfWater.
+
+No Slope is a Road.
+
+Every Pond containedIn a Basin.
+
+No StreamCrossing is a Dyke.Rock.
+
+No FloodPrevention is an Industry.
+
+Every CoolingPond is a Pond.
+
+No Track is a FishMigration.
+
+Every Bog contains a Peat.
+
+No Cliff is an Industry.
+
+Every OxbowLake locatedNear a River.
+
+No FloodPrevention is a Footprint.
+
+Every CanalFeeder containedIn a Channel.
+
+No Estuary is a Pool.InRiver.
+
+Every Pool.InRiver is a BodyOfWater.
+
+No GroundSurface is a LeisureActivity.
+
+No Footprint is an IndustrialArea.
+
+Lake hasSynonym "Mere".
+
+No Industry is a LeisureActivity.
+
+No ContainmentOfSalmon is a RockStep.
+
+No FloodPrevention is a RiverCrossing.
+
+Every MillStream flowsFrom a MillPond.
+
+No Land is a PastureLand.
+
+Every Gully enables a Drainage.
+
+No Spring is an Estuary.
+
+No RiverCrossing is a Process.
+
+Everything actsSpecificallyOn at most 1 thing.
+
+No Flume is a BodyOfWater.
+
+No TemporalConcept is a Connection.
+
+Every River that hasDirectComponent a BraidedRiverStretch is a BraidedRiver.
+Every BraidedRiver is a River that hasDirectComponent a BraidedRiverStretch.
+
+No Channel is a Sink.
+
+No Pond hasCurrent a Current.
+
+Every Drain hasPrimaryPurpose a Drainage.
+
+Every DryCanalStretch isDirectComponentOf a Canal.
+
+No InlandNavigation is an IndustrialArea.
+
+No FloodPrevention is a Connection.
+
+No Dyke.Rock is an Animal.
+
+No Rapids enables an InlandNavigation.
+
+No Confluence is a Stream.
+
+No WaterSupplyToCanal is an Irrigation.
+
+No TemporalConcept is a LeisureActivity.
+
+No Property is a Substance.
+
+No Mountain is an Escarpment.
+
+No Bed is a Bank.
+
+No Slope is a Cave.
+
+No WaterSupply is a Drainage.
+
+No Flood is a Process.
+
+No Embankment is a Land.
+
+Every RiverMouth providesConnection a Connection that connectionFrom exactly 1 River and that connectionTo something that is a Lake or that is a River or that is a Sea.
+
+Every WaterMeadow is a Meadow that directlyLocatedIn a Floodplain and that occursDuring a Spring.Season and that contains a Water.
+Every Meadow that directlyLocatedIn a Floodplain and that occursDuring a Spring.Season and that contains a Water is a WaterMeadow.
+
+No Basin is a DisusedCanalStretch.
+
+No Cave is an Industry.
+
+No TimberStorage is a TidalProcess.
+
+Floodplain hasSynonym "Flood Basin".
+
+No Marsh is a Swamp.
+
+No InlandNavigation is a Road.
+
+No RiverStretch is a Whirlpool.
+
+No Mountain is a Modifier.
+
+No Cave is a Connection.
+
+No Mountain is a Dyke.Rock.
+
+No Industry is a Flood.
+
+Every DryCanalStretch hasFootprint a Footprint.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Waterfall),ObjectIntersectionOf([ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : madeOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : FallingWater)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Mereology.owl# : isDirectComponentOf),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)])),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : BodyOfWater),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : locatedAt),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Slope),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Cliff),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Escarpment)])),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : locatedAt),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Slope),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Cliff),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Escarpment)]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : madeOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : FallingWater)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Mereology.owl# : isDirectComponentOf),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)])),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : BodyOfWater),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : locatedAt),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Slope),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Cliff),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Escarpment)])),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : locatedAt),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Slope),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Cliff),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Escarpment)]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Waterfall)])) */
+
+No WaterFlowProcess is a TidalProcess.
+
+No GroundSurface is an Animal.
+
+Every Fen is a Wetland.
+
+No Slope is a RiverCrossing.
+
+No Cliff is a LeisureActivity.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Ford),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : providesConnection),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : Connection),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : connectionFrom),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Track),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Path),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Road)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : connectionTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Track),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Path),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Road)]))])]))) */
+
+No ControlOfWaterFlow is a WaterFlowProcess.
+
+No RiverMouth is an Estuary.
+
+No Leat is a Pool.
+
+DryLock hasSynonym "Dry Lock".
+
+Every Lake directlyConnectedTo something that is a Canal or that is a Reservoir or that is a River or that is a Stream.
+
+No PastureLand is a Valley.
+
+No CanalStretch is a Pipe.
+
+Every Canal connectedTo something that is a Canal or that is a Lake or that is a Pond or that is a Pool or that is a Reservoir or that is a River or that is a Stream.
+
+No Pond is an Estuary.
+
+Every WaterFlowProcess is a Process.
+
+If X actedOnBy Y then Y actsOn X.
+If X actsOn Y then Y actedOnBy X.
+
+CoveredReservoir hasSynonym "Covered Reservoir".
+
+No CanalStretch is an AreaOfLand.
+
+No MineralSalts is a Limestone.
+
+No IndustrialArea is a Flood.
+
+No Connection is a Valley.
+
+No Connection is a Modifier.
+
+Every Pipe directlyConnectedTo something that is a Basin or that is a Channel or that is a Pipe.
+
+Every DecoyPond is a Pond.
+
+Everything that is directlyConnectedTo by a Pond is something that is a Canal.Water or that is a River or that is a Stream.
+
+No Inlet is a Rapids.
+
+No Pool is a Stream.
+
+Every WaterPressure is a ValuePartition.
+
+No FishMigration is a RockStep.
+
+Every TimberStorage is a Process.
+
+Every DuckPond is a Pond.
+
+No Substance is a StreamCrossing.
+
+Every CanalStretch hasDirectComponent a Canal.Channel.
+
+No RiverMouth is a Lake.
+
+No TemporalConcept is a Land.
+
+ModelBoatLake hasSynonym "Model Boat Lake".
+
+Every Force is a Waterfall.
+
+Every Intermittent is a Frequency.
+
+No Footprint is a PoliticalGeographicArea.
+
+No GroundSurface is a PoliticalGeographicArea.
+
+Every Marsh temporarilyFloodedBy a Water.
+
+No StreamCrossing is a Mill.
+
+No Pool.InRiver is a Pool.
+
+No Path is a Valley.
+
+No Bed is a DryDisusedCanalStretch.
+
+No Wetland is a Field.
+
+No PastureLand is a Footprint.
+
+No ContainmentOfWater is a Road.
+
+No Track is a Mountain.
+
+Every WaterMeadow enables a PastureLand that occursDuring a Spring.Season.
+
+No Dyke.Rock is a Modifier.
+
+No ContainmentOfWater is a Valley.
+
+No StreamCrossing is a Land.
+
+No Ford is a Channel.
+
+No Land is an IndustrialArea.
+
+No Fort is a Weir.
+
+Every Spring.Season is a Season.
+
+Every DisusedCanalStretch is a HydrologyConcepts.
+
+No RockStep is a LeisureActivity.
+
+No Conduit.Channel is a Gully.
+
+No Substance is a Flood.
+
+No Inlet is a River.
+
+No RiverCrossing is an Escarpment.
+
+No Flume is a Ford.
+
+Every TidalRiverStretch is a RiverStretch.
+
+If X flowsIn Y then X containedIn Y.
+
+No Substance is a Process.
+
+Every Cataract hasShape a SheerShape.
+
+No InlandNavigation is a Modifier.
+
+No Track is a Modifier.
+
+No Road is a Process.
+
+No Basin is an AreaOfLand.
+
+No Track is a FloodPrevention.
+
+DryDisusedCanalStretch hasSynonym "Dry Disused Canal Stretch".
+
+No Curling is a Boating.
+
+No PoliticalGeographicArea is a Flood.
+
+No ContainmentOfSalmon is a Footprint.
+
+No ContainmentOfSalmon is a Path.
+
+No Cave is an IndustrialArea.
+
+Every Marsh is a Wetland.
+
+No StreamCrossing is an Industry.
+
+Every Structure hasFootprint a Footprint.
+
+No Canal is a Basin.
+
+No Slope is a ContainmentOfSalmon.
+
+No StreamCrossing is a PastureLand.
+
+No MineralSalts is a Water.
+
+No DisusedCanalStretch is a Sink.
+
+RiverStretch hasSynonym "Stretch".
+
+No Leat is a Lake.
+
+Every DykeSpring locatedAt a Dyke.Rock.
+
+No Nant is a Syke.
+
+No Pond is a Leat.
+
+No IndustrialArea is a Mill.
+
+No StreamCrossing is a Connection.
+
+DuckPond hasSynonym "Duck Pond".
+
+No FloodPrevention is a Mountain.
+
+No Cover is an Industry.
+
+Every CanalFeeder directlyConnectedTo exactly 1 CanalStretch.
+
+No DisusedCanal.Water hasCurrent a Current.
+
+Every CatchDrain is something that locatedNear a Canal or that locatedNear a Hill.
+
+No TemporalConcept is a Boulder.
+
+Every Bourne containedIn a Channel.
+
+No Castle is a LockGate.
+
+Every Size is something that is a LargeSize or that is a MediumSize or that is a SmallSize.
+Everything that is a LargeSize or that is a MediumSize or that is a SmallSize is a Size.
+
+Every DisusedCanalStretch hasDirectComponent a Canal.Channel.
+
+No Track is a Boulder.
+
+No Land is a Footprint.
+
+No Ford is a Sink.
+
+Every Canal hasDirectComponent something that is a CanalStretch or that is a DryCanalStretch.
+
+No Path is a Process.
+
+No PastureLand is an Industry.
+
+No IndustrialArea is a RockStep.
+
+No Footprint is a Modifier.
+
+No StreamCrossing is a Path.
+
+No Cover is a Process.
+
+No Embankment is an Animal.
+
+No River is a Leat.
+
+No Road is a RiverCrossing.
+
+No Path is a Mill.
+
+No Spa is a Spout.
+
+Every TimberPond adjacentTo a River.
+
+No Footprint is a Hollow.
+
+No Structure is a Bank.
+
+No Path is an Escarpment.
+
+No TemporalConcept is a ContainmentOfWater.
+
+Every Ditch is a Channel.
+
+No Industry is a Mill.
+
+No HydrologyConcepts is a Slope.
+
+Every TransportOfWater is a Process.
+
+No IndustrialArea is an Escarpment.
+
+No InlandNavigation is a RiverCrossing.
+
+No IndustrialArea is an Industry.
+
+No Hill is a Mountain.
+
+No HydrologyConcepts is a Process.
+
+Every Syke is a Stream.
+
+No AreaOfLand is a Bed.
+
+DykeSpring hasSynonym "Dyke Spring".
+
+No Reservoir is a RiverStretch.
+
+No HighWaterPressure is a MediumWaterPressure.
+
+No Leat is a Whirlpool.
+
+No Basin is a DryDisusedCanalStretch.
+
+No FishMigration is a Footprint.
+
+Every AgriculturalField is a Field.
+
+Every Ford hasPrimaryPurpose something that is a RiverCrossing or that is a StreamCrossing.
+
+ChannelBed hasSynonym "Bed".
+
+No Beck is a Bourne.
+
+No Track is a Mill.
+
+No PoliticalGeographicArea is a RockStep.
+
+Every Canal.Channel is a Channel that isDirectComponentOf something that is a CanalStretch or that is a DryCanalStretch.
+Every Channel that isDirectComponentOf something that is a CanalStretch or that is a DryCanalStretch is a Canal.Channel.
+
+Every Waterfall hasCurrent a Current.
+
+Every Inlet directlyLocatedIn something that is an Estuary or that is a Lake or that is a River or that is a Sea.
+
+No BodyOfWater is a Sink.
+
+Every CanalStretch is something that directlyConnectedTo a CanalStretch or that directlyConnectedTo a DryCanalStretch.
+
+No InlandNavigation is a Cover.
+
+No InlandNavigation is an Embankment.
+
+No Substance is a RockStep.
+
+Every Pool.InRiver containedIn a BodyOfWater.
+
+No GroundSurface is a Boulder.
+
+Every Dam is a Structure.
+
+No Dyke.Rock is a RiverCrossing.
+
+No Flume is a DryDisusedCanalStretch.
+
+Every Moat is a Channel.
+
+No InlandNavigation is a FloodPrevention.
+
+No Cave is a PastureLand.
+
+No AreaOfLand is a Sink.
+
+No TemporalConcept is a ContainmentOfSalmon.
+
+No LeisureActivity is an Escarpment.
+
+No InlandNavigation is a RockStep.
+
+No Modifier is a RiverCrossing.
+
+No Hill is a Land.
+
+No BodyOfWater is a DryDisusedCanalStretch.
+
+No Ford is an AreaOfLand.
+
+Every IrrigationDitch hasPrimaryPurpose an Irrigation.
+
+No Mountain is a RiverCrossing.
+
+No Marsh is a Bog.
+
+Every Dam.Water locatedBehind a Dam.
+
+Every River flowsInto something that is a Lake or that is a Reservoir or that is a River or that is a Sea.
+
+No Hollow is a PoliticalGeographicArea.
+
+No FishMigration is a Road.
+
+No RiverCrossing is a Boulder.
+
+Every MillPond hasPrimaryPurpose a WaterSupply.
+
+No FloodPrevention is a Land.
+
+No HydrologyConcepts is a ContainmentOfWater.
+
+No InfluentStream is a MillStream.
+
+No TemporalConcept is a PoliticalGeographicArea.
+
+Every Basin is a Hollow that directlyLocatedIn a GroundSurface.
+
+No FloodPrevention is a PoliticalGeographicArea.
+
+No Boulder is an Escarpment.
+
+No TemporalConcept is a PastureLand.
+
+No IndustrialArea is a Road.
+
+No DryCanalStretch is a Ford.
+
+IrrigationCanal hasSynonym "Irrigation Canal".
+
+No Reservoir is a Sea.
+
+No Canal is a DryCanalStretch.
+
+No Basin is a Pipe.
+
+No Cliff is an IndustrialArea.
+
+No Connection is a ContainmentOfWater.
+
+No Modifier is a Valley.
+
+Every River hasDirectComponent a Source.
+
+No Reservoir is a Pool.InRiver.
+
+No RiverCrossing is an Animal.
+
+No Waterfall enables an InlandNavigation.
+
+Every RiverMouth isDirectComponentOf a River.
+
+Every CoveredReservoir is a HydrologyConcepts.
+
+No Sea is an Estuary.
+
+No Cliff is a ContainmentOfSalmon.
+
+No Substance is a ContainmentOfSalmon.
+
+No Road is an Animal.
+
+No Syke is a MillStream.
+
+No OverflowChannel is a Gully.
+
+No Peat is a Chalk.
+
+No Mountain is an IndustrialArea.
+
+No Pond is a Rapids.
+
+No RiverMouth is a Pool.InRiver.
+
+No Bay is a Lake.
+
+Every CanalStretch hasFootprint a Footprint.
+
+No Slope is a Path.
+
+Every Bourne is a Stream.
+
+Every Flume is something that is a Channel or that is a Pipe.
+
+No Moat is a Ditch.
+
+No Road is an Escarpment.
+
+No Footprint is a Valley.
+
+No Leat is a Pool.InRiver.
+
+Every MillStream flowsIn a MillRace.
+
+No TemporalConcept is a Valley.
+
+No Cave is an Animal.
+
+No Ford is a DisusedCanalStretch.
+
+No Hill is a Road.
+
+Every ModelBoating is a LeisureActivity.
+
+No Pond is a River.
+
+No Land is a RiverCrossing.
+
+Every Boating is a LeisureActivity.
+
+No InlandNavigation is a Boulder.
+
+Every Rill is a Stream that flowsIn a Gully.
+Every Stream that flowsIn a Gully is a Rill.
+
+Every Sink hasFootprint a Footprint.
+
+No Flood is a Mill.
+
+Every DryCanalStretch is something that directlyConnectedTo a CanalStretch or that directlyConnectedTo a DryCanalStretch.
+
+Every PlungePool containedIn a Basin.
+
+No Estuary is a Bay.
+
+Every TidalRiverStretch isDirectComponentOf a TidalRiver.
+
+No Path is a RockStep.
+
+No Substance is a Road.
+
+No BodyOfWater is a Bed.
+
+No Property is a RiverCrossing.
+
+No FishMigration is a Path.
+
+No FishMigration is an Escarpment.
+
+No Cliff is a RiverCrossing.
+
+No Cave is a Mill.
+
+No ContainmentOfWater is a RockStep.
+
+Every Winter is a Season.
+
+No Cave is an Embankment.
+
+No Modifier is a PoliticalGeographicArea.
+
+No Connection is a Land.
+
+No Hill is a Dyke.Rock.
+
+Every NavigationalCut hasDirectComponent exactly 1 CanalStretch.
+
+No Bank is a DisusedCanalStretch.
+
+No FishMigration is a GroundSurface.
+
+Every Cascade is a Waterfall.
+
+No FloodPrevention is a Process.
+
+No StreamCrossing is a Process.
+
+No Size is a Shape.
+
+No Duck is a GameBird.
+
+No FishMigration is a Cliff.
+
+No Leat is a Sea.
+
+No Castle is a SalmonLadder.
+
+No Mill is a Valley.
+
+No Property is a LeisureActivity.
+
+No Dam is a Weir.
+
+No Property is a Hill.
+
+Every Reservoir is a BodyOfWater.
+
+No Mountain is an Industry.
+
+No ContainmentOfWater is an Animal.
+
+No HydrologyConcepts is an IndustrialArea.
+
+No Property is an Animal.
+
+No FloodPrevention is a Cave.
+
+No Property is a GroundSurface.
+
+No Modifier is an Escarpment.
+
+No Brook is a Syke.
+
+No PoliticalGeographicArea is a Valley.
+
+Every Tributary is a HydrologyConcepts.
+
+No Cliff is a Road.
+
+Every Loch hasDirectGeographicLocation Scotland.
+
+Every Canal hasFootprint a Footprint.
+
+No SluiceGate is a SalmonLadder.
+
+Every SheerShape is a Shape.
+
+Every Sea hasCurrent a Current.
+
+Every Wetland is an AreaOfLand.
+
+Every PlungePool is a Pool.
+
+Every Lode is a Stream.
+
+No Estuary is a Whirlpool.
+
+No InlandNavigation is a Cave.
+
+No Hole is a Connection.
+
+Every Bird is an Animal.
+
+No Fen is a Marsh.
+
+No Track is a ContainmentOfWater.
+
+No PastureLand is a RockStep.
+
+Every Estuary hasCurrent a Current.
+
+No StreamCrossing is a Hill.
+
+Every Channel enables a ContainmentOfWater.
+
+No IndustrialArea is a LeisureActivity.
+
+No Slope is a StreamCrossing.
+
+No Cliff is a ContainmentOfWater.
+
+No FloodPrevention is a Mill.
+
+No Ford is a Pipe.
+
+No Flood is an Animal.
+
+No InlandNavigation is a Slope.
+
+No Mountain is a Process.
+
+No Property is a Land.
+
+No Property is an Embankment.
+
+Every IrrigationCanal is a Canal.
+
+No Moat is a Gully.
+
+Every MediumWaterPressure is a WaterPressure.
+
+No Track is a Cave.
+
+No Cave is a RiverCrossing.
+
+No FishMigration is a LeisureActivity.
+
+OxbowLake hasSynonym "Oxbow Lake".
+
+No CanalStretch is a BodyOfWater.
+
+No StreamCrossing is a Road.
+
+No Peat is a Water.
+
+No Slope is a Valley.
+
+No Reservoir is a Rapids.
+
+No Pond is a Confluence.
+
+Every Lake is a BodyOfWater.
+
+Every Lochan hasSize a SmallSize.
+
+MillStream hasSynonym "Mill Stream".
+
+Every Spa is a Spring.
+
+Every Swamp is a Wetland.
+
+No InlandNavigation is a LeisureActivity.
+
+No ControlOfWaterFlow is a ControlOfWaterLevel.
+
+No InlandNavigation is a Hill.
+
+RiverStretch hasSynonym "River Stretch".
+
+If X temporarilyFloodedBy Y then X floodedBy Y.
+
+No FloodPrevention is a RockStep.
+
+Every Cataract is a Waterfall.
+
+Every Inlet indentsInto a Land.
+
+No ContainmentOfSalmon is a Cave.
+
+Every ModelBoatLake is a Pond.
+
+No ControlOfWaterLevel is a TimberStorage.
+
+No Conduit.Channel is a Ditch.
+
+Every Canal.Water is something that enables a Boating or that enables a Fishing.
+
+Every Estuary isDirectComponentOf a Sea.
+
+Every Dam.Water is a Pool.InRiver.
+
+TidalRiverStretch hasSynonym "Tidal River Stretch".
+
+No Lode is a Syke.
+
+ChannelBank hasSynonym "Channel Bank".
+
+No Connection is a Footprint.
+
+No ContainmentOfWater is a LeisureActivity.
+
+Every RiverStretch is a BodyOfWater.
+
+Every Axiom_2 contains something that madeOf a Water.
+Everything that contains something that madeOf a Water is an Axiom_2.
+
+Every TidalRiverStretch actedOnBy a TidalProcess.
+
+No Dyke.Rock is a PastureLand.
+
+No DryCanalStretch is a BodyOfWater.
+
+No Water is a Limestone.
+
+Every DewPond hasPrimaryPurpose a WaterSupply that supplyTo a Livestock.
+
+No Modifier is an Industry.
+
+No Bay is a Rapids.
+
+Everything that is directlyConnectedTo by a Lake is something that is a Canal or that is a Reservoir or that is a River or that is a Stream.
+
+Every CatchDrain is a Drain.
+
+No InlandNavigation is a PastureLand.
+
+No InlandNavigation is a Land.
+
+No ContainmentOfWater is a Modifier.
+
+RiverBank hasSynonym "Bank".
+
+No Sea is a Confluence.
+
+Every MineralSalts is a Substance.
+
+No StreamCrossing is a LeisureActivity.
+
+No Property is a PastureLand.
+
+No Cliff is a StreamCrossing.
+
+No Flume is a Bank.
+
+Every TypicalCatchDrain is a CatchDrain that contains a Water.
+Every CatchDrain that contains a Water is a TypicalCatchDrain.
+
+No FloodPrevention is an Embankment.
+
+No TemporalConcept is an IndustrialArea.
+
+No TemporalConcept is a Dyke.Rock.
+
+No Track is a LeisureActivity.
+
+No InlandNavigation is a TemporalConcept.
+
+Every HydrologyConcepts that is a Spring or that is a Wetland and that feeds something that is a River or that is a Stream is a Source.
+Every Source is a HydrologyConcepts that is a Spring or that is a Wetland and that feeds something that is a River or that is a Stream.
+
+No Track is an Embankment.
+
+Every Field is an AreaOfLand.
+
+Everything that is an Autumn or that is a Spring.Season or that is a Summer or that is a Winter is a Season.
+Every Season is something that is an Autumn or that is a Spring.Season or that is a Summer or that is a Winter.
+
+No GroundSurface is a Land.
+
+No AreaOfLand is a DisusedCanalStretch.
+
+Every BodyOfWater that isDirectComponentOf a Canal and that hasPrimaryPurpose a WaterSupplyToCanal is a CanalFeeder.
+Every CanalFeeder is a BodyOfWater that isDirectComponentOf a Canal and that hasPrimaryPurpose a WaterSupplyToCanal.
+
+No Reservoir is a Leat.
+
+No Pipe is a Channel.
+
+Every SalmonLadder hasPrimaryPurpose a FishMigration.
+
+No HydrologyConcepts is a Hill.
+
+No FishMigration is a Cave.
+
+No Cave is a Boulder.
+
+No Footprint is a Flood.
+
+No Hill is an IndustrialArea.
+
+No Industry is a RiverCrossing.
+
+No Whirlpool is a Rapids.
+
+No CanalStretch is a Bank.
+
+Every Rhyne is an AgriculturalDrain.
+
+Every Loch hasRegionalSynonym a Lake that hasDirectGeographicLocation Scotland.
+
+No Cover is a PastureLand.
+
+No LockGate is a Weir.
+
+No Pool.InRiver is a Stream.
+
+Every River connectedTo something that is a Canal or that is a Lake or that is a Pond or that is a Pool or that is a Reservoir or that is a River or that is a Sea or that is a Stream.
+
+No PastureLand is a Road.
+
+No CanalStretch is a Channel.
+
+Lake hasWelshTranslation "Llyn".
+
+No Pipe is a Bed.
+
+No Mountain is an Embankment.
+
+No Lode is a Beck.
+
+No TemporalConcept is a Cave.
+
+No Flume is a Structure.
+
+No Dyke.Rock is a Connection.
+
+No FishMigration is a Land.
+
+No Spring is a Pool.InRiver.
+
+No Mill is an Animal.
+
+No Boulder is a Valley.
+
+No ContainmentOfSalmon is a Connection.
+
+No Slope is a Flood.
+
+No FloodPrevention is a GroundSurface.
+
+Every Bed that isBottomOf a Channel that contains a River is a RiverBed.
+Every RiverBed is a Bed that isBottomOf a Channel that contains a River.
+
+No Cover is a Mill.
+
+No Mountain is a Road.
+
+Everything that is directlyConnectedTo by a Basin is something that is a Basin or that is a Channel or that is a Pipe.
+
+No Slope is a RockStep.
+
+No Cliff is a Path.
+
+No PoliticalGeographicArea is a LeisureActivity.
+
+No ContainmentOfWater is a Flood.
+
+No Embankment is an Escarpment.
+
+No WaterSupply is a WaterFlowProcess.
+
+No HydrologyConcepts is a Footprint.
+
+Every Duration is a TemporalConcept.
+
+Every Floodplain is an AreaOfLand.
+
+No FloodPrevention is a Flood.
+
+No AreaOfLand is a DryDisusedCanalStretch.
+
+Every Frequency is a TemporalConcept.
+
+No Canal is a DryDisusedCanalStretch.
+
+Every WaterPressure is a Modifier.
+
+Every Reservoir hasPrimaryPurpose a WaterSupply.
+
+Every Channel is something that connectedTo a Basin or that connectedTo a Channel or that connectedTo a Pipe or that connectedTo a Wetland.
+
+Every RainWater is a Water.
+
+No Channel is a DryDisusedCanalStretch.
+
+No ContainmentOfSalmon is a Flood.
+
+Every MillStream is a Stream.
+
+No Substance is a Dyke.Rock.
+
+No HydrologyConcepts is a Flood.
+
+IntermittentSpring hasSynonym "Intermittent Spring".
+
+No HydrologyConcepts is a StreamCrossing.
+
+No IndustrialArea is a Valley.
+
+Every Direction is a Modifier.
+
+No HydrologyConcepts is a Land.
+
+No ContainmentOfSalmon is a PastureLand.
+
+No MediumSize is a SmallSize.
+
+No InlandNavigation is a Mountain.
+
+No Footprint is an Industry.
+
+No Substance is a Boulder.
+
+No FishMigration is a Flood.
+
+No TemporalConcept is a Property.
+
+Every LockGate is a Structure.
+
+MillPond hasSynonym "Mill Pond".
+
+No Inlet is a Leat.
+
+No Embankment is a RiverCrossing.
+
+No Process is an Animal.
+
+No Estuary is a Stream.
+
+No Road is a Valley.
+
+No Cover is a StreamCrossing.
+
+No RiverStretch is a Pool.
+
+No Basin is a Structure.
+
+Every TidalRiver is a River that hasDirectComponent a TidalRiverStretch.
+Every River that hasDirectComponent a TidalRiverStretch is a TidalRiver.
+
+No GroundSurface is a Dyke.Rock.
+
+No Land is a Road.
+
+No BodyOfWater is a Pipe.
+
+If X flowsOutOf Y then X flowsFrom Y.
+
+No ControlOfWaterFlow is a TidalProcess.
+
+Rhyne hasSynonym "Rhine".
+
+Every DisusedCanalStretch directlyConnectedTo at most 3 things.
+
+No Dyke.Rock is a Boulder.
+
+No OverflowChannel is a Ditch.
+
+No Reservoir is a Pool.
+
+No Inlet is a Lake.
+
+No Dyke.Rock is a ContainmentOfWater.
+
+No RiverStretch is a River.
+
+No ControlOfWaterLevel is a TidalProcess.
+
+No Dyke.Rock is an IndustrialArea.
+
+Every ModelBoatLake hasPrimaryPurpose a ModelBoating.
+
+DykeSpring hasSynonym "Dike Spring".
+
+DecoyPond hasSynonym "Decoy Pond".
+
+No Flood is an Escarpment.
+
+No Connection is an Industry.
+
+No RiverMouth is an Inlet.
+
+Every Drainage is a Process.
+
+No Cliff is a Substance.
+
+No Slope is a Connection.
+
+No Path is a Flood.
+
+No Syke is a Burn.
+
+No Mountain is a PoliticalGeographicArea.
+
+Every BodyOfWater madeOf a Water.
+
+No Hill is a Cave.
+
+No Embankment is a Road.
+
+No Reservoir is a Bay.
+
+No Rivulet is a MillStream.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : InfluentStream),ObjectUnionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : dischargesThrough),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Chalk),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Limestone)])),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : flowsInto),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Cave)),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : flowsThrough),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Sink))])])) */
+
+No LockGate is a SluiceGate.
+
+Every Spring is a BodyOfWater.
+
+No RiverMouth is a Spring.
+
+No Valley is a LeisureActivity.
+
+Every Ford isComponentOf something that is a Path or that is a Road or that is a Track.
+
+No Substance is a PastureLand.
+
+No Channel is a DisusedCanalStretch.
+
+No Inlet is a Bay.
+
+No Hill is a Path.
+
+No Canal.Water hasCurrent a Current.
+
+No Brook is a Rivulet.
+
+No StreamCrossing is a PoliticalGeographicArea.
+
+Every Flume hasFootprint a Footprint.
+
+No Bank is a DryDisusedCanalStretch.
+
+No Direction is a WaterPressure.
+
+Every Cascade flowsOver at least 2 things that are a Boulder or that are a RockStep.
+
+Every RiverStretch enables an InlandNavigation.
+
+Every FishPond hasPrimaryPurpose a Fishing.
+
+No Meadow is an AgriculturalField.
+
+Every IrrigationCanal hasPrimaryPurpose an Irrigation.
+
+No ModelBoating is a Boating.
+
+No StreamCrossing is an Animal.
+
+No Path is an Animal.
+
+SluiceGate hasSynonym "Sluice Gate".
+
+DisusedCanal.Water hasSynonym "Disused Canal".
+
+Every Reservoir controlledBy something that is a Dam or that is a SluiceGate.
+
+No Castle is a Weir.
+
+No BodyOfWater is a Bank.
+
+Everything hasFlowDirection at most 1 thing.
+
+No FloodPrevention is a Valley.
+
+No Dyke.Rock is an Escarpment.
+
+No Slope is a GroundSurface.
+
+No River is a Whirlpool.
+
+No Hill is a Process.
+
+Ditch hasSynonym "Trench".
+
+No Footprint is a RiverCrossing.
+
+No Hill is a Boulder.
+
+No Track is a PastureLand.
+
+No PastureLand is a Boulder.
+
+No FishMigration is a Valley.
+
+Everything that is directlyConnectedTo by a Wetland is something that is a Canal.Water or that is a Lake or that is a Pond or that is a Pool or that is a River or that is a Stream or that is a Wetland.
+
+No Cover is a TemporalConcept.
+
+Every IrrigationDitch is a Ditch.
+
+No Mill is a LeisureActivity.
+
+No IrrigationCanal is a NavigationalCut.
+
+No Cliff is an Animal.
+
+No Reservoir is a Spring.
+
+Every Basin is something that hasPart a Bank and that hasPart a Bed.
+
+No Mountain is a Connection.
+
+No Structure is a DisusedCanalStretch.
+
+Everything that is controlledBy by a Reservoir is something that is a Dam or that is a SluiceGate.
+
+No ContainmentOfSalmon is a Boulder.
+
+No Flume is a CanalStretch.
+
+No RiverMouth is a Pool.
+
+No Mountain is a Path.
+
+No Embankment is a Path.
+
+No HydrologyConcepts is a Mill.
+
+No Property is a Mountain.
+
+No Whirlpool is a Pool.
+
+No InlandNavigation is a Mill.
+
+No Floodplain is a Wetland.
+
+No Track is a Cover.
+
+Every DewPond directlyLocatedIn a PastureLand.
+
+Every Spa contains a MineralSalts.
+
+No Beck is an InfluentStream.
+
+No Hole is a Footprint.
+
+No Substance is a Connection.
+
+No Estuary is a Confluence.
+
+No Spring is a Whirlpool.
+
+Every DisusedCanalStretch hasFootprint a Footprint.
+
+No Basin is a Sink.
+
+No RiverMouth is a Bay.
+
+Everything that hasPrimaryPurpose an InlandNavigation, and that is a Canal.Water or that is a River is a Waterway.
+Every Waterway is something that hasPrimaryPurpose an InlandNavigation, and that is a Canal.Water or that is a River.
+
+No HighWaterPressure is a LowWaterPressure.
+
+No PoliticalGeographicArea is an Industry.
+
+No StreamCrossing is a Cave.
+
+No Mountain is an Animal.
+
+Every DisusedCanalStretch isDirectComponentOf a Canal.
+
+No Rivulet is a Burn.
+
+Every TimberPond is something.
+
+No Substance is a GroundSurface.
+
+No DryCanalStretch is a Structure.
+
+No ContainmentOfWater is an Escarpment.
+
+No Spout is a DykeSpring.
+
+No Bed is a Channel.
+
+No WaterFlowProcess is a TimberStorage.
+
+No Cover is a Footprint.
+
+No Cover is a RiverCrossing.
+
+No Brook is a Nant.
+
+No Hill is a ContainmentOfWater.
+
+CanalStretch hasSynonym "Canal Stretch".
+
+No Embankment is a Process.
+
+No Land is a PoliticalGeographicArea.
+
+No Cover is a Valley.
+
+No Connection is a Flood.
+
+Every Stream is a BodyOfWater.
+
+Every CanalStretch directlyConnectedTo at most 3 things.
+
+Every Broad is a Lake.
+
+No Land is a Boulder.
+
+No Embankment is an IndustrialArea.
+
+No Footprint is a Road.
+
+Every CoolingPond hasInflow an IndustrialWater.
+
+Dyke hasSynonym "Dike".
+
+No Burn is a MillStream.
+
+No Ford is a BodyOfWater.
+
+No Syke is an InfluentStream.
+
+Every Whirlpool hasCurrent a Current that hasFlowDirection a CircularDirection.
+
+Every Bourne seasonallyExistsDuring a Winter.
+
+No Gully is a Ditch.
+
+No Basin is a Bank.
+
+Every LockGate isDirectComponentOf a Canal.
+
+No HydrologyConcepts is a ContainmentOfSalmon.
+
+No AgriculturalDrain is a CatchDrain.
+
+No GroundSurface is a ContainmentOfWater.
+
+Every Lake enables an InlandNavigation.
+
+No RiverStretch is a Bay.
+
+Every Culvert locatedUnder a GroundSurface.
+
+Every ChannelBed is a Bed that isBottomOf a Channel.
+Every Bed that isBottomOf a Channel is a ChannelBed.
+
+No Frequency is a Duration.
+
+No PoliticalGeographicArea is a Boulder.
+
+No Rivulet is a Beck.
+
+No Brook is a Beck.
+
+If X actsOn something that actsOn Y then X actsOn Y.
+
+Every Lake hasCurrent a Current.
+
+No ContainmentOfSalmon is a ContainmentOfWater.
+
+No Spring is a Rapids.
+
+No TransportOfWater is a TimberStorage.
+
+Every WaterSupply is a Process.
+
+Every DryDisusedCanalStretch directlyConnectedTo something that is a CanalStretch or that is a DisusedCanalStretch or that is a DryCanalStretch.
+
+No Footprint is a Path.
+
+Every Beck hasRegionalSynonym a Stream that hasDirectGeographicLocation Northern_England.
+
+ChannelBank hasSynonym "Bank".
+
+No Cave is a RockStep.
+
+Lake hasSynonym "Flash".
+
+No GroundSurface is a Mountain.
+
+No HydrologyConcepts is a Boulder.
+
+MillLade hasSynonym "Mill Lade".
+
+Every CanalStretch hasDirectComponent a Canal.Water.
+
+No Cover is a Cliff.
+
+No Moat is a Conduit.Channel.
+
+No BodyOfWater is a DisusedCanalStretch.
+
+No Industry is an Escarpment.
+
+No Road is a Boulder.
+
+No PoliticalGeographicArea is a Process.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Tributary),ObjectIntersectionOf([ObjectIntersectionOf([ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)]),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : flowsTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : flowsTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)]),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : flowsTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : flowsTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream)]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Tributary)])) */
+
+No Cover is a Path.
+
+No IndustrialArea is a PoliticalGeographicArea.
+
+No Property is a ContainmentOfSalmon.
+
+No Brook is a Burn.
+
+Every DryLock directlyConnectedTo at most 2 things.
+
+No TransportOfWater is a ControlOfWaterLevel.
+
+No Connection is a RockStep.
+
+Every Shape is a Modifier.
+
+IrrigationDitch hasSynonym "Irrigation Ditch".
+
+Dam.Water hasSynonym "Dam".
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Bay),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : hasRegion),ObjectIntersectionOf([ObjectComplementOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Sea)),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Lake)),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)]))])),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Sea),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Lake)]))]))]))) */
+
+No Property is a Mill.
+
+No Road is a PoliticalGeographicArea.
+
+No River is a Lake.
+
+No Reservoir is a Stream.
+
+No Hole is a PoliticalGeographicArea.
+
+No Substance is a RiverCrossing.
+
+Every Backwater isDirectComponentOf something that is a River or that is a Stream.
+
+Every Duck is a Bird.
+
+No Cave is a LeisureActivity.
+
+No ContainmentOfWater is a Path.
+
+No AreaOfLand is a Channel.
+
+No Modifier is a RockStep.
+
+No Ford is a Bank.
+
+No Lake is a Rapids.
+
+No Track is a RockStep.
+
+No Nant is a Beck.
+
+No Hill is a Flood.
+
+Every Beck is a Stream.
+
+Every DisusedCanalStretch directlyConnectedTo something that is a CanalStretch or that is a DisusedCanalStretch or that is a DryCanalStretch.
+
+No HydrologyConcepts is a TemporalConcept.
+
+No Cliff is a Modifier.
+
+No SluiceGate is a Weir.
+
+No Cover is a FloodPrevention.
+
+Every Drain that directlyLocatedIn a Field is a TypicalDrain.
+Every TypicalDrain is a Drain that directlyLocatedIn a Field.
+
+No DryDisusedCanalStretch hasDirectComponent a Canal.Water.
+
+No Structure is a Sink.
+
+No Pond is a Pool.InRiver.
+
+No PoliticalGeographicArea is an Animal.
+
+No Slope is a Substance.
+
+No RiverCrossing is a Valley.
+
+Every Axiom_1 is something.
+
+No Property is a Path.
+
+Every LargeSize is a Size.
+
+No Boulder is an Animal.
+
+No Substance is a Cave.
+
+No Hill is a PastureLand.
+
+No GroundSurface is a Footprint.
+
+Every Spout hasWaterPressure a HighWaterPressure.
+
+Every CurlingPond is a Pond.
+
+No FishMigration is a ContainmentOfWater.
+
+No Connection is a Process.
+
+No Slope is a Modifier.
+
+No Cover is a Connection.
+
+No Dyke.Rock is a Process.
+
+No GroundSurface is an IndustrialArea.
+
+No Connection is a PastureLand.
+
+No Flume is a Bed.
+
+No Spa is a DykeSpring.
+
+No Fort is a SalmonLadder.
+
+No Modifier is a Mill.
+
+No InlandNavigation is a Flood.
+
+No ContainmentOfSalmon is a Valley.
+
+No Property is a RockStep.
+
+No IndustrialArea is a Process.
+
+No Spring is a River.
+
+No Ditch is a MillRace.
+
+Everything that is flowsInto by a River is something that is a Lake or that is a Reservoir or that is a River or that is a Sea.
+
+No Cover is a Boulder.
+
+Every TimberPond is a Pond that hasPrimaryPurpose a TimberStorage.
+Every Pond that hasPrimaryPurpose a TimberStorage is a TimberPond.
+
+No Modifier is a Boulder.
+
+Every Ford hasFootprint a Footprint.
+
+No Pond is a Bay.
+
+No Modifier is a Road.
+
+MillRace hasSynonym "Mill Race".
+
+Every Ford is a HydrologyConcepts.
+
+No Slope is a Boulder.
+
+Force hasSynonym "Foss".
+
+Every OxbowLake is a Pond.
+
+Inlet hasSynonym "Creek".
+
+No Land is a Modifier.
+
+Every Brook hasRegionalSynonym a Stream that hasDirectGeographicLocation England.
+
+No FishMigration is a Substance.
+
+No Basin is a Channel.
+
+No InlandNavigation is a HydrologyConcepts.
+
+No TemporalConcept is a Road.
+
+No Slope is an Embankment.
+
+No Dyke.Rock is a Mill.
+
+Every Stream flowsIn a Channel.
+
+No Land is a Flood.
+
+Every Tarn locatedOn a Mountain.
+
+Every Bank hasFootprint a Footprint.
+
+No Whirlpool is a Stream.
+
+Every SalmonLadder locatedNear something that is a Dam or that is a Weir.
+
+No Pool hasCurrent a Current.
+
+No PastureLand is a Process.
+
+Every Ditch that directlyLocatedIn a Field is a TypicalDitch.
+Every TypicalDitch is a Ditch that directlyLocatedIn a Field.
+
+RiverBank hasSynonym "River Bank".
+
+Everything hasSize at most 1 thing.
+
+No Pool is a Rapids.
+
+No InlandNavigation is a ContainmentOfWater.
+
+Every RiverStretch flowsIn a Channel.
+
+No Property is a Cliff.
+
+Every Llyn hasRegionalSynonym a Lake that hasDirectGeographicLocation Wales.
+
+Lake hasSynonym "Mere".
+
+No WaterSupply is a TidalProcess.
+
+No Cliff is a Valley.
+
+No Slope is a Cliff.
+
+No WaterFlowProcess is a Drainage.
+
+No Lode is a MillStream.
+
+Every BodyOfWater is a HydrologyConcepts.
+
+No Canal is a Bank.
+
+No Cover is a PoliticalGeographicArea.
+
+No StreamCrossing is a RockStep.
+
+No Substance is an Escarpment.
+
+No InlandNavigation is a GroundSurface.
+
+No Modifier is a LeisureActivity.
+
+No Dyke is an IrrigationDitch.
+
+No Cover is a Property.
+
+No FishMigration is a RiverCrossing.
+
+No RiverMouth is a Confluence.
+
+Every TurbulentCurrent is a Current.
+
+No InlandNavigation is a Track.
+
+No Whirlpool is a Confluence.
+
+No HydrologyConcepts is a Cover.
+
+Every Pot locatedNear something that is a Rapids or that is a Waterfall.
+
+No Lake is a Stream.
+
+Every Bay directlyLocatedIn something that is a Lake or that is a Sea.
+
+No Cave is an Escarpment.
+
+No Slope is an Escarpment.
+
+No Cover is a Substance.
+
+No River is a Bay.
+
+No RiverStretch is an Estuary.
+
+Every LockGate hasPrimaryPurpose a ControlOfWaterFlow.
+
+No ContainmentOfSalmon is a RiverCrossing.
+
+No IndustrialArea is a RiverCrossing.
+
+No Footprint is a RockStep.
+
+No Confluence is a Pool.InRiver.
+
+No River is an Estuary.
+
+Every DecoyPond hasPrimaryPurpose a CaptureOfGameBirds.
+
+No Structure is a BodyOfWater.
+
+No FishMigration is a PastureLand.
+
+Every DryDisusedCanalStretch isDirectComponentOf a Canal.
+
+Every Tarn hasDirectGeographicLocation Northern_England.
+
+No Canal is a Channel.
+
+No Slope is a Mill.
+
+No Channel is a Bank.
+
+Every Inlet hasFootprint a Footprint.
+
+No Ford is a Bed.
+
+Broad_5 is a Broad.
+
+No Inlet is a Stream.
+
+Every Wetland hasFootprint a Footprint.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Inlet),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : hasRegion),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Sea),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Lake),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Estuary)])),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)])),ObjectComplementOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Estuary)),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River)),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Sea)),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : t_spatiallyInside),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : isRegionOf),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Lake)),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)]))])),Class(http://www.ordnancesurvey.co.uk/ontology/SpatialRelations.owl# : SpatialRegion)]))) */
+
+No Cover is a Cave.
+
+No Hill is an Animal.
+
+No Slope is a PastureLand.
+
+No Slope is a Land.
+
+No Connection is a LeisureActivity.
+
+No RiverStretch is a Rapids.
+
+If X fedBy Y then Y feeds X.
+If X feeds Y then Y fedBy X.
+
+No Leat is a Rapids.
+
+Every BraidedRiverStretch is a RiverStretch that flowsIn at least 2 Channel.
+Every RiverStretch that flowsIn at least 2 Channel is a BraidedRiverStretch.
+
+No Property is a ContainmentOfWater.
+
+No Hill is a LeisureActivity.
+
+No FloodPrevention is a Boulder.
+
+No FishMigration is a PoliticalGeographicArea.
+
+No InlandNavigation is an Animal.
+
+No DryCanalStretch hasDirectComponent a Canal.Water.
+
+OverflowChannel hasSynonym "Overflow Channel".
+
+No TemporalConcept is a Mountain.
+
+No Canal is a Structure.
+
+No DryCanalStretch is a Sink.
+
+No HydrologyConcepts is a Modifier.
+
+No Slope is a Process.
+
+No Cave is a ContainmentOfWater.
+
+Every SluiceGate is a Structure.
+
+Every Spring flowsOutOf a GroundSurface.
+
+No CaptureOfGameBirds is a Curling.
+
+No Substance is an Industry.
+
+Every Syke locatedOn a Wetland.
+
+No Industry is an Animal.
+
+No FishMigration is an Embankment.
+
+No HydrologyConcepts is a Dyke.Rock.
+
+No Gully is a MillRace.
+
+No Cave is a PoliticalGeographicArea.
+
+No Property is a Valley.
+
+No HydrologyConcepts is a Mountain.
+
+No Cliff is a Land.
+
+No Ford is a Structure.
+
+No InfluentStream is a Burn.
+
+Every Estuary is a BodyOfWater.
+
+Every Meadow is a Field.
+
+No Land is an Animal.
+
+RiverBed hasSynonym "Bed".
+
+If X flowsTo Y then X directlyConnectedTo Y.
+
+No Footprint is a Mill.
+
+No Cliff is a Hill.
+
+No HydrologyConcepts is a Cliff.
+
+Rhyne hasSynonym "Reen".
+
+Everything that is directlyConnectedTo by a DryDisusedCanalStretch is something that is a CanalStretch or that is a DisusedCanalStretch or that is a DryCanalStretch.
+
+No Castle is a Fort.
+
+No Embankment is a Mill.
+
+Every River hasCurrent a Current.
+
+No Substance is a PoliticalGeographicArea.
+
+Every Channel hasFootprint a Footprint.
+
+No ContainmentOfWater is an Industry.
+
+No Hill is a RockStep.
+
+Every IndustrialWater is a Water.
+
+No Cover is a Flood.
+
+No FloodPrevention is a StreamCrossing.
+
+No FloodPrevention is a LeisureActivity.
+
+Every Livestock is an Animal.
+
+No RockStep is an Escarpment.
+
+Every Force hasRegionalSynonym a Waterfall that hasDirectGeographicLocation Northern_England.
+
+Everything that is directlyConnectedTo by a Pool is something that is a Canal.Water or that is a River or that is a Stream.
+
+No CaptureOfGameBirds is a Boating.
+
+No Lode is a Burn.
+
+Every Bed hasFootprint a Footprint.
+
+Every Nant is a Stream.
+
+No FloodPrevention is a Path.
+
+No PastureLand is a Modifier.
+
+Every Size is a Modifier.
+
+No RiverStretch is a Stream.
+
+No RiverStretch is a Leat.
+
+Every Wetland saturatedBy a Water.
+
+No Rivulet is a Bourne.
+
+No Dyke.Rock is a RockStep.
+
+No Mountain is a RockStep.
+
+No Fishing is a Curling.
+
+No FloodPrevention is an Animal.
+
+Every Brook is a Stream.
+
+No Cliff is a PastureLand.
+
+No Property is a Flood.
+
+No Inlet is a Pool.InRiver.
+
+Everything hasCurrent at most 1 thing.
+
+No Track is a Flood.
+
+No Footprint is a Boulder.
+
+No Bed is a Sink.
+
+Every Axiom_2 is something.
+
+No Pot is a PlungePool.
+
+Every BalancingPond is a Pond.
+
+Everything that is surrounds by a Moat is something that is a Castle or that is a Fort.
+
+No PastureLand is a Path.
+
+No FishMigration is a Property.
+
+Every DisusedCanalStretch hasDirectComponent a DisusedCanal.Water.
+
+No ContainmentOfSalmon is a LeisureActivity.
+
+No WaterSupply is a TimberStorage.
+
+No FloodPrevention is a ContainmentOfWater.
+
+Every CanalFeeder controlledBy a SluiceGate.
+
+No Bog is a Swamp.
+
+Spa hasSynonym "Mineral Spring".
+
+No HydrologyConcepts is a FishMigration.
+
+LockGate hasSynonym "Lock Gate".
+
+No WaterFlowProcess is a ControlOfWaterLevel.
+
+CatchDrain hasSynonym "Catch Drain".
+
+No Slope is an Animal.
+
+Every Basin hasFootprint a Footprint.
+
+No Dyke.Rock is a Path.
+
+No DryCanalStretch is an AreaOfLand.
+
+No InlandNavigation is an Industry.
+
+No Hill is a PoliticalGeographicArea.
+
+No Track is a Slope.
+
+No Track is a Road.
+
+No Track is a Process.
+
+Every Axiom_1 contains a BodyOfWater.
+
+No WaterSupply is a ControlOfWaterLevel.
+
+No HydrologyConcepts is a Property.
+
+Bourne hasSynonym "Winterbourne".
+
+No Cover is a LeisureActivity.
+
+Every DryCanalStretch hasDirectComponent a Canal.Channel.
+
+Every Size is a ValuePartition.
+
+No Embankment is a LeisureActivity.
+
+No TemporalConcept is a Substance.
+
+Everything hasWaterPressure at most 1 thing.
+
+No Cover is an IndustrialArea.
+
+Every River flowsIn a Channel.
+
+If X actsSpecificallyOn Y then X actsOn Y.
+
+Every Canal.Channel hasPrimaryPurpose a ContainmentOfWater.
+
+Every Limestone is a Substance.
+
+Every Spring that participatesIn a WaterFlowProcess that hasFrequency an Intermittent is an IntermittentSpring.
+Every IntermittentSpring is a Spring that participatesIn a WaterFlowProcess that hasFrequency an Intermittent.
+
+No ContainmentOfWater is a PoliticalGeographicArea.
+
+No Cover is a ContainmentOfWater.
+
+No GroundSurface is an Embankment.
+
+No IndustrialArea is an Animal.
+
+Every Pipe hasFootprint a Footprint.
+
+Every MillStream flowsPast a Mill.
+
+No Canal is a BodyOfWater.
+
+If X flowsInto Y then X flowsTo Y.
+
+No ContainmentOfSalmon is a Dyke.Rock.
+
+No HydrologyConcepts is a Cave.
+
+No Hill is a Modifier.
+
+Every Dyke hasPrimaryPurpose a Drainage.
+
+Every Lock directlyConnectedTo at most 2 things.
+
+Every Sink is a Hole that locatedWhere a Stream that flowsInto a GroundSurface.
+
+No Bay is a Pool.InRiver.
+
+No Cover is an Embankment.
+
+No Dam.Water is a Backwater.
+
+No Inlet is a Pool.
+
+No Cave is a Footprint.
+
+Every OverflowChannel adjacentTo a Lake.
+
+Every Pool.InRiver isDirectComponentOf something that is a River or that is a Stream.
+
+No ContainmentOfWater is a RiverCrossing.
+
+No DryDisusedCanalStretch hasDirectComponent a DisusedCanal.Water.
+
+No Flume is a Basin.
+
+No ModelBoating is a Curling.
+
+No Cliff is a Boulder.
+
+Every Weir hasPrimaryPurpose a ControlOfWaterFlow.
+
+AgriculturalDrain hasSynonym "Agricultural Drain".
+
+Every MillRace contains a MillStream.
+
+No Fishing is a Boating.
+
+No Mountain is a Valley.
+
+No ContainmentOfSalmon is an Animal.
+
+No GroundSurface is a StreamCrossing.
+
+No Basin is a BodyOfWater.
+
+No Substance is an Embankment.
+
+Every Fishing is a LeisureActivity.
+
+No Property is a Boulder.
+
+CurlingPond hasSynonym "Curling Pond".
+
+No Livestock is a Bird.
+
+No River is something that flowsInto a Lake and that flowsInto a Reservoir and that flowsInto a River and that flowsInto a Sea.
+
+No Embankment is a Flood.
+
+No Inlet is a Sea.
+
+No River is a Pool.InRiver.
+
+No Fort is a Dam.
+
+No FloodPrevention is a Property.
+
+Pool.InRiver hasSynonym "Pool".
+
+No Cliff is a Footprint.
+
+No Boulder is a LeisureActivity.
+
+No Water is a Chalk.
+
+No Lode is an InfluentStream.
+
+No Property is a Hollow.
+
+No Lake is a Confluence.
+
+ChannelBed hasSynonym "Channel Bed".
+
+No Cave is a Process.
+
+No Sea is a Bay.
+
+No Spring is a Bay.
+
+Every RiverStretch isDirectComponentOf a River.
+
+No Substance is a Modifier.
+
+No Canal is a DisusedCanalStretch.
+
+No GroundSurface is a Road.
+
+Every Bay isPartOf something that is a Lake or that is a Sea.
+
+No Swamp contains a Peat.
+
+No StreamCrossing is a Valley.
+
+CoolingPond hasSynonym "Cooling Pond".
+
+No Cliff is a Flood.
+
+No HydrologyConcepts is a Valley.
+
+No FloodPrevention is a TemporalConcept.
+
+No Hill is a Valley.
+
+No GroundSurface is a RockStep.
+
+Every Ford isComponentOf something that is a River or that is a Stream.
+
+No ContainmentOfSalmon is a Process.
+
+No Process is a LeisureActivity.
+
+No Road is a RockStep.
+
+No Substance is a LeisureActivity.
+
+No Substance is a Mountain.
+
+No FloodPrevention is an Escarpment.
+
+Every Embankment is something.
+
+No PastureLand is a ContainmentOfWater.
+
+Everything that is hasCurrent by something is a Current.
+
+No Track is a Land.
+
+No AreaOfLand is a Structure.
+
+Every Floodplain adjacentTo a River.
+
+No Road is a LeisureActivity.
+
+Every Stream hasDirectComponent a Source.
+
+No Structure is a Channel.
+
+Every Gully is a Channel.
+
+No Road is an Industry.
+
+No Connection is a Road.
+
+If X contains Y then Y containedIn X.
+If X containedIn Y then Y contains X.
+
+No GroundSurface is an Escarpment.
+
+Every Castle is a Structure.
+
+No Track is a Cliff.
+
+No InlandNavigation is a Property.
+
+No Cliff is a Dyke.Rock.
+
+Every Sink is a HydrologyConcepts.
+
+No PastureLand is a Mill.
+
+Syke hasSynonym "".
+
+Every Dam.Water directlyLocatedIn something that is a River or that is a Stream.
+
+No GroundSurface is a Hill.
+
+Every DykeSpring is a Spring.
+
+No Dyke.Rock is a Footprint.
+
+Every GroundWater is a Water.
+
+No ContainmentOfSalmon is an Industry.
+
+No Flume is a DisusedCanalStretch.
+
+Every Swamp floodedBy a Water.
+
+No Cover is a RockStep.
+
+No CaptureOfGameBirds is a ModelBoating.
+
+No HydrologyConcepts is an Industry.
+
+No Spring is a Pool.
+
+No Pipe is a Sink.
+
+No FishMigration is a Boulder.
+
+No Property is a StreamCrossing.
+
+No TemporalConcept is an Embankment.
+
+No DryCanalStretch is a Basin.
+
+No Sea is a Pool.InRiver.
+
+Every AgriculturalDrain is a Drain.
+
+No Property is an Industry.
+
+No Track is a GroundSurface.
+
+No Moat is something that surrounds a Castle and that surrounds a Fort.
+
+No Property is a Dyke.Rock.
+
+No Boulder is a Process.
+
+No CaptureOfGameBirds is a Fishing.
+
+Lochan hasSynonym "Lake".
+
+No RiverStretch is a Sea.
+
+No Whirlpool is a Pool.InRiver.
+
+No River is a Pool.
+
+No Cliff is a PoliticalGeographicArea.
+
+No FishMigration is an Animal.
+
+Every Channel that contains a Leat is a Leat.Channel.
+Every Leat.Channel is a Channel that contains a Leat.
+
+Every Llyn is a Lake.
+
+No TemporalConcept is a Cliff.
+
+No River is a Sea.
+
+Every Curling is a LeisureActivity.
+
+Every CanalStretch isDirectComponentOf a Canal.
+
+No Track is a Substance.
+
+No Structure is a Pipe.
+
+No Flume is a DryCanalStretch.
+
+Every Flume is a HydrologyConcepts.
+
+Every Autumn is a Season.
+
+RiverBed hasSynonym "River Bed".
+
+Everything that is connectedTo by a Canal is something that is a Canal or that is a Lake or that is a Pond or that is a Pool or that is a Reservoir or that is a River or that is a Stream.
+
+No DryCanalStretch is a Bank.
+
+No LargeSize is a MediumSize.
+
+No WaterSupply is a ControlOfWaterFlow.
+
+Every SluiceGate isDirectComponentOf a Canal.
+
+No OverflowChannel is a MillRace.
+
+No ControlOfWaterFlow is a TimberStorage.
+
+No Property is an Escarpment.
+
+No TemporalConcept is a Process.
+
+Every Season is a Duration.
+
+No RiverStretch is an Inlet.
+
+No FishMigration is a Hill.
+
+No Rapids is a Stream.
+
+Every River is a BodyOfWater.
+
+No Confluence is a Rapids.
+
+No HydrologyConcepts is a RockStep.
+
+Every Pipe is a HydrologyConcepts.
+
+No Mountain is a Land.
+
+Every Canal.Water isDirectComponentOf a CanalStretch.
+
+No ContainmentOfSalmon is a Road.
+
+No Substance is a Hill.
+
+Every Drain is a Ditch.
+
+Every ControlOfWaterFlow actsSpecificallyOn a Water.
+
+No TransportOfWater is a TidalProcess.
+
+Every Dyke is a Ditch.
+
+Every AgriculturalDrain adjacentTo an AgriculturalField.
+
+No ContainmentOfWater is an IndustrialArea.
+
+No RiverMouth is a RiverStretch.
+
+No Process is a Mill.
+
+Every AgriculturalDrain hasPrimaryPurpose a Drainage.
+
+No FloodPrevention is a Road.
+
+DryCanalStretch hasSynonym "Dry Canal Stretch".
+
+No Direction is a Size.
+
+No StreamCrossing is a ContainmentOfWater.
+
+No Land is an Escarpment.
+
+Every CaptureOfGameBirds is a LeisureActivity.
+
+No FloodPrevention is a Cliff.
+
+No SluiceGate is a Fort.
+
+No Dyke.Rock is a PoliticalGeographicArea.
+
+No Track is a PoliticalGeographicArea.
+
+No Peat is a Limestone.
+
+Every Axiom_2 contains a BodyOfWater.
+
+No Cover is a Land.
+
+No Flume is an AreaOfLand.
+
+No Beck is a MillStream.
+
+No Bed is a DisusedCanalStretch.
+
+No HydrologyConcepts is an Animal.
+
+No Pond is a Spring.
+
+No Connection is a Boulder.
+
+Every Lochan is a Loch.
+
+No FishMigration is a Dyke.Rock.
+
+No ContainmentOfSalmon is a Mountain.
+
+No Canal is a Ford.
+
+No Nant is a Bourne.
+
+No LowWaterPressure is a MediumWaterPressure.
+
+No InlandNavigation is a Connection.
+
+No Slope is a Mountain.
+
+Every MillPond is a Pond.
+
+No Leat is an Estuary.
+
+Every Nant hasRegionalSynonym a Stream that hasDirectGeographicLocation Wales.
+
+No ControlOfWaterFlow is a TransportOfWater.
+
+Every Peat is a Substance.
+
+No Cliff is a Mill.
+
+No Brook is a Bourne.
+
+Every Floodplain directLocationOf a Flood.
+
+No IndustrialArea is a Path.
+
+Every Moat surrounds something that is a Castle or that is a Fort.
+
+No Sea is a Whirlpool.
+
+No AreaOfLand is a BodyOfWater.
+
+No Leat is a Bay.
+
+No StreamCrossing is a ContainmentOfSalmon.
+
+Everything hasPrimaryPurpose at most 1 thing.
+
+No Culvert is a Conduit.Pipe.
+
+No ContainmentOfSalmon is a PoliticalGeographicArea.
+
+Every DryCanalStretch directlyConnectedTo at most 3 things.
+
+Every InfluentStream flowsOver something that is a Chalk or that is a Limestone.
+
+No Property is a Connection.
+
+No GroundSurface is a ContainmentOfSalmon.
+
+Every Culvert is a Pipe.
+
+No Property is a Road.
+
+No Pipe is a DisusedCanalStretch.
+
+No TransportOfWater is a Drainage.
+
+No Inlet is a Confluence.
+
+No Process is an Escarpment.
+
+No LargeSize is a SmallSize.
+
+RiverStretch hasSynonym "Reach".
+
+Every BodyOfWater that containedIn a Canal.Channel and that hasPrimaryPurpose an InlandNavigation is a Canal.Water.
+Every Canal.Water is a BodyOfWater that containedIn a Canal.Channel and that hasPrimaryPurpose an InlandNavigation.
+
+Every Confluence isConnecting at least 2 things.
+
+Every Inlet is a BodyOfWater.
+
+No Brook is an InfluentStream.
+
+http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl http://purl.org/dc/terms/abstract "Scope: Permanent topographic features involved in the containment and transport of surface inland water of a size of 1 metre or greater including tidal water within rivers. Purpose: To describe in an unambiguous manner the inland hydrology feature classes surveyed by Ordnance Survey with the intention of improving the use of the surveyed data by our customers and enabling semi-automatic processing of these data. Feature terms have primarily been taken from the Ordnance Survey Master Map Real World Objects Catalogue [1], however new terms have also been added in order to ensure the completeness of the domain. The feature definitions have also been taken from Ordnance Survey Master Map Real World Objects Catalogue [1] but they have been completed and modified where descriptions were insufficient. The sources of the additional definitions are noted after each definition. The ontology modules (Spatial relations, Network relations, Language relations, Political geography and Mereology) include only those relationships and concepts that were directly relevant to the Hydrology ontology. [1] Ordnance Survey (2001) Ordnance Survey Master Map Real World Objects Catalogue, v. 1.0, November 2001.".
+
+BraidedRiver hasSynonym "Braided River".
+
+Every AreaOfLand hasFootprint a Footprint.
+
+No Road is a Flood.
+
+No WaterPressure is a Shape.
+
+No TemporalConcept is a Footprint.
+
+No Pond is a Pool.
+
+No Fen is a Bog.
+
+Every Spout is a Spring.
+
+Everything that is flowsIn by a MillStream is a MillRace.
+
+No RockStep is a Mill.
+
+No FishMigration is a StreamCrossing.
+
+No Track is a Property.
+
+No Valley is an Escarpment.
+
+No Path is a Boulder.
+
+No RiverStretch is a Spring.
+
+No InlandNavigation is a FishMigration.
+
+No Track is a Connection.
+
+No Lake is a Pool.
+
+No HydrologyConcepts is a FloodPrevention.
+
+No TemporalConcept is a RockStep.
+
+No Property is a Process.
+
+No Flood is a RockStep.
+
+No Land is a Path.
+
+Every Pond is a BodyOfWater.
+
+No RockStep is a Valley.
+
+Every Dub is a Pool.InRiver.
+
+No Cover is a Slope.
+
+Every Structure is a HydrologyConcepts.
+
+No ContainmentOfSalmon is a Modifier.
+
+No Estuary is a Lake.
+
+No GroundSurface is a Cave.
+
+No WaterFlowProcess is a TransportOfWater.
+
+Every Channel that contains a Water is a TypicalChannel.
+Every TypicalChannel is a Channel that contains a Water.
+
+No Rivulet is a Nant.
+
+No FloodPrevention is a ContainmentOfSalmon.
+
+No Cover is a GroundSurface.
+
+Every RiverBank is a Bank that isEdgeOf a Channel that contains a River.
+Every Bank that isEdgeOf a Channel that contains a River is a RiverBank.
+
+No StreamCrossing is an Escarpment.
+
+Every Reservoir that hasDirectComponent a Cover is a CoveredReservoir.
+Every CoveredReservoir is a Reservoir that hasDirectComponent a Cover.
+
+No PastureLand is a LeisureActivity.
+
+No FloodPrevention is a Modifier.
+
+No Track is a Path.
+
+No Bank is a Sink.
+
+No Spring is a Confluence.
+
+No Beck is a Burn.
+
+No Substance is a Land.
+
+No Substance is a Valley.
+
+Every MillLade hasRegionalSynonym a MillRace that hasDirectGeographicLocation Scotland.
+
+No Spring is an Inlet.
+
+No Connection is an Animal.
+
+No GroundSurface is a Process.
+
+Every BodyOfWater hasFootprint a Footprint.
+
+No Cliff is a Cave.
+
+No Spring is a Stream.
+
+Every Fort is a Structure.
+
+No FishMigration is an IndustrialArea.
+
+No Slope is a ContainmentOfWater.
+
+No Pond is a RiverStretch.
+
+No Castle is a Dam.
+
+Every NavigationalCut is a Canal.
+
+No InlandNavigation is a ContainmentOfSalmon.
+
+No Industry is a Valley.
+
+Every Leat is a BodyOfWater.
+
+No ContainmentOfSalmon is a Mill.
+
+No Track is a ContainmentOfSalmon.
+
+No Reservoir is an Estuary.
+
+No MineralSalts is a Chalk.
+
+Every FishPond is a Pond.
+
+Every CircularDirection is a Direction.
+
+No RockStep is an Animal.
+
+No Flume is a Canal.
+
+Every Channel is a HydrologyConcepts.
+
+No HydrologyConcepts is a LeisureActivity.
+
+No RiverStretch is a Confluence.
+
+Every AreaOfLand isSubdivisionOf a Land.
+
+No Footprint is a ContainmentOfWater.
+
+No Footprint is a Process.
+
+Everything that is seasonallyExistsDuring by something is a Season.
+
+No Reservoir is a Whirlpool.
+
+No Dyke.Rock is a Valley.
+
+No Flume is a Sink.
+
+No TimberStorage is a Drainage.
+
+No Dyke.Rock is an Embankment.
+
+No FloodPrevention is a Dyke.Rock.
+
+Every BoatingLake is a Pond that hasPrimaryPurpose a Boating.
+Every Pond that hasPrimaryPurpose a Boating is a BoatingLake.
+
+No PastureLand is an Animal.
+
+No Track is an Industry.
+
+No DryCanalStretch is a CanalStretch.
+
+Every DryDisusedCanalStretch is a HydrologyConcepts.
+
+No River is a Rapids.
+
+No Cliff is an Embankment.
+
+No Mountain is a LeisureActivity.
+
+Every DryCanalStretch is a HydrologyConcepts.
+
+No PoliticalGeographicArea is a RiverCrossing.
+
+No Cover is a FishMigration.
+
+No PoliticalGeographicArea is a Mill.
+
+If X hasPrimaryPurpose Y then X enables Y.
+
+Every Lode locatedOn an Embankment.
+
+Every Rapids isDirectComponentOf something that is a River or that is a Stream.
+
+No Footprint is an Escarpment.
+
+No Dyke.Rock is an Industry.
+
+Everything that is hasFlowDirection by something is a Direction.
+
+No TemporalConcept is an Industry.
+
+No Embankment is a Modifier.
+
+No Basin is a Ford.
+
+Every Conduit.Channel is a Channel.
+
+No Path is a PoliticalGeographicArea.
+
+No StreamCrossing is a RiverCrossing.
+
+No InlandNavigation is a Cliff.
+
+Every OverflowChannel enables a Drainage.
+
+Every OxbowLake locatedNear a Floodplain.
+
+Every MediumSize is a Size.
+
+No RiverCrossing is a LeisureActivity.
+
+No RiverMouth is a Stream.
+
+No Process is a Valley.
+
+No Cave is a Land.
+
+Every CurlingPond hasPrimaryPurpose a Curling.
+
+No CanalStretch is a DryDisusedCanalStretch.
+
+Every Loch is a Lake.
+
+No Cover is an Escarpment.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Confluence),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : providesConnection),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : connectionTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Canal.Water)])),Class(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : Connection),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/Network.owl# : connectionFrom),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : River),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Stream),Class(http://www.ordnancesurvey.co.uk/ontology/Hydrology.owl# : Canal.Water)]))]))) */
+
+No AreaOfLand is a Bank.
+
+Every Aber hasRegionalSynonym something that hasDirectGeographicLocation Wales, and that is a Confluence or that is a RiverMouth.
+
+Every Lake containedIn a Basin.
+
+No RiverCrossing is a RockStep.
+
+No Substance is an Animal.
+
+No LockGate is a Dam.
+
+No CanalStretch is a Bed.
+
+No Estuary is a Pool.
+
+No GroundSurface is a Valley.
+
+No Slope is a Footprint.
+
+No Substance is a Mill.
+
+No Syke is a Bourne.
+
+No Structure is a DryDisusedCanalStretch.
+
+Every Flume hasPrimaryPurpose a TransportOfWater that usedBy an Industry or that usedFor an Irrigation.
+
+Every Waterway is a HydrologyConcepts.
+
+No Connection is a Hollow.
+
+No Nant is a MillStream.
+
+No RiverMouth is a Rapids.
+
+Every Culvert hasPrimaryPurpose a TransportOfWater that transportsUnder a Road.
+
+No ControlOfWaterLevel is a Drainage.
+
+No FishMigration is a Mill.
+
+No StreamCrossing is an IndustrialArea.
+
+No SalmonLadder is a Dam.
+
+No PastureLand is a PoliticalGeographicArea.
+
+No Rivulet is a Syke.
+
+Every DryDisusedCanalStretch hasFootprint a Footprint.
+
+No Brook is a MillStream.
+
+No Connection is a Path.
+
+No Dyke is a Drain.
+
+No Valley is an Animal.
+
+No Hill is a ContainmentOfSalmon.
+
+No Reservoir is a River.
+
+WaterMeadow hasSynonym "Water Meadow".
+
+No InlandNavigation is a Footprint.
+
+No Property is an IndustrialArea.
+
+No Spring is a Sea.
+
+Canal.Channel hasSynonym "Canal".
+
+No RiverMouth is a Whirlpool.
+
+Every Aber is a BodyOfWater.
+
+No FishMigration is a ContainmentOfSalmon.
+
+Every DryDisusedCanalStretch hasDirectComponent a Canal.Channel.
+
+Every Basin is a HydrologyConcepts.
+
+Every FallingWater is a Water.
+
+Every Summer is a Season.
+
+No Cover is an Animal.
+
+No Substance is an IndustrialArea.
+
+Every Pool containedIn a Basin.
+

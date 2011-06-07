@@ -1,0 +1,2354 @@
+Every Smithy hasPurpose a Production that appliesTo a MetalProduct.
+
+Every ConcertHall is a Place.
+
+Every JuniorSchoolPupil is a Student.
+
+Every Rectory hasPurpose a Housing that appliesTo a Rector.
+
+Every Research is a Purpose.
+
+Every TelephoneExchange is a Place.
+
+Every CattleMarket hasPart a Building that hasPurpose a Trading that appliesTo a Cattle.
+
+Every ConferenceCentre is a Place.
+
+Every MeetingHouse hasPurpose a Worship that appliesTo a Quaker.
+
+Every Training is a Purpose.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : EquestrianCentre),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectUnionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Teaching),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Riding))]),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Horse)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Riding)])]))) */
+
+Every Mortuary is a Place.
+
+Every Mission hasPart a Building that hasPurpose something that is a CharitableActivity or that is a ChristianWorship.
+
+Every CustomsShed isLocatedNear exactly 1 thing that is an Airport or that is a Docks.
+
+Every Church that isLocatedIn an Abbey is an AbbeyChurch.
+Every AbbeyChurch is a Church that isLocatedIn an Abbey.
+
+Every JuvenileCourt hasPart a Building that hasPurpose an Administration that appliesTo a Justice and that appliesTo a YoungPerson.
+
+Every MilitaryBase hasPurpose a MilitaryActivity.
+
+Every ShoppingCentre hasPurpose a Shopping.
+
+Every RoadsideServices hasPart a Building that hasPurpose a Provision that appliesTo a Motorist and that appliesTo a Refreshment.
+
+Every Repair is a Purpose.
+
+Every AircraftHanger hasPurpose a Housing that appliesTo an Aircraft.
+
+Every InshoreLifeboat is a Lifeboat.
+
+Every SecondarySchoolPupil is a Student.
+
+Every Bethesda is a Place.
+
+Every Treatment is a Purpose.
+
+Every Temple is a Place.
+
+Every Lairage hasPurpose a Holding that appliesTo a Livestock.
+
+Every LawCourt is a Place.
+
+Every Lairage is a Place.
+
+Every Hall hasPurpose a Meeting that appliesTo a Person.
+
+Every Building hasPart a Roof.
+
+Every TerritorialArmyCentre hasPart a Building that hasPurpose a Training that appliesTo an ArmyReservist.
+
+Every NavalBase is a MilitaryBase.
+
+Every InshoreRescueBoatStation hasPart a Building that hasPurpose a Base that appliesTo an InshoreLifeboat.
+
+Every BarrackBlock hasPurpose a Housing that appliesTo a MilitaryPersonnel.
+
+Every Cinema hasPart a Building that hasPurpose a Showing that appliesTo a Film.
+
+Every Sawmill hasPart a Building that hasPurpose a Processing that appliesTo a Timber.
+
+Every Drainage is a Purpose.
+
+Every LiveryStables is a Stables.
+
+Every Salem is a Place.
+
+Every CarFactory hasPart a Building that hasPurpose a Manufacturing that appliesTo a MotorVehicle.
+
+Every AnimalHouse is a Building.
+
+Every ShintyStadium hasPurpose a Playing that appliesTo a Shinty.
+
+Every ServiceStation is a Place.
+
+Every Manse hasPart a Building that hasPurpose a Housing that appliesTo a Minister_Religion.
+
+Every Horse is an Animal.
+
+Every Allotment isOwnedBy exactly 1 LocalAuthority.
+
+Every ChangingRoom hasPurpose a Changing that appliesTo a Clothes.
+
+Every ConvalescentHome hasPart a Building that hasPurpose a Convalescence that appliesTo a Patient.
+
+Every StatelyHome is a Place.
+
+Every UniversityStudent is a Student.
+
+Every WildfowlCentre is a Place.
+
+Every Stables hasPurpose a Housing that appliesTo a Horse.
+
+Every PsychiatricHospital hasPart a Building that hasPurpose a Housing that appliesTo a PsychiatricPatient.
+
+Every MilitaryCamp hasPart a Building that hasPurpose a Housing that appliesTo a MilitaryPersonnel.
+
+Every WeatherStation hasPart a Building that hasPurpose a Recording that appliesTo a Weather.
+
+Every Palace hasPart a Building that hasPurpose a Housing that appliesTo something that is an Archbishop or that is a Bishop or that is a RoyalFamily.
+
+Every Place hasPurpose a Purpose.
+
+Every AnimalHouse isLocatedIn exactly 1 Zoo.
+
+Every RadarStation hasPart a Building that hasPurpose something that is a NavigationAid or that is a Surveillance.
+
+Every CricketGround is a SportsGround.
+
+Every Capel is a Chapel that isLocatedIn wales.
+Every Chapel that isLocatedIn wales is a Capel.
+
+Every CouncilOffice is a Place.
+
+Every Crematorium hasPurpose a Cremation.
+
+Every Tabernacle hasPart a Building that hasPurpose a ChristianWorship.
+
+Every Shed hasPurpose something that is a CraftActivity or that is a Storage.
+
+Every Distilling is a Purpose.
+
+Every Storey is a Structure.
+
+Every FireStation is a Place.
+
+Every Bothy isLocatedIn exactly 1 thing that is a Moorland or that is a MountainousArea.
+
+Every RoadsideServices hasPurpose a Provision that appliesTo a Motorist and that appliesTo a Refreshment.
+
+Every Kirk isLocatedIn scotland.
+
+Every PublicIncinerator hasPurpose a Burning that appliesTo a Waste.
+
+Every SwimmingPool is a Place.
+
+Every ShintyStadium is a Stadium.
+
+Every MunicipalBuilding is a Building.
+
+Every Cemetery hasPurpose a Burial that appliesTo a Corpse.
+
+Every AirTerminalBuilding is a TerminalBuilding.
+
+Every PostOffice is a Place.
+
+Every Swannery is a Place.
+
+Every ConvalescentHome hasPurpose a Housing that appliesTo a Patient.
+
+Every TollHouse is a Building.
+
+Every MotorVehicle is a Vehicle.
+
+Every MilitaryDefence is a MilitaryActivity.
+
+Every SewagePumpingStation hasPurpose a Pumping that appliesTo a Sewage.
+
+Every RailwayStation hasPart a Building that hasPurpose a Transport that appliesTo a Railway.
+
+Every Academy is a Place.
+
+Every ValveHouse isLocatedNear a CanalFeeder.
+
+Every CountryClub is a Club.
+
+Every AstronomicalResearch is a Research.
+
+Every Sawmill hasPurpose a Processing that appliesTo a Timber.
+
+Every Mission is a Place.
+
+Every GardenShed isLocatedIn exactly 1 Garden_Private.
+
+Every FootballStadium hasPart a Building that hasPurpose a Playing that appliesTo a Football.
+
+Every Flat hasPurpose a Housing that appliesTo a Person.
+
+Every Dairy is a Place.
+
+Every Bank hasPurpose a Provision that appliesTo a FinancialService.
+
+Every Priory isLedBy exactly 1 thing that is a Prior or that is a Prioress.
+
+Every Lairage hasPart a Building that hasPurpose a Holding that appliesTo a Livestock.
+
+Every SortingOffice hasPurpose a Provision that appliesTo a PostalService.
+
+Every Worship is a Purpose.
+
+Every CoachStation hasPart a Building that hasPurpose a Transport that appliesTo a Coach.
+
+wales is a Country.
+
+Every Club hasPart a Building that hasPurpose a Recreation.
+
+Every PoliceHeadquarters hasPart a Building that hasPurpose an Administration that appliesTo a Police.
+
+Every DeliveryOffice hasPart a Building that hasPurpose a Provision that appliesTo a PostalService.
+
+Every Garage_Service is a Place.
+
+Every PoliceHeadquarters is a PoliceStation.
+
+Every ValveHouse hasPurpose a Control that appliesTo a WaterFlow.
+
+Every Palace hasPurpose a Housing that appliesTo something that is an Archbishop or that is a Bishop or that is a RoyalFamily.
+
+Every AuctionHouse hasPurpose a Trading that appliesTo something that is a Goods or that is a Livestock.
+
+Every FireStation hasPart a Building that hasPurpose a Base that appliesTo a FireEngine.
+
+Every School is a Place.
+
+Every Berthing is a Purpose.
+
+Every Milling is a Purpose.
+
+Every TownHall isLocatedIn exactly 1 Town.
+
+Every Works is a Place.
+
+Every Gatehouse is something that hasPart a Gate or that isLocatedNear a Gate.
+
+Every Church is a Place.
+
+Every LifeboatStation isLocatedNear a Sea.
+
+Every ChemicalWorks hasPurpose an IndustrialProcessing that appliesTo a Chemical.
+
+Every GreyhoundTrack hasPurpose a Racing that appliesTo a Greyhound.
+
+Every UndergroundStation is a RailwayStation.
+
+Every CoastguardStation isOperatedBy an EmergencyServiceOrganisation.
+
+Every Distillery hasPart a Building that hasPurpose a Distilling that appliesTo a Spirit.
+
+Every Recording is a Purpose.
+
+Every FarmHouse isPartOf a Farm.
+
+Every CanalFeeder is a TopographicObject.
+
+Every RecyclingCentre hasPart a Building that hasPurpose a Recycling that appliesTo a Waste.
+
+Every BeachHut isLocatedNear a Beach.
+
+Every HillFort hasHistoricPurpose a MilitaryDefence.
+
+Every PigeonLoft is a Building.
+
+Every Cannery is a Place.
+
+Every Maltings hasPurpose a Malting.
+
+Every KingdomHall hasPart a Building that hasPurpose a Worship that appliesTo a JehovahsWitness.
+
+Every RidingSchool hasPart a Stables.
+
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Entertainment),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Tourist))])),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Place)])]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : TouristAttraction)])) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : TouristAttraction),ObjectIntersectionOf([ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Entertainment),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Tourist))])),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Place)])])])) */
+
+Every YWCAHostel is a Hostel.
+
+Every Brickworks hasPart a Building that hasPurpose a Manufacturing that appliesTo a Bricks.
+
+Every VisitorCentre is a Place.
+
+Every InfantSchoolPupil is a Student.
+
+Every LifeboatStation isOperatedBy an EmergencyServiceOrganisation.
+
+Every Forge is a Place.
+
+Every FarmHouse isLocatedIn a Farm.
+
+Every GasMeterHouse hasPurpose a Control that appliesTo a GasFlow.
+
+Every CoastguardStation hasPart a Building that hasPurpose a Base that appliesTo a Coastguard.
+
+Every Shipyard isLocatedNear a Sea.
+
+Every Deanery hasPurpose a Housing that appliesTo a Dean.
+
+Every Tabernacle hasPurpose a ChristianWorship.
+
+Every Hospice hasPurpose a Housing that appliesTo a Patient.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : LockHouse),ObjectUnionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : LockKeeper)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Housing)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasHistoricPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : LockKeeper)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Housing)]))])) */
+
+Every Piggery is a Place.
+
+Every SewagePumpingStation is a PumpingStation.
+
+Every CommunityCentre is a Place.
+
+Every RugbyGround hasPurpose a Playing that appliesTo a Rugby.
+
+Every EngineShed is a Building.
+
+Every Vicarage is a Place.
+
+Every Icehouse is a Building.
+
+Every YoungPerson is something that is a Child or that is a Teenager.
+Everything that is a Child or that is a Teenager is a YoungPerson.
+
+Every SheepMarket hasPurpose a Trading that appliesTo a Sheep.
+
+Every RecyclingCentre hasPurpose a Recycling that appliesTo a Waste.
+
+Every TollStation isLocatedOn a TollRoad.
+
+Every Abbey hasPart an AbbeyChurch.
+
+Every Mill that isLocatedIn wales is a Pandy.
+Every Pandy is a Mill that isLocatedIn wales.
+
+Every FarmHouse hasPurpose a Housing that appliesTo a Person.
+
+Every HealthCentre hasPurpose a Provision that appliesTo a HealthCare.
+
+Every Slaughter is a Purpose.
+
+Every PublicIncinerator is a Place.
+
+Every TrainingCentre hasPurpose an Education.
+
+Every Abbey hasPurpose a ChristianWorship.
+
+Every Store is a Place.
+
+Every ClubHouse is a Building.
+
+Every Reception is a Purpose.
+
+Every GasTerminal hasPurpose a Storage that appliesTo a Gas.
+
+Every RadioStation is a Place.
+
+Every BowlingAlley hasPart a Building that hasPurpose a Playing that appliesTo a TenPinBowling.
+
+Every Distribution is a Purpose.
+
+Every Barn hasPurpose a Storage that appliesTo something that is an Animal or that is an AnimalFeed or that is a Crop or that is a FarmVehicle.
+
+Every Abattoir hasPurpose a Slaughter that appliesTo a Livestock.
+
+Every OperaHouse hasPart a Building that hasPurpose a Staging that appliesTo an Opera.
+
+Every Castle hasPart a Building.
+
+Every Showing is a Purpose.
+
+Every Lock is a Structure.
+
+Every PoliceHeadquarters hasPurpose an Administration that appliesTo a Police.
+
+Every Flat is a Place.
+
+Every TelephoneExchange hasPart a Building that hasPurpose a Routing that appliesTo an ElectronicCommunications.
+
+Every WasteTransferStation hasPurpose a Sorting that appliesTo a Waste.
+
+Every ColdStore hasPurpose a ColdStorage that appliesTo a Produce.
+
+Every River is a TopographicObject.
+
+Every SalvationArmyCitadel hasPurpose a ChristianWorship.
+
+Every OilStorageDepot is a Place.
+
+Every Aviary hasPurpose a Housing that appliesTo a Bird.
+
+Every VeterinarySurgery hasPurpose a Provision that appliesTo a VeterinaryCare.
+
+Every Barn isLocatedOn a FarmLand.
+
+Every Mill hasPart a Building that hasPurpose something that is a Milling or that is a Processing.
+
+Every GreyhoundTrack is a Place.
+
+Every OilRefinery is a Refinery.
+
+Every ChemicalWorks is a Works.
+
+Every Pillbox hasHistoricPurpose a MilitaryDefence.
+
+Every PalliativeHealthCare is a HealthCare.
+
+Every VisitorCentre isLocatedIn a TouristAttraction.
+
+Every Zoo is a Place.
+
+Every CarPark hasPurpose a Parking that appliesTo a Car.
+
+Every MaltHouse hasPurpose a Malting.
+
+Every Barracks is a Place.
+
+Every Vineyard hasPurpose a Growing that appliesTo a Grapes.
+
+Every Recreation is a Purpose.
+
+Every FishMarket is a Place.
+
+Every CommunityCentre hasPurpose a Meeting that appliesTo a CommunityGroup.
+
+Every Dock hasPurpose something that appliesTo a Ship, and that is a Construction or that is a Repair.
+
+Every Flower is something.
+
+Every Guildhall hasPart a Building that hasPurpose a Staging that appliesTo a PublicEvent.
+
+Every Broadcasting is a Purpose.
+
+Every AnimalHouse hasPurpose a Housing that appliesTo an Animal.
+
+Every Synagogue hasPart a Building that hasPurpose a JewishWorship.
+
+Every SportsGround hasPurpose a Playing that appliesTo a Sport.
+
+Every ShootingBox hasPurpose a Housing that appliesTo a Hunter.
+
+Every Worship that appliesTo a Muslim is an IslamicWorship.
+Every IslamicWorship is a Worship that appliesTo a Muslim.
+
+Every AmbulanceStation isOperatedBy an EmergencyServiceOrganisation.
+
+Every LeisureCentre hasPurpose a Playing that appliesTo a Sport.
+
+Every TollStation hasPart a TollBooth.
+
+Every Ebenezer hasPurpose a ChristianWorship.
+
+Every Lifeboat is a Vehicle.
+
+Every BarrackBlock isPartOf a Barracks.
+
+Every Dockyard hasPart a Dock.
+
+Every SignalStation hasPart a Building that hasPurpose a Reception that appliesTo a RadioSignal.
+
+Every MountainRescueHut hasPurpose a Provision that appliesTo a RescueFacility.
+
+Every FarmHouse is a Building.
+
+Every BusStation hasPart a Building that hasPurpose a Transport that appliesTo a Bus.
+
+Every Sanatorium is a ConvalescentHome.
+
+Every GardenCentre hasPurpose a Trading that appliesTo a Plant.
+
+Every Vicarage hasPurpose a Housing that appliesTo a Vicar.
+
+Every HydroelectricPowerStation hasPart a Dam.
+
+Every BombShelter hasPurpose a Protection that appliesTo a Bomb.
+
+Every Mosque hasPurpose an IslamicWorship.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchool),ObjectIntersectionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchool)])) */
+
+Every SheriffsCourt isLocatedIn scotland.
+
+Every PsychiatricHospital is a Place.
+
+Every Castle hasHistoricPurpose a MilitaryDefence.
+
+Every Restaurant hasPart a Building that hasPurpose a Consumption that appliesTo a Food.
+
+Every LifeboatHouse is a Building.
+
+Every OperaHouse hasPurpose a Staging that appliesTo an Opera.
+
+Every Shop hasPurpose a Shopping.
+
+Every House is a Building.
+
+Every Mortuary hasPart a Building that hasPurpose a Storage that appliesTo a Corpse.
+
+Every NursingHome hasPurpose a Housing that appliesTo an ElderlyPerson.
+
+Every Entombment is a Purpose.
+
+Every Mosque is a Place.
+
+Every Works hasPurpose an IndustrialProcessing.
+
+Every SalvationArmyCitadel hasPart a Building that hasPurpose a ChristianWorship.
+
+Every RetailPark hasPurpose a Shopping.
+
+Every MagistratesCourt is a LawCourt.
+
+Every SkittleAlley is a Building.
+
+Every TrainingCentre hasPart a Building that hasPurpose an Education.
+
+Every Kennels hasPart a Building that hasPurpose a Housing that appliesTo a Dog.
+
+Every Trading is a Purpose.
+
+Every Stadium is a Place.
+
+Every Pumping is a Purpose.
+
+Every FireStation hasPurpose a Base that appliesTo a FireEngine.
+
+Every Education is a Purpose.
+
+Every Hospice hasPart a Building that hasPurpose a Provision that appliesTo a PalliativeHealthCare.
+
+Every CoastguardLookout is a Building.
+
+Every Church hasPurpose a ChristianWorship.
+
+Every Shed is a Building.
+
+Every Protection is a Purpose.
+
+Every Hall is a Place.
+
+Every Car is a MotorVehicle.
+
+Every SportsGround is a Place.
+
+Every Crematorium is a Place.
+
+Every Gym hasPurpose an Exercising.
+
+Every Production is a Purpose.
+
+Every Meeting is a Purpose.
+
+Every TechnicalCollege hasPart a Building that hasPurpose an Education.
+
+Every Recycling is a Purpose.
+
+Every PetrolStation hasPurpose a Refuelling that appliesTo a MotorVehicle.
+
+Everything that is hasName by a Place is a Name.
+
+Every Cannery hasPurpose a Manufacturing that appliesTo a CannedProduct.
+
+Every PublicHouse is a Place.
+
+Every PumpingStation is a Place.
+
+Every BarrackBlock is a Building.
+
+Every House hasPurpose a Housing that appliesTo a Person.
+
+Every Academy hasPart a Building that hasPurpose an Education.
+
+Every Factory is a Place.
+
+Every Analysis is a Purpose.
+
+Every Consumption is a Purpose.
+
+Every NursingHome is a Place.
+
+Every Burial is a Purpose.
+
+Every DefensiveWall is a Wall that hasPurpose a MilitaryDefence.
+Every Wall that hasPurpose a MilitaryDefence is a DefensiveWall.
+
+Every MilitaryActivity is a Purpose.
+
+Every Bird is an Animal.
+
+Every PsychiatricHospital hasPart a Building that hasPurpose a Provision that appliesTo a HealthCare.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : BeachHut),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectUnionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Provision),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : CateringFacility))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Storage),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : BeachEquipment))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Changing),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Clothes))])]))) */
+
+Every LifeboatStation hasPurpose a Base that appliesTo a Lifeboat.
+
+Every GoodsYard hasPart something that is a GoodsShed or that is a Warehouse.
+
+Every LockUp is a Building.
+
+Every Sale is a Purpose.
+
+Every Cathedral is a Church that isLedBy a Bishop.
+Every Church that isLedBy a Bishop is a Cathedral.
+
+Every YouthClub hasPart a Building that hasPurpose a Meeting that appliesTo a Teenager.
+
+Every GoodsShed hasPurpose a Storage that appliesTo a Goods.
+
+Every YouthClub is a Place.
+
+Every FootballGround is a SportsGround.
+
+Every LockUp hasHistoricPurpose a Detention that appliesTo a Prisoner.
+
+Every SwingBridge is a TopographicObject.
+
+Every CricketPavilion is a ClubHouse.
+
+Every CouncilOffice hasPart a Building that hasPurpose an Administration that isCarriedOutBy a LocalAuthority.
+
+Every RaceHorse is an Animal.
+
+Every HousingEstate hasPurpose a Housing that appliesTo a Person.
+
+Every Distillery is a Place.
+
+Every TopographicObject hasFootprint a Footprint.
+
+Every GameBird is an Animal.
+
+Every Brickworks is a Works.
+
+Every Monastery hasPart a Building that hasPurpose a Housing that appliesTo a Monk.
+
+Every SocialServiceCentre is a Place.
+
+Every ClimbingHut is a Building.
+
+Every Library hasPurpose something that appliesTo a Publication, and that is a Holding or that is a Loaning.
+
+Every PigeonLoft hasPurpose a Housing that appliesTo a Pigeon.
+
+Every BoatHouse hasPurpose a Housing that appliesTo a Boat.
+
+Every Concert is a Performance.
+
+Every AmbulanceStation is a Place.
+
+Every Bicycle is a Vehicle.
+
+Every Theatre is a Place.
+
+Every NursingHome hasPart a Building that hasPurpose a Provision that appliesTo a Care that appliesTo an ElderlyPerson.
+
+Every Priory is a Place.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : College_Secondary),ObjectIntersectionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : College_Secondary_Student)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : College_Secondary_Student)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building)]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : College_Secondary_Student)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : College_Secondary_Student)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building)]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : College_Secondary)])) */
+
+Every Dog is an Animal.
+
+Every Castle hasPart a DefensiveWall.
+
+Every NavalAirStation hasPart an Airfield.
+
+Every ComprehensiveSchool is a SecondarySchool.
+
+Every GardenCentre hasPart a Building that hasPurpose a Trading that appliesTo a Plant.
+
+Every CraftActivity is a Purpose.
+
+Every CricketClubMember is a ClubMember.
+
+Every BoatHouse is a Building.
+
+Every Superstore hasPart a Building that hasPurpose a Shopping.
+
+Every SwimmingPool hasPart a Building.
+
+Every Cannery hasPart a Building that hasPurpose a Manufacturing that appliesTo a CannedProduct.
+
+Every GovernmentOffice hasPart a Building that hasPurpose an Administration that isCarriedOutBy a CentralGovernment.
+
+Every University is a Place.
+
+Every Zoo hasPurpose a Housing that appliesTo an Animal.
+
+Every Shopping is a Trading.
+
+Every PersonalConsumption is something.
+
+Every TechnicalCollege hasPurpose an Education.
+
+Every TouristInformationCentre hasPurpose a Provision that appliesTo a TouristInformation.
+
+Every WinterGarden_Building is a Building.
+
+Every Surveillance is a Purpose.
+
+Every House that isConnectedTo exactly 1 TerraceHouse is an EndTerraceHouse.
+Every EndTerraceHouse is a House that isConnectedTo exactly 1 TerraceHouse.
+
+Every ReadingRoom is a Library.
+
+Every CoastguardStation isLocatedNear a Sea.
+
+Every Winery is a Place.
+
+Every Transport is a Purpose.
+
+Every Airfield is a Place.
+
+Every GoodsYard is a Place.
+
+Every School that isOperatedBy a GovernmentOrganisation is a StateSchool.
+Every StateSchool is a School that isOperatedBy a GovernmentOrganisation.
+
+Every AircraftHanger is a Building.
+
+Every ContainerPort is a Docks.
+
+Every PowerStation is a Place.
+
+Every UndergroundRailway is a Railway.
+
+Every TechnicalCollege is a Place.
+
+Every LifeboatHouse hasPurpose a Housing that appliesTo a Lifeboat.
+
+Every FreightTerminal is a Place.
+
+Every CadetCentre is a Place.
+
+Every ArtGallery hasPurpose an Exhibition that appliesTo an Art.
+
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchool)])) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchool),ObjectIntersectionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])])) */
+
+Every SignalStation hasPurpose a Broadcasting that appliesTo a RadioSignal.
+
+Every BlockOfFlats hasPart at least 2 Flat.
+
+Every Manor is a Place.
+
+Every FishMarket hasPart a Building that hasPurpose a Trading that appliesTo a Fish.
+
+Every ConvalescentHome hasPurpose a Convalescence that appliesTo a Patient.
+
+Every Swan is a Bird.
+
+Every RidingSchool is a Place.
+
+Every VisitorCentre hasPurpose a Reception that appliesTo a Tourist.
+
+Every Warehouse hasPart a Building that hasPurpose a Storage that appliesTo something that is a Goods or that is a RawMaterial.
+
+Every Knackery is a Place.
+
+Every Ambulance is a Vehicle.
+
+Every Place is a TopographicObject.
+
+Every SignalStation hasPurpose a Reception that appliesTo a RadioSignal.
+
+Every Minster hasPurpose a ChristianWorship.
+
+Every NursesHome is a Place.
+
+Every Shinty is a Sport.
+
+Every Tannery hasPurpose a Tanning.
+
+Every BusDepot is a Place.
+
+Every WinterGarden_Building hasPurpose an Entertainment that appliesTo a Tourist.
+
+Every Bakery hasPart a Building that hasPurpose a Baking.
+
+Every LifeboatHouse isLocatedNear a Sea.
+
+Every TidalRiver is a River.
+
+Every Gym is a Place.
+
+Every NurserySchool is a Place.
+
+Every Synagogue is a Place.
+
+Every WasteTransferStation is a Place.
+
+Every CycleShed hasPurpose a Housing that appliesTo a Bicycle.
+
+Every Provision is a Purpose.
+
+Every AmbulanceStation hasPurpose a Base that appliesTo an Ambulance.
+
+Every PoliceStation hasPurpose a Base that appliesTo a Police.
+
+Every College_Secondary_Student is a Student.
+
+Every Bethesda hasPurpose a ChristianWorship.
+
+Every PsychiatricHospital hasPurpose a Housing that appliesTo a PsychiatricPatient.
+
+Every Docks hasPurpose a Transport that appliesTo something that is a River or that is a Sea.
+
+Every GospelHall is a Place.
+
+Every Cremation is a Purpose.
+
+Every RadioStation hasPurpose a Broadcasting.
+
+Every Club hasPurpose a Recreation.
+
+Every Synagogue hasPurpose a JewishWorship.
+
+Every ChapelOfRest hasPurpose a ChristianWorship.
+
+Every Zoo hasPurpose an Entertainment that appliesTo a Tourist.
+
+Every FootballGround hasPurpose a Playing that appliesTo a Football.
+
+Every Docks is a Place.
+
+Every CustomsHouse hasPurpose an Inspection that appliesTo a Goods.
+
+Every GasTerminal hasPurpose a Distribution that appliesTo a Gas.
+
+Every Pillbox is a Building.
+
+Every AirForceBase is a MilitaryBase.
+
+Every HistoricSite hasHistoricInterest a HistoricInterest.
+
+Every YouthClub hasPurpose a Meeting that appliesTo a Teenager.
+
+Every Warehouse hasPurpose a Storage that appliesTo something that is a Goods or that is a RawMaterial.
+
+Every TitheBarn hasHistoricPurpose a Storage that appliesTo a Tithe.
+
+Every Cinema is a Place.
+
+Every TransmissionStation hasPurpose a Broadcasting.
+
+Every AirForceBase hasPart an Airfield.
+
+Every ExhibitionCentre is a Place.
+
+Every Garden_Private hasPurpose something that is a Recreation or that is a Growing and that appliesTo something that is a Flower or that is a Fruit or that is a Vegetable.
+
+Every JobCentre hasPart a Building that hasPurpose a Provision that appliesTo an EmploymentService.
+
+Every TransmissionStation is a Place.
+
+Every PumpingStation hasPart a Building that hasPurpose a Pumping that appliesTo exactly 1 thing that is an Oil or that is a Sewage or that is a Water.
+
+Every Aquarium is a Place.
+
+Every Manufacturing is an IndustrialProcessing.
+
+Every WinterGarden_Building hasPurpose an Exhibition that appliesTo an ExoticPlant.
+
+Every RetailPark is a Place.
+
+Every Clinic is a Place.
+
+Every Dockyard hasPurpose something that appliesTo a Ship, and that is a Construction or that is a Repair.
+
+Every Manor hasPurpose a Housing that appliesTo a Person.
+
+Every Stables is a Place.
+
+Every NurserySchool hasPurpose a Care that appliesTo an Infant.
+
+Every Gate is a Structure.
+
+Every Vicarage hasPart a Building that hasPurpose a Housing that appliesTo a Vicar.
+
+Every RemandCentre hasPurpose a Detention that appliesTo a RemandPrisoner.
+
+Every Vineyard is a Place.
+
+Every CoastguardStation hasPurpose a Base that appliesTo a Coastguard.
+
+Every Chapel is a Place.
+
+Every ClimbingHut hasPurpose a Housing that appliesTo a Climber.
+
+Every TennisCourt is a Place.
+
+Every School hasPurpose an Education.
+
+Every ExhibitionCentre hasPart a Building that hasPurpose a Staging that appliesTo an Exhibition.
+
+Every Laboratory hasPart a Building that hasPurpose something that is an Analysis or that is a Research.
+
+Every RugbyStadium is a Stadium.
+
+Every SmokeHouse is a Building.
+
+Every PoliceHouse hasPurpose a Housing that appliesTo a Police.
+
+Every Smelting is a Purpose.
+
+Every ArtsCentre hasPurpose something that appliesTo an Arts, and that is an Exhibition or that is a Performance.
+
+Every Tannery hasPart a Building that hasPurpose a Tanning.
+
+Every Place hasPart a TopographicObject.
+
+Every Aviary is a Building.
+
+Every Cattery hasPurpose a Housing that appliesTo a Cat.
+
+Every Transfer is a Purpose.
+
+Every ElectricitySubStation hasPurpose a Supply that appliesTo an Electricity.
+
+Every Processing is a Purpose.
+
+Every AquaticAnimal is an Animal.
+
+Every GardenCentre is a Place.
+
+Every Presbytery hasPart a Building that hasPurpose a Housing that appliesTo a Priest.
+
+Every AircraftHanger isPartOf exactly 1 thing.
+
+Every Foundry hasPurpose a Production that appliesTo something that is a Glass or that is a Metal.
+
+Every Opera is a Performance.
+
+Every CoastguardLookout hasPurpose an Observation that appliesTo a Coast.
+
+Every Animal is something.
+
+Every Preparation is a Purpose.
+
+Every Smoking is a Purpose.
+
+Every Lighthouse hasPart a Building that hasPurpose a NavigationAid.
+
+Every RepeaterStation hasPart a Building that hasPurpose a Broadcasting.
+
+Every Fort is a Place.
+
+Every HallOfResidence is a Place.
+
+Every MartelloTower is a Building.
+
+Every OfficeBuilding hasPurpose a Housing that appliesTo an OfficeWorker.
+
+Every Piggery hasPurpose a Rearing that appliesTo a Pig.
+
+Every NursesHome hasPurpose a Housing that appliesTo a Nurse.
+
+Every Bethesda hasPart a Building that hasPurpose a ChristianWorship.
+
+Every Kitchen hasPurpose a Provision that appliesTo a CateringFacility.
+
+Every GasMeterHouse is a Building.
+
+Every Reservoir is a TopographicObject.
+
+Every Temple hasPurpose a Worship.
+
+Every DayCentre is a Place.
+
+Every NurserySchool hasPart a Building that hasPurpose a Provision that appliesTo a Care that appliesTo an Infant.
+
+Every TollHouse hasHistoricPurpose a Collection that appliesTo a Toll.
+
+Every Construction is a Purpose.
+
+Every PostOffice hasPart a Building that hasPurpose a Provision that appliesTo a PostalService.
+
+Every Airport hasPurpose a Transport that appliesTo an Aircraft.
+
+Every PostalService is a Service.
+
+Every CustomsHouse is a Building.
+
+Every CommunityCentre hasPart a Building that hasPurpose a Meeting that appliesTo a CommunityGroup.
+
+Every Storage is a Purpose.
+
+Every AuctionHouse hasPart a Building that hasPurpose a Trading that appliesTo something that is a Goods or that is a Livestock.
+
+Every Mill is a Place.
+
+Every Sorting is a Purpose.
+
+Every Kirk is a Church.
+
+Every MountainRescueHut isLocatedIn exactly 1 MountainousArea.
+
+Every Ebenezer hasPart a Building that hasPurpose a ChristianWorship.
+
+Every OastHouse hasPurpose a Drying that appliesTo something that is a Hops or that is a Malt.
+
+Every Smithy is a Place.
+
+Every Knackery hasPurpose a Slaughter that appliesTo a Livestock that does not appliesTo a HumanConsumption.
+
+Every Surgery hasPurpose a Provision that appliesTo a HealthCare.
+
+Every BowlingClub hasPurpose a Playing that appliesTo a Bowls.
+
+Every Minster hasPart a Building that hasPurpose a ChristianWorship.
+
+Every MilitaryCamp is a MilitaryBase.
+
+Every TerminalBuilding hasPurpose a Transfer that appliesTo something that is a Goods or that is a Passenger.
+
+Every Almshouse hasPart a Building that hasPurpose a Housing that appliesTo an ElderlyPerson.
+
+Every Ferry is a Ship.
+
+Every Boat is a Vehicle.
+
+Every Market is a Place.
+
+Every RepeaterStation is a Place.
+
+Every Allotment hasPurpose a Growing that appliesTo a PersonalConsumption and that appliesTo something that is a Fruit or that is a Vegetable.
+
+Every TennisClub hasPurpose a Playing that appliesTo a Tennis.
+
+Every Garage_Service hasPurpose a Servicing that appliesTo a Vehicle.
+
+Every Exercising is a Purpose.
+
+Every LocalAuthority is a GovernmentOrganisation.
+
+Every Football is a Sport.
+
+Every ColdStore hasPart a Building that hasPurpose a ColdStorage that appliesTo a Produce.
+
+Every RailwayCarriage is a Vehicle.
+
+Every Cattery hasPart a Building that hasPurpose a Housing that appliesTo a Cat.
+
+Every Gurdwara hasPurpose a Worship that appliesTo a Sikh.
+
+Every TollBooth hasPurpose a Collection that appliesTo a Toll.
+
+Every Factory hasPurpose a Manufacturing.
+
+Every BellHouse isLocatedNear a Church.
+
+Every Convalescence is a Purpose.
+
+Every Garden_Private is a Place.
+
+Every Distillery hasPurpose a Distilling that appliesTo a Spirit.
+
+Every Collection is a Purpose.
+
+Every TelevisionStation hasPurpose a Broadcasting.
+
+Every Observation is a Purpose.
+
+Every Docks hasPurpose a Berthing that appliesTo a Ship.
+
+Every PublicConvenience is a Building.
+
+Every Loaning is a Purpose.
+
+Every TransmissionStation hasPart a Building that hasPurpose a Broadcasting.
+
+Every Hide is a Building.
+
+Every Chapel hasPurpose a ChristianWorship.
+
+Every School hasPart a Building that hasPurpose an Education.
+
+Every Zion hasPurpose a ChristianWorship.
+
+Every Sea is a TopographicObject.
+
+Every IceRink is a Place.
+
+Every Foundry is a Place.
+
+Every Drying is a Purpose.
+
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Prison),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Detention),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungPerson))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Detention),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungPerson))]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungOffenderInstitution)])) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungOffenderInstitution),ObjectIntersectionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Prison),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Detention),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungPerson))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Detention),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungPerson))]))])])) */
+
+Every Tabernacle is a Place.
+
+Every Museum hasPurpose an Exhibition that appliesTo an Artefact.
+
+Every AnimalHouse isPartOf exactly 1 Zoo.
+
+Every GasTerminal is a Place.
+
+Every FuneralParlour hasPurpose a Preparation that appliesTo a Corpse and that appliesTo something that is a Burial or that is a Cremation.
+
+Every GuestHouse is a Place.
+
+Every ChangingRoom isLocatedIn a SportsGround.
+
+Every Sheep is a Livestock.
+
+Every ShootingBox is a Building.
+
+Every YouthHostel is a Hostel.
+
+Every Dockyard is a Place.
+
+Every Aircraft is a Vehicle.
+
+Every CycleShed is a Building.
+
+Every FreightTerminal hasPart a Building that hasPurpose a Storage that appliesTo a Freight.
+
+Every InshoreRescueBoatStation is a LifeboatStation.
+
+Every PowerStation hasPurpose a Generation that appliesTo an Electricity.
+
+Every CharitableActivity is a Purpose.
+
+Every MountainousArea is a Landform.
+
+Every Drawbridge is a TopographicObject.
+
+Every Nursery_Horticulture is a Place.
+
+Every Base is a Purpose.
+
+Every Hospital is a Place.
+
+Every Observatory hasPurpose an AstronomicalResearch.
+
+Every LifeGuardStation isLocatedNear a Sea.
+
+Every ColdStorage is a Storage.
+
+Every CrownCourt is a LawCourt.
+
+Every Store hasPart a Building that hasPurpose a Storage that appliesTo a Goods.
+
+Every Sawmill is a Mill.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : PrimarySchool),ObjectIntersectionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)])),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)])),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)])),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : InfantSchoolPupil),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)])),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : PrimarySchool)])) */
+
+Every Oratory hasPart a Building that hasPurpose a ChristianWorship.
+
+Every Hotel hasPart a Building that hasPurpose a Provision that appliesTo an Accommodation.
+
+Every ChangingRoom isPartOf a SportsGround.
+
+Every CarFactory hasPurpose a Manufacturing that appliesTo a MotorVehicle.
+
+Every Slaughterhouse is a Place.
+
+Every OfficeBuilding is a Building.
+
+Every Hospice hasPurpose a Provision that appliesTo a PalliativeHealthCare.
+
+Everything that is hasAddress by a Place is an Address.
+
+Every BedAndBreakfast hasPurpose a Provision that appliesTo an Accommodation.
+
+Every GovernmentOffice hasPurpose an Administration that isCarriedOutBy a CentralGovernment.
+
+Every HillFort is a HistoricSite.
+
+Every BellHouse hasPurpose a Housing that appliesTo a Bell.
+
+Every BeachHut is a Building.
+
+Every Salem hasPart a Building that hasPurpose a ChristianWorship.
+
+Every ParcelOffice hasPart a Building that hasPurpose a Provision that appliesTo a PostalService.
+
+Every Clinic hasPart a Building that hasPurpose a Provision that appliesTo a HealthCare.
+
+Every SocialServiceCentre hasPart a Building that hasPurpose a Provision that appliesTo a SocialService.
+
+Every Abattoir is a Place.
+
+Every Library hasPart a Building that hasPurpose something that appliesTo a Publication, and that is a Holding or that is a Loaning.
+
+Every GoodsShed is a Building.
+
+Every Laboratory is a Place.
+
+Every NursingHome hasPart a Building that hasPurpose a Housing that appliesTo an ElderlyPerson.
+
+Every FuneralParlour is a Place.
+
+Every SkittleAlley hasPurpose a Playing that appliesTo a Skittles.
+
+Every IceRink hasPurpose an IceSkating.
+
+Every Rugby is a Sport.
+
+Every RadarStation hasPurpose something that is a NavigationAid or that is a Surveillance.
+
+Every Bank hasPart a Building that hasPurpose a Provision that appliesTo a FinancialService.
+
+Every Store hasPurpose a Storage that appliesTo a Goods.
+
+Every PetrolStation hasPart a Building.
+
+Every IceRink hasPart a Building that hasPurpose an IceSkating.
+
+Every PrivateSchool is a School that does not isOperatedBy a GovernmentOrganisation.
+Every School that does not isOperatedBy a GovernmentOrganisation is a PrivateSchool.
+
+Every StatelyHome hasPart a Building that hasHistoricPurpose a Housing that appliesTo an Aristocrat.
+
+Every GasWorks hasPurpose a Distribution that appliesTo a Gas.
+
+Every CarShowroom hasPart a Building that hasPurpose a Sale that appliesTo a Car.
+
+Every Presbytery hasPurpose a Housing that appliesTo a Priest.
+
+Every Mausoleum is a Building.
+
+Every TennisClub is a Club.
+
+Every Convent hasPart a Building that hasPurpose a Housing that appliesTo a Nun.
+
+Every RugbyGround is a Place.
+
+Every ShoppingCentre hasPart a Shop.
+
+Every GrammarSchool is a SecondarySchool.
+
+Every FootballStadium hasPurpose a Playing that appliesTo a Football.
+
+Every Lighthouse is a Place.
+
+Every MeetingHouse hasPart a Building that hasPurpose a Worship that appliesTo a Quaker.
+
+Every Airport hasPart an AirTerminalBuilding.
+
+Every Building hasPart a Wall.
+
+Every FootballStadium is a Stadium.
+
+Every SalvationArmyCitadel is a Place.
+
+Every Deanery is a Place.
+
+Every Coast is a Landform.
+
+Every Granary is a Building.
+
+Every Hospice is a Place.
+
+Every BusDepot hasPurpose a Garaging that appliesTo a Bus.
+
+Every College_University is a Place.
+
+Every Refining is a Purpose.
+
+Every SportsCentre is a Place.
+
+Every ContainerPort hasPurpose a Berthing that appliesTo a ContainerShip.
+
+Every Forge hasPart a Building that hasPurpose a Production that appliesTo a MetalProduct.
+
+Every Mill hasPurpose something that is a Milling or that is a Processing.
+
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : SecondarySchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : SecondarySchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School)]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : SecondarySchool)])) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : SecondarySchool),ObjectIntersectionOf([ObjectIntersectionOf([ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : SecondarySchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : SecondarySchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : School)])])) */
+
+Every StorageDepot hasPart a Building that hasPurpose a Storage that appliesTo a Goods.
+
+Every ConferenceCentre hasPurpose a Staging that appliesTo a Conference.
+
+Every RailwayEngine is a Vehicle.
+
+Every FreightTerminal hasPurpose a Storage that appliesTo a Freight.
+
+Every TenPinBowling is a Sport.
+
+Every WildfowlCentre hasPurpose a Holding that appliesTo a GameBird.
+
+Every RailwayStation is a Place.
+
+Every ShireHall is a CouncilOffice.
+
+Every Lighthouse isLocatedNear a Sea.
+
+Every ControlTower isPartOf exactly 1 thing that is an Airport or that is a Drawbridge or that is a SwingBridge.
+
+Every BedAndBreakfast hasPart a Building that hasPurpose a Provision that appliesTo an Accommodation.
+
+Every Shipyard hasPurpose something that appliesTo a Ship, and that is a Construction or that is a Repair.
+
+Every ChildrensHome is a Place.
+
+Every Restaurant is a Place.
+
+Every Tannery is a Place.
+
+Every Forge hasPurpose a Production that appliesTo a MetalProduct.
+
+Every AircraftHanger isLocatedIn exactly 1 thing.
+
+Every SewagePumpingStation is something that hasPart a Building and that hasPurpose a Pumping that appliesTo a Sewage.
+
+Every Bothy isLocatedIn scotland.
+
+Every Kennels hasPurpose a Housing that appliesTo a Dog.
+
+Every RacingStable hasPurpose a Housing that appliesTo a RaceHorse.
+
+Every Oratory is a Place.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Abbey),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Nun),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Monk)])),ObjectComplementOf(ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Nun),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Monk)]))),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Housing)]))) */
+
+Every GlassFoundry hasPurpose a Production that appliesTo a Glass.
+
+Every Bank is a Place.
+
+Every Convent hasPurpose a Housing that appliesTo a Nun.
+
+Every TitheBarn is a Barn.
+
+scotland is a Country.
+
+Every IndustrialProcessing is a Purpose.
+
+Every DayCentre hasPart a Building that hasPurpose a Provision that appliesTo a Care and that appliesTo a VulnerablePerson.
+
+Every Bethel hasPart a Building that hasPurpose a ChristianWorship that appliesTo a Seaman.
+
+Every Convent is a Place.
+
+Every RoadsideServices is a Place.
+
+Every City is a Settlement.
+
+Every Fish is an Animal.
+
+Every SteelWorks hasPart a Building that hasPurpose a Production that appliesTo a Steel.
+
+Every MultiStoreyCarPark hasStorey at least 2 Storey.
+
+Every Play is a Performance.
+
+Every UndergroundStation hasPurpose a Transport that appliesTo an UndergroundRailway.
+
+Every SteelWorks is a Foundry.
+
+Every TerminalBuilding is a Building.
+
+Every ChemicalWorks hasPart a Building that hasPurpose an IndustrialProcessing that appliesTo a Chemical.
+
+Every HistoricSite is a Place.
+
+Every BusStation is a Place.
+
+Every ContainerShip is a Ship.
+
+Every Monastery hasPurpose a ChristianWorship.
+
+Every MountainRescueHut is a Building.
+
+Every BellHouse is a Building.
+
+Every Warehouse is a Place.
+
+Every ClimbingHut isLocatedIn a MountainousArea.
+
+Every Clinic hasPurpose a Provision that appliesTo a HealthCare.
+
+Every GasWorks hasPurpose a Storage that appliesTo a Gas.
+
+Every Generation is a Purpose.
+
+Every Monastery hasPurpose a Housing that appliesTo a Monk.
+
+Every RetailPark hasPart a Shop.
+
+Every GlassFoundry hasPart a Building that hasPurpose a Production that appliesTo a Glass.
+
+Every TouristInformationCentre is a Place.
+
+Every Hill is a Landform.
+
+Every Coach is a Vehicle.
+
+Every Superstore is a Shop.
+
+Every ControlTower hasPurpose a Control that appliesTo something that is an Aircraft or that is a Drawbridge or that is a SwingBridge.
+
+Every FishMarket hasPurpose a Trading that appliesTo a Fish.
+
+Every Velodrome hasPurpose a Racing that appliesTo a Bicycle.
+
+Every RepeaterStation hasPurpose a Broadcasting.
+
+Every MotorBike is a MotorVehicle.
+
+Every Shed isLocatedIn exactly 1 thing that is an Allotment or that is a Garden_Private.
+
+Every Bothy hasPurpose a Housing that appliesTo something that is a Climber or that is a Hiker.
+
+Every CarriageShed isLocatedOn a Railway.
+
+Every BusStation hasPurpose a Transport that appliesTo a Bus.
+
+Every Lake is a TopographicObject.
+
+Every Gurdwara hasPart a Building that hasPurpose a Worship that appliesTo a Sikh.
+
+Every HealthCentre is a Place.
+
+Every Waterworks is a Place.
+
+Every Arsenal hasPurpose a Storage that appliesTo an Ordnance.
+
+Every GlassFoundry is a Foundry.
+
+Every FireEngine is a Vehicle.
+
+Every HydroelectricPowerStation isLocatedNear a Reservoir.
+
+Every CricketPavilion hasPurpose a Recreation that appliesTo a CricketClubMember.
+
+Every BowlingAlley hasPurpose a Playing that appliesTo a TenPinBowling.
+
+Every NavalShip is a Ship.
+
+Every Exhibition is a Purpose.
+
+Every StatelyHome hasHistoricPurpose a Housing that appliesTo an Aristocrat.
+
+Every Swimming is a Purpose.
+
+Every BowlingAlley is a Place.
+
+Every Malting is a Purpose.
+
+Every Rearing is a Purpose.
+
+Every SignalStation is a Place.
+
+Every Refinery is a Place.
+
+Every ShoppingCentre is a Place.
+
+Every Almshouse hasPurpose a Housing that appliesTo an ElderlyPerson.
+
+Every WinterGarden_Garden hasPurpose an Exhibition that appliesTo a Plant.
+
+Every WinterGarden_Garden hasPurpose an Entertainment that appliesTo a Tourist.
+
+Every FerryPort hasPurpose a Berthing that appliesTo a Ferry.
+
+Every ChangingRoom is a Building.
+
+Every PumpHouse hasPurpose a Housing that appliesTo a Pump.
+
+Every Entertainment is a Purpose.
+
+Every PublicSchool is a PrivateSchool.
+
+Every OilStorageDepot hasPurpose a Storage that appliesTo an Oil.
+
+Every Piggery hasPart a Building that hasPurpose a Rearing that appliesTo a Pig.
+
+Every Airport is a Place.
+
+Every OperaHouse is a Place.
+
+Every Dovecote hasPurpose a Housing that appliesTo a Dove.
+
+Every Abattoir hasPart a Building that hasPurpose a Slaughter that appliesTo a Livestock.
+
+Every Abbey is a Place.
+
+Every MeetingHouse is a Place.
+
+Every AmbulanceStation hasPart a Building that hasPurpose a Base that appliesTo an Ambulance.
+
+Every Shop is something that hasPart a Building or that isPartOf a Building.
+
+Every SheriffsCourt is a LawCourt.
+
+Every Surgery hasPart a Building that hasPurpose a Provision that appliesTo a HealthCare.
+
+Every Playing is a Purpose.
+
+Every MultiStoreyCarPark is a CarPark.
+
+Every CityHall is a CouncilOffice.
+
+Every DayCentre hasPurpose a Provision that appliesTo a Care that appliesTo a VulnerablePerson.
+
+Every Gardens hasPurpose an Exhibition that appliesTo a Plant.
+
+Every Administration is a Purpose.
+
+Every Works hasPart a Building that hasPurpose an IndustrialProcessing.
+
+Every PowerStation hasPart a Building that hasPurpose a Generation that appliesTo an Electricity.
+
+Every Shipyard is a Place.
+
+Every Theatre hasPart a Building that hasPurpose a Staging that appliesTo a Play.
+
+Every GuestHouse hasPurpose a Provision that appliesTo an Accommodation.
+
+Every ConcertHall hasPurpose a Staging that appliesTo a Concert.
+
+Every Cat is an Animal.
+
+Every Brewery is a Place.
+
+Every Parking is a Purpose.
+
+Every Laboratory hasPurpose something that is an Analysis or that is a Research.
+
+Every Hotel is a Place.
+
+Every PsychiatricPatient is a Patient.
+
+Every CarFactory is a Factory.
+
+Every Maltings is a Place.
+
+Every Monastery is a Place.
+
+Every CustomsShed hasPurpose an Inspection that appliesTo a Goods.
+
+Every Detention is a Purpose.
+
+Every Bothy is a Building.
+
+Every NursesHome hasPart a Building that hasPurpose a Housing that appliesTo a Nurse.
+
+Every Dispatch is a Purpose.
+
+Every Guildhall hasPurpose a Staging that appliesTo a PublicEvent.
+
+Every RugbyStadium hasPurpose a Playing that appliesTo a Rugby.
+
+Every SheepMarket is a Place.
+
+Every Smelter hasPurpose a Smelting.
+
+Every Maltings hasPart a MaltHouse.
+
+Every GasGovenor hasPurpose a Control that appliesTo a GasFlow.
+
+Every GoodsStation is a RailwayStation.
+
+Every GovernmentOffice is a Place.
+
+Every Guildhall is a Place.
+
+Every LifeboatStation hasPart a Building that hasPurpose a Base that appliesTo a Lifeboat.
+
+Every PetrolStation is a Place.
+
+Every Mosque hasPart a Building that hasPurpose an IslamicWorship.
+
+Every Wall is a Structure.
+
+Every PoultryHouse is a Building.
+
+Every Church hasPart a Building that hasPurpose a ChristianWorship.
+
+Every GasGovenor is a Place.
+
+Every Nursery_Horticulture hasPurpose a Growing that appliesTo a Plant.
+
+Every SocialServiceCentre hasPurpose a Provision that appliesTo a SocialService.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Windmill),ObjectUnionOf([ObjectExactCardinality(1,ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectUnionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Generation),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Electricity))]),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Drainage),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Milling)])),ObjectExactCardinality(1,ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasHistoricPurpose),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Drainage),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Milling)]))])) */
+
+Every Dove is a Bird.
+
+Every PublicHouse hasPart a Building that hasPurpose a Consumption that appliesTo a Beer.
+
+Every BombShelter is a Building.
+
+Every LawCourt hasPurpose an Administration that appliesTo a Justice.
+
+Every PoultryHouse hasPurpose a Housing that appliesTo a Poultry.
+
+Every ColdStore is a Place.
+
+Every PumpingStation hasPurpose a Pumping that appliesTo exactly 1 thing that is an Oil or that is a Sewage or that is a Water.
+
+Every ExhibitionCentre hasPurpose a Staging that appliesTo an Exhibition.
+
+Every TownHall is a CouncilOffice.
+
+Every WeatherStation is a Place.
+
+Every PoultryHouse hasPurpose a Production that appliesTo an Egg.
+
+Every YMCAHostel is a Hostel.
+
+Every AirTerminalBuilding isLocatedIn something that is an Airfield or that is an Airport.
+
+Every JuvenileCourt hasPurpose an Administration that appliesTo a Justice and that appliesTo a YoungPerson.
+
+Every FerryPort hasPart a TerminalBuilding.
+
+Every Bakery is a Place.
+
+Every Refuelling is a Purpose.
+
+Every DefensiveWall is a Structure.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : PreparatorySchool),ObjectIntersectionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : PrivateSchool),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : PrivateSchool),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : JuniorSchoolPupil)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Education)]))]),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : PreparatorySchool)])) */
+
+Every House that isConnectedTo exactly 1 TerraceHouse, and that isConnectedTo exactly 1 EndTerraceHouse or that isConnectedTo exactly 2 TerraceHouse is a TerraceHouse.
+Every TerraceHouse is a House that isConnectedTo exactly 1 TerraceHouse, and that isConnectedTo exactly 1 EndTerraceHouse or that isConnectedTo exactly 2 TerraceHouse.
+
+Every PublicHouse hasPurpose a Consumption that appliesTo a Beer.
+
+Every Riding is a Purpose.
+
+Every Mission hasPurpose something that is a CharitableActivity or that is a ChristianWorship.
+
+Every TerritorialArmyCentre hasPurpose a Training that appliesTo an ArmyReservist.
+
+Every FootballCentre hasPurpose a Playing that appliesTo a Football.
+
+Every Inspection is a Purpose.
+
+Every TerritorialArmyCentre is a Place.
+
+Every Holding is a Purpose.
+
+Every CustomsShed is a Building.
+
+Every ConcertHall hasPart a Building that hasPurpose a Staging that appliesTo a Concert.
+
+Every Housing is a Purpose.
+
+Every ServiceStation hasPart a PetrolStation.
+
+Every NavigationAid is a Purpose.
+
+Every ClubHouse hasPurpose a Recreation that appliesTo a ClubMember.
+
+Every FerryPort is a Docks.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Farm),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectUnionOf([ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Growing),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Crop))]),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Animal)),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Farming)])]))) */
+
+Every HealthCare is a Care.
+
+Every Surgery is a Place.
+
+Every HillFort isLocatedOn exactly 1 Hill.
+
+Every ControlTower is something that isLocatedIn an Airport or that isLocatedNear exactly 1 thing that is a Drawbridge or that is a SwingBridge.
+
+Every HousingEstate is a Place.
+
+Every TollRoad is a Road that requires a Toll.
+Every Road that requires a Toll is a TollRoad.
+
+Every OilRefinery hasPart a Building that hasPurpose a Refining that appliesTo an Oil.
+
+Every VeterinarySurgery is a Place.
+
+Every CoachStation is a Place.
+
+Every Greyhound is a Dog.
+
+Every PoliceStation hasPart a Building that hasPurpose a Base that appliesTo a Police.
+
+Every Kitchen is a Building.
+
+Every CarPark is a Place.
+
+Every Hostel hasPart a Building that hasPurpose a Provision that appliesTo an Accommodation.
+
+Every BlockOfFlats is a Place.
+
+Every CoastguardStation is a Place.
+
+Every Mortuary hasPurpose a Storage that appliesTo a Corpse.
+
+Every Granary hasPurpose a Storage that appliesTo a Grain.
+
+Every GreyhoundTrack hasPart a Building.
+
+Every ServiceStation hasPart a Building that hasPurpose a Provision that appliesTo a Motorist and that appliesTo a Refreshment.
+
+Every Ship is a Vehicle.
+
+Every HousingEstate that isOwnedBy exactly 1 LocalAuthority is a CouncilEstate.
+Every CouncilEstate is a HousingEstate that isOwnedBy exactly 1 LocalAuthority.
+
+Every Parsonage hasPurpose a Housing that appliesTo a Parson.
+
+Every Building is a Structure.
+
+Every Almshouse is a Place.
+
+Every VisitorCentre hasPart a Building that hasPurpose a Reception that appliesTo a Tourist.
+
+Every Control is a Purpose.
+
+Every Brewery hasPurpose a Brewing that appliesTo a Beer.
+
+Every ControlTower is a Building.
+
+Every Poultry is an Animal.
+
+Every ServiceStation hasPurpose a Provision that appliesTo a Motorist and that appliesTo a Refreshment.
+
+Every Theatre hasPurpose a Staging that appliesTo a Play.
+
+Every CentralGovernment is a GovernmentOrganisation.
+
+Every Observatory hasPart a Building that hasPurpose an AstronomicalResearch.
+
+Every NavalAirStation is a MilitaryBase.
+
+Every Gatehouse hasHistoricPurpose a Housing that appliesTo a Gatekeeper.
+
+Every StorageDepot is a Place.
+
+Every House that isConnectedTo exactly 1 Semi-detachedHouse is a Semi-detachedHouse.
+Every Semi-detachedHouse is a House that isConnectedTo exactly 1 Semi-detachedHouse.
+
+Every DIYSuperstore is a Superstore.
+
+Every KingdomHall is a Place.
+
+Every Gardens is a Place.
+
+Every Flat isPartOf exactly 1 Building.
+
+Every ChapelOfRest is a Building.
+
+Every CricketGround hasPurpose a Playing that appliesTo a Cricket.
+
+Every Winery hasPart a Building that hasPurpose a Production that appliesTo a Wine.
+
+Every Observatory is a Place.
+
+Every Watermill isLocatedNear a River.
+
+Every NursingHome hasPurpose a Provision that appliesTo a Care that appliesTo an ElderlyPerson.
+
+Every Growing is a Purpose.
+
+Every Stables hasPart a Building that hasPurpose a Housing that appliesTo a Horse.
+
+Every TennisClub hasPart a TennisCourt.
+
+Every BlockOfFlats hasPurpose a Housing that appliesTo a Person.
+
+Every ChapelOfRest isPartOf exactly 1 thing that is a Crematorium or that is a FuneralParlour or that is a Mortuary.
+
+Every ChapelOfRest isLocatedIn exactly 1 thing that is a Crematorium or that is a FuneralParlour or that is a Mortuary.
+
+Every Dam is a Structure.
+
+Every Manse hasPurpose a Housing that appliesTo a Minister_Religion.
+
+Every CivicCentre is a CouncilOffice.
+
+Every RacingStable is a Stables.
+
+Every VeterinarySurgery hasPart a Building that hasPurpose a Provision that appliesTo a VeterinaryCare.
+
+Every Beach is a TopographicObject.
+
+Every MunicipalBuilding isOwnedBy exactly 1 LocalAuthority.
+
+Every Salem hasPurpose a ChristianWorship.
+
+Every Barracks hasPurpose a Housing that appliesTo a MilitaryPersonnel.
+
+Every Museum is a Place.
+
+Every Hall hasPart a Building that hasPurpose a Meeting that appliesTo a Person.
+
+Every FinancialService is a Service.
+
+Every Bus is a Vehicle.
+
+Every Gym hasPart a Building that hasPurpose an Exercising.
+
+Every Manse is a Place.
+
+Every Gurdwara is a Place.
+
+Every SportsCentre hasPurpose a Playing that appliesTo a Sport.
+
+Every Parsonage hasPart a Building that hasPurpose a Housing that appliesTo a Parson.
+
+Every Building hasName a Name.
+
+Every RugbyStadium hasPart a Building that hasPurpose a Playing that appliesTo a Rugby.
+
+Every Dovecote is a Building.
+
+Every Zion hasPart a Building that hasPurpose a ChristianWorship.
+
+Every Fort hasPart a Building.
+
+Every FarmVehicle is a Vehicle.
+
+Every Watermill is a Mill.
+
+Every SugarRefinery hasPart a Building that hasPurpose a Refining that appliesTo a Sugar.
+
+Every CarShowroom is a Place.
+
+Every PoliceStation is a Place.
+
+Every DeliveryOffice hasPurpose a Provision that appliesTo a PostalService.
+
+Every Castle is a Place.
+
+Every Prison hasPart a Building that hasPurpose a Detention that appliesTo a Prisoner.
+
+Every Hostel hasPurpose a Provision that appliesTo an Accommodation.
+
+Every Teaching is a Purpose.
+
+Every CivicCentre isLocatedIn exactly 1 City.
+
+Every Bowls is a Sport.
+
+Every AuctionHouse is a Place.
+
+Every Gatehouse is a Building.
+
+Every Rectory hasPart a Building that hasPurpose a Housing that appliesTo a Rector.
+
+Every Livestock is an Animal.
+
+Every CountryClub isLocatedIn a RuralArea.
+
+Every Fort hasPurpose a MilitaryDefence.
+
+Every CricketPavilion isLocatedIn a CricketGround.
+
+Every Zion is a Place.
+
+Every Refinery hasPart a Building that hasPurpose a Refining.
+
+Every Waterworks hasPurpose a Supply that appliesTo a Water.
+
+Every Kennels is a Place.
+
+Every LockHouse isLocatedNear a Lock.
+
+Every StorageDepot hasPurpose a Storage that appliesTo a Goods.
+
+Every SteelWorks hasPurpose a Production that appliesTo a Steel.
+
+Every Brewing is a Purpose.
+
+Every GardenShed is a Shed.
+
+Every Arsenal hasPart a Building that hasPurpose a Storage that appliesTo an Ordnance.
+
+Every ArtGallery is a Place.
+
+Every Arsenal is a Place.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Priory),ObjectIntersectionOf([ObjectComplementOf(ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Monastery),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Convent)])),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Monastery),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Convent)])])) */
+
+Every PublicConvenience hasPurpose a Provision that appliesTo a ToiletFacility.
+
+Everything that is hasAddress by a Building is an Address.
+
+Every HallOfResidence hasPart a Building that hasPurpose a Housing that appliesTo a Student.
+
+Every TelephoneExchange hasPurpose a Routing that appliesTo an ElectronicCommunications.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Abbey),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Nun),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Monk)])),ObjectComplementOf(ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Nun),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Monk)]))),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Housing)]))]))) */
+
+Every EquestrianCentre is a Place.
+
+Every Cemetery is a Place.
+
+Every Supply is a Purpose.
+
+Every DayCentre operatesDuring a DayTime.
+
+Every Crematorium hasPart a Building that hasPurpose a Cremation.
+
+Every CadetCentre hasPart a Building that hasPurpose a Training that appliesTo a Cadet.
+
+Every PoliceHouse is a Place.
+
+Every MaltHouse is a Building.
+
+Every FootballCentre hasPart at least 2 FootballGround.
+
+Every CoachStation hasPurpose a Transport that appliesTo a Coach.
+
+Every GuestHouse hasPart a Building that hasPurpose a Provision that appliesTo an Accommodation.
+
+Every Brewery hasPart a Building that hasPurpose a Brewing that appliesTo a Beer.
+
+Every FootballCentre is a Place.
+
+Every SmokeHouse hasPurpose a Smoking that appliesTo something that is a Fish or that is a Meat.
+
+Every Greenhouse hasPurpose a Growing that appliesTo a Plant.
+
+Every Icehouse hasPurpose a ColdStorage that appliesTo a Goods.
+
+Every Restaurant hasPurpose a Consumption that appliesTo a Food.
+
+Every Brickworks hasPurpose a Manufacturing that appliesTo a Bricks.
+
+Every Moorland is a Landform.
+
+Every Presbytery is a Place.
+
+Every Market hasPurpose a Trading that appliesTo something that is a Goods or that is a Livestock.
+
+Every MilitaryBase hasPart a Building that hasPurpose a MilitaryActivity.
+
+Every RadioStation hasPart a Building that hasPurpose a Broadcasting.
+
+Every Convent hasPart a Building that hasPurpose a ChristianWorship.
+
+Every Library is a Place.
+
+Every Temple hasPart a Building that hasPurpose a Worship.
+
+Every ArmyReservist is a MilitaryPersonnel.
+
+Every Lighthouse hasPurpose a NavigationAid.
+
+Every Palace is a Place.
+
+Every ElectricitySubStation is a Place.
+
+Every Ebenezer is a Place.
+
+Every NuclearPowerStation is a PowerStation.
+
+Every Dairy hasPart a Building that hasPurpose a Processing that appliesTo a Milk.
+
+Every Road is a TopographicObject.
+
+Every GoodsStation hasPurpose a Transport that appliesTo a Freight.
+
+Every Church that isLocatedIn a Priory is a PrioryChurch.
+Every PrioryChurch is a Church that isLocatedIn a Priory.
+
+Every AbbeyChurch is a Church.
+
+Every Foundry hasPart a Building that hasPurpose a Production that appliesTo something that is a Glass or that is a Metal.
+
+Every Hospital hasPurpose a Provision that appliesTo a HealthCare.
+
+Every LeisureCentre hasPart a Building that hasPurpose a Playing that appliesTo a Sport.
+
+Every SortingOffice hasPart a Building that hasPurpose a Provision that appliesTo a PostalService.
+
+Every RailwayStation hasPurpose a Transport that appliesTo a Railway.
+
+Every LawCourt hasPart a Building that hasPurpose an Administration that appliesTo a Justice.
+
+Every PoliceHouse hasPart a Building that hasPurpose a Housing that appliesTo a Police.
+
+Every JewishWorship is a Worship that appliesTo a Jew.
+Every Worship that appliesTo a Jew is a JewishWorship.
+
+Every DIYSuperstore hasPurpose a Trading that appliesTo a Hardware.
+
+Every ConvalescentHome hasPart a Building that hasPurpose a Housing that appliesTo a Patient.
+
+Every Watching is a Purpose.
+
+Every LeisureCentre is a Place.
+
+Every Prison hasPurpose a Detention that appliesTo a Prisoner.
+
+Every Minster is a Place.
+
+Every MilitaryCamp hasPurpose a Housing that appliesTo a MilitaryPersonnel.
+
+Every Refinery hasPurpose a Refining.
+
+Every Dockyard hasPart a Docks.
+
+Every BowlingClub is a Club.
+
+Every Slaughterhouse hasPurpose a Slaughter that appliesTo a Livestock that appliesTo a HumanConsumption.
+
+Every Dairy hasPurpose a Processing that appliesTo a Milk.
+
+Every Convent hasPurpose a ChristianWorship.
+
+Every Burning is a Purpose.
+
+Every AmbulanceStation hasPart a Building that hasPurpose a Dispatch that appliesTo an Ambulance.
+
+Every PublicIncinerator hasPart a Building that hasPurpose a Burning that appliesTo a Waste.
+
+Every Hospital hasPurpose a Housing that appliesTo a Patient.
+
+Every Structure is a TopographicObject.
+
+Every WinterGarden_Garden is a Gardens.
+
+Every SwimmingPool hasPurpose a Swimming.
+
+Every LifeGuardStation hasPurpose a Watching that appliesTo a Coast.
+
+Every CouncilOffice hasPurpose an Administration that isCarriedOutBy a LocalAuthority.
+
+Every Railway is a TopographicObject.
+
+Every House that does not isConnectedTo a Building is a DetachedHouse.
+Every DetachedHouse is a House that does not isConnectedTo a Building.
+
+Every Stadium hasPurpose something that is a Racing or that is a Playing and that appliesTo a Sport.
+
+Every Racing is a Purpose.
+
+Every HealthCentre hasPart a Building that hasPurpose a Provision that appliesTo a HealthCare.
+
+Every RadarStation is a Place.
+
+Every FireStation isOperatedBy an EmergencyServiceOrganisation.
+
+Every ValveHouse isLocatedNear a Reservoir.
+
+Every Dock is a Structure.
+
+Every Farming is a Purpose.
+
+Every Club is a Place.
+
+Every Waterworks hasPurpose a Treatment that appliesTo a Water.
+
+Every TelevisionStation is a Place.
+
+Every Slaughterhouse hasPart a Building that hasPurpose a Slaughter that appliesTo a Livestock that appliesTo a HumanConsumption.
+
+Every University hasPart a Building that hasPurpose an Education that appliesTo a UniversityStudent.
+
+Every Mausoleum hasPurpose an Entombment that appliesTo a Corpse.
+
+Every Hospice hasPart a Building that hasPurpose a Housing that appliesTo a Patient.
+
+Every GospelHall hasPurpose a ChristianWorship.
+
+Every CityHall isLocatedIn exactly 1 City.
+
+Every Bakery hasPurpose a Baking.
+
+Every TelevisionStation hasPart a Building that hasPurpose a Broadcasting.
+
+Every Cricket is a Sport.
+
+Every PumpHouse is a Building.
+
+Every TouristInformationCentre hasPart a Building that hasPurpose a Provision that appliesTo a TouristInformation.
+
+Every Cinema hasPurpose a Showing that appliesTo a Film.
+
+Every VeterinaryCare is a Care.
+
+Every ChildrensHome hasPurpose a Housing that appliesTo a Child.
+
+Every ArtsCentre hasPart a Building that hasPurpose something that appliesTo an Arts, and that is an Exhibition or that is a Performance.
+
+Every HydroelectricPowerStation is a PowerStation.
+
+Every SocialService is a Service.
+
+Every Museum hasPart a Building that hasPurpose an Exhibition that appliesTo an Artefact.
+
+Every Barn is a Building.
+
+Every LifeboatStation is a Place.
+
+Every IceSkating is a Purpose.
+
+Every CadetCentre hasPurpose a Training that appliesTo a Cadet.
+
+Every HumanConsumption is something.
+
+Every SheepMarket hasPart a Building that hasPurpose a Trading that appliesTo a Sheep.
+
+Every RemandCentre is a Prison.
+
+Every MartelloTower hasHistoricPurpose a MilitaryDefence.
+
+Every Hospital hasPart a Building that hasPurpose a Provision that appliesTo a HealthCare.
+
+Every Tanning is a Purpose.
+
+Every RemandPrisoner is a Prisoner.
+
+Every JobCentre is a Place.
+
+Every Hostel is a Place.
+
+Every TrainingCentre is a Place.
+
+Every BedAndBreakfast is a Place.
+
+Every AircraftHanger isLocatedIn something that is an Airfield or that is an Airport.
+
+Every Garage_Private hasPurpose a Housing that appliesTo a Vehicle.
+
+Every University hasPurpose an Education that appliesTo a UniversityStudent.
+
+Every CarShowroom hasPurpose a Sale that appliesTo a Car.
+
+Every Swannery hasPurpose a Holding that appliesTo a Swan.
+
+Every OilRefinery hasPurpose a Refining that appliesTo an Oil.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungOffenderInstitution),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPart),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Building),ObjectAllValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Detention),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungPerson))])),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : hasPurpose),ObjectIntersectionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Detention),ObjectSomeValuesFrom(ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : appliesTo),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : YoungPerson))]))]))) */
+
+Every WeatherStation hasPurpose a Recording that appliesTo a Weather.
+
+Every Knackery hasPart a Building that hasPurpose a Slaughter that appliesTo a Livestock that does not appliesTo a HumanConsumption.
+
+Every Garage_Private is a Place.
+
+Every Skittles is a Sport.
+
+Every ParcelOffice is a Place.
+
+Every Cattery is a Place.
+
+Every GasWorks is a Place.
+
+Every RecyclingCentre is a Place.
+
+Every Garaging is a Purpose.
+
+Every ParcelOffice hasPurpose a Provision that appliesTo a PostalService.
+
+Every EngineShed hasPurpose a Housing that appliesTo a RailwayEngine.
+
+Every ShireHall isLocatedIn exactly 1 County.
+
+Every Tennis is a Sport.
+
+Every Baking is a Purpose.
+
+Every JuvenileCourt is a LawCourt.
+
+Every SugarRefinery is a Refinery.
+
+Every OastHouse is a Building.
+
+Every WasteTransferStation hasPart a Building that hasPurpose a Sorting that appliesTo a Waste.
+
+Every PoliceBeatOffice is a PoliceStation.
+
+Every LifeGuardStation hasPart a Building that hasPurpose a Watching that appliesTo a Coast.
+
+Every Parsonage is a Place.
+
+Every CattleMarket is a Place.
+
+Every Town is a Settlement.
+
+Every TollStation hasPurpose a Collection that appliesTo a Toll.
+
+Every Greenhouse is a Building.
+
+Every Winery hasPurpose a Production that appliesTo a Wine.
+
+Every SpeedwayStadium hasPurpose a Racing that appliesTo a MotorBike.
+
+Every HallOfResidence hasPurpose a Housing that appliesTo a Student.
+
+Every NavalBase hasPurpose a Base that appliesTo a NavalShip.
+
+Every Servicing is a Purpose.
+
+Every EmploymentService is a Service.
+
+Every MartelloTower isLocatedNear a Sea.
+
+Every Allotment is a Place.
+
+Every DeliveryOffice is a Place.
+
+Every ArtsCentre is a Place.
+
+Every SugarRefinery hasPurpose a Refining that appliesTo a Sugar.
+
+Every Garage_Service hasPart a Building that hasPurpose a Servicing that appliesTo a Vehicle.
+
+Every InshoreRescueBoatStation hasPurpose a Base that appliesTo an InshoreLifeboat.
+
+Every CoastguardLookout isLocatedNear a Sea.
+
+Every EngineShed isLocatedOn a Railway.
+
+Every PsychiatricHospital hasPurpose a Provision that appliesTo a HealthCare.
+
+Every TideMill isLocatedNear a TidalRiver.
+
+Every Oratory hasPurpose a ChristianWorship.
+
+Every UndergroundStation hasPart a Building that hasPurpose a Transport that appliesTo an UndergroundRailway.
+
+Every Hotel hasPurpose a Provision that appliesTo an Accommodation.
+
+Every Deanery hasPart a Building that hasPurpose a Housing that appliesTo a Dean.
+
+Every Smelter is a Place.
+
+Every ChildrensHome hasPart a Building that hasPurpose a Housing that appliesTo a Child.
+
+Every Airfield hasPurpose a Transport that appliesTo an Aircraft.
+
+Every TollStation is a Place.
+
+Every MilitaryBase is a Place.
+
+Every Staging is a Purpose.
+
+Every RidingSchool hasPurpose a Teaching that appliesTo a Riding.
+
+Every Smelter hasPart a Building that hasPurpose a Smelting.
+
+Every Manor hasPart a Building that hasPurpose a Housing that appliesTo a Person.
+
+Every ArtGallery hasPart a Building that hasPurpose an Exhibition that appliesTo an Art.
+
+Every College_University hasPart a Building that hasPurpose an Education that appliesTo a UniversityStudent.
+
+Every Academy hasPurpose an Education.
+
+Every Pigeon is a Bird.
+
+Every TideMill is a Mill.
+
+Every BarrackBlock isLocatedIn a Barracks.
+
+Every College_University hasPurpose an Education that appliesTo a UniversityStudent.
+
+Every TollBooth is a Building.
+
+Every Aquarium hasPurpose an Exhibition that appliesTo an AquaticAnimal.
+
+Every Farm is a Place.
+
+Every Bethel hasPurpose a ChristianWorship that appliesTo a Seaman.
+
+Every Monastery hasPart a Building that hasPurpose a ChristianWorship.
+
+Every RacingStable hasPart a Building that hasPurpose a Housing that appliesTo a RaceHorse.
+
+Every SpeedwayStadium is a Stadium.
+
+Every KingdomHall hasPurpose a Worship that appliesTo a JehovahsWitness.
+
+Every Routing is a Purpose.
+
+Every Steel is a Metal.
+
+Every ConvalescentHome is a Place.
+
+Every Building hasPurpose a Purpose.
+
+Every Velodrome is a Stadium.
+
+Every SortingOffice is a Place.
+
+Every SignalStation hasPart a Building that hasPurpose a Broadcasting that appliesTo a RadioSignal.
+
+Every Roof is a Structure.
+
+Every GoodsYard hasPurpose a Storage that appliesTo something that is a Goods or that is a RawMaterial.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : BoatHouse),ObjectUnionOf([ObjectExactCardinality(1,ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : isLocatedNear),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Lake),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : River)])),ObjectExactCardinality(1,ObjectProperty(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : isLocatedOn),ObjectUnionOf([Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : Lake),Class(http://www.ordnancesurvey.co.uk/ontology/v1/BuildingsAndPlaces.owl# : River)]))])) */
+
+Every ConferenceCentre hasPart a Building that hasPurpose a Staging that appliesTo a Conference.
+
+Every Prison is a Place.
+
+Every GospelHall hasPart a Building that hasPurpose a ChristianWorship.
+
+Every Factory hasPart a Building that hasPurpose a Manufacturing.
+
+Every Store isLocatedIn a Place.
+
+Every CarriageShed hasPurpose a Housing that appliesTo a RailwayCarriage.
+
+Every RemandCentre hasPart a Building that hasPurpose a Detention that appliesTo a RemandPrisoner.
+
+Every Hide hasPurpose an Observation that appliesTo a Wildlife.
+
+Every Changing is a Purpose.
+
+Every Zoo hasPart a Building that hasPurpose a Housing that appliesTo an Animal.
+
+Every PostOffice hasPurpose a Provision that appliesTo a PostalService.
+
+Every Aquarium hasPurpose an Entertainment that appliesTo a Tourist.
+
+Every CattleMarket hasPurpose a Trading that appliesTo a Cattle.
+
+Every CarriageShed is a Building.
+
+Every Chapel hasPart a Building that hasPurpose a ChristianWorship.
+
+Every HousingEstate hasPart at least 2 Building that hasPurpose a Housing that appliesTo a Person.
+
+Every LifeGuardStation is a Place.
+
+Every LockHouse is a Building.
+
+Every BowlingClub hasPart a Building.
+
+Every Aquarium hasPart a Building that hasPurpose an Exhibition that appliesTo an AquaticAnimal.
+
+Every Windmill is a Building.
+
+Every Bethel is a Place.
+
+Every Rectory is a Place.
+
+Every Shop is a Place.
+
+Every Pig is a Livestock.
+
+Every JobCentre hasPurpose a Provision that appliesTo an EmploymentService.
+
+Every Smithy hasPart a Building that hasPurpose a Production that appliesTo a MetalProduct.
+
+Every Hospital hasPart a Building that hasPurpose a Housing that appliesTo a Patient.
+
+Every PoliceHouse isLocatedIn a RuralArea.
+
+Every ValveHouse is a Building.
+
+Every Worship that appliesTo a Christian is a ChristianWorship.
+Every ChristianWorship is a Worship that appliesTo a Christian.
+
+Every Barracks hasPart a Building that hasPurpose a Housing that appliesTo a MilitaryPersonnel.
+
+Every Cattle is a Livestock.
+

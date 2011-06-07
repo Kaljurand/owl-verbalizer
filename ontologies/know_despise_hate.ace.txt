@@ -1,0 +1,4 @@
+If X hate Y then it is false that X despise Y.
+
+If X know something that despise Y then X hate Y.
+

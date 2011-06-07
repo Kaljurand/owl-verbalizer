@@ -1,0 +1,32 @@
+Everything that is eat by a goat is a grass.
+Everything that eat nothing but grass is a goat.
+
+Every animal is something that is a cat or that is a goat.
+
+John is a man.
+
+Everything is eat by at most 1 thing.
+
+Everything that is eat by something is a food that is not an automobile.
+
+Everything that is an apple or that is a grass is a food.
+
+Every human is something that is John or that is Mary.
+
+Every man is a person.
+
+Everything eat at most 1 thing.
+
+Every human is a person that own an automobile.
+
+If X eat something that eat Y then X eat Y.
+
+Every person is a human.
+
+Mary is a person.
+
+Everything that eat something is an animal.
+
+If X eat Y then Y hate X.
+If X hate Y then Y eat X.
+

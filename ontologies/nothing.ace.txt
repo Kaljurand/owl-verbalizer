@@ -1,0 +1,10 @@
+Every dog is something.
+
+Nothing is a dog-cat.
+
+Every cat is something.
+
+Every dog-cat is a cat that is a dog.
+
+No dog is a cat.
+

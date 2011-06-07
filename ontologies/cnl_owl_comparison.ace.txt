@@ -1,0 +1,120 @@
+/* BUG: axiom unsupported: AntisymmetricObjectProperty(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : is-near-to)) */
+Every mission has-purpose something that is a charitable-activity or that is a christian-worship.
+
+Every river-stretch has-part exactly 1 channel.
+
+Everything flows-into itself.
+
+Every ring-road is-connected-to a ring-road.
+
+Every charitable-activity is something.
+
+Every building is something.
+
+Every manufacturing is something.
+
+Every petrol-station is a gas-station.
+Every gas-station is a petrol-station.
+
+If X is-part-of something that is-part-of Y then X is-part-of Y.
+
+Every bourne is a stream.
+
+Everything that is is-capital-city-of by something is a country.
+
+No backwater has-current a current.
+
+Every river-stretch has-part at least 2 banks.
+
+Everything is is-assigned-to by at most 1 thing.
+
+Every child is something.
+
+Every christian-worship is something.
+
+Every UK-country is something.
+
+Hampshire is-located-in Hampshire.
+
+Every country is something.
+
+Every confluence is something.
+
+Every stream is something.
+
+Everything that is is-connected-to by a basin is something that is a channel or that is a pipe.
+
+Every tributary is something.
+
+Every bank is something.
+
+Hampshire does not is-located-in Scotland.
+
+If X is-adjacent-to Y then Y is-adjacent-to X.
+
+Everything that is-capital-city-of something is a capital-city.
+
+Every gas-station is something.
+
+If X contain Y then it is false that X is-contained-in Y.
+
+If X flows-into Y then X flows Y.
+
+If X is-inside Y then X is-within Y.
+If X is-within Y then X is-inside Y.
+
+Every river is something.
+
+Every floodplain is something.
+
+England is a country.
+
+Every current is something.
+
+Pompey is Portsmouth.
+
+Every loch is-located-in Scotland.
+
+Every education is something.
+
+Every source is something.
+
+If X has-part something that contain Y then X contain Y.
+
+Every UK-country is something that is England or that is Northern-Ireland or that is Scotland or that is Wales.
+Everything that is England or that is Northern-Ireland or that is Scotland or that is Wales is a UK-country.
+
+Every petrol-station is something.
+
+Scotland is not England.
+
+If X contain Y then Y is-contained-in X.
+If X is-contained-in Y then Y contain X.
+
+Every pipe is something.
+
+Every channel is something.
+
+Nothing is-near-to itself.
+
+Every spring is something.
+
+Every school has-purpose an education that applies-to a child.
+
+Everything has-postcode at most 1 thing.
+
+Every factory has-part a building that has-purpose a manufacturing.
+
+No floodplain is a river.
+
+Every capital-city is something.
+
+Every factory has-purpose a manufacturing.
+
+Every wetland is something.
+
+/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : source),ObjectIntersectionOf([ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : stream)]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : stream)]))]),ObjectIntersectionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : source)])) */
+
+Every river-stretch has-part at most 2 confluences.
+

@@ -1,0 +1,6 @@
+/* BUG: axiom unsupported: SameIndividual([]) */
+Mary is Mary.
+
+Mary is Mary.
+
+/* BUG: axiom unsupported: DifferentIndividuals([NamedIndividual(http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl# : Mary),NamedIndividual(http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl# : Mary)]) */

@@ -63,6 +63,11 @@
 
     <ClassAssertion>
         <Class abbreviatedIRI="t:man"/>
-        <AnonymousIndividual nodeID="12345"/>
+        <AnonymousIndividual nodeID="X12345"/>
+    </ClassAssertion>
+
+    <ClassAssertion>
+        <AnonymousIndividual nodeID="X12345"/>
+        <Class abbreviatedIRI="t:man"/>
     </ClassAssertion>
 </Ontology>

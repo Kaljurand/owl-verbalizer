@@ -1,0 +1,64 @@
+Every protein contain Methionine.
+
+Every dna-region that translate-to a protein is a gene.
+
+If X hate Y then Y hate X.
+
+Everything is contain by at most 1 thing.
+
+If X contain Y then it is false that Y contain X.
+
+Every molecule is something.
+
+If X hate Y then it is false that X like Y.
+
+If X hate something that hate Y then X hate Y.
+
+Everything contain itself.
+
+Every protein contain an amino-acid that is not Methionine.
+
+Methionine is something.
+
+Every dna-region is a region.
+
+Nothing contain itself.
+
+No gene is a protein.
+
+If X contain Y then it is false that X translate-to Y.
+
+If X contain Y then Y contain X.
+
+If X hate Y then it is false that Y hate X.
+
+If X like something that translate-to Y then X hate Y.
+
+Everything hate at most 1 thing.
+
+Methionine is an amino-acid.
+
+Every amino-acid is a molecule.
+
+If X contain Y then it is false that X hate Y.
+
+Methionine is Met.
+
+If X contain something that contain Y then X contain Y.
+
+Everything is hate by at most 1 thing.
+
+Everything hate itself.
+
+Nothing hate itself.
+
+Every gene is a region.
+
+Every protein is a molecule.
+
+Met is something.
+
+Every region is something.
+
+Everything contain at most 1 thing.
+

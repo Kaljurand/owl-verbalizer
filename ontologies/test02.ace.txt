@@ -1,0 +1,12 @@
+Mary is something.
+
+Bill is something that has-parent at most 2 things and that has-parent at least 2 things.
+
+Everything is something that is Bill or that is John or that is Mary.
+
+Bill does not has-parent itself.
+
+John is something.
+
+Bill is something.
+

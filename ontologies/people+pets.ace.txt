@@ -1,0 +1,233 @@
+Everything that is reads by something is a publication.
+
+Everything that is reads by a white_van_man is a tabloid.
+
+Every tree is a plant.
+
+Every person that has_pet a cat is a cat_owner.
+Every cat_owner is a person that has_pet a cat.
+
+Walt has_pet Louie.
+
+Everything that is has_mother by something is a woman.
+
+Every dog eats a bone.
+
+Walt has_pet Dewey.
+
+Huey is a duck.
+
+No broadsheet is a tabloid.
+
+Joe has_pet Fido.
+
+Flossie is a cow.
+
+Every elderly is an adult.
+
+Every giraffe is an animal.
+
+Fred is a person.
+
+Everything that has_pet something is a person.
+
+The_Times is a broadsheet.
+
+Every cat_liker is a person that likes a cat.
+Every person that likes a cat is a cat_liker.
+
+Every red_top is a tabloid.
+
+Every quality_broadsheet is a broadsheet.
+
+Every lorry is a vehicle.
+
+Every man is an adult that is a male and that is a person.
+Every adult that is a male and that is a person is a man.
+
+Every driver is an adult.
+
+Every bicycle is a vehicle.
+
+The42 service_number 42.
+
+Every person is an animal.
+
+Every grownup is an adult that is a person.
+Every adult that is a person is a grownup.
+
+Every old_lady is something that has_pet an animal and that has_pet nothing but cat.
+
+Daily_Mirror is something.
+
+Everything that is eats by a sheep is a grass.
+
+Every kid is a person that is a young.
+Every person that is a young is a kid.
+
+Every sheep is an animal.
+
+The_Guardian is a broadsheet.
+
+Every person that drives a bus is a bus_driver.
+Every bus_driver is a person that drives a bus.
+
+Every man that drives a van that is a white_thing is a white_van_man.
+Every white_van_man is a man that drives a van that is a white_thing.
+
+Every tiger is an animal.
+
+If X eats Y then Y eaten_by X.
+If X eaten_by Y then Y eats X.
+
+Everything that works_for something that is a haulage_company or that is_part_of a haulage_company is a haulage_worker.
+Every haulage_worker works_for something that is a haulage_company or that is_part_of a haulage_company.
+
+Every duck is an animal.
+
+Every animal eats something.
+
+Every adult that is a female and that is a person is a woman.
+Every woman is an adult that is a female and that is a person.
+
+Every person that has_pet a dog is a dog_owner.
+Every dog_owner is a person that has_pet a dog.
+
+Everything that is has_father by something is a man.
+
+Everything that is eats by a giraffe is a leaf.
+
+Walt has_pet Huey.
+
+The42 is a bus.
+
+Every cat is an animal.
+
+If X is_part_of Y then Y has_part X.
+If X has_part Y then Y is_part_of X.
+
+Rex is_pet_of Mick.
+
+Every haulage_company is a company.
+
+Everything that eats something is an animal.
+
+Fred has_pet Tibbs.
+
+Every haulage_truck_driver is a person that drives a truck and that works_for something that is_part_of a haulage_company.
+Every person that drives a truck and that works_for something that is_part_of a haulage_company is a haulage_truck_driver.
+
+Mick is a male.
+
+Louie is a duck.
+
+Mick reads Daily_Mirror.
+
+If X has_pet Y then X likes Y.
+
+Every elderly that is a female and that is a person is an old_lady.
+Every old_lady is an elderly that is a female and that is a person.
+
+Every newspaper is a publication.
+
+Q123_ABC is a white_thing.
+
+Every lorry_driver is a person that drives a lorry.
+Every person that drives a lorry is a lorry_driver.
+
+Every dog_liker is a person that likes a dog.
+Every person that likes a dog is a dog_liker.
+
+Kevin is a person.
+
+Mick drives Q123_ABC.
+
+Every van is a vehicle.
+
+Every animal_lover is a person that has_pet at least 3 things.
+Every person that has_pet at least 3 things is an animal_lover.
+
+Every bus_company is a company.
+
+If X has_father Y then X has_parent Y.
+
+Every car is a vehicle.
+
+Joe has_pet at most 1 thing.
+
+If X has_pet Y then Y is_pet_of X.
+If X is_pet_of Y then Y has_pet X.
+
+Fido is a dog.
+
+Minnie is a female.
+
+Everything that is an animal or that is_part_of an animal is something that is not a plant and that does not is_part_of a plant.
+
+Every animal that does not eats an animal and that does not eats something that is_part_of an animal is a vegetarian.
+Every vegetarian is an animal that does not eats an animal and that does not eats something that is_part_of an animal.
+
+Every bus is a vehicle.
+
+Every broadsheet is a newspaper.
+
+Minnie has_pet Tom.
+
+The_Sun is a tabloid.
+
+No cat is a dog.
+
+Tibbs is a cat.
+
+Q123_ABC is a van.
+
+/* BUG: axiom unsupported: DataPropertyRange(DataProperty(http://cohse.semanticweb.org/ontologies/people# : service_number),Datatype(http://www.w3.org/2001/XMLSchema# : integer)) */
+Every truck is a vehicle.
+
+Every tabloid is a newspaper.
+
+Dewey is a duck.
+
+Every person that drives a van is a van_driver.
+Every van_driver is a person that drives a van.
+
+Fluffy is a tiger.
+
+If X has_mother Y then X has_parent Y.
+
+Joe is a person.
+
+Every magazine is a publication.
+
+Every cow is a vegetarian.
+
+Every mad_cow is a cow that eats a brain that is_part_of a sheep.
+Every cow that eats a brain that is_part_of a sheep is a mad_cow.
+
+Everything that is has_pet by something is an animal.
+
+Every driver is a person that drives a vehicle.
+Every person that drives a vehicle is a driver.
+
+Everything that is_pet_of something is a pet.
+Every pet is_pet_of something.
+
+Tom is something.
+
+Every newspaper is something that is a broadsheet or that is a tabloid.
+
+Every grass is a plant.
+
+Every person that has_pet an animal is a pet_owner.
+Every pet_owner is a person that has_pet an animal.
+
+No adult is a young.
+
+Minnie is an elderly.
+
+Rex is a dog.
+
+Every leaf is_part_of a tree.
+
+Walt is a person.
+

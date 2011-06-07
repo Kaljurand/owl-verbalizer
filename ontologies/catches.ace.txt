@@ -1,0 +1,12 @@
+Every man is a human.
+
+Every mouse is an animal.
+
+/* BUG: axiom too complex: SubClassOf(ObjectOneOf([NamedIndividual(http://www.example.org/catches.owl# : John)]),ObjectIntersectionOf([ObjectUnionOf([ObjectSomeValuesFrom(ObjectProperty(http://www.example.org/catches.owl# : like),ObjectIntersectionOf([Class(http://www.example.org/catches.owl# : dog),ObjectSomeValuesFrom(ObjectProperty(http://www.example.org/catches.owl# : catch),Class(http://www.example.org/catches.owl# : thief))])),ObjectSomeValuesFrom(ObjectProperty(http://www.example.org/catches.owl# : like),ObjectIntersectionOf([Class(http://www.example.org/catches.owl# : cat),ObjectSomeValuesFrom(ObjectProperty(http://www.example.org/catches.owl# : catch),Class(http://www.example.org/catches.owl# : mouse))]))]),Class(http://www.example.org/catches.owl# : man)])) */
+
+Every dog is an animal.
+
+Every cat is an animal.
+
+Every thief is a human.
+

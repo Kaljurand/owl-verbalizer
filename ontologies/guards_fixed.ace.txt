@@ -1,0 +1,20 @@
+Everything is something that is Bill or that is John or that is Mary.
+
+genid3 is a first-guard.
+
+genid3 is John.
+
+Every first-guard is a guard that is not shield by a guard.
+
+Every guard shield at most 3 man.
+
+genid3 is something.
+
+Mary is something.
+
+John is something.
+
+Bill is something.
+
+Every guard is something that shield a guard and that is shield by at most 1 guard.
+

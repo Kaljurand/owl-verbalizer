@@ -1,0 +1,1441 @@
+Every Cajun hasTopping a MozzarellaTopping.
+
+Every Capricciosa hasTopping a CaperTopping.
+
+No FourSeasons is a Parmense.
+
+No VegetableTopping is a HerbSpiceTopping.
+
+Every Giardiniera hasTopping a TomatoTopping.
+
+No LaReine is a PolloAdAstra.
+
+Every Soho hasTopping a MozzarellaTopping.
+
+Every SweetPepperTopping is a PepperTopping.
+
+No AnchoviesTopping is a MixedSeafoodTopping.
+
+Every FruttiDiMare hasTopping a GarlicTopping.
+
+No FourSeasons is a LaReine.
+
+Everything is isBaseOf by at most 1 thing.
+
+No Parmense is a Rosa.
+
+No OliveTopping is an ArtichokeTopping.
+
+No NutTopping is a VegetableTopping.
+
+Every RosemaryTopping hasSpiciness a Mild.
+
+No CaperTopping is an OliveTopping.
+
+No Capricciosa is an AmericanHot.
+
+Every AmericanHot hasCountryOfOrigin America.
+
+No Veneziana is a Siciliana.
+
+No Soho is a Giardiniera.
+
+Every PrinceCarlo hasTopping a TomatoTopping.
+
+Every ChickenTopping is a MeatTopping.
+
+Every OnionTopping hasSpiciness a Medium.
+
+No FourSeasons is a Margherita.
+
+Everything that is hasTopping by a SloppyGiuseppe is something that is a GreenPepperTopping or that is a HotSpicedBeefTopping or that is a MozzarellaTopping or that is an OnionTopping or that is a TomatoTopping.
+
+Everything is hasBase by at most 1 thing.
+
+Every LaReine hasTopping a MushroomTopping.
+
+Every HamTopping is a MeatTopping.
+
+No Cajun is a Fiorentina.
+
+Every LaReine hasTopping a MozzarellaTopping.
+
+No FourSeasons is a Fiorentina.
+
+Every Cajun is a NamedPizza.
+
+Every Siciliana is a NamedPizza.
+
+Every PrawnsTopping is a FishTopping.
+
+Every HerbSpiceTopping is a PizzaTopping.
+
+Every SlicedTomatoTopping is a TomatoTopping.
+
+Everything that is isBaseOf by something is a Pizza.
+
+No Veneziana is a QuattroFormaggi.
+
+Everything that is hasIngredient by something is a Food.
+
+No Fiorentina is an UnclosedPizza.
+
+Every Pizza that hasBase nothing but ThinAndCrispyBase is a ThinAndCrispyPizza.
+Every ThinAndCrispyPizza is a Pizza that hasBase nothing but ThinAndCrispyBase.
+
+No PolloAdAstra is a Siciliana.
+
+No SloppyGiuseppe is an American.
+
+/* BUG: axiom unsupported: DifferentIndividuals([NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl# : France),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl# : America),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl# : Italy),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl# : England),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl# : Germany)]) */
+Germany is a Country.
+
+No PolloAdAstra is a SloppyGiuseppe.
+
+No CaperTopping is a PetitPoisTopping.
+
+No PrinceCarlo is a Soho.
+
+Every OliveTopping is a VegetableTopping.
+
+No OliveTopping is an AsparagusTopping.
+
+If X isIngredientOf something that isIngredientOf Y then X isIngredientOf Y.
+
+Every TomatoTopping hasSpiciness a Mild.
+
+Every Cajun hasTopping a PeperonataTopping.
+
+Every PizzaBase is a Food.
+
+Every Capricciosa hasTopping an AnchoviesTopping.
+
+No LeekTopping is an AsparagusTopping.
+
+No Mushroom is a LaReine.
+
+No Caprina is a LaReine.
+
+Every HotGreenPepperTopping hasSpiciness a Hot.
+
+No FruitTopping is a FishTopping.
+
+No Mushroom is a Fiorentina.
+
+No GarlicTopping is a PetitPoisTopping.
+
+No Veneziana is a SloppyGiuseppe.
+
+No FourSeasons is a Siciliana.
+
+No MozzarellaTopping is a ParmesanTopping.
+
+Every LaReine hasTopping a HamTopping.
+
+No PrinceCarlo is a Fiorentina.
+
+Every OnionTopping is a VegetableTopping.
+
+No PepperTopping is a LeekTopping.
+
+No SpinachTopping is a PetitPoisTopping.
+
+No Parmense is an AmericanHot.
+
+Every Giardiniera hasTopping a PetitPoisTopping.
+
+No Cajun is a Siciliana.
+
+Every ParmaHamTopping is a HamTopping.
+
+Every FourSeasons hasTopping a TomatoTopping.
+
+Every Pizza is a Food.
+
+No PrinceCarlo is an UnclosedPizza.
+
+No Soho is an American.
+
+No Siciliana is a SloppyGiuseppe.
+
+Every Fiorentina hasTopping a ParmesanTopping.
+
+No Cajun is a Parmense.
+
+No Siciliana is a Giardiniera.
+
+No LaReine is a Soho.
+
+No Cajun is an American.
+
+No HerbSpiceTopping is a MeatTopping.
+
+No Fiorentina is a FruttiDiMare.
+
+No MushroomTopping is a SpinachTopping.
+
+Every AmericanHot hasTopping a HotGreenPepperTopping.
+
+Everything that is hasTopping by a Giardiniera is something that is a LeekTopping or that is a MozzarellaTopping or that is a MushroomTopping or that is an OliveTopping or that is a PeperonataTopping or that is a PetitPoisTopping or that is a SlicedTomatoTopping or that is a TomatoTopping.
+
+No CaperTopping is an ArtichokeTopping.
+
+America is something.
+
+No UnclosedPizza is a SloppyGiuseppe.
+
+No GarlicTopping is a SpinachTopping.
+
+No Caprina is a Margherita.
+
+Every Fiorentina hasTopping an OliveTopping.
+
+No Veneziana is an AmericanHot.
+
+Every AmericanHot hasTopping a TomatoTopping.
+
+No IceCream is a PizzaTopping.
+
+No Mushroom is a Capricciosa.
+
+No PrinceCarlo is a QuattroFormaggi.
+
+No Capricciosa is a SloppyGiuseppe.
+
+Every Mild is a Spiciness.
+
+No Cajun is a PolloAdAstra.
+
+Every TomatoTopping is a VegetableTopping.
+
+No GarlicTopping is a RocketTopping.
+
+Italy is something.
+
+Every Mushroom is a NamedPizza.
+
+No Cajun is a SloppyGiuseppe.
+
+Everything that is hasSpiciness by something is a Spiciness.
+
+Every CheeseTopping is a PizzaTopping.
+
+Every PizzaTopping that hasSpiciness a Hot is a SpicyTopping.
+Every SpicyTopping is a PizzaTopping that hasSpiciness a Hot.
+
+No JalapenoPepperTopping is a SweetPepperTopping.
+
+No RosemaryTopping is a CajunSpiceTopping.
+
+No RocketTopping is an ArtichokeTopping.
+
+Every Napoletana is a NamedPizza.
+
+Everything that is isToppingOf by something is a Pizza.
+
+Every PolloAdAstra hasTopping a CajunSpiceTopping.
+
+No LaReine is a Siciliana.
+
+Every PolloAdAstra hasTopping a GarlicTopping.
+
+No Veneziana is an UnclosedPizza.
+
+Every FourCheesesTopping is a CheeseTopping.
+
+No LaReine is a SloppyGiuseppe.
+
+No FruttiDiMare is a Rosa.
+
+No SloppyGiuseppe is a QuattroFormaggi.
+
+Every Parmense is a NamedPizza.
+
+No VegetableTopping is a FruitTopping.
+
+Everything that is hasTopping by an AmericanHot is something that is a HotGreenPepperTopping or that is a JalapenoPepperTopping or that is a MozzarellaTopping or that is a PeperoniSausageTopping or that is a TomatoTopping.
+
+No Siciliana is an UnclosedPizza.
+
+Everything that is hasTopping by a PolloAdAstra is something that is a CajunSpiceTopping or that is a ChickenTopping or that is a GarlicTopping or that is a MozzarellaTopping or that is a RedOnionTopping or that is a SweetPepperTopping or that is a TomatoTopping.
+
+Every FourSeasons hasTopping a MushroomTopping.
+
+No FourSeasons is a Rosa.
+
+Every FishTopping is a PizzaTopping.
+
+Everything is hasTopping by at most 1 thing.
+
+No OnionTopping is a LeekTopping.
+
+No Fiorentina is a PolloAdAstra.
+
+Every LaReine hasTopping a TomatoTopping.
+
+If X hasBase Y then Y isBaseOf X.
+If X isBaseOf Y then Y hasBase X.
+
+Every Giardiniera hasTopping an OliveTopping.
+
+No Veneziana is a Margherita.
+
+No Rosa is a QuattroFormaggi.
+
+No PrinceCarlo is a FruttiDiMare.
+
+Every Giardiniera is a NamedPizza.
+
+No PizzaBase is a Pizza.
+
+Every PepperTopping is a VegetableTopping.
+
+Every LaReine hasTopping an OliveTopping.
+
+No SloppyGiuseppe is a Rosa.
+
+No ParmesanTopping is a FourCheesesTopping.
+
+No OliveTopping is a PetitPoisTopping.
+
+Every GreenPepperTopping is a PepperTopping.
+
+No Veneziana is a Soho.
+
+Every ParmesanTopping is a CheeseTopping.
+
+No PepperTopping is a PetitPoisTopping.
+
+Every HotGreenPepperTopping is a GreenPepperTopping.
+
+No Parmense is a LaReine.
+
+Every SultanaTopping is a FruitTopping.
+
+Every InterestingPizza is a Pizza that hasTopping at least 3 things.
+Every Pizza that hasTopping at least 3 things is an InterestingPizza.
+
+No Mushroom is a Veneziana.
+
+Every Rosa hasTopping a GorgonzolaTopping.
+
+Everything that is hasTopping by a QuattroFormaggi is something that is a FourCheesesTopping or that is a TomatoTopping.
+
+Every MozzarellaTopping hasSpiciness a Mild.
+
+No VegetableTopping is a FishTopping.
+
+No Soho is a SloppyGiuseppe.
+
+Every Rosa is a NamedPizza.
+
+No Medium is a Mild.
+
+No QuattroFormaggi is an AmericanHot.
+
+No CaperTopping is a RocketTopping.
+
+Everything hasBase at most 1 thing.
+
+No FourSeasons is a QuattroFormaggi.
+
+No Rosa is an American.
+
+No Napoletana is an American.
+
+No Mushroom is an AmericanHot.
+
+No LeekTopping is a SpinachTopping.
+
+Every Pizza that hasTopping a MeatTopping is a MeatyPizza.
+Every MeatyPizza is a Pizza that hasTopping a MeatTopping.
+
+No Giardiniera is a QuattroFormaggi.
+
+No FruttiDiMare is a PolloAdAstra.
+
+Every AsparagusTopping is a VegetableTopping.
+
+No OnionTopping is a PetitPoisTopping.
+
+Every FruttiDiMare hasTopping a MixedSeafoodTopping.
+
+No PepperTopping is an ArtichokeTopping.
+
+Every AnchoviesTopping is a FishTopping.
+
+No SloppyGiuseppe is an AmericanHot.
+
+No SauceTopping is a FishTopping.
+
+Every MushroomTopping hasSpiciness a Mild.
+
+No FruttiDiMare is an American.
+
+No GarlicTopping is an OliveTopping.
+
+No PrinceCarlo is a Capricciosa.
+
+No RocketTopping is a PetitPoisTopping.
+
+No MozzarellaTopping is a GoatsCheeseTopping.
+
+No FourSeasons is a FruttiDiMare.
+
+Everything that is hasTopping by a Caprina is something that is a GoatsCheeseTopping or that is a MozzarellaTopping or that is a SundriedTomatoTopping or that is a TomatoTopping.
+
+Every Veneziana hasTopping a MozzarellaTopping.
+
+Every CheeseyVegetableTopping is a CheeseTopping.
+
+No Parmense is a Margherita.
+
+No Napoletana is a QuattroFormaggi.
+
+Every Parmense hasTopping a TomatoTopping.
+
+Every Parmense hasTopping a HamTopping.
+
+No Cajun is a Veneziana.
+
+Everything that isIngredientOf something is a Food.
+
+Every NonVegetarianPizza is a Pizza that is not a VegetarianPizza.
+Every Pizza that is not a VegetarianPizza is a NonVegetarianPizza.
+
+Everything that is hasTopping by something is a PizzaTopping.
+
+No VegetableTopping is a MeatTopping.
+
+No FourSeasons is an UnclosedPizza.
+
+No Cajun is a QuattroFormaggi.
+
+Every HotSpicedBeefTopping is a MeatTopping.
+
+Every SloppyGiuseppe hasTopping a HotSpicedBeefTopping.
+
+No Mushroom is a Giardiniera.
+
+Every PrinceCarlo is a NamedPizza.
+
+Every ParmaHamTopping hasSpiciness a Mild.
+
+Everything that isToppingOf something is a PizzaTopping.
+
+No Parmense is a QuattroFormaggi.
+
+No Cajun is a Capricciosa.
+
+Every Veneziana hasTopping a PineKernels.
+
+Germany is something.
+
+No ArtichokeTopping is a PetitPoisTopping.
+
+Everything that is hasTopping by a LaReine is something that is a HamTopping or that is a MozzarellaTopping or that is a MushroomTopping or that is an OliveTopping or that is a TomatoTopping.
+
+Every Siciliana hasTopping a HamTopping.
+
+No Soho is a PolloAdAstra.
+
+No FruttiDiMare is an UnclosedPizza.
+
+No OliveTopping is an OnionTopping.
+
+Every PrinceCarlo hasTopping a ParmesanTopping.
+
+No Fiorentina is a Margherita.
+
+No PrinceCarlo is a Parmense.
+
+Every American hasTopping a MozzarellaTopping.
+
+Everything that is hasTopping by a Rosa is something that is a GorgonzolaTopping or that is a MozzarellaTopping or that is a TomatoTopping.
+
+Every Soho hasTopping a GarlicTopping.
+
+No Mushroom is a PolloAdAstra.
+
+No FourSeasons is a SloppyGiuseppe.
+
+No LaReine is a FruttiDiMare.
+
+No NonVegetarianPizza is a VegetarianPizza.
+
+No SauceTopping is a CheeseTopping.
+
+No Caprina is a Napoletana.
+
+No PepperTopping is a MushroomTopping.
+
+No Parmense is a Soho.
+
+Everything that is hasTopping by an American is something that is a MozzarellaTopping or that is a PeperoniSausageTopping or that is a TomatoTopping.
+
+Every Medium is a Spiciness.
+
+No GarlicTopping is a PepperTopping.
+
+No FourSeasons is a Napoletana.
+
+Every Pizza hasBase a PizzaBase.
+
+No Caprina is an UnclosedPizza.
+
+No LaReine is an AmericanHot.
+
+No PrawnsTopping is a MixedSeafoodTopping.
+
+Everything that is hasTopping by a Siciliana is something that is an AnchoviesTopping or that is an ArtichokeTopping or that is a GarlicTopping or that is a HamTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a TomatoTopping.
+
+Everything that is hasBase by something is a PizzaBase.
+
+No FruttiDiMare is a Napoletana.
+
+Every AmericanHot hasTopping a MozzarellaTopping.
+
+If X hasIngredient Y then Y isIngredientOf X.
+If X isIngredientOf Y then Y hasIngredient X.
+
+No American is an AmericanHot.
+
+Every CheeseyVegetableTopping is a VegetableTopping.
+
+Every RedOnionTopping is an OnionTopping.
+
+No Capricciosa is a Veneziana.
+
+No FourSeasons is a Soho.
+
+Every PeperonataTopping hasSpiciness a Medium.
+
+No TomatoTopping is an AsparagusTopping.
+
+No MozzarellaTopping is a GorgonzolaTopping.
+
+No Parmense is a PolloAdAstra.
+
+Every Siciliana hasTopping an AnchoviesTopping.
+
+Every MeatTopping is a PizzaTopping.
+
+No Napoletana is a Giardiniera.
+
+Every AsparagusTopping hasSpiciness a Mild.
+
+No MeatTopping is a CheeseTopping.
+
+Everything that is hasTopping by a FruttiDiMare is something that is a GarlicTopping or that is a MixedSeafoodTopping or that is a TomatoTopping.
+
+No Rosa is an AmericanHot.
+
+Every American is a NamedPizza.
+
+No Cajun is a PrinceCarlo.
+
+Every Cajun hasTopping a TomatoTopping.
+
+Every CajunSpiceTopping hasSpiciness a Hot.
+
+Every AmericanHot hasTopping a JalapenoPepperTopping.
+
+No RocketTopping is an AsparagusTopping.
+
+No UnclosedPizza is an American.
+
+Every FruttiDiMare hasTopping a TomatoTopping.
+
+No PepperTopping is a SpinachTopping.
+
+No FruttiDiMare is a Giardiniera.
+
+No PrinceCarlo is a Veneziana.
+
+No FruttiDiMare is a Veneziana.
+
+Every Cajun hasTopping an OnionTopping.
+
+Every PetitPoisTopping hasSpiciness a Mild.
+
+No Mushroom is an UnclosedPizza.
+
+No LaReine is a Napoletana.
+
+No SpinachTopping is an AsparagusTopping.
+
+No OliveTopping is a LeekTopping.
+
+Every American hasTopping a TomatoTopping.
+
+Every Caprina is a NamedPizza.
+
+No ThinAndCrispyBase is a DeepPanBase.
+
+Every Caprina hasTopping a SundriedTomatoTopping.
+
+No Parmense is a FruttiDiMare.
+
+No ArtichokeTopping is an AsparagusTopping.
+
+No ArtichokeTopping is a MushroomTopping.
+
+No HerbSpiceTopping is a CheeseTopping.
+
+Every SauceTopping is a PizzaTopping.
+
+No JalapenoPepperTopping is a GreenPepperTopping.
+
+No PolloAdAstra is an American.
+
+No LaReine is an UnclosedPizza.
+
+No IceCream is a Pizza.
+
+No Caprina is a PrinceCarlo.
+
+No OnionTopping is a SpinachTopping.
+
+No Fiorentina is a Rosa.
+
+No TomatoTopping is a PetitPoisTopping.
+
+Every Siciliana hasTopping an OliveTopping.
+
+No Napoletana is an AmericanHot.
+
+Every Country is a DomainConcept that is America or that is England or that is France or that is Germany or that is Italy.
+Every DomainConcept that is America or that is England or that is France or that is Germany or that is Italy is a Country.
+
+Every SultanaTopping hasSpiciness a Medium.
+
+No SauceTopping is a MeatTopping.
+
+Every Napoletana hasTopping a MozzarellaTopping.
+
+Every Caprina hasTopping a TomatoTopping.
+
+Every Veneziana hasCountryOfOrigin Italy.
+
+No Parmense is an UnclosedPizza.
+
+Every GorgonzolaTopping is a CheeseTopping.
+
+Every ThinAndCrispyBase is a PizzaBase.
+
+No Parmense is a SloppyGiuseppe.
+
+No HamTopping is a HotSpicedBeefTopping.
+
+No Siciliana is a Rosa.
+
+No ArtichokeTopping is a SpinachTopping.
+
+No LeekTopping is a PetitPoisTopping.
+
+Every QuattroFormaggi hasTopping a TomatoTopping.
+
+Every Veneziana hasTopping an OnionTopping.
+
+No PrinceCarlo is a Napoletana.
+
+No Caprina is a Giardiniera.
+
+No Mushroom is a Parmense.
+
+No SauceTopping is a NutTopping.
+
+Every TobascoPepperSauce is a SauceTopping.
+
+No Capricciosa is a Rosa.
+
+No Caprina is a Capricciosa.
+
+Every PolloAdAstra hasTopping a RedOnionTopping.
+
+If X isToppingOf Y then X isIngredientOf Y.
+
+No Parmense is a Giardiniera.
+
+Every JalapenoPepperTopping is a PepperTopping.
+
+No Mild is a Hot.
+
+No Capricciosa is a FruttiDiMare.
+
+No PrinceCarlo is an American.
+
+Every Soho is a NamedPizza.
+
+No Capricciosa is a LaReine.
+
+Every CaperTopping is a VegetableTopping.
+
+No Medium is a Hot.
+
+No Fiorentina is a Soho.
+
+No TomatoTopping is a LeekTopping.
+
+Everything that is hasTopping by a Soho is something that is a GarlicTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a ParmesanTopping or that is a RocketTopping or that is a TomatoTopping.
+
+No GarlicTopping is a LeekTopping.
+
+Every Mushroom hasTopping a MozzarellaTopping.
+
+If X hasIngredient something that hasIngredient Y then X hasIngredient Y.
+
+No FourSeasons is an American.
+
+Everything that hasTopping something is a Pizza.
+
+Every Siciliana hasTopping a MozzarellaTopping.
+
+No OliveTopping is a MushroomTopping.
+
+No FruttiDiMare is a QuattroFormaggi.
+
+No FruttiDiMare is an AmericanHot.
+
+No LaReine is a Giardiniera.
+
+No Mushroom is a FruttiDiMare.
+
+No Cajun is a Mushroom.
+
+No GoatsCheeseTopping is a FourCheesesTopping.
+
+No Cajun is an UnclosedPizza.
+
+Every PrinceCarlo hasTopping a RosemaryTopping.
+
+Every Fiorentina is a NamedPizza.
+
+Everything that is a Hot or that is a Medium or that is a Mild is a Spiciness.
+Every Spiciness is something that is a Hot or that is a Medium or that is a Mild.
+
+Every LeekTopping hasSpiciness a Mild.
+
+Every RocketTopping hasSpiciness a Medium.
+
+Every NutTopping hasSpiciness a Mild.
+
+No PepperTopping is a RocketTopping.
+
+No Soho is a Rosa.
+
+No Mushroom is an American.
+
+Everything that is hasTopping by a PrinceCarlo is something that is a LeekTopping or that is a MozzarellaTopping or that is a ParmesanTopping or that is a RosemaryTopping or that is a TomatoTopping.
+
+Every Giardiniera hasTopping a LeekTopping.
+
+If X isBaseOf Y then X isIngredientOf Y.
+
+No PolloAdAstra is a QuattroFormaggi.
+
+Every SloppyGiuseppe hasTopping a MozzarellaTopping.
+
+No Cajun is a Margherita.
+
+Everything that hasBase something is a Pizza.
+
+Every PolloAdAstra hasTopping a SweetPepperTopping.
+
+Every PizzaTopping is a Food.
+
+No Soho is a Siciliana.
+
+Every ArtichokeTopping hasSpiciness a Mild.
+
+No PizzaBase is a PizzaTopping.
+
+Every CheeseyPizza is a Pizza that hasTopping a CheeseTopping.
+Every Pizza that hasTopping a CheeseTopping is a CheeseyPizza.
+
+No Capricciosa is a QuattroFormaggi.
+
+No Mushroom is a Rosa.
+
+No HerbSpiceTopping is a FishTopping.
+
+Everything that is hasTopping by a Parmense is something that is an AsparagusTopping or that is a HamTopping or that is a MozzarellaTopping or that is a ParmesanTopping or that is a TomatoTopping.
+
+No Fiorentina is a SloppyGiuseppe.
+
+No PolloAdAstra is a Giardiniera.
+
+No Napoletana is a Siciliana.
+
+No Caprina is a Fiorentina.
+
+No NutTopping is a FruitTopping.
+
+Every Margherita is a NamedPizza.
+
+Everything that is isIngredientOf by something is a Food.
+
+No FruitTopping is a HerbSpiceTopping.
+
+Every Food is a DomainConcept.
+
+Italy is a Country.
+
+No Napoletana is an UnclosedPizza.
+
+Every PetitPoisTopping is a VegetableTopping.
+
+Everything that is hasTopping by a Cajun is something that is a MozzarellaTopping or that is an OnionTopping or that is a PeperonataTopping or that is a PrawnsTopping or that is a TobascoPepperSauce or that is a TomatoTopping.
+
+No Mushroom is a Napoletana.
+
+Every LeekTopping is a VegetableTopping.
+
+No MushroomTopping is an AsparagusTopping.
+
+No Soho is an AmericanHot.
+
+No Caprina is a FruttiDiMare.
+
+No IceCream is a PizzaBase.
+
+Everything that is hasBase by a RealItalianPizza is a ThinAndCrispyBase.
+
+Every Hot is a Spiciness.
+
+America is a Country.
+
+Every MushroomTopping is a VegetableTopping.
+
+No Margherita is a Siciliana.
+
+Every FourSeasons hasTopping an OliveTopping.
+
+Every TobascoPepperSauce hasSpiciness a Hot.
+
+Every Capricciosa is a NamedPizza.
+
+Every PolloAdAstra is a NamedPizza.
+
+Every FourSeasons hasTopping a MozzarellaTopping.
+
+Every Fiorentina hasTopping a MozzarellaTopping.
+
+No Veneziana is an American.
+
+Every IceCream is a Food.
+
+No Fiorentina is an American.
+
+No LaReine is a Veneziana.
+
+France is a Country.
+
+No Caprina is a Siciliana.
+
+No PeperonataTopping is a SweetPepperTopping.
+
+No PeperoniSausageTopping is a ChickenTopping.
+
+France is something.
+
+Every Fiorentina hasTopping a SpinachTopping.
+
+No PepperTopping is an OliveTopping.
+
+Everything isToppingOf at most 1 thing.
+
+No CaperTopping is an OnionTopping.
+
+Every PeperonataTopping is a PepperTopping.
+
+Every FruttiDiMare is a NamedPizza.
+
+Every Rosa hasTopping a MozzarellaTopping.
+
+No PolloAdAstra is a Margherita.
+
+No FruttiDiMare is a Soho.
+
+Every Mushroom hasTopping a MushroomTopping.
+
+Every GarlicTopping is a VegetableTopping.
+
+Every PrinceCarlo hasTopping a MozzarellaTopping.
+
+Every QuattroFormaggi is a NamedPizza.
+
+Every Rosa hasTopping a TomatoTopping.
+
+Every UnclosedPizza hasTopping a MozzarellaTopping.
+
+No GarlicTopping is an AsparagusTopping.
+
+Everything that is hasTopping by a Napoletana is something that is an AnchoviesTopping or that is a CaperTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a TomatoTopping.
+
+No Capricciosa is a PolloAdAstra.
+
+Every Veneziana hasTopping a SultanaTopping.
+
+No Fiorentina is a Napoletana.
+
+No PolloAdAstra is a Napoletana.
+
+No Parmense is a Napoletana.
+
+No LaReine is a Rosa.
+
+No GorgonzolaTopping is a FourCheesesTopping.
+
+No RocketTopping is a SpinachTopping.
+
+Every Veneziana hasTopping a TomatoTopping.
+
+No PolloAdAstra is an AmericanHot.
+
+No Capricciosa is a Soho.
+
+Every Napoletana hasTopping an AnchoviesTopping.
+
+No PepperTopping is an AsparagusTopping.
+
+No MushroomTopping is a PetitPoisTopping.
+
+No PrinceCarlo is an AmericanHot.
+
+No GarlicTopping is an ArtichokeTopping.
+
+No Capricciosa is a Napoletana.
+
+No ChickenTopping is a HotSpicedBeefTopping.
+
+No PrinceCarlo is a Rosa.
+
+No Giardiniera is a Rosa.
+
+Every Capricciosa hasTopping a MozzarellaTopping.
+
+No SweetPepperTopping is a GreenPepperTopping.
+
+Every Siciliana hasTopping an ArtichokeTopping.
+
+Every Pizza that does not have_topping a FishTopping and that does not have_topping a MeatTopping is a VegetarianPizza.
+Every VegetarianPizza is a Pizza that does not have_topping a FishTopping and that does not have_topping a MeatTopping.
+
+No PrinceCarlo is a Margherita.
+
+Every AmericanHot hasTopping a PeperoniSausageTopping.
+
+No PepperTopping is a TomatoTopping.
+
+No LaReine is a Margherita.
+
+No LaReine is a Fiorentina.
+
+No Soho is an UnclosedPizza.
+
+No ArtichokeTopping is an OnionTopping.
+
+Every UnclosedPizza is a NamedPizza.
+
+No MozzarellaTopping is a FourCheesesTopping.
+
+Every FourSeasons hasTopping a PeperoniSausageTopping.
+
+No Cajun is an AmericanHot.
+
+No UnclosedPizza is an AmericanHot.
+
+No Mushroom is a Margherita.
+
+Every NamedPizza is a Pizza.
+
+No VegetableTopping is a CheeseTopping.
+
+No Caprina is a Rosa.
+
+No Siciliana is a QuattroFormaggi.
+
+No FishTopping is a CheeseTopping.
+
+Every PolloAdAstra hasTopping a MozzarellaTopping.
+
+No Cajun is a Napoletana.
+
+No CaperTopping is a SpinachTopping.
+
+Every CajunSpiceTopping is a HerbSpiceTopping.
+
+No RocketTopping is a MushroomTopping.
+
+Every FishTopping hasSpiciness a Mild.
+
+Every GoatsCheeseTopping is a CheeseTopping.
+
+No SauceTopping is a HerbSpiceTopping.
+
+Every NutTopping is a PizzaTopping.
+
+No UnclosedPizza is a Giardiniera.
+
+Every GarlicTopping hasSpiciness a Medium.
+
+Every MozzarellaTopping hasCountryOfOrigin Italy.
+
+No Capricciosa is an UnclosedPizza.
+
+If X hasTopping Y then X hasIngredient Y.
+
+No CaperTopping is a MushroomTopping.
+
+No FourSeasons is a Capricciosa.
+
+No Caprina is a PolloAdAstra.
+
+Every HotSpicedBeefTopping hasSpiciness a Hot.
+
+No Napoletana is a Margherita.
+
+No ChickenTopping is a HamTopping.
+
+No NutTopping is a MeatTopping.
+
+No Capricciosa is an American.
+
+Every Siciliana hasTopping a TomatoTopping.
+
+No SloppyGiuseppe is a Giardiniera.
+
+No FourSeasons is a Veneziana.
+
+Every Margherita hasTopping a MozzarellaTopping.
+
+No CaperTopping is a TomatoTopping.
+
+No Margherita is an American.
+
+No Margherita is a QuattroFormaggi.
+
+No Caprina is an American.
+
+No Capricciosa is a Fiorentina.
+
+If X hasBase Y then X hasIngredient Y.
+
+No GarlicTopping is a CaperTopping.
+
+Every MozzarellaTopping is a CheeseTopping.
+
+No PeperoniSausageTopping is a HamTopping.
+
+No Giardiniera is an AmericanHot.
+
+No Caprina is a QuattroFormaggi.
+
+No SlicedTomatoTopping is a SundriedTomatoTopping.
+
+No Cajun is a Rosa.
+
+Every Soho hasTopping an OliveTopping.
+
+Every QuattroFormaggi hasTopping a FourCheesesTopping.
+
+Every Giardiniera hasTopping a MozzarellaTopping.
+
+Every American hasTopping a PeperoniSausageTopping.
+
+No RocketTopping is a LeekTopping.
+
+No Mushroom is a QuattroFormaggi.
+
+No Margherita is an UnclosedPizza.
+
+No TomatoTopping is a SpinachTopping.
+
+No Capricciosa is a Giardiniera.
+
+No FourSeasons is an AmericanHot.
+
+No FruitTopping is a CheeseTopping.
+
+Every SundriedTomatoTopping is a TomatoTopping.
+
+No Caprina is an AmericanHot.
+
+Every Fiorentina hasTopping a TomatoTopping.
+
+Every Spiciness is a ValuePartition.
+
+No Pizza is a PizzaTopping.
+
+No Siciliana is an AmericanHot.
+
+No TomatoTopping is an ArtichokeTopping.
+
+No ArtichokeTopping is a LeekTopping.
+
+Everything isBaseOf at most 1 thing.
+
+No FourSeasons is a PrinceCarlo.
+
+No PrinceCarlo is a Siciliana.
+
+Every GoatsCheeseTopping hasSpiciness a Mild.
+
+Every RosemaryTopping is a HerbSpiceTopping.
+
+No AnchoviesTopping is a PrawnsTopping.
+
+England is something.
+
+No LaReine is an American.
+
+No PolloAdAstra is a Rosa.
+
+No GorgonzolaTopping is a ParmesanTopping.
+
+No Caprina is a Mushroom.
+
+Every American hasCountryOfOrigin America.
+
+No GarlicTopping is a MushroomTopping.
+
+Everything that is hasTopping by a Fiorentina is something that is a GarlicTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a ParmesanTopping or that is a SpinachTopping or that is a TomatoTopping.
+
+No CaperTopping is a PepperTopping.
+
+Every IceCream hasTopping a FruitTopping.
+
+Every PeperoniSausageTopping hasSpiciness a Medium.
+
+Every Napoletana hasCountryOfOrigin Italy.
+
+If X hasTopping Y then Y isToppingOf X.
+If X isToppingOf Y then Y hasTopping X.
+
+No Cajun is a LaReine.
+
+No NutTopping is a HerbSpiceTopping.
+
+No PeperonataTopping is a GreenPepperTopping.
+
+No Mushroom is a PrinceCarlo.
+
+No Cajun is a FourSeasons.
+
+Every Giardiniera hasTopping a PeperonataTopping.
+
+Every Giardiniera hasTopping a MushroomTopping.
+
+No Cajun is a Giardiniera.
+
+No Parmense is an American.
+
+No Margherita is a Rosa.
+
+Every RocketTopping is a VegetableTopping.
+
+No GarlicTopping is a TomatoTopping.
+
+No FourSeasons is a PolloAdAstra.
+
+No Fiorentina is a Siciliana.
+
+No Caprina is a Soho.
+
+Every FourCheesesTopping hasSpiciness a Mild.
+
+No Parmense is a Fiorentina.
+
+Every SpinachTopping is a VegetableTopping.
+
+No SauceTopping is a FruitTopping.
+
+Every SpinachTopping hasSpiciness a Mild.
+
+Every SundriedTomatoTopping hasSpiciness a Mild.
+
+No OliveTopping is a SpinachTopping.
+
+No Caprina is a Veneziana.
+
+Everything that is hasTopping by a Mushroom is something that is a MozzarellaTopping or that is a MushroomTopping or that is a TomatoTopping.
+
+No Parmense is a Siciliana.
+
+Every ParmesanTopping hasSpiciness a Mild.
+
+No PrinceCarlo is a PolloAdAstra.
+
+Every FourSeasons is a NamedPizza.
+
+No Cajun is a Caprina.
+
+No Giardiniera is an American.
+
+No Capricciosa is a Siciliana.
+
+No Margherita is a SloppyGiuseppe.
+
+Every SweetPepperTopping hasSpiciness a Mild.
+
+No UnclosedPizza is a Rosa.
+
+Every Soho hasTopping a TomatoTopping.
+
+No Veneziana is a PolloAdAstra.
+
+No Veneziana is a Napoletana.
+
+No American is a QuattroFormaggi.
+
+No Fiorentina is a Veneziana.
+
+Everything that hasIngredient something is a Food.
+
+No NutTopping is a CheeseTopping.
+
+Everything that is hasTopping by a FourSeasons is something that is an AnchoviesTopping or that is a CaperTopping or that is a MozzarellaTopping or that is a MushroomTopping or that is an OliveTopping or that is a PeperoniSausageTopping or that is a TomatoTopping.
+
+Every PolloAdAstra hasTopping a ChickenTopping.
+
+Every CaperTopping hasSpiciness a Mild.
+
+Every OliveTopping hasSpiciness a Mild.
+
+Every SloppyGiuseppe hasTopping a GreenPepperTopping.
+
+No PeperoniSausageTopping is a HotSpicedBeefTopping.
+
+No JalapenoPepperTopping is a PeperonataTopping.
+
+Every LaReine is a NamedPizza.
+
+No PolloAdAstra is an UnclosedPizza.
+
+Every Veneziana is a NamedPizza.
+
+No TomatoTopping is an OnionTopping.
+
+Every Soho hasTopping a ParmesanTopping.
+
+No CaperTopping is a LeekTopping.
+
+No PrinceCarlo is a LaReine.
+
+No Parmense is a Veneziana.
+
+No GoatsCheeseTopping is a ParmesanTopping.
+
+Every AmericanHot is a NamedPizza.
+
+No Caprina is a SloppyGiuseppe.
+
+No OnionTopping is a MushroomTopping.
+
+Every Cajun hasTopping a TobascoPepperSauce.
+
+Everything that is hasTopping by a Margherita is something that is a MozzarellaTopping or that is a TomatoTopping.
+
+Every Mushroom hasTopping a TomatoTopping.
+
+Every MixedSeafoodTopping is a FishTopping.
+
+No Mushroom is a Soho.
+
+Every PineKernels is a NutTopping.
+
+No FruttiDiMare is a SloppyGiuseppe.
+
+No Cajun is a Soho.
+
+Every Cajun hasTopping a PrawnsTopping.
+
+No Capricciosa is a Margherita.
+
+Every SlicedTomatoTopping hasSpiciness a Mild.
+
+Every Caprina hasTopping a MozzarellaTopping.
+
+No Mushroom is a Siciliana.
+
+Every PizzaTopping that is a CheeseTopping or that is a FruitTopping or that is a HerbSpiceTopping or that is a NutTopping or that is a SauceTopping or that is a VegetableTopping is a VegetarianTopping.
+Every VegetarianTopping is a PizzaTopping that is a CheeseTopping or that is a FruitTopping or that is a HerbSpiceTopping or that is a NutTopping or that is a SauceTopping or that is a VegetableTopping.
+
+No Soho is a QuattroFormaggi.
+
+No RocketTopping is an OliveTopping.
+
+No FourSeasons is a Giardiniera.
+
+Every VegetarianPizzaEquivalent2 is a Pizza that hasTopping nothing but things that are a CheeseTopping or that are a FruitTopping or that are a HerbSpiceTopping or that are a NutTopping or that are a SauceTopping or that are a VegetableTopping.
+Every Pizza that hasTopping nothing but things that are a CheeseTopping or that are a FruitTopping or that are a HerbSpiceTopping or that are a NutTopping or that are a SauceTopping or that are a VegetableTopping is a VegetarianPizzaEquivalent2.
+
+Every Soho hasTopping a RocketTopping.
+
+Everything that isBaseOf something is a PizzaBase.
+
+Every Napoletana hasTopping an OliveTopping.
+
+No AsparagusTopping is a PetitPoisTopping.
+
+Every Margherita hasTopping a TomatoTopping.
+
+No Fiorentina is a QuattroFormaggi.
+
+No Napoletana is a SloppyGiuseppe.
+
+Every RealItalianPizza is a Pizza that hasCountryOfOrigin Italy.
+Every Pizza that hasCountryOfOrigin Italy is a RealItalianPizza.
+
+No OnionTopping is an AsparagusTopping.
+
+No Fiorentina is a Giardiniera.
+
+No DomainConcept is a ValuePartition.
+
+Every DeepPanBase is a PizzaBase.
+
+No PrinceCarlo is a SloppyGiuseppe.
+
+No Soho is a Margherita.
+
+Every ChickenTopping hasSpiciness a Mild.
+
+Every Napoletana hasTopping a CaperTopping.
+
+Every PeperoniSausageTopping is a MeatTopping.
+
+No LaReine is a QuattroFormaggi.
+
+Everything that is hasTopping by a Veneziana is something that is a CaperTopping or that is a MozzarellaTopping or that is an OliveTopping or that is an OnionTopping or that is a PineKernels or that is a SultanaTopping or that is a TomatoTopping.
+
+No PepperTopping is an OnionTopping.
+
+No RocketTopping is a TomatoTopping.
+
+No Veneziana is a Rosa.
+
+No FourSeasons is a Caprina.
+
+Every Capricciosa hasTopping a HamTopping.
+
+No RocketTopping is an OnionTopping.
+
+No SauceTopping is a VegetableTopping.
+
+Every FruitTopping is a PizzaTopping.
+
+Every Capricciosa hasTopping a TomatoTopping.
+
+No Fiorentina is an AmericanHot.
+
+England is a Country.
+
+Every FourSeasons hasTopping a CaperTopping.
+
+Every Napoletana hasTopping a TomatoTopping.
+
+No FruttiDiMare is a Siciliana.
+
+No Margherita is an AmericanHot.
+
+Every PolloAdAstra hasTopping a TomatoTopping.
+
+Every Parmense hasTopping an AsparagusTopping.
+
+Every Veneziana hasTopping an OliveTopping.
+
+No TomatoTopping is a MushroomTopping.
+
+Every Veneziana hasTopping a CaperTopping.
+
+Every FourSeasons hasTopping an AnchoviesTopping.
+
+No OliveTopping is a TomatoTopping.
+
+Every GorgonzolaTopping hasSpiciness a Mild.
+
+Everything that is hasTopping by a Capricciosa is something that is an AnchoviesTopping or that is a CaperTopping or that is a HamTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a PeperonataTopping or that is a TomatoTopping.
+
+Every Parmense hasTopping a ParmesanTopping.
+
+No Veneziana is a Giardiniera.
+
+No Margherita is a Giardiniera.
+
+No Capricciosa is a Parmense.
+
+No UnclosedPizza is a QuattroFormaggi.
+
+Every ArtichokeTopping is a VegetableTopping.
+
+Every JalapenoPepperTopping hasSpiciness a Hot.
+
+No Soho is a Napoletana.
+
+No MushroomTopping is a LeekTopping.
+
+No Mushroom is a SloppyGiuseppe.
+
+Every Pizza that hasTopping a SpicyTopping is a SpicyPizza.
+Every SpicyPizza is a Pizza that hasTopping a SpicyTopping.
+
+No Caprina is a Parmense.
+
+Every SloppyGiuseppe hasTopping a TomatoTopping.
+
+No Napoletana is a Rosa.
+
+No GarlicTopping is an OnionTopping.
+
+Everything hasSpiciness at most 1 thing.
+
+Every VegetableTopping is a PizzaTopping.
+
+No FruitTopping is a MeatTopping.
+
+No NutTopping is a FishTopping.
+
+Every SpicyPizzaEquivalent is a Pizza that hasTopping a PizzaTopping that hasSpiciness a Hot.
+Every Pizza that hasTopping a PizzaTopping that hasSpiciness a Hot is a SpicyPizzaEquivalent.
+
+Every Capricciosa hasTopping an OliveTopping.
+
+No Siciliana is an American.
+
+Every Parmense hasTopping a MozzarellaTopping.
+
+No MeatTopping is a FishTopping.
+
+No FruttiDiMare is a Margherita.
+
+Every Giardiniera hasTopping a SlicedTomatoTopping.
+
+Every PrinceCarlo hasTopping a LeekTopping.
+
+Every Siciliana hasTopping a GarlicTopping.
+
+Every SloppyGiuseppe hasTopping an OnionTopping.
+
+Every Pizza that hasTopping nothing but VegetarianTopping is a VegetarianPizzaEquivalent1.
+Every VegetarianPizzaEquivalent1 is a Pizza that hasTopping nothing but VegetarianTopping.
+
+No GoatsCheeseTopping is a GorgonzolaTopping.
+
+No Cajun is a FruttiDiMare.
+
+No CaperTopping is an AsparagusTopping.
+
+Every SloppyGiuseppe is a NamedPizza.
+
+No PrinceCarlo is a Giardiniera.
+
+Every Capricciosa hasTopping a PeperonataTopping.
+
+Every Caprina hasTopping a GoatsCheeseTopping.
+
+No FourSeasons is a Mushroom.
+
+Every Fiorentina hasTopping a GarlicTopping.
+

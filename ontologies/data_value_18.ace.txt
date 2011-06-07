@@ -1,0 +1,6 @@
+Everything that age 18 is a teenager.
+
+Everything that age 18.5 is a teenager.
+
+Everything that age "eightteen comma five" is a teenager.
+
