@@ -16,7 +16,6 @@
 # TODO:
 # * commandline arguments
 # * performance measurement
-# * verbalizing multiple inputs in parallel
 # * instead of curl use some Python library for better performance
 #
 import sys
@@ -31,7 +30,7 @@ from os.path import join
 owl_to_ace_exe="./owl_to_ace.exe"
 curl='curl'
 extension_pattern='\.owl'
-port=8001
+port=5123
 server_url="http://localhost:" + str(port)
 
 
@@ -68,19 +67,7 @@ def process_file_aux(cmd, path):
 	ret_code = pipe.wait()
 	f.flush()
 	f.close()
-
-
-def run_as_httpserver(g):
-	"""
-	"""
-	print 'Starting the server'
-	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port)]
-	print cmd
-	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-	wait_until_up(server)
-	post_files_with_curl(g)
-	print 'Stopping the server'
-	server.terminate()
+	print 'Verbalized:', path
 
 
 def run_as_script(g):
@@ -88,7 +75,6 @@ def run_as_script(g):
 	"""
 	for path in g:
 		cmd = [owl_to_ace_exe, '-owlfile', path]
-		print cmd
 		process_file(cmd, path)
 
 
@@ -138,16 +124,31 @@ print >> sys.stderr, 'TODO: out:', args.out
 
 g = owl_file_generator(args.dir_in)
 
-time_start = time.time()
+server = None
+time_start = None
+
 if args.mode == 'http':
-	run_as_httpserver(g)
+	print 'Starting the server'
+	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port)]
+	print cmd
+	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
+	wait_until_up(server)
+	time_start = time.time()
+	post_files_with_curl(g)
 else:
+	time_start = time.time()
 	run_as_script(g)
 
 
 while threading.active_count() > 1:
-	print "Active thread count: ", threading.active_count()
+	print '{:} threads still active'.format(threading.active_count())
 	time.sleep(.2)
 
 time_end = time.time()
+
+# Stop the verbalization server in case it was started
+if server is not None:
+	print 'Stopping the server'
+	server.terminate()
+
 print 'Duration: {:.2f} sec'.format(time_end - time_start)
