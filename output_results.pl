@@ -52,36 +52,64 @@ output_results(Format, [_-[] | SentenceList]) :-
 output_results(Format, [Axiom-Message | SentenceList]) :-
 	atom(Message),
 	!,
-	format("/* ~w: ~w */~n", [Message, Axiom]),
+	format_message(Format, Message, Axiom),
 	output_results(Format, SentenceList).
 
 output_results(Format, [_Axiom-SentenceList | AxiomSentenceListList]) :-
 	format_sentences(Format, SentenceList),
-	nl,
+	format_separator(Format),
 	output_results(Format, AxiomSentenceListList).
 
 
-format_sentences(ace, Sentences) :-
-	format_sentencelist(Sentences).
+format_separator(ace) :- nl.
+format_separator(csv) :- nl.
 
 
-%% format_sentencelist(+SentenceList:list)
+format_message(ace, Message, Axiom) :-
+	format("/* ~w: ~w */~n", [Message, Axiom]).
+
+format_message(csv, Message, Axiom) :-
+	format("~w\t~w~n", [Message, Axiom]).
+
+format_sentences(_, []).
+format_sentences(Format, [Sentence | Sentences]) :-
+	format_sentence(Format, Sentence),
+	format_sentences(Format, Sentences).
+
+
+%% format_sentence(+Format:atom, +Sentence:list)
 %
-% @param SentenceList is a list of ACE sentences
+% @param Sentence is an ACE sentences
 %
-format_sentencelist([]).
-
-format_sentencelist([Comment | SentenceList]) :-
+format_sentence(ace, Comment) :-
 	atom(Comment),
 	!,
-	format("~w~n", [Comment]),
-	format_sentencelist(SentenceList).
+	format("~w~n", [Comment]).
 
-format_sentencelist([RawSentence | SentenceList]) :-
+format_sentence(ace, RawSentence) :-
 	ace_niceace(RawSentence, Sentence),
 	concat_atom(Sentence, ' ', SentenceAtom),
-	format("~w~n", [SentenceAtom]),
-	format_sentencelist(SentenceList).
+	format("~w~n", [SentenceAtom]).
+
+format_sentence(csv, Comment) :-
+	atom(Comment),
+	!,
+	format("comment\t~w~n", [Comment]).
+
+format_sentence(csv, RawSentence) :-
+	maplist(format_as_csv, RawSentence).
+
+
+format_as_csv(Term) :-
+	functor(Term, Name, Arity),
+	(
+		Arity =:= 0
+	->
+		format("f\t~w~n", [Term])
+	;
+		arg(1, Term, Arg1),
+		format("~w\t~w~n", [Name, Arg1])
+	).
 
 
 %% output_mapping(+SentenceList:list)
@@ -112,6 +140,6 @@ output_mapping_x([Axiom-Message | SentenceList]) :-
 	output_mapping_x(SentenceList).
 
 output_mapping_x([Axiom-SentenceList | AxiomSentenceListList]) :-
-	with_output_to(atom(AceText), format_sentencelist(SentenceList)),
+	with_output_to(atom(AceText), format_sentences(ace, SentenceList)),
 	format("<tr><td>~w</td><td>~w</td></tr>~n", [Axiom, AceText]),
 	output_mapping_x(AxiomSentenceListList).
