@@ -13,8 +13,7 @@
 % OWL verbalizer. If not, see http://www.gnu.org/licenses/.
 
 :- module(output_results, [
-		output_results/2,
-		output_mapping/1
+		output_results/2
 	]).
 
 
@@ -36,50 +35,80 @@ Currently defined output formats are:
 	]).
 
 
-%% output_results(+Format:atom, +SentenceList:list)
+%% output_results(+Format:atom, +Results:list)
 %
-% Outputs the given ACE sentences. The SentenceList
+% Outputs the given ACE sentences in the given format.
 % that is given as input is a list of Axiom-Sentence pairs.
 %
-% @param SentenceList is a list of ACE sentences
+% @param Format One of {ace, csv, html}
+% @param Results List of pairs (OWL axiom, List of ACE sentences)
 %
-output_results(_Format, []).
+output_results(Format, Results) :-
+	output_header(Format, Results),
+	output_results_loop(Format, Results),
+	output_footer(Format, Results).
 
-output_results(Format, [_-[] | SentenceList]) :-
+
+output_results_loop(_Format, []).
+
+output_results_loop(Format, [_-[] | Results]) :-
 	!,
-	output_results(Format, SentenceList).
+	output_results_loop(Format, Results).
 
-output_results(Format, [Axiom-Message | SentenceList]) :-
+output_results_loop(Format, [Axiom-Message | Results]) :-
 	atom(Message),
 	!,
 	format_message(Format, Message, Axiom),
-	output_results(Format, SentenceList).
+	output_results_loop(Format, Results).
 
-output_results(Format, [_Axiom-SentenceList | AxiomSentenceListList]) :-
-	format_sentences(Format, SentenceList),
-	format_separator(Format),
-	output_results(Format, AxiomSentenceListList).
-
-
-format_separator(ace) :- nl.
-format_separator(csv) :- nl.
+output_results_loop(Format, [Axiom-SentenceList | Results]) :-
+	format_sentences(Format, Axiom, SentenceList),
+	format_axiom_separator(Format),
+	output_results_loop(Format, Results).
 
 
+
+
+%% format_axiom_separator(+Format:atom)
+%
+format_axiom_separator(ace) :- nl.
+format_axiom_separator(csv) :- nl.
+format_axiom_separator(html).
+
+
+%% format_message(+Format:atom, +Message:term, +Axiom:term)
+%
 format_message(ace, Message, Axiom) :-
 	format("/* ~w: ~w */~n", [Message, Axiom]).
 
 format_message(csv, Message, Axiom) :-
 	format("~w\t~w~n", [Message, Axiom]).
 
-format_sentences(_, []).
-format_sentences(Format, [Sentence | Sentences]) :-
+format_message(html, Message, Axiom) :-
+	format("<tr style='color: red'><td>~w</td><td>~w</td></tr>~n", [Axiom, Message]).
+
+
+%% format_sentences(+Format:atom, +Axiom:term, +Sentences:list)
+%
+format_sentences(html, Axiom, Sentences) :-
+	!,
+	with_output_to(atom(AceText), format_sentences_x(ace, Sentences)),
+	format("<tr><td>~w</td><td>~w</td></tr>~n", [Axiom, AceText]).
+
+format_sentences(Format, _Axiom, Sentences) :-
+	format_sentences_x(Format, Sentences).
+
+
+format_sentences_x(_, []).
+
+format_sentences_x(Format, [Sentence | Sentences]) :-
 	format_sentence(Format, Sentence),
-	format_sentences(Format, Sentences).
+	format_sentences_x(Format, Sentences).
 
 
 %% format_sentence(+Format:atom, +Sentence:list)
 %
-% @param Sentence is an ACE sentences
+% @param Sentence is an ACE sentence
 %
 format_sentence(ace, Comment) :-
 	atom(Comment),
@@ -112,34 +141,18 @@ format_as_csv(Term) :-
 	).
 
 
-%% output_mapping(+SentenceList:list)
+%% output_header(+Format:atom, +Results:list)
 %
-% @param SentenceList is a list of ACE sentences
-%
-output_mapping(SentenceList) :-
+output_header(ace, _).
+output_header(csv, _).
+output_header(html, SentenceList) :-
 	length(SentenceList, Length),
-	format("<html><head><title>ACE verbalization of ~w OWL axioms</title><style type='text/css'>td { border: 1px solid black; padding: 0.3em 0.3em 0.3em 0.3em } thead { font-weight: bold; background-color: #4b4; font-variant: small-caps } table { font-size: 90%; empty-cells: show; border-collapse: collapse }</style></head><body><table>", [Length]),
-	output_mapping_x(SentenceList),
+	format("<html><head><title>ACE verbalization of ~w OWL axioms</title><style type='text/css'>td { border: 1px solid black; padding: 0.3em 0.3em 0.3em 0.3em } thead { font-weight: bold; background-color: #4b4; font-variant: small-caps } table { font-size: 90%; empty-cells: show; border-collapse: collapse }</style></head><body><table>", [Length]).
+
+
+%% output_footer(+Format:atom, +Results:list)
+%
+output_footer(ace, _).
+output_footer(csv, _).
+output_footer(html, _) :-
 	format("</table></body></html>~n", []).
-
-
-%% output_mapping_x(+SentenceList:list)
-%
-% @param SentenceList is a list of ACE sentences
-%
-output_mapping_x([]).
-
-output_mapping_x([_-[] | SentenceList]) :-
-	!,
-	output_mapping_x(SentenceList).
-
-output_mapping_x([Axiom-Message | SentenceList]) :-
-	atom(Message),
-	!,
-	format("<tr style='color: red'><td>~w</td><td>~w</td></tr>~n", [Axiom, Message]),
-	output_mapping_x(SentenceList).
-
-output_mapping_x([Axiom-SentenceList | AxiomSentenceListList]) :-
-	with_output_to(atom(AceText), format_sentences(ace, SentenceList)),
-	format("<tr><td>~w</td><td>~w</td></tr>~n", [Axiom, AceText]),
-	output_mapping_x(AxiomSentenceListList).

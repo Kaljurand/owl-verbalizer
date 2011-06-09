@@ -34,8 +34,7 @@
 	]).
 
 :- use_module(output_results, [
-		output_results/2,
-		output_mapping/1
+		output_results/2
 	]).
 
 :- use_module(lexicon, [
@@ -150,7 +149,7 @@ process_input(InputList) :-
 	!,
 	get_arg(format, InputList, Format),
 	cli_time_limit(TimeLimit),
-	owl_to_ace(FileName, TimeLimit, format(Format)).
+	owl_to_ace(FileName, TimeLimit, Format).
 
 process_input(InputList) :-
 	memberchk(httpserver=on, InputList),
@@ -209,34 +208,28 @@ get_arglist([_|ArgList], ArgList).
 
 
 % This interface is for the commandline.
-owl_to_ace(FileName, TimeLimit, format(Format)) :-
-	call_with_time_limit(
-		TimeLimit,
-		(
-			owlxml_owlfss(FileName, Ontology, _ErrorList),
-			Ontology = 'Ontology'(_Name, NS, AxiomList),
-			owlfss_acetext(AxiomList, SentenceList),
-			current_stream(1, write, Stream),
-			set_stream(Stream, encoding(utf8)),
-			output_results(Format, NS, AxiomList, SentenceList)
-		)
-	).
+owl_to_ace(FileName, TimeLimit, Format) :-
+	call_with_time_limit(TimeLimit, owl_to_ace(FileName, Format)).
+
+owl_to_ace(FileName, Format) :-
+	owlxml_owlfss(FileName, Ontology, _ErrorList),
+	Ontology = 'Ontology'(_Name, NS, AxiomList),
+	owlfss_acetext(AxiomList, Results),
+	current_stream(1, write, Stream),
+	set_stream(Stream, encoding(utf8)),
+	output_results(Format, NS, AxiomList, Results).
 
 
 %% output_results(+Format:atom, +SentenceList:list)
 %
-output_results(ace, NS, AxiomList, SentenceList) :-
-	set_default_ns(NS),
-	asserta_lexicon(AxiomList),
-	output_results(ace, SentenceList).
-
-output_results(html, NS, AxiomList, SentenceList) :-
-	set_default_ns(NS),
-	asserta_lexicon(AxiomList),
-	output_mapping(SentenceList).
-
 output_results(csv, _, _, SentenceList) :-
+	!,
 	output_results(csv, SentenceList).
+
+output_results(Format, NS, AxiomList, SentenceList) :-
+	set_default_ns(NS),
+	asserta_lexicon(AxiomList),
+	output_results(Format, SentenceList).
 
 
 %% http_server(+PortNumber:integer, +WorkerCount:integer)
@@ -257,7 +250,7 @@ owl_to_ace_handler(Request) :-
 			(
 				http_parameters(Request, [
 					xml(XmlAtom, []),
-					format(Format, [oneof([ace, csv]), default(ace)])
+					format(Format, [oneof([ace, csv, html]), default(ace)])
 				]),
 				atom_to_memory_file(XmlAtom, Handle),
 				open_memory_file(Handle, read, InStream),
@@ -265,9 +258,10 @@ owl_to_ace_handler(Request) :-
 				ellist_termlist(XML, []-_ErrorList, [Ontology]),
 				Ontology = 'Ontology'(_Name, NS, AxiomList),
 				owlfss_acetext(AxiomList, SentenceList),
+				format_to_mime(Format, Mime),
 				current_stream(1, write, Stream),
 				set_stream(Stream, encoding(utf8)),
-				format('Content-type: ~w\r\n\r\n', ['text/plain']),
+				format('Content-type: ~w\r\n\r\n', [Mime]),
 				output_results(Format, NS, AxiomList, SentenceList)
 			)
 		),
@@ -277,6 +271,13 @@ owl_to_ace_handler(Request) :-
 			format('Content-type: ~w\r\n\r\n~w', [ContentType, Content])
 		)
 	).
+
+
+%% format_to_mime(+Format:atom, -Mime:atom)
+%
+format_to_mime(ace, 'text/plain').
+format_to_mime(csv, 'text/plain').
+format_to_mime(html, 'text/html').
 
 
 %% format_error_for_terminal(+Exception:term)

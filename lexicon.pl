@@ -153,7 +153,7 @@ make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':vbg, Form, entry
 %
 % Interface to the dynamic lexicon.
 %
-pn_sg(X, Y) :- get_lexicon_entry('PN_sg', X, Y).
+pn_sg(X, Y) :- get_lexicon_entry('PN_sg', X, Y), !.
 pn_sg(_:X, X). % BUG: fallback
 
 % BUG experimental
@@ -177,20 +177,20 @@ pn_sg(NS:X, NSX) :-
 */
 
 
-cn_sg(X, Y) :- get_lexicon_entry('CN_sg', X, Y).
+cn_sg(X, Y) :- get_lexicon_entry('CN_sg', X, Y), !.
 cn_sg(_:X, X). % BUG: fallback
 
-cn_pl(X, Y) :- get_lexicon_entry('CN_pl', X, Y).
+cn_pl(X, Y) :- get_lexicon_entry('CN_pl', X, Y), !.
 cn_pl(_:X, X). % BUG: fallback
 
 
-tv_sg(X, Y) :- get_lexicon_entry('TV_sg', X, Y).
+tv_sg(X, Y) :- get_lexicon_entry('TV_sg', X, Y), !.
 tv_sg(_:X, X). % BUG: fallback
 
-tv_pl(X, Y) :- get_lexicon_entry('TV_pl', X, Y).
+tv_pl(X, Y) :- get_lexicon_entry('TV_pl', X, Y), !.
 tv_pl(_:X, X). % BUG: fallback
 
-tv_vbg(X, Y) :- get_lexicon_entry('TV_vbg', X, Y).
+tv_vbg(X, Y) :- get_lexicon_entry('TV_vbg', X, Y), !.
 tv_vbg(_:X, X). % BUG: fallback
 
 
