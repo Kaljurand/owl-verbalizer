@@ -49,7 +49,7 @@ def post_files_with_curl(g):
 	"""
 	"""
 	for path in g:
-		cmd = [curl, '-s', '-S', '-F', "xml=@" + path, server_url]
+		cmd = [curl, '-s', '-S', '-F', "format=" + args.fmt, '-F', "xml=@" + path, server_url]
 		process_file(cmd, path)
 
 
@@ -77,7 +77,7 @@ def run_as_script(g):
 	"""
 	"""
 	for path in g:
-		cmd = [owl_to_ace_exe, '-owlfile', path]
+		cmd = [owl_to_ace_exe, '-owlfile', path, '-format', args.fmt]
 		process_file(cmd, path)
 
 
@@ -122,7 +122,6 @@ if args.dir_in is None:
 	print >> sys.stderr, 'ERROR: argument -i/--in is not specified'
 	exit()
 
-print >> sys.stderr, 'TODO: fmt:', args.fmt
 print >> sys.stderr, 'TODO: out:', args.out
 
 g = owl_file_generator(args.dir_in)

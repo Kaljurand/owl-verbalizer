@@ -255,7 +255,10 @@ owl_to_ace_handler(Request) :-
 		call_with_time_limit(
 			20,
 			(
-				http_parameters(Request, [xml(XmlAtom, [])]),
+				http_parameters(Request, [
+					xml(XmlAtom, []),
+					format(Format, [oneof([ace, csv]), default(ace)])
+				]),
 				atom_to_memory_file(XmlAtom, Handle),
 				open_memory_file(Handle, read, InStream),
 				load_structure(InStream, XML, [dialect(xml), space(remove)]),
@@ -265,7 +268,7 @@ owl_to_ace_handler(Request) :-
 				current_stream(1, write, Stream),
 				set_stream(Stream, encoding(utf8)),
 				format('Content-type: ~w\r\n\r\n', ['text/plain']),
-				output_results(ace, NS, AxiomList, SentenceList)
+				output_results(Format, NS, AxiomList, SentenceList)
 			)
 		),
 		Exception,
