@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2009, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -50,7 +50,7 @@ Syntactic roundtripping does not work, e.g. in the case of: 'that' vs 'and that'
 ==
 
 @author Kaarel Kaljurand
-@version 2009-10-22
+@version 2011-06-09
 
 */
 
@@ -102,10 +102,9 @@ from_ace_to_owl(ACE, OWL) :-
 % An example of verbalizing an OWL axiom as an ACE sentence.
 %
 %==
-% ?- owl_ace('SubClassOf'('Class'(protein), 'ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'(modify)), 'ObjectOneOf'(['NamedIndividual'('Met')]))), ACE).
+% ?- owlace_dcg:owl_ace('SubClassOf'('Class'('':protein),'ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'('':modify)),'ObjectOneOf'(['NamedIndividual'('':'Met')]))),ACE).
 %
 %ACE = ['Every', protein, is, modify, by, 'Met', '.'] ;
-%false.
 %==
 %
 % An example of using ACE to express OWL axioms.
