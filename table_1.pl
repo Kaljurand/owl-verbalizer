@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2009, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -21,7 +21,7 @@
 /** <module> Table 1
 
 @author Kaarel Kaljurand
-@version 2009-04-03
+@version 2011-06-09
 @license LGPLv3
 
 TODO:
@@ -40,13 +40,13 @@ Domain, Range, property assertions
 % while preserving their meaning. For example
 %
 %==
-% EquivalentClasses'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C])
+% EquivalentClasses'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C])
 %==
 %
 % is rewritten into
 %
 %==
-% SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C)
+% SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), C)
 %==
 %
 % Note that sometimes we need to make several axioms from one,
@@ -106,15 +106,15 @@ table_1('DisjointObjectProperties'([R, S]), [
 % table_1('DisjointObjectProperties'(ObjectPropertyList), [ ]).
 
 table_1('ObjectPropertyDomain'(R, C), [
-	'SubClassOf'('ObjectSomeValuesFrom'(R, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))), C)
+	'SubClassOf'('ObjectSomeValuesFrom'(R, 'Class'('http://www.w3.org/2002/07/owl#Thing')), C)
 	]).
 
 table_1('ObjectPropertyRange'('ObjectInverseOf'('ObjectProperty'(R)), C), [
-	'SubClassOf'('ObjectSomeValuesFrom'('ObjectProperty'(R), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))), C)
+	'SubClassOf'('ObjectSomeValuesFrom'('ObjectProperty'(R), 'Class'('http://www.w3.org/2002/07/owl#Thing')), C)
 	]).
 
 table_1('ObjectPropertyRange'('ObjectProperty'(R), C), [
-	'SubClassOf'('ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'(R)), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))), C)
+	'SubClassOf'('ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'(R)), 'Class'('http://www.w3.org/2002/07/owl#Thing')), C)
 	]).
 
 % BUG: doesn't support ObjectInverseOf as argument
@@ -124,23 +124,23 @@ table_1('InverseObjectProperties'('ObjectProperty'(R), 'ObjectProperty'(S)), [
 	]).
 
 table_1('FunctionalObjectProperty'(R), [
-	'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectMaxCardinality'(1, R, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))))
+	'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectMaxCardinality'(1, R, 'Class'('http://www.w3.org/2002/07/owl#Thing')))
 	]).
 
 table_1('InverseFunctionalObjectProperty'('ObjectInverseOf'('ObjectProperty'(R))), [
-	'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectMaxCardinality'(1, 'ObjectProperty'(R), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))))
+	'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectMaxCardinality'(1, 'ObjectProperty'(R), 'Class'('http://www.w3.org/2002/07/owl#Thing')))
 	]).
 
 table_1('InverseFunctionalObjectProperty'('ObjectProperty'(R)), [
-	'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectMaxCardinality'(1, 'ObjectInverseOf'('ObjectProperty'(R)), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))))
+	'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectMaxCardinality'(1, 'ObjectInverseOf'('ObjectProperty'(R)), 'Class'('http://www.w3.org/2002/07/owl#Thing')))
 	]).
 
 table_1('ReflexiveObjectProperty'(R), [
-	'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectHasSelf'(R))
+	'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectHasSelf'(R))
 	]).
 
 table_1('IrreflexiveObjectProperty'(R), [
-	'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectComplementOf'('ObjectHasSelf'(R)))
+	'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectComplementOf'('ObjectHasSelf'(R)))
 	]).
 
 table_1('SymmetricObjectProperty'('ObjectInverseOf'('ObjectProperty'(R))), [
@@ -234,20 +234,20 @@ table_1('NegativeDataPropertyAssertion'(DataProperty, Individual, DataValue), [
 
 table_1_x('EquivalentClasses'(ClassSet), SubClassOfList) :-
 	ClassSet = [_, _ | _],
-	select('Class'(':'('http://www.w3.org/2002/07/owl#', 'Nothing')), ClassSet, ClassSetWithoutNothing),
+	select('Class'('http://www.w3.org/2002/07/owl#Nothing'), ClassSet, ClassSetWithoutNothing),
 	!,
 	findall(
-		'SubClassOf'(Class, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Nothing'))),
+		'SubClassOf'(Class, 'Class'('http://www.w3.org/2002/07/owl#Nothing')),
 		member(Class, ClassSetWithoutNothing),
 		SubClassOfList
 	).
 
 table_1_x('EquivalentClasses'(ClassSet), SubClassOfList) :-
 	ClassSet = [_, _ | _],
-	select('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), ClassSet, ClassSetWithoutThing),
+	select('Class'('http://www.w3.org/2002/07/owl#Thing'), ClassSet, ClassSetWithoutThing),
 	!,
 	findall(
-		'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), Class),
+		'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), Class),
 		member(Class, ClassSetWithoutThing),
 		SubClassOfList
 	).

@@ -80,7 +80,7 @@ from_ace_to_owl(ACE, OWL) :-
 % An example of verbalizing an OWL axiom as an ACE sentence.
 %
 %==
-% ?- owlace_dcg:owl_ace('SubClassOf'('Class'('':protein),'ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'('':modify)),'ObjectOneOf'(['NamedIndividual'('':'Met')]))),ACE).
+% ?- owlace_dcg:owl_ace('SubClassOf'('Class'(protein),'ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'(modify)),'ObjectOneOf'(['NamedIndividual'('Met')]))),ACE).
 %
 %ACE = ['Every', protein, is, modify, by, 'Met', '.'] ;
 %==
@@ -411,9 +411,9 @@ propn('ObjectOneOf'(['AnonymousIndividual'(NodeId)])) -->
 
 % Nouns (including `something')
 % For nouns we have to describe 2 forms: {num=sg, num=pl}
-n(num=sg, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) -->
+n(num=sg, 'Class'('http://www.w3.org/2002/07/owl#Thing')) -->
 	[thing].
-n(num=pl, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) -->
+n(num=pl, 'Class'('http://www.w3.org/2002/07/owl#Thing')) -->
 	[things].
 n(num=sg, 'Class'(Lemma)) -->
 	[cn_sg(Lemma)].

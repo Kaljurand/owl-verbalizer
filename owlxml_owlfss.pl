@@ -90,9 +90,8 @@ el_term(element('Prefix', AttrList, _), E-E, 'Prefix'(Name, IRI)) :-
 	assert(owlverbalizer_Prefix(Name, IRI)),
 	!.
 
-el_term(element('AbbreviatedIRI', [], [PCDATA]), E-E, 'IRI'(IRI)) :-
-	airi_name(PCDATA, NS:Name),
-	concat_atom([NS, Name], IRI),
+el_term(element('AbbreviatedIRI', [], [PCDATA]), E-E, 'IRI'(Iri)) :-
+	airi_name(PCDATA, Iri),
 	!.
 
 el_term(element('AnonymousIndividual', [nodeID = NodeId], _), E-E, 'AnonymousIndividual'(NodeId)) :-
@@ -143,8 +142,7 @@ el_term(element(Term, [facet = Facet], ElList), E1-E2, Return) :-
 	Return =.. [Term, Facet | TermList].
 
 el_term(element(Term, ['IRI' = Iri], _), E-E, Base) :-
-	is_base(Term, Name, Base),
-	iri_name(Iri, Name),
+	is_base(Term, Iri, Base),
 	!.
 
 el_term(element(Term, ['abbreviatedIRI' = AbbreviatedIri], _), E-E, Base) :-
@@ -154,8 +152,7 @@ el_term(element(Term, ['abbreviatedIRI' = AbbreviatedIri], _), E-E, Base) :-
 
 % @deprecated (OWL-API 2): use IRI
 el_term(element(Term, ['URI' = Uri], _), E-E, Base) :-
-	is_base(Term, Name, Base),
-	iri_name(Uri, Name),
+	is_base(Term, Uri, Base),
 	!.
 
 % @deprecated (OWL-API 2): use ObjectHasSelf
@@ -291,26 +288,14 @@ is_owl_unary('ObjectExistsSelf').
 */
 
 
-%% iri_name(+Iri:atom, -Name:term) is det.
-%
-% Mapping of IRIs to names that will be used
-% during verbalization.
-%
-iri_name(Iri, ':'(NS_With_Hash, Name)) :-
-	concat_atom([NS, Name], '#', Iri),
-	!,
-	atom_concat(NS, '#', NS_With_Hash).
-
-iri_name(Iri, ':'('', Iri)).
-
-
-%% airi_name(+AbbreviatedIri:atom, -Name:term) is det.
+%% airi_name(+AbbreviatedIri:atom, -Iri:atom) is det.
 %
 % Mapping of abbreviated IRIs to names and their namespace identifiers.
 %
-airi_name(AbbreviatedIri, ':'(Expansion, Name)) :-
+airi_name(AbbreviatedIri, Iri) :-
 	concat_atom([Prefix, Name], ':', AbbreviatedIri),
-	abbr_expansion(Prefix, Expansion).
+	abbr_expansion(Prefix, Expansion),
+	concat_atom([Expansion, Name], Iri).
 
 
 %% abbr_expansion

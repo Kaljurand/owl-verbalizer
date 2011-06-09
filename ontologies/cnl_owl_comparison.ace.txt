@@ -1,4 +1,4 @@
-/* BUG: axiom unsupported: AntisymmetricObjectProperty(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : is-near-to)) */
+/* BUG: axiom unsupported: AntisymmetricObjectProperty(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-near-to)) */
 Every mission has-purpose something that is a charitable-activity or that is a christian-worship.
 
 Every river-stretch has-part exactly 1 channel.
@@ -113,8 +113,8 @@ Every factory has-purpose a manufacturing.
 
 Every wetland is something.
 
-/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : source),ObjectIntersectionOf([ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : stream)]))])])) */
-/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : stream)]))]),ObjectIntersectionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl# : source)])) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#source),ObjectIntersectionOf([ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream)]))])])) */
+/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream)]))]),ObjectIntersectionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#source)])) */
 
 Every river-stretch has-part at most 2 confluences.
 

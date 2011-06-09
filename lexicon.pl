@@ -85,9 +85,7 @@ asserta_lexicon_x(['EntityAnnotation'(Entity, 'Annotation'(Feature, '^^'(Form, _
 
 % AnnotationAssertion(AnnotationProperty(sg), IRI(#John), ^^(John, http://www.w3.org/2001/XMLSchema#string))
 asserta_lexicon_x(['AnnotationAssertion'('AnnotationProperty'(Property), 'IRI'(Iri), '^^'(WordForm, _)) | AxiomList]) :-
-	concat_atom([NS, Lemma], '#', Iri),
-	atom_concat(NS, '#', NS1),
-	make_lex_entry(NS1:Lemma, Property, WordForm, Entry),
+	make_lex_entry(Iri, Property, WordForm, Entry),
 	!,
 	set_lexicon_entry(Entry),
 	asserta_lexicon_x(AxiomList).
@@ -131,30 +129,32 @@ make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#
 % @param WordForm is an ACE surface word-form
 % @param LexiconEntry is a lexicon entry, one of {n_pl/2, v_sg/2, v_vbg/2}
 %
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'PN_sg', Form, entry('PN_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'CN_sg', Form, entry('CN_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'CN_pl', Form, entry('CN_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_sg', Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_pl', Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_vbg', Form, entry('TV_vbg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg', Form, entry('PN_sg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg', Form, entry('CN_sg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl', Form, entry('CN_pl', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg', Form, entry('TV_sg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl', Form, entry('TV_pl', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg', Form, entry('TV_vbg', Lemma, Form)).
 
 % BUG: just for testing, remove these at some point
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':sg, Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':pl, Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':vbg, Form, entry('TV_vbg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, entry('TV_sg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#pl', Form, entry('TV_pl', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#vbg', Form, entry('TV_vbg', Lemma, Form)).
 
 
-%% pn_sg(+Lemma, +WordForm) is det.
-%% cn_sg(+Lemma, +WordForm) is det.
-%% cn_pl(+Lemma, +WordForm) is det.
-%% tv_sg(+Lemma, +WordForm) is det.
-%% tv_pl(+Lemma, +WordForm) is det.
-%% tv_vbg(+Lemma, +WordForm) is det.
+%% pn_sg(+Iri, +WordForm) is det.
+%% cn_sg(+Iri, +WordForm) is det.
+%% cn_pl(+Iri, +WordForm) is det.
+%% tv_sg(+Iri, +WordForm) is det.
+%% tv_pl(+Iri, +WordForm) is det.
+%% tv_vbg(+Iri, +WordForm) is det.
 %
-% Interface to the dynamic lexicon.
+% Interface to the dynamic lexicon
+% with a fallback to using the IRI fragment.
 %
 pn_sg(X, Y) :- get_lexicon_entry('PN_sg', X, Y), !.
-pn_sg(_:X, X). % BUG: fallback
+pn_sg(Iri, F) :-
+	iri_fragment(Iri, F).
 
 % BUG experimental
 /*
@@ -178,36 +178,53 @@ pn_sg(NS:X, NSX) :-
 
 
 cn_sg(X, Y) :- get_lexicon_entry('CN_sg', X, Y), !.
-cn_sg(_:X, X). % BUG: fallback
+cn_sg(Iri, F) :-
+	iri_fragment(Iri, F).
 
 cn_pl(X, Y) :- get_lexicon_entry('CN_pl', X, Y), !.
-cn_pl(_:X, X). % BUG: fallback
+cn_pl(Iri, F) :-
+	iri_fragment(Iri, F).
 
 
 tv_sg(X, Y) :- get_lexicon_entry('TV_sg', X, Y), !.
-tv_sg(_:X, X). % BUG: fallback
+tv_sg(Iri, F) :-
+	iri_fragment(Iri, F).
 
 tv_pl(X, Y) :- get_lexicon_entry('TV_pl', X, Y), !.
-tv_pl(_:X, X). % BUG: fallback
+tv_pl(Iri, F) :-
+	iri_fragment(Iri, F).
 
 tv_vbg(X, Y) :- get_lexicon_entry('TV_vbg', X, Y), !.
-tv_vbg(_:X, X). % BUG: fallback
+tv_vbg(Iri, F) :-
+	iri_fragment(Iri, F).
 
 
-%% set_lexicon_entry(+Type:atom, +Iri:term, +Form:atom) is det.
+%% iri_fragment(+Iri:atom, -Fragment:atom)
 %
-set_lexicon_entry(entry(Type, NS:Lemma, Form)) :-
-	concat_atom([Type, NS, Lemma], Id),
+iri_fragment(Iri, Fragment) :-
+	concat_atom([_, Fragment], '#', Iri),
+	!.
+
+% This always succeeds
+iri_fragment(Iri, Fragment) :-
+	concat_atom(Parts, '/', Iri),
+	last(Parts, Fragment).
+
+
+%% set_lexicon_entry(+Type:atom, +Iri:atom, +Form:atom) is det.
+%
+set_lexicon_entry(entry(Type, Iri, Form)) :-
+	concat_atom([Type, Iri], Id),
 	nb_setval(Id, Form).
 
 
-%% get_lexicon_entry(+Type:atom, +Iri:term, -Form:atom) is det.
+%% get_lexicon_entry(+Type:atom, +Iri:atom, -Form:atom) is det.
 %
 % TODO: with better indexing we can avoid concat_atom/2
 % if it proves to be too slow.
 %
-get_lexicon_entry(Type, NS:Lemma, Form) :-
-	concat_atom([Type, NS, Lemma], Id),
+get_lexicon_entry(Type, Iri, Form) :-
+	concat_atom([Type, Iri], Id),
 	catch(nb_getval(Id, Form), _, fail).
 
 

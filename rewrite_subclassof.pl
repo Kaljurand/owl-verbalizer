@@ -57,7 +57,7 @@ rewrite_subclassof('DisjointObjectProperties'([R, S]), 'DisjointObjectProperties
 % BUG: do we need this? maybe it's taken care of later anyway?
 % BUG: do later
 rewrite_subclassof('SubClassOf'(C1, C2), SubClassOf) :-
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C1]), NewC1),
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C1]), NewC1),
 	rewrite_class(C2, NewC2),
 	rewrite_subclassof_x('SubClassOf'(NewC1, NewC2), SubClassOf).
 
@@ -69,24 +69,24 @@ rewrite_subclassof('SubClassOf'(C1, C2), SubClassOf) :-
 % structure of the class expressions (e.g. that the property expressions have
 % been flattened as much as possible.
 rewrite_subclassof_x(
-	'SubClassOf'('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectComplementOf'(C1)]), 'ObjectComplementOf'(C2)),
+	'SubClassOf'('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectComplementOf'(C1)]), 'ObjectComplementOf'(C2)),
 	'SubClassOf'(C2, C1)
 ) :- !.
 
 % No dog-cat is something. --> Nothing is a dog-cat.
 rewrite_subclassof_x(
-	'SubClassOf'(Class, 'ObjectComplementOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')))),
-	'SubClassOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectComplementOf'(Class))
+	'SubClassOf'(Class, 'ObjectComplementOf'('Class'('http://www.w3.org/2002/07/owl#Thing'))),
+	'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectComplementOf'(Class))
 ) :- !.
 
 rewrite_subclassof_x(
 	'SubClassOf'(C1, 'ObjectAllValuesFrom'('ObjectInverseOf'(R), C2)),
-	'SubClassOf'('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectSomeValuesFrom'(R, C1)]), C2)
+	'SubClassOf'('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectSomeValuesFrom'(R, C1)]), C2)
 ) :- !.
 
 rewrite_subclassof_x(
 	'SubClassOf'(C1, 'ObjectAllValuesFrom'(R, C2)),
-	'SubClassOf'('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectSomeValuesFrom'('ObjectInverseOf'(R), C1)]), C2)
+	'SubClassOf'('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectSomeValuesFrom'('ObjectInverseOf'(R), C1)]), C2)
 ) :- !.
 
 rewrite_subclassof_x(X, X).
@@ -135,13 +135,13 @@ rewrite_classlist([Class | Classes], [NewClass | NewClasses]) :-
 %
 % @bug add placeholders for data properties.
 %
-% @bug How can we rewrite: 'ObjectSomeValuesFrom'(modify, 'ObjectComplementOf'(':'('http://www.w3.org/2002/07/owl#', 'Thing')))
+% @bug How can we rewrite: 'ObjectSomeValuesFrom'(modify, 'ObjectComplementOf'('http://www.w3.org/2002/07/owl#Thing'))
 %
 % @bug Should we remove the duplicates from ObjectOneOf (or even sort the individuals)? Yes.
 
 rewrite_class(
-	'Class'('http://www.w3.org/2002/07/owl#':'Nothing'),
-	'ObjectComplementOf'('Class'('http://www.w3.org/2002/07/owl#':'Thing'))
+	'Class'('http://www.w3.org/2002/07/owl#Nothing'),
+	'ObjectComplementOf'('Class'('http://www.w3.org/2002/07/owl#Thing'))
 ) :- !.
 
 % Removing double negation
@@ -159,11 +159,11 @@ rewrite_class('ObjectSomeValuesFrom'(R, 'ObjectOneOf'([Name])), 'ObjectSomeValue
 rewrite_class('ObjectSomeValuesFrom'(R, C), 'ObjectSomeValuesFrom'(RR, NewC)) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
 rewrite_class(
 	'ObjectAllValuesFrom'(R, 'ObjectOneOf'([Name])),
-	'ObjectAllValuesFrom'(RR, 'ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectOneOf'([Name])]))
+	'ObjectAllValuesFrom'(RR, 'ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectOneOf'([Name])]))
 	) :-
 	!,
 	rewrite_property(R, RR).
@@ -178,7 +178,7 @@ rewrite_class('ObjectAllValuesFrom'(R, 'ObjectComplementOf'(C)), RewrittenClass)
 rewrite_class('ObjectAllValuesFrom'(R, C), 'ObjectAllValuesFrom'(RR, NewC)) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
 
 rewrite_class('ObjectHasValue'(R, I), 'ObjectSomeValuesFrom'(RR, 'ObjectOneOf'([I]))) :-
@@ -187,27 +187,27 @@ rewrite_class('ObjectHasValue'(R, I), 'ObjectSomeValuesFrom'(RR, 'ObjectOneOf'([
 
 
 % BUG: this is maybe confusing because it deletes what the user said about R and C.
-rewrite_class('ObjectMinCardinality'(0, _R), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
-rewrite_class('ObjectMinCardinality'(0, _R, _C), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
+rewrite_class('ObjectMinCardinality'(0, _R), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
+rewrite_class('ObjectMinCardinality'(0, _R, _C), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
 
 
-rewrite_class('ObjectMaxCardinality'(0, R), 'ObjectComplementOf'('ObjectSomeValuesFrom'(RR, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))))) :-
+rewrite_class('ObjectMaxCardinality'(0, R), 'ObjectComplementOf'('ObjectSomeValuesFrom'(RR, 'Class'('http://www.w3.org/2002/07/owl#Thing')))) :-
 	!,
 	rewrite_property(R, RR).
 
 rewrite_class('ObjectMaxCardinality'(0, R, C), 'ObjectComplementOf'('ObjectSomeValuesFrom'(RR, NewC))) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
-rewrite_class('ObjectExactCardinality'(0, R), 'ObjectComplementOf'('ObjectSomeValuesFrom'(RR, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))))) :-
+rewrite_class('ObjectExactCardinality'(0, R), 'ObjectComplementOf'('ObjectSomeValuesFrom'(RR, 'Class'('http://www.w3.org/2002/07/owl#Thing')))) :-
 	!,
 	rewrite_property(R, RR).
 
 rewrite_class('ObjectExactCardinality'(0, R, C), 'ObjectComplementOf'('ObjectSomeValuesFrom'(RR, NewC))) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
 rewrite_class('ObjectHasSelf'(R), 'ObjectHasSelf'(R3)) :-
 	!,
@@ -220,35 +220,35 @@ rewrite_class('ObjectHasSelf'(R), 'ObjectHasSelf'(R3)) :-
 		R3 = R1
 	).
 
-rewrite_class('ObjectMinCardinality'(N, R), 'ObjectMinCardinality'(N, RR, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')))) :-
+rewrite_class('ObjectMinCardinality'(N, R), 'ObjectMinCardinality'(N, RR, 'Class'('http://www.w3.org/2002/07/owl#Thing'))) :-
 	!,
 	rewrite_property(R, RR).
 
 rewrite_class('ObjectMinCardinality'(N, R, C), 'ObjectMinCardinality'(N, RR, NewC)) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
-rewrite_class('ObjectMaxCardinality'(N, R), 'ObjectMaxCardinality'(N, RR, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')))) :-
+rewrite_class('ObjectMaxCardinality'(N, R), 'ObjectMaxCardinality'(N, RR, 'Class'('http://www.w3.org/2002/07/owl#Thing'))) :-
 	!,
 	rewrite_property(R, RR).
 
 rewrite_class('ObjectMaxCardinality'(N, R, C), 'ObjectMaxCardinality'(N, RR, NewC)) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
-rewrite_class('ObjectExactCardinality'(N, R), 'ObjectExactCardinality'(N, RR, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')))) :-
+rewrite_class('ObjectExactCardinality'(N, R), 'ObjectExactCardinality'(N, RR, 'Class'('http://www.w3.org/2002/07/owl#Thing'))) :-
 	!,
 	rewrite_property(R, RR).
 
 rewrite_class('ObjectExactCardinality'(N, R, C), 'ObjectExactCardinality'(N, RR, NewC)) :-
 	!,
 	rewrite_property(R, RR),
-	rewrite_class('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), C]), NewC).
+	rewrite_class('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C]), NewC).
 
 % Note: OWL 2 spec allows only 1..*
-rewrite_class('ObjectOneOf'([]), 'ObjectComplementOf'('Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')))) :- !.
+rewrite_class('ObjectOneOf'([]), 'ObjectComplementOf'('Class'('http://www.w3.org/2002/07/owl#Thing'))) :- !.
 
 rewrite_class('ObjectOneOf'([I]), 'ObjectOneOf'([I])) :- !.
 
@@ -258,7 +258,7 @@ rewrite_class('ObjectOneOf'(IndividualList), RewrittenClass) :-
 	rewrite_class('ObjectUnionOf'(ClassList), RewrittenClass).
 
 % Note: OWL 2 spec allows only 2..*
-rewrite_class('ObjectIntersectionOf'([]), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
+rewrite_class('ObjectIntersectionOf'([]), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
 
 % Note: OWL 2 spec allows only 2..*
 rewrite_class('ObjectIntersectionOf'([C]), NewC) :-
@@ -292,7 +292,7 @@ rewrite_class('ObjectIntersectionOf'(Classes), Return) :-
 
 
 % Note: OWL 2 spec allows only 2..*
-rewrite_class('ObjectUnionOf'([]), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
+rewrite_class('ObjectUnionOf'([]), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
 
 % Note: OWL 2 spec allows only 2..*
 rewrite_class('ObjectUnionOf'([C]), NewC) :-
@@ -312,7 +312,7 @@ rewrite_class('ObjectUnionOf'(Classes), Return) :-
 	->
 		check_classlist(FinalClassList),
 		union_binary(FinalClass, ReturnTmp),
-		Return = 'ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), ReturnTmp])
+		Return = 'ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), ReturnTmp])
 	;
 		Return = FinalClass
 	).
@@ -331,7 +331,7 @@ rewrite_class('Class'(C), 'Class'(C)).
 %
 rewrite_class_complement('ObjectComplementOf'(Class), Class) :- !.
 
-rewrite_class_complement('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectComplementOf'(Class)]), Class) :- !.
+rewrite_class_complement('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectComplementOf'(Class)]), Class) :- !.
 
 /* BUG: We should also handle ObjectAllValuesFrom wrapped in ObjectIntersectionOf. :*/
 
@@ -351,7 +351,7 @@ rewrite_class_complement('ObjectMaxCardinality'(N, R, C), RewrittenClass) :-
 
 % BUG: just testing
 % maybe we could run always some sort of simplify/2 to remove owl:Thing etc.
-rewrite_class_complement('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectUnionOf'(UnionClassList)]), RewrittenClass) :-
+rewrite_class_complement('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectUnionOf'(UnionClassList)]), RewrittenClass) :-
 	!,
 	findall('ObjectComplementOf'(UnionClass), member(UnionClass, UnionClassList), ClassList),
 	rewrite_class('ObjectIntersectionOf'(ClassList), RewrittenClass).
@@ -366,7 +366,7 @@ rewrite_class_complement(Class, 'ObjectComplementOf'(Class)).
 
 %% prune_intersection
 %
-% Note that we insert ':'('http://www.w3.org/2002/07/owl#', 'Thing') as the first element in case the
+% Note that we insert 'http://www.w3.org/2002/07/owl#Thing') as the first element in case the
 % ClassList starts with a complex class. This is to make the verbalization
 % more direct.
 %
@@ -374,15 +374,15 @@ rewrite_class_complement(Class, 'ObjectComplementOf'(Class)).
 % Note: OWL 2 spec allows only 2..*
 prune_intersection('ObjectIntersectionOf'([C]), C) :- !.
 
-prune_intersection('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'ObjectOneOf'([A])]), 'ObjectOneOf'([A])) :- !.
+prune_intersection('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'ObjectOneOf'([A])]), 'ObjectOneOf'([A])) :- !.
 
-prune_intersection('ObjectIntersectionOf'([ComplexClass | Rest]), 'ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), ComplexClass | Rest])) :-
+prune_intersection('ObjectIntersectionOf'([ComplexClass | Rest]), 'ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), ComplexClass | Rest])) :-
 	ComplexClass \= 'Class'(_),
 	!.
 
 % Note: OWL 2 spec allows only 2..*
 % BUG: if Rest = [] then a syntactically wrong class expression is generated
-prune_intersection('ObjectIntersectionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'Class'(NamedClass) | Rest]), Pruned) :-
+prune_intersection('ObjectIntersectionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing'), 'Class'(NamedClass) | Rest]), Pruned) :-
 	!,
 	prune_intersection('ObjectIntersectionOf'(['Class'(NamedClass) | Rest]), Pruned).
 
@@ -395,13 +395,13 @@ prune_intersection(And, And).
 %
 
 % Note: OWL 2 spec allows only 2..*
-prune_union('ObjectUnionOf'([]), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
+prune_union('ObjectUnionOf'([]), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
 
 % Note: OWL 2 spec allows only 2..*
 prune_union('ObjectUnionOf'([C]), C) :- !.
 
 % Note: OWL 2 spec allows only 2..*
-prune_union('ObjectUnionOf'(['Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')) | _]), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
+prune_union('ObjectUnionOf'(['Class'('http://www.w3.org/2002/07/owl#Thing') | _]), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
 
 prune_union(ObjectUnionOf, ObjectUnionOf).
 
@@ -416,7 +416,7 @@ prune_union(ObjectUnionOf, ObjectUnionOf).
 %
 
 % Note: OWL 2 spec allows only 2..*
-intersection_binary('ObjectIntersectionOf'([]), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))).
+intersection_binary('ObjectIntersectionOf'([]), 'Class'('http://www.w3.org/2002/07/owl#Thing')).
 
 % Note: OWL 2 spec allows only 2..*
 intersection_binary('ObjectIntersectionOf'([Class]), Class).
@@ -432,7 +432,7 @@ intersection_binary('ObjectIntersectionOf'([C1, C2 | ClassList]), 'ObjectInterse
 % or([a, b, c, d]) -> or([a, or([b, or([c, d])))
 
 % Note: OWL 2 spec allows only 2..*
-union_binary('ObjectUnionOf'([]), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))).
+union_binary('ObjectUnionOf'([]), 'Class'('http://www.w3.org/2002/07/owl#Thing')).
 
 % Note: OWL 2 spec allows only 2..*
 union_binary('ObjectUnionOf'([Class]), Class).
@@ -496,9 +496,9 @@ order_classes(Classes, OrderedClasses) :-
 % * Thing or X = Thing
 
 % owl:Thing is equal to itself but otherwise smaller than everything
-natural_order(=, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
-natural_order(<, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing')), _) :- !.
-natural_order(>, _, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) :- !.
+natural_order(=, 'Class'('http://www.w3.org/2002/07/owl#Thing'), 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
+natural_order(<, 'Class'('http://www.w3.org/2002/07/owl#Thing'), _) :- !.
+natural_order(>, _, 'Class'('http://www.w3.org/2002/07/owl#Thing')) :- !.
 
 % BUG: discuss the arity-1 classes:
 % UnionOf, IntersectionOf, ComplementOf, HasSelf, OneOf

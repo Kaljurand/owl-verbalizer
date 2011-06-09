@@ -6,7 +6,7 @@ John age 4.
 
 Every man age 18.
 
-/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl# : man),DataHasValue(DataProperty(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl# : age),^^(true,http://www.w3.org/2001/XMLSchema#boolean))) */
+/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man),DataHasValue(DataProperty(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age),^^(true,http://www.w3.org/2001/XMLSchema#boolean))) */
 
 John age "three".
 
