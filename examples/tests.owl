@@ -27,13 +27,19 @@
     </AnnotationAssertion>
 
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+		<IRI>http://www.example.org/test.owl#leaf</IRI>
+        <Literal>leaf</Literal>
+    </AnnotationAssertion>
+
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
 		<IRI>http://www.example.org/test.owl#leaf</IRI>
         <Literal>leaves</Literal>
     </AnnotationAssertion>
 
     <SubClassOf>
-        <Class abbreviatedIRI=":animal"/>
+        <Class abbreviatedIRI=":leaf"/>
         <Class IRI="http://www.w3.org/2002/07/owl#Thing"/>
     </SubClassOf>
 

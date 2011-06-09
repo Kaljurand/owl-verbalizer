@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2009, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -29,7 +29,7 @@ of ACE tokens.
 * glue the quotes to the quoted strings
 
 @author Kaarel Kaljurand
-@version 2009-05-16
+@version 2011-06-09
 
 */
 
@@ -63,23 +63,31 @@ ace_merge(['No', thing | Rest], [], ['Nothing' | Rest]) :-
 ace_merge([a, thing | Rest], [], [something | Rest]) :-
 	!.
 
-ace_merge([a, Token | Rest], [Article], [Token | Rest]) :-
+ace_merge([a, cn_sg(Iri) | Rest], [Article], [SurfaceForm | Rest]) :-
 	!,
-	word_article(Token, Article).
+	lexicon:call(cn_sg(Iri), SurfaceForm),
+	word_article(SurfaceForm, Article).
 
 ace_merge(['"', Token, '"' | Rest], [], [TokenQuotes | Rest]) :-
+	atom(Token),
 	!,
-	concat_atom(['"', Token, '"'], TokenQuotes).
+	my_concat_atom(['"', Token, '"'], TokenQuotes).
 
 ace_merge([Token, '.' | Rest], [TokenPeriod], Rest) :-
 	!,
-	concat_atom([Token, '.'], TokenPeriod).
+	my_concat_atom([Token, '.'], TokenPeriod).
 
 ace_merge([Token, ',' | Rest], [TokenComma], Rest) :-
 	!,
-	concat_atom([Token, ','], TokenComma).
+	my_concat_atom([Token, ','], TokenComma).
 
-ace_merge([Token | Rest], [Token], Rest).
+ace_merge([Token | Rest], [Token], Rest) :-
+	atomic(Token),
+	!.
+
+ace_merge([Token | Rest], [SurfaceForm], Rest) :-
+	functor(Token, _, 1),
+	lexicon:call(Token, SurfaceForm).
 
 
 %% simple_append(?List1:list, ?List2:list, ?List3:list) is nondet.
@@ -160,3 +168,15 @@ bad_an_letters([u, s, e | _]).
 %bad_an_letters([u, k, '-' | _]).
 bad_an_letters([u, k | _]).
 bad_an_letters([o, n, e | _]).
+
+% TODO: temporary hack
+my_concat_atom(List, Atom) :-
+	maplist(my_term_to_atom, List, AtomList),
+	concat_atom(AtomList, Atom).
+
+% TODO: temporary hack
+my_term_to_atom(Term, Atom) :-
+	functor(Term, _, 1),
+	!,
+	lexicon:call(Term, Atom).
+my_term_to_atom(Atom, Atom).

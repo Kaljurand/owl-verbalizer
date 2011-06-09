@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 # OWL verbalizer tester
 # Kaarel Kaljurand
 # 2011-06-07

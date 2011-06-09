@@ -310,3 +310,7 @@ and not the information about annotations, versioning, import-structure, etc.
 ==
 Everything is an a.  # function word used as content word
 ==
+
+* NamedIndividual should not be verbalized into `itself' or `themselves', because
+in some positions it would not be an ACE proper name but an anaphoric reference.
+(e.g.: Nothing sees itself.)

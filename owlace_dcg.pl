@@ -13,7 +13,7 @@
 % OWL verbalizer. If not, see http://www.gnu.org/licenses/.
 
 :- module(owlace_dcg, [
-		from_owl_to_ace/2
+		owl_ace/2
 	]).
 
 /** <module> Definite Clause Grammar for an OWL-compatible fragment of ACE
@@ -53,28 +53,6 @@ Syntactic roundtripping does not work, e.g. in the case of: 'that' vs 'and that'
 @version 2011-06-09
 
 */
-
-:- use_module(lexicon, [
-		pn_sg/2,
-		cn_sg/2,
-		cn_pl/2,
-		tv_sg/2,
-		tv_pl/2,
-		tv_vbg/2
-	]).
-
-:- use_module(ace_niceace, [
-		ace_niceace/2
-	]).
-
-
-%% from_owl_to_ace(+OWL:term, -ACE:list)
-%
-% Translates OWL to ACE.
-%
-from_owl_to_ace(OWL, ACE) :-
-	owl_ace(OWL, RawACE),
-	ace_niceace(RawACE, ACE).
 
 
 %% from_ace_to_owl(+ACE:atom, -OWL:term)
@@ -145,8 +123,7 @@ ip(
 ) :-
 	propertychain_verbchain(PropertyChain, [something, that | Tail]),
 	TokenListBeginning = ['If', 'X' | Tail],
-	tv_sg(S, SSg),
-	append(TokenListBeginning, ['Y', then, 'X', SSg, 'Y', '.'], TokenList).
+	append(TokenListBeginning, ['Y', then, 'X', tv_sg(S), 'Y', '.'], TokenList).
 
 ip(
 	'SubObjectPropertyOf'('ObjectPropertyChain'(PropertyChain), 'ObjectInverseOf'('ObjectProperty'(S))),
@@ -155,42 +132,33 @@ ip(
 ) :-
 	propertychain_verbchain(PropertyChain, [something, that | Tail]),
 	TokenListBeginning = ['If', 'X' | Tail],
-	tv_vbg(S, SPp),
-	append(TokenListBeginning, ['Y', then, 'X', is, SPp, by, 'Y', '.'], TokenList).
+	append(TokenListBeginning, ['Y', then, 'X', is, tv_vbg(S), by, 'Y', '.'], TokenList).
 
 % BUG: use passive to be consistent with the thesis
 ip('SubObjectPropertyOf'('ObjectInverseOf'('ObjectProperty'(R)), 'ObjectInverseOf'('ObjectProperty'(S)))) -->
-	['If', 'Y', RSg, 'X', then, 'Y', SSg, 'X', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'Y', tv_sg(R), 'X', then, 'Y', tv_sg(S), 'X', '.'].
 
 ip('SubObjectPropertyOf'('ObjectInverseOf'('ObjectProperty'(R)), 'ObjectProperty'(S))) -->
-	['If', 'Y', RSg, 'X', then, 'X', SSg, 'Y', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'Y', tv_sg(R), 'X', then, 'X', tv_sg(S), 'Y', '.'].
 
 ip('SubObjectPropertyOf'('ObjectProperty'(R), 'ObjectInverseOf'('ObjectProperty'(S)))) -->
-	['If', 'X', RSg, 'Y', then, 'Y', SSg, 'X', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'X', tv_sg(R), 'Y', then, 'Y', tv_sg(S), 'X', '.'].
 
 ip('SubObjectPropertyOf'('ObjectProperty'(R), 'ObjectProperty'(S))) -->
-	['If', 'X', RSg, 'Y', then, 'X', SSg, 'Y', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'X', tv_sg(R), 'Y', then, 'X', tv_sg(S), 'Y', '.'].
 
 % BUG: use passive to be consistent with the thesis
 ip('DisjointObjectProperties'(['ObjectInverseOf'('ObjectProperty'(R)), 'ObjectInverseOf'('ObjectProperty'(S))])) -->
-	['If', 'Y', RSg, 'X', then, it, is, false, that, 'Y', SSg, 'X', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'Y', tv_sg(R), 'X', then, it, is, false, that, 'Y', tv_sg(S), 'X', '.'].
 
 ip('DisjointObjectProperties'(['ObjectInverseOf'('ObjectProperty'(R)), 'ObjectProperty'(S)])) -->
-	['If', 'Y', RSg, 'X', then, it, is, false, that, 'X', SSg, 'Y', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'Y', tv_sg(R), 'X', then, it, is, false, that, 'X', tv_sg(S), 'Y', '.'].
 
 ip('DisjointObjectProperties'(['ObjectProperty'(R), 'ObjectInverseOf'('ObjectProperty'(S))])) -->
-	['If', 'X', RSg, 'Y', then, it, is, false, that, 'Y', SSg, 'X', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'X', tv_sg(R), 'Y', then, it, is, false, that, 'Y', tv_sg(S), 'X', '.'].
 
 ip('DisjointObjectProperties'(['ObjectProperty'(R), 'ObjectProperty'(S)])) -->
-	['If', 'X', RSg, 'Y', then, it, is, false, that, 'X', SSg, 'Y', '.'],
-	{ tv_sg(R, RSg), tv_sg(S, SSg) }.
+	['If', 'X', tv_sg(R), 'Y', then, it, is, false, that, 'X', tv_sg(S), 'Y', '.'].
 
 
 ip(SubClassOf) -->
@@ -429,8 +397,7 @@ or(C1, C2, 'ObjectUnionOf'([C1, C2])) -->
 
 % Proper names
 propn('ObjectOneOf'(['NamedIndividual'(Lemma)])) -->
-	[Token],
-	{ pn_sg(Lemma, Token), Token \= itself, Token \= themselves }.
+	[pn_sg(Lemma)].
 
 /*
 TODO: this way of handling Anonymous individuals does not work:
@@ -450,11 +417,9 @@ n(num=sg, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) -->
 n(num=pl, 'Class'(':'('http://www.w3.org/2002/07/owl#', 'Thing'))) -->
 	[things].
 n(num=sg, 'Class'(Lemma)) -->
-	[Token],
-	{ cn_sg(Lemma, Token) }.
+	[cn_sg(Lemma)].
 n(num=pl, 'Class'(Lemma)) -->
-	[Token],
-	{ cn_pl(Lemma, Token) }.
+	[cn_pl(Lemma)].
 
 
 % Transitive verbs
@@ -475,35 +440,27 @@ n(num=pl, 'Class'(Lemma)) -->
 % finite form, infinitive, and past participle (e.g. modifies, modify, modified).
 
 tv(num=sg, neg=no, vbn=no, 'ObjectProperty'(Lemma)) -->
-	[Token],
-	{ tv_sg(Lemma, Token) }.
+	[tv_sg(Lemma)].
 tv(num=pl, neg=no, vbn=no, 'ObjectProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 tv(num=sg, neg=yes, vbn=no, 'ObjectProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 tv(num=pl, neg=yes, vbn=no, 'ObjectProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 tv(_, _, vbn=yes, 'ObjectInverseOf'('ObjectProperty'(Lemma))) -->
-	[Token, by],
-	{ tv_vbg(Lemma, Token) }.
+	[tv_vbg(Lemma), by].
 
 % BUG: DataProperties are treated in the same was as object properties,
 % i.e. with transitive verbs
+% BUG: why don't we use tv_sg and tv_vbg here?
 tv(num=sg, neg=no, vbn=no, 'DataProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 tv(num=pl, neg=no, vbn=no, 'DataProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 tv(num=sg, neg=yes, vbn=no, 'DataProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 tv(num=pl, neg=yes, vbn=no, 'DataProperty'(Lemma)) -->
-	[Token],
-	{ tv_pl(Lemma, Token) }.
+	[tv_pl(Lemma)].
 
 
 %% propertychain_verbchain(?PropertyChain:list, ?VerbChain:list) is det.
@@ -532,8 +489,6 @@ propertychain_verbchain([Property | PropertyChainTail], VerbChain) :-
 % @param VerbChainTail is a list of ACE tokens containing `something', `that', and the verb
 % @param VerbChain is a list of ACE tokens containing `something', `that', and the verb
 %
-property_verb('ObjectProperty'(R), VerbChainTail, [something, that, RSg | VerbChainTail]) :-
-	tv_sg(R, RSg).
+property_verb('ObjectProperty'(R), VerbChainTail, [something, that, tv_sg(R) | VerbChainTail]).
 
-property_verb('ObjectInverseOf'('ObjectProperty'(R)), VerbChainTail, [something, that, is, RPp, by | VerbChainTail]) :-
-	tv_vbg(R, RPp).
+property_verb('ObjectInverseOf'('ObjectProperty'(R)), VerbChainTail, [something, that, is, tv_vbg(R), by | VerbChainTail]).

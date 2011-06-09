@@ -33,8 +33,12 @@
 	]).
 
 :- use_module(owlace_dcg, [
-		from_owl_to_ace/2
+		owl_ace/2
 	]).
+
+:- use_module(ace_niceace, [
+        ace_niceace/2
+    ]).
 
 :- use_module(lexicon, [
 		set_default_ns/1,
@@ -85,7 +89,8 @@ axiomlist_sentencelist_x([], []).
 
 axiomlist_sentencelist_x([Axiom | AxiomList], [Sentence | SentenceList]) :-
 	rewrite_subclassof(Axiom, RewrittenAxiom),
-	from_owl_to_ace(RewrittenAxiom, Sentence),
+	owl_ace(RewrittenAxiom, RawSentence),
+	ace_niceace(RawSentence, Sentence),
 	!,
 	axiomlist_sentencelist_x(AxiomList, SentenceList).
 
