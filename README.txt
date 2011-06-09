@@ -12,7 +12,7 @@ and produces an output in a fragment of Attempto Controlled English (ACE).
 This fragment is described in Kaarel Kaljurand's PhD thesis as ACE2
 (see <http://attempto.ifi.uzh.ch/site/pubs/papers/phd_kaljurand.pdf>).
 
-The verbalizer performs two steps, both implemented in SWI-Prolog.
+The verbalizer performs two steps:
 
 1. owlxml_owlfss/2: OWL 2 XML --> OWL 2 Functional-Style Syntax (in Prolog notation)
 2. owlfss_acetext/2: OWL 2 Functional-Style Syntax (in Prolog notation) --> ACE text
@@ -119,7 +119,7 @@ In the following example, we are using
 =|examples/example.owl|= as input.
 
 ==
-./owl_to_ace.exe -owlfile examples/example.owl
+./owl_to_ace.exe -xml examples/example.owl
 ==
 
 The output (i.e. the resulting ACE text) is printed to standard output.
@@ -127,7 +127,7 @@ The output (i.e. the resulting ACE text) is printed to standard output.
 Note that this command can be also executed as:
 
 ==
-swipl -x owl_to_ace.exe -- -owlfile examples/example.owl
+swipl -x owl_to_ace.exe -- -xml examples/example.owl
 ==
 
 This you can use on computers where the path to SWI-Prolog is different than the
@@ -172,7 +172,7 @@ cat examples/example.owl | curl -F "xml=<-" http://localhost:5123
 curl 'http://owl.cs.manchester.ac.uk/repository/download?ontology=http://www.co-ode.org/ontologies/pizza/pizza.owl&format=OWL/XML' | curl -F "xml=<-" http://localhost:5123
 ==
 
-Posting from an HTML page: look at the source code of <http://attempto.ifi.uzh.ch/site/docs/owl_to_ace.html>.
+Posting from an HTML page: look at the source code of <docs/owl_to_ace.html>.
 
 Posting from Java: use the Attempto Java Packages
 (see e.g. <http://attempto.ifi.uzh.ch/site/docs/java/ch/uzh/ifi/attempto/owl/VerbalizerWebservice.html>).
@@ -191,17 +191,12 @@ This module calls three further rules from three separate modules.
 
 * rewrite_subclassof/2: rewrites SubClassOf-axioms
 
-* from_owl_to_ace/2: verbalizes the rewritten axioms with a Definite Clause Grammar
+* owl_ace/2: verbalizes the rewritten axioms with a Definite Clause Grammar
 
 ---++ Lexicon
 
-The lexicon that is used during the verbalization is defined in =|lexicon.pl|=.
-It has a fall-back strategy, i.e. when a class/property/individual name is not found
-in the lexicon then the name is used as an ACE wordform without any modification (i.e. morphological synthesis).
-So you can use the verbalizer even without describing the words in the lexicon.
-
-It is possible to ``configure'' the morphological mappings by annotating the OWL
-IRIs with the following annotation properties:
+It is possible to specify the mapping of IRIs to surface forms
+using the following annotation properties:
 
 * http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg
 * http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg
@@ -241,6 +236,42 @@ For example, these axioms support the generation of the sentence ``John mans at 
 from an axiom that uses the IRI "#man" via punning once as an object property name,
 and once as a class name.
 
+If the mapping of an IRI is missing then its fragment is used in the output.
+
+If the output-mode is "csv", then each ACE token is output on a separate line
+and morphological mappings are left to the user to be applied. An example of
+csv-output is:
+
+==
+pn_sg	http://www.example.org/story.owl#John
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#man
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#apple
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#food
+f	.
+==
+
+The columns are tab-separated. The first column specifies the type of the token
+(f = function word, qs = quoted string, comment = comment, cn_sg = singular common noun, ...),
+and the 2nd column contains ACE tokens and OWL IRIs. Empty line denotes axiom
+borders (each OWL axiom in the input ontology is verbalized by 0 or more ACE
+sentences).
+
 
 ---++ Files
 
@@ -252,9 +283,9 @@ and once as a class name.
 * table_1.pl: axiom rewriting
 * rewrite_subclassof.pl: SubClassOf-axiom rewriting
 * owlace_dcg.pl: ACE2 grammar in DCG (used to generate ACE sentences)
-* lexicon.pl: lexicon for morphological synthesis, also supports dynamic update of the lexicon on the basis of AnnotationAssertion-axioms
-* ace_niceace.pl: some post-processing of the verbalization
-* output_results.pl: different ways to output the results
+* lexicon.pl: lexicon for morphological synthesis, also supports dynamic update of the lexicon on the basis of AnnotationAssertion-axioms (not used in the csv-mode)
+* ace_niceace.pl: some post-processing of the verbalization (not used in csv-mode)
+* output_results.pl: different ways to output the results (ace, csv, html)
 
 ---+++ Other
 
