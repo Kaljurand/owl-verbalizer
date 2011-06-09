@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2009, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -20,7 +20,7 @@
 /** <module> OWL 2 verbalizer
 
 @author Kaarel Kaljurand
-@version 2008-12-02
+@version 2011-06-09
 
 */
 
@@ -36,25 +36,13 @@
 		owl_ace/2
 	]).
 
-:- use_module(ace_niceace, [
-        ace_niceace/2
-    ]).
 
-:- use_module(lexicon, [
-		set_default_ns/1,
-		asserta_lexicon/1
-	]).
-
-
-%% owlfss_acetext(+Owl:term, -AxiomSentenceList:list) is det.
+%% owlfss_acetext(+AxiomList:list, -AxiomSentenceList:list) is det.
 %
-% @param Owl is an OWL ontology in OWL 2 Functional-Style Syntax (Prolog notation)
+% @param AxiomList is a list of axioms in OWL 2 Functional-Style Syntax (Prolog notation)
 % @param AxiomSentenceList is a list of Axiom-SentenceList pairs
 %
-owlfss_acetext(Owl, AxiomSentenceList) :-
-	Owl = 'Ontology'(_Name, NS, AxiomList),
-	set_default_ns(NS),
-	asserta_lexicon(AxiomList),
+owlfss_acetext(AxiomList, AxiomSentenceList) :-
 	axiomlist_sentencelist(AxiomList, AxiomSentenceList).
 
 
@@ -89,8 +77,7 @@ axiomlist_sentencelist_x([], []).
 
 axiomlist_sentencelist_x([Axiom | AxiomList], [Sentence | SentenceList]) :-
 	rewrite_subclassof(Axiom, RewrittenAxiom),
-	owl_ace(RewrittenAxiom, RawSentence),
-	ace_niceace(RawSentence, Sentence),
+	owl_ace(RewrittenAxiom, Sentence),
 	!,
 	axiomlist_sentencelist_x(AxiomList, SentenceList).
 

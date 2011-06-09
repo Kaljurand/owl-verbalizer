@@ -38,6 +38,11 @@
 		output_mapping/1
 	]).
 
+:- use_module(lexicon, [
+		set_default_ns/1,
+		asserta_lexicon/1
+	]).
+
 
 %% default_value(+Key:atom, -Value:atomic)
 %
@@ -209,23 +214,28 @@ owl_to_ace(FileName, TimeLimit, format(Format)) :-
 		TimeLimit,
 		(
 			owlxml_owlfss(FileName, Ontology, _ErrorList),
-			owlfss_acetext(Ontology, SentenceList),
+			Ontology = 'Ontology'(_Name, NS, AxiomList),
+			owlfss_acetext(AxiomList, SentenceList),
 			current_stream(1, write, Stream),
 			set_stream(Stream, encoding(utf8)),
-			output_results(Format, SentenceList)
+			output_results(Format, NS, AxiomList, SentenceList)
 		)
 	).
 
 
 %% output_results(+Format:atom, +SentenceList:list)
 %
-output_results(ace, SentenceList) :-
+output_results(ace, NS, AxiomList, SentenceList) :-
+	set_default_ns(NS),
+	asserta_lexicon(AxiomList),
 	output_sentencelist(SentenceList).
 
-output_results(html, SentenceList) :-
+output_results(html, NS, AxiomList, SentenceList) :-
+	set_default_ns(NS),
+	asserta_lexicon(AxiomList),
 	output_mapping(SentenceList).
 
-output_results(csv, SentenceList) :-
+output_results(csv, _, _, SentenceList) :-
 	output_csv(SentenceList).
 
 
@@ -250,11 +260,12 @@ owl_to_ace_handler(Request) :-
 				open_memory_file(Handle, read, InStream),
 				load_structure(InStream, XML, [dialect(xml), space(remove)]),
 				ellist_termlist(XML, []-_ErrorList, [Ontology]),
-				owlfss_acetext(Ontology, SentenceList),
+				Ontology = 'Ontology'(_Name, NS, AxiomList),
+				owlfss_acetext(AxiomList, SentenceList),
 				current_stream(1, write, Stream),
 				set_stream(Stream, encoding(utf8)),
 				format('Content-type: ~w\r\n\r\n', ['text/plain']),
-				output_sentencelist(SentenceList)
+				output_results(ace, NS, AxiomList, SentenceList)
 			)
 		),
 		Exception,

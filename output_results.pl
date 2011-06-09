@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -27,9 +27,13 @@ Currently defined output formats are:
 * output_mapping/1: HTML-table that maps an OWL axiom to a list of ACE sentences
 
 @author Kaarel Kaljurand
-@version 2008-12-02
+@version 2011-06-09
 
 */
+
+:- use_module(ace_niceace, [
+		ace_niceace/2
+	]).
 
 
 %% output_sentencelist(+SentenceList:list)
@@ -63,13 +67,15 @@ output_sentencelist([_Axiom-SentenceList | AxiomSentenceListList]) :-
 %
 format_sentencelist([]).
 
+% TODO: does this case every apply?
 format_sentencelist([Sentence | SentenceList]) :-
 	atom(Sentence),
 	!,
 	format("~w~n", [Sentence]),
 	format_sentencelist(SentenceList).
 
-format_sentencelist([Sentence | SentenceList]) :-
+format_sentencelist([RawSentence | SentenceList]) :-
+	ace_niceace(RawSentence, Sentence),
 	concat_atom(Sentence, ' ', SentenceAtom),
 	format("~w~n", [SentenceAtom]),
 	format_sentencelist(SentenceList).
