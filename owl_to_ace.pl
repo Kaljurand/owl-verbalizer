@@ -9,7 +9,7 @@
 %
 % Using the command-line interface:
 %
-% ./owl_to_ace.exe -owlfile file.owx
+% ./owl_to_ace.exe -xml file.owx
 %
 % Starting the verbalizer HTTP service:
 %
@@ -70,7 +70,7 @@ cli_time_limit(40).
 %
 % Command-line arguments.
 %
-argument('-owlfile', 'FILENAME', 'The name of a file that contains an OWL ontology in OWL/XML format.').
+argument('-xml', 'FILENAME', 'Ontology (in the OWL/XML format) to be verbalized.').
 argument('-format', 'STRING', 'Specify the output format, one of {ace, html, csv}.').
 argument('-httpserver', '', 'Launch an HTTP interface to OWL verbalizer.').
 argument('-port', 'NUMBER', 'Override the default port (8000) of the HTTP interface.').
@@ -145,7 +145,7 @@ process_input(InputList) :-
 	show_version.
 
 process_input(InputList) :-
-	memberchk(owlfile=FileName, InputList),
+	memberchk(xml=FileName, InputList),
 	!,
 	get_arg(format, InputList, Format),
 	cli_time_limit(TimeLimit),

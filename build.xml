@@ -14,7 +14,7 @@
 			destfile="${dist}/owl_verbalizer-${build.time}.zip"
 			basedir="."
 			includes="**"
-			excludes="ontologies/**, dist/**, .hg/**, xslt/**, notes/**, clex_to_owl/**, run_tests.py, build.xml, *.exe"
+			excludes="ontologies/**, dist/**, .hg/**, xslt/**, notes/**, clex_to_owl/**, run_tests.py, build.xml, lexicon_with_assert.pl, *.exe"
 		/>
 	</target>
 
