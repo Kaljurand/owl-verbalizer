@@ -38,20 +38,14 @@
 		output_mapping/1
 	]).
 
-%% default_http_port(?PortNumber:integer)
-%
-% Port number of the webservice.
-% This can be overridden on the command-line.
-%
-default_http_port(8000).
 
-
-%% default_http_workers(?WorkerCount:integer)
+%% default_value(+Key:atom, -Value:atomic)
 %
-% Number of HTTP workers.
-% This can be overridden on the command-line.
-%
-default_http_workers(4).
+% Specifies the default values of the commandline parameters.
+% 
+default_value(format, ace).
+default_value(workers, 4).
+default_value(port, 8000).
 
 %
 % Location of the webservice.
@@ -73,14 +67,12 @@ cli_time_limit(40).
 % Command-line arguments.
 %
 argument('-owlfile', 'FILENAME', 'The name of a file that contains an OWL ontology in OWL/XML format.').
+argument('-format', 'STRING', 'Specify the output format, one of {ace, html, csv}.').
 argument('-httpserver', '', 'Launch an HTTP interface to OWL verbalizer.').
 argument('-port', 'NUMBER', 'Override the default port (8000) of the HTTP interface.').
 argument('-workers', 'NUMBER', 'Override the default number of workers (4) on the HTTP server.').
-argument('-html', '', 'Output an HTML table with the OWL->ACE mapping.').
 argument('-version', '', 'Show version information.').
 argument('-help', '', 'Show this help page.').
-
-
 
 
 %% owl_to_ace
@@ -148,44 +140,31 @@ process_input(InputList) :-
 	!,
 	show_version.
 
-process_input([httpserver=on]) :-
-	!,
-	start_http_server.
-
-process_input(Args) :-
-	length(Args, 2),
-	memberchk(httpserver=on, Args),
-	memberchk(port=Port, Args),
-	!,
-	default_http_workers(Workers),
-	start_http_server(Port, Workers).
-
-process_input(Args) :-
-	length(Args, 2),
-	memberchk(httpserver=on, Args),
-	memberchk(workers=Workers, Args),
-	!,
-	default_http_port(Port),
-	start_http_server(Port, Workers).
-
-process_input(Args) :-
-	length(Args, 3),
-	memberchk(httpserver=on, Args),
-	memberchk(port=Port, Args),
-	memberchk(workers=Workers, Args),
-	!,
-	start_http_server(Port, Workers).
-
 process_input(InputList) :-
 	memberchk(owlfile=FileName, InputList),
+	!,
+	get_arg(format, InputList, Format),
 	cli_time_limit(TimeLimit),
-	(
-		memberchk(html=on, InputList)
-	->
-		owl_to_ace(FileName, TimeLimit, html(on))
-	;
-		owl_to_ace(FileName, TimeLimit, html(off))
-	).
+	owl_to_ace(FileName, TimeLimit, format(Format)).
+
+process_input(InputList) :-
+	memberchk(httpserver=on, InputList),
+	!,
+	get_arg(port, InputList, Port),
+	get_arg(workers, InputList, Workers),
+	start_http_server(Port, Workers).
+
+
+%% get_arg(+Key:atom, +InputList:list, -Value:atomic)
+%
+% Gets the value of the input parameter if set,
+% otherwise uses the default value.
+%
+get_arg(Key, InputList, Value) :-
+	memberchk(Key=Value, InputList),
+	!.
+get_arg(Key, _, Value) :-
+	default_value(Key, Value).
 
 
 %% show_help
@@ -211,7 +190,7 @@ show_help :-
 % Prints the version information.
 %
 show_version :-
-	format("OWL verbalizer, ver ~w~n", ['0.9.1']).
+	format("OWL verbalizer, ver ~w~n", ['0.9.2']).
 
 
 %% get_arglist(+RawArgList, -ArgList)
@@ -225,7 +204,7 @@ get_arglist([_|ArgList], ArgList).
 
 
 % This interface is for the commandline.
-owl_to_ace(FileName, TimeLimit, html(HtmlOnOff)) :-
+owl_to_ace(FileName, TimeLimit, format(Format)) :-
 	call_with_time_limit(
 		TimeLimit,
 		(
@@ -233,24 +212,21 @@ owl_to_ace(FileName, TimeLimit, html(HtmlOnOff)) :-
 			owlfss_acetext(Ontology, SentenceList),
 			current_stream(1, write, Stream),
 			set_stream(Stream, encoding(utf8)),
-			(
-				HtmlOnOff = on
-			->
-				output_mapping(SentenceList)
-			;
-				output_sentencelist(SentenceList)
-			)
+			output_results(Format, SentenceList)
 		)
 	).
 
 
-%% start_http_server
+%% output_results(+Format:atom, +SentenceList:list)
 %
-%
-start_http_server :-
-	default_http_port(Port),
-	default_http_workers(Workers),
-	start_http_server(Port, Workers).
+output_results(ace, SentenceList) :-
+	output_sentencelist(SentenceList).
+
+output_results(html, SentenceList) :-
+	output_mapping(SentenceList).
+
+output_results(csv, SentenceList) :-
+	output_csv(SentenceList).
 
 
 %% http_server(+PortNumber:integer, +WorkerCount:integer)

@@ -106,7 +106,7 @@ parser.add_argument('-m', '--mode', type=str, action='store', dest='mode',
 parser.add_argument('-p', '--parallel', action='store_true', dest='parallel', default=False,
                    help='run the tests in parallel (default: false)')
 
-parser.add_argument('-f', '--fmt', type=str, action='store', dest='fmt',
+parser.add_argument('-f', '--format', type=str, action='store', dest='fmt',
                    default="ace",
                    help='set the output format, one of {ace, csv, html} (default: ace)')
 
