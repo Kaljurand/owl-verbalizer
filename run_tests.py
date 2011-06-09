@@ -9,15 +9,12 @@
 # Saves the outputs into files so that they can be compared against the
 # gold standard.
 #
-# Work in progress
-#
 # Example:
 #
-# python run_tests.py --in examples --mode http --parallel
+# python run_tests.py -i ontologies/ -m http -p -f csv -o ontologies/csv/
 #
 # TODO:
-# * commandline arguments
-# * performance measurement
+# * separate performance measurement for each input
 # * instead of curl use some Python library for better performance
 #
 import sys
@@ -62,15 +59,17 @@ def process_file(cmd, path):
 		process_file_aux(cmd, path)
 
 
-def process_file_aux(cmd, path):
-	basename, extension = os.path.splitext(path)
-	ace_path = basename + ".ace.txt"
-	f = open(ace_path, 'w')
+def process_file_aux(cmd, path_owl):
+	name = os.path.splitext(os.path.basename(path_owl))[0]
+	path_ace = args.dir_out + "/" + name + "." + args.fmt
+	if args.fmt == 'ace':
+		path_ace += ".txt"
+	f = open(path_ace, 'w')
 	pipe = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=f)
-	ret_code = pipe.wait()
+	pipe.wait()
 	f.flush()
 	f.close()
-	print 'Verbalized:', path
+	print '{:} -> {:}'.format(path_owl, path_ace)
 
 
 def run_as_script(g):
@@ -110,7 +109,7 @@ parser.add_argument('-f', '--format', type=str, action='store', dest='fmt',
                    default="ace",
                    help='set the output format, one of {ace, csv, html} (default: ace)')
 
-parser.add_argument('-o', '--out', type=str, action='store', dest='out', default="dir_in",
+parser.add_argument('-o', '--out', type=str, action='store', dest='dir_out',
                    help='set the directory where the output files are stored (default: same as "in")')
 
 parser.add_argument('-v', '--version', action='version', version='%(prog)s v0.1')
@@ -122,7 +121,9 @@ if args.dir_in is None:
 	print >> sys.stderr, 'ERROR: argument -i/--in is not specified'
 	exit()
 
-print >> sys.stderr, 'TODO: out:', args.out
+# TODO: there is probably a better way to do this
+if args.dir_out is None:
+	args.dir_out = args.dir_in
 
 g = owl_file_generator(args.dir_in)
 
