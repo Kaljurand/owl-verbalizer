@@ -218,9 +218,8 @@ np_obj(_, R, 'DataHasValue'(R, '^^'(Double,  'http://www.w3.org/2001/XMLSchema#d
 	[Double],
 	{ float(Double) }.
 
-% BUG: use q(String) instead
 np_obj(_, R, 'DataHasValue'(R, '^^'(String,  'http://www.w3.org/2001/XMLSchema#string'))) -->
-	['"', String, '"'],
+	[qs(String)],
 	{ atom(String) }.
 
 np_obj(num=sg, R, 'ObjectHasSelf'(R)) -->

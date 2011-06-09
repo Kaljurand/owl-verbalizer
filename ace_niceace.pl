@@ -68,10 +68,10 @@ ace_merge([a, cn_sg(Iri) | Rest], [Article], [SurfaceForm | Rest]) :-
 	lexicon:call(cn_sg(Iri), SurfaceForm),
 	word_article(SurfaceForm, Article).
 
-ace_merge(['"', Token, '"' | Rest], [], [TokenQuotes | Rest]) :-
+ace_merge([qs(Token) | Rest], [], [TokenQuotes | Rest]) :-
 	atom(Token),
 	!,
-	my_concat_atom(['"', Token, '"'], TokenQuotes).
+	concat_atom(['"', Token, '"'], TokenQuotes).
 
 ace_merge([Token, '.' | Rest], [TokenPeriod], Rest) :-
 	!,
