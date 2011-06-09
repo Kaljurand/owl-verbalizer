@@ -38,13 +38,20 @@
 		output_mapping/1
 	]).
 
-%% http_port(?PortNumber:integer)
+%% default_http_port(?PortNumber:integer)
 %
 % Port number of the webservice.
 % This can be overridden on the command-line.
 %
-http_port(8000).
+default_http_port(8000).
 
+
+%% default_http_workers(?WorkerCount:integer)
+%
+% Number of HTTP workers.
+% This can be overridden on the command-line.
+%
+default_http_workers(4).
 
 %
 % Location of the webservice.
@@ -65,9 +72,10 @@ cli_time_limit(40).
 %
 % Command-line arguments.
 %
-argument('-owlfile', 'FILENAME', 'The name of a file that contains an OWL ontology in OWL 2 XML format.').
-argument('-httpserver', '', 'Launch an HTTP interface to OWL verbalizer at port 8000.').
-argument('-port', 'NUMBER', 'Override the default port of the HTTP interface.').
+argument('-owlfile', 'FILENAME', 'The name of a file that contains an OWL ontology in OWL/XML format.').
+argument('-httpserver', '', 'Launch an HTTP interface to OWL verbalizer.').
+argument('-port', 'NUMBER', 'Override the default port (8000) of the HTTP interface.').
+argument('-workers', 'NUMBER', 'Override the default number of workers (4) on the HTTP server.').
 argument('-html', '', 'Output an HTML table with the OWL->ACE mapping.').
 argument('-version', '', 'Show version information.').
 argument('-help', '', 'Show this help page.').
@@ -142,15 +150,31 @@ process_input(InputList) :-
 
 process_input([httpserver=on]) :-
 	!,
-	http_server.
+	start_http_server.
 
-process_input([httpserver=on, port=Port]) :-
+process_input(Args) :-
+	length(Args, 2),
+	memberchk(httpserver=on, Args),
+	memberchk(port=Port, Args),
 	!,
-	http_server(Port).
+	default_http_workers(Workers),
+	start_http_server(Port, Workers).
 
-process_input([port=Port, httpserver=on]) :-
+process_input(Args) :-
+	length(Args, 2),
+	memberchk(httpserver=on, Args),
+	memberchk(workers=Workers, Args),
 	!,
-	http_server(Port).
+	default_http_port(Port),
+	start_http_server(Port, Workers).
+
+process_input(Args) :-
+	length(Args, 3),
+	memberchk(httpserver=on, Args),
+	memberchk(port=Port, Args),
+	memberchk(workers=Workers, Args),
+	!,
+	start_http_server(Port, Workers).
 
 process_input(InputList) :-
 	memberchk(owlfile=FileName, InputList),
@@ -220,30 +244,26 @@ owl_to_ace(FileName, TimeLimit, html(HtmlOnOff)) :-
 	).
 
 
-%% http_server
+%% start_http_server
 %
 %
-http_server :-
-	http_port(Port),
-	http_server(Port).
+start_http_server :-
+	default_http_port(Port),
+	default_http_workers(Workers),
+	start_http_server(Port, Workers).
 
 
-%% http_server(+PortNumber:integer)
-%
-% Note: we use just one worker, because the OWL verbalizer is not thread-safe
-% (lexicon.pl uses assert/1).
+%% http_server(+PortNumber:integer, +WorkerCount:integer)
 %
 % @bug Make sure I understand what thread_get_message/1 does.
 %
-http_server(Port) :-
-	format("Starting owl_to_ace at port ~w ...~n", [Port]),
-	http_server(http_dispatch, [port(Port), workers(4)]),
+start_http_server(Port, Workers) :-
+	format("Starting owl_to_ace at port ~w with ~w workers ...~n", [Port, Workers]),
+	http_server(http_dispatch, [port(Port), workers(Workers)]),
 	thread_get_message(_),
-	format("Stopping owl_to_ace ...~n", [Port]),
+	format("Stopping owl_to_ace ...~n"),
 	halt.
 
-% @bug It would be better to read the input directly from a stream,
-% not through http_parameters/2.
 owl_to_ace_handler(Request) :-
 	catch(
 		call_with_time_limit(

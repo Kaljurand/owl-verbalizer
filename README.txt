@@ -2,7 +2,7 @@
 
 Author: Kaarel Kaljurand
 
-Version: 2011-06-07
+Version: 2011-06-09
 
 
 ---++ Introduction
@@ -142,20 +142,22 @@ options local/1 and global/1, and recompile.
 The OWL verbalizer webservice is launched on the command-line, e.g.:
 
 ==
-./owl_to_ace.exe -httpserver -port 5123
+./owl_to_ace.exe -httpserver -port 5123 -workers 2
 ==
 
 A good way to start the service on a Unix command-line is:
 
 ==
-nohup swipl -x owl_to_ace.exe -- -httpserver -port 5123 > stdout.txt 2> stderr.txt &
+nohup swipl -x owl_to_ace.exe -- -httpserver -port 5123 -workers 2 > stdout.txt 2> stderr.txt &
 ==
 
 In this case, the service is started in the background,
 a start up message is stored in =|stdout.txt|=, and possible error messages in =|stderr.txt|=.
 On Mac OS X, one could use _|launchctl|_ instead.
 
-As a result, a webserver (SWI HTTP server) is started on port 5123.
+As a result, a webserver (SWI HTTP server) is started on port 5123 with 2 worker threads.
+The optimal number of workers depends on the number of CPUs.
+
 In order to verbalize an ontology,
 post the OWL 2 XML document to the server via the argument `xml'.
 Following are some examples of using 'curl' to achieve this.
@@ -251,7 +253,7 @@ and once as a class name.
 * rewrite_subclassof.pl: SubClassOf-axiom rewriting
 * owlace_dcg.pl: ACE2 grammar in DCG (used to generate ACE sentences)
 * lexicon.pl: lexicon for morphological synthesis, also supports dynamic update of the lexicon on the basis of AnnotationAssertion-axioms
-* ace_niceace.pl: some tiny post-processing of the verbalization
+* ace_niceace.pl: some post-processing of the verbalization
 * output_results.pl: different ways to output the results
 
 ---+++ Other

@@ -2,7 +2,7 @@
 
 # OWL verbalizer tester
 # Kaarel Kaljurand
-# 2011-06-07
+# 2011-06-09
 #
 # Verbalizes all the OWL files in a given directory either
 # using the OWL verbalizer commandline script or the HTTP server (via curl).
@@ -13,7 +13,7 @@
 #
 # Example:
 #
-# python run_tests.py --in examples --mode http
+# python run_tests.py --in examples --mode http --parallel
 #
 # TODO:
 # * commandline arguments
@@ -33,6 +33,7 @@ owl_to_ace_exe="./owl_to_ace.exe"
 curl='curl'
 extension_pattern='\.owl'
 port=5123
+workers=4
 server_url="http://localhost:" + str(port)
 
 
@@ -131,7 +132,7 @@ time_start = None
 
 if args.mode == 'http':
 	print 'Starting the server'
-	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port)]
+	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port), '-workers', str(workers)]
 	print cmd
 	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
 	wait_until_up(server)
