@@ -237,7 +237,7 @@ http_server :-
 %
 http_server(Port) :-
 	format("Starting owl_to_ace at port ~w ...~n", [Port]),
-	http_server(http_dispatch, [port(Port), workers(1)]),
+	http_server(http_dispatch, [port(Port), workers(4)]),
 	thread_get_message(_),
 	format("Stopping owl_to_ace ...~n", [Port]),
 	halt.

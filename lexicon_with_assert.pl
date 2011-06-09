@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2010, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -27,14 +27,14 @@
 /** <module> Lexicon
 
 @author Kaarel Kaljurand
-@version 2011-06-09
+@version 2010-06-15
 
 Lemma to surface form mapping.
 The mappings must be bidirectional within the same word class.
 
 The supported surface forms are:
 
-* (singular) proper name,
+* singular proper name,
 * singular noun,
 * plural noun,
 * singular verb,
@@ -45,8 +45,18 @@ The lexicon is instantiated from a list of OWL annotation assertion axioms.
 
 @tbd Cut when first argument is instantiated (?)
 @tbd Add support for checking the bidirectionality of morphological mappings
+@tbd Use compile_predicates/1 for all dynamic predicates, e.g.
+in asserta_lexicon/1: compile_predicates([pn_sg_x/2, ...]). Actually this wouldn't work
+in the server mode as the dynamic predicates need to be retracted and new ones created
+all the time.
 
 */
+
+:- dynamic(pn_sg_x/2, cn_sg_x/2, cn_pl_x/2, tv_sg_x/2, tv_pl_x/2, tv_vbg_x/2).
+:- dynamic(default_ns/1).
+
+% BUG: experimental
+default_ns('').
 
 %% asserta_lexicon(+AxiomList:list) is det.
 %% asserta_lexicon_x(+AxiomList:list) is det.
@@ -80,7 +90,8 @@ asserta_lexicon_x([]).
 asserta_lexicon_x(['EntityAnnotation'(Entity, 'Annotation'(Feature, '^^'(Form, _))) | AxiomList]) :-
 	make_lex_entry(Entity, Feature, Form, Entry),
 	!,
-	set_lexicon_entry(Entry),
+	%format("Adding lex entry: ~q~n", [Entry]),
+	asserta(Entry),
 	asserta_lexicon_x(AxiomList).
 
 % AnnotationAssertion(AnnotationProperty(sg), IRI(#John), ^^(John, http://www.w3.org/2001/XMLSchema#string))
@@ -89,7 +100,8 @@ asserta_lexicon_x(['AnnotationAssertion'('AnnotationProperty'(Property), 'IRI'(I
 	atom_concat(NS, '#', NS1),
 	make_lex_entry(NS1:Lemma, Property, WordForm, Entry),
 	!,
-	set_lexicon_entry(Entry),
+	% format("Adding lex entry: ~q~n", [Entry]),
+	asserta(Entry),
 	asserta_lexicon_x(AxiomList).
 
 asserta_lexicon_x([_Axiom | AxiomList]) :-
@@ -101,10 +113,13 @@ asserta_lexicon_x([_Axiom | AxiomList]) :-
 %
 % Removes all dynamic lexicon entries.
 %
-% TODO: not sure we need it
-%
 retract_lexicon :-
-	nb_current(N, _), nb_delete(N), fail ; true.
+	retractall(pn_sg_x(_, _)),
+	retractall(cn_sg_x(_, _)),
+	retractall(cn_pl_x(_, _)),
+	retractall(tv_sg_x(_, _)),
+	retractall(tv_pl_x(_, _)),
+	retractall(tv_vbg_x(_, _)).
 
 
 %% make_lex_entry(+OWLEntity:term, +MorphType:atom, +WordForm:atom, -LexiconEntry:term) is det.
@@ -116,32 +131,32 @@ retract_lexicon :-
 %
 % @deprecated
 %
-make_lex_entry('NamedIndividual'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, entry('PN_sg', Lemma, Form)).
-make_lex_entry('Class'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, entry('CN_sg', Lemma, Form)).
-make_lex_entry('Class'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#pl', Form, entry('CN_pl', Lemma, Form)).
-make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#pl', Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#vbg', Form, entry('TV_vbg', Lemma, Form)).
+make_lex_entry('NamedIndividual'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, pn_sg_x(Lemma, Form)).
+make_lex_entry('Class'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, cn_sg_x(Lemma, Form)).
+make_lex_entry('Class'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#pl', Form, cn_pl_x(Lemma, Form)).
+make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, tv_sg_x(Lemma, Form)).
+make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#pl', Form, tv_pl_x(Lemma, Form)).
+make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#vbg', Form, tv_vbg_x(Lemma, Form)).
 
 
-%% make_lex_entry(+Iri:term, +MorphType:atom, +WordForm:atom, -LexiconEntry:term) is det.
+%% make_lex_entry(+Iri:atom, +MorphType:atom, +WordForm:atom, -LexiconEntry:term) is det.
 %
-% @param Iri is an IRI, e.g. 'http://blah':man
+% @param Iri is an IRI, e.g. ClassIRI
 % @param MorphType is an IRI for an ACE morphological type, one of {PN_sg, CN_sg, CN_pl, TV_sg, TV_pl, TV_vbg}
 % @param WordForm is an ACE surface word-form
 % @param LexiconEntry is a lexicon entry, one of {n_pl/2, v_sg/2, v_vbg/2}
 %
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'PN_sg', Form, entry('PN_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'CN_sg', Form, entry('CN_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'CN_pl', Form, entry('CN_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_sg', Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_pl', Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_vbg', Form, entry('TV_vbg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'PN_sg', Form, pn_sg_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'CN_sg', Form, cn_sg_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'CN_pl', Form, cn_pl_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_sg', Form, tv_sg_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_pl', Form, tv_pl_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':'TV_vbg', Form, tv_vbg_x(Lemma, Form)).
 
 % BUG: just for testing, remove these at some point
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':sg, Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':pl, Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':vbg, Form, entry('TV_vbg', Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':sg, Form, tv_sg_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':pl, Form, tv_pl_x(Lemma, Form)).
+make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':vbg, Form, tv_vbg_x(Lemma, Form)).
 
 
 %% pn_sg(+Lemma, +WordForm) is det.
@@ -153,13 +168,13 @@ make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#':vbg, Form, entry
 %
 % Interface to the dynamic lexicon.
 %
-pn_sg(X, Y) :- get_lexicon_entry('PN_sg', X, Y).
+pn_sg(X, Y) :- pn_sg_x(X, Y).
 pn_sg(_:X, X). % BUG: fallback
 
 % BUG experimental
 /*
 pn_sg(NS:X, Y) :-
-	get_default_ns(NS),
+	default_ns(NS),
 	pn_sg_x(NS:X, Y),
 	!.
 
@@ -169,7 +184,7 @@ pn_sg(NS:X, NSY) :-
 	!.
 
 pn_sg(NS:X, X) :-
-	get_default_ns(NS),
+	default_ns(NS),
 	!.
 
 pn_sg(NS:X, NSX) :-
@@ -177,50 +192,24 @@ pn_sg(NS:X, NSX) :-
 */
 
 
-cn_sg(X, Y) :- get_lexicon_entry('CN_sg', X, Y).
+cn_sg(X, Y) :- cn_sg_x(X, Y).
 cn_sg(_:X, X). % BUG: fallback
 
-cn_pl(X, Y) :- get_lexicon_entry('CN_pl', X, Y).
+cn_pl(X, Y) :- cn_pl_x(X, Y).
 cn_pl(_:X, X). % BUG: fallback
 
 
-tv_sg(X, Y) :- get_lexicon_entry('TV_sg', X, Y).
+tv_sg(X, Y) :- tv_sg_x(X, Y).
 tv_sg(_:X, X). % BUG: fallback
 
-tv_pl(X, Y) :- get_lexicon_entry('TV_pl', X, Y).
+tv_pl(X, Y) :- tv_pl_x(X, Y).
 tv_pl(_:X, X). % BUG: fallback
 
-tv_vbg(X, Y) :- get_lexicon_entry('TV_vbg', X, Y).
+tv_vbg(X, Y) :- tv_vbg_x(X, Y).
 tv_vbg(_:X, X). % BUG: fallback
-
-
-%% set_lexicon_entry(+Type:atom, +Iri:term, +Form:atom) is det.
-%
-set_lexicon_entry(entry(Type, NS:Lemma, Form)) :-
-	concat_atom([Type, NS, Lemma], Id),
-	nb_setval(Id, Form).
-
-
-%% get_lexicon_entry(+Type:atom, +Iri:term, -Form:atom) is det.
-%
-% TODO: with better indexing we can avoid concat_atom/2
-% if it proves to be too slow.
-%
-get_lexicon_entry(Type, NS:Lemma, Form) :-
-	concat_atom([Type, NS, Lemma], Id),
-	catch(nb_getval(Id, Form), _, fail).
 
 
 %% set_default_ns(+NS:atom) is det.
 %
 set_default_ns(NS) :-
-	nb_setval(default_ns, NS).
-
-
-%% get_default_ns(+NS:atom) is det.
-%
-% @throws error if NS is not a set variable
-%
-% TODO: currently not used
-get_default_ns(NS) :-
-	nb_getval(default_ns, NS).
+	assert(default_ns(NS)).
