@@ -34,7 +34,7 @@
 	]).
 
 :- use_module(output_results, [
-		output_sentencelist/1,
+		output_results/2,
 		output_mapping/1
 	]).
 
@@ -228,7 +228,7 @@ owl_to_ace(FileName, TimeLimit, format(Format)) :-
 output_results(ace, NS, AxiomList, SentenceList) :-
 	set_default_ns(NS),
 	asserta_lexicon(AxiomList),
-	output_sentencelist(SentenceList).
+	output_results(ace, SentenceList).
 
 output_results(html, NS, AxiomList, SentenceList) :-
 	set_default_ns(NS),
@@ -236,7 +236,7 @@ output_results(html, NS, AxiomList, SentenceList) :-
 	output_mapping(SentenceList).
 
 output_results(csv, _, _, SentenceList) :-
-	output_csv(SentenceList).
+	output_results(csv, SentenceList).
 
 
 %% http_server(+PortNumber:integer, +WorkerCount:integer)

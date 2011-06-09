@@ -13,7 +13,7 @@
 % OWL verbalizer. If not, see http://www.gnu.org/licenses/.
 
 :- module(output_results, [
-		output_sentencelist/1,
+		output_results/2,
 		output_mapping/1
 	]).
 
@@ -36,29 +36,33 @@ Currently defined output formats are:
 	]).
 
 
-%% output_sentencelist(+SentenceList:list)
+%% output_results(+Format:atom, +SentenceList:list)
 %
 % Outputs the given ACE sentences. The SentenceList
 % that is given as input is a list of Axiom-Sentence pairs.
 %
 % @param SentenceList is a list of ACE sentences
 %
-output_sentencelist([]).
+output_results(_Format, []).
 
-output_sentencelist([_-[] | SentenceList]) :-
+output_results(Format, [_-[] | SentenceList]) :-
 	!,
-	output_sentencelist(SentenceList).
+	output_results(Format, SentenceList).
 
-output_sentencelist([Axiom-Message | SentenceList]) :-
+output_results(Format, [Axiom-Message | SentenceList]) :-
 	atom(Message),
 	!,
 	format("/* ~w: ~w */~n", [Message, Axiom]),
-	output_sentencelist(SentenceList).
+	output_results(Format, SentenceList).
 
-output_sentencelist([_Axiom-SentenceList | AxiomSentenceListList]) :-
-	format_sentencelist(SentenceList),
+output_results(Format, [_Axiom-SentenceList | AxiomSentenceListList]) :-
+	format_sentences(Format, SentenceList),
 	nl,
-	output_sentencelist(AxiomSentenceListList).
+	output_results(Format, AxiomSentenceListList).
+
+
+format_sentences(ace, Sentences) :-
+	format_sentencelist(Sentences).
 
 
 %% format_sentencelist(+SentenceList:list)
@@ -67,11 +71,10 @@ output_sentencelist([_Axiom-SentenceList | AxiomSentenceListList]) :-
 %
 format_sentencelist([]).
 
-% TODO: does this case every apply?
-format_sentencelist([Sentence | SentenceList]) :-
-	atom(Sentence),
+format_sentencelist([Comment | SentenceList]) :-
+	atom(Comment),
 	!,
-	format("~w~n", [Sentence]),
+	format("~w~n", [Comment]),
 	format_sentencelist(SentenceList).
 
 format_sentencelist([RawSentence | SentenceList]) :-
