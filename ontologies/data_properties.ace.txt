@@ -1,5 +1,10 @@
 /* unsupported: DisjointDataProperties([DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#phone-number)]) */
+
 /* unsupported: EquivalentDataProperties([DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#vanus)]) */
+
 /* unsupported: SubDataPropertyOf(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#small-age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age)) */
+
 /* unsupported: EquivalentDataProperties([DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#alter)]) */
+
 /* unsupported: FunctionalDataProperty(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age)) */
+

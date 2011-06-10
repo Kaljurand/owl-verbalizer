@@ -1,7 +1,9 @@
-/* unsupported: Import(http://example.org/otherOntologies/families.owl) */
 /* unsupported: DatatypeDefinition(Datatype(personAge),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#integer),FacetRestriction(http://www.w3.org/2001/XMLSchema#minInclusive,^^(0,http://www.w3.org/2001/XMLSchema#integer)),FacetRestriction(http://www.w3.org/2001/XMLSchema#maxInclusive,^^(150,http://www.w3.org/2001/XMLSchema#integer))])) */
+
 /* unsupported: DatatypeDefinition(Datatype(majorAge),DataIntersectionOf(Datatype(personAge),DataComplementOf(Datatype(minorAge)))) */
+
 /* unsupported: DatatypeDefinition(Datatype(toddlerAge),DataOneOf([^^(1,http://www.w3.org/2001/XMLSchema#integer),^^(2,http://www.w3.org/2001/XMLSchema#integer)])) */
+
 If X hasSpouse Y then Y hasSpouse X.
 
 If X hasChild Y then it is false that Y hasChild X.
@@ -41,10 +43,15 @@ If X hasFather something that hasBrother Y then X hasUncle Y.
 If X hasFather something that hasBrother Y then X hasUncle Y.
 
 /* unsupported: HasKey(Class(Person),ObjectProperty(hasSSN)) */
+
 /* unsupported: DataPropertyDomain(DataProperty(hasAge),Class(Person)) */
+
 /* unsupported: DataPropertyRange(DataProperty(hasAge),Datatype(http://www.w3.org/2001/XMLSchema#nonNegativeInteger)) */
+
 /* unsupported: FunctionalDataProperty(DataProperty(hasHusband)) */
+
 /* unsupported: EquivalentDataProperties([DataProperty(hasAge),DataProperty(http://example.org/otherOntologies/families/age)]) */
+
 Every Woman is a Person.
 
 Every Mother is a Woman.
@@ -60,6 +67,7 @@ Every Female that is Bill or that is Mary or that is Meg is a Parent that hasChi
 /* BUG: axiom too complex: SubClassOf(Class(Teenager),DataSomeValuesFrom(DataProperty(hasAge),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#integer),FacetRestriction(http://www.w3.org/2001/XMLSchema#minExclusive,^^(12,http://www.w3.org/2001/XMLSchema#integer)),FacetRestriction(http://www.w3.org/2001/XMLSchema#maxInclusive,^^(19,http://www.w3.org/2001/XMLSchema#integer))]))) */
 
 /* unsupported: SubClassOf(Annotation(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),^^("States that every man is a person.",xsd:string)),Class(Man),Class(Person)) */
+
 Every HappyPerson is something that hasChild nothing but HappyPerson and that hasChild a HappyPerson.
 Everything that hasChild nothing but HappyPerson and that hasChild a HappyPerson is a HappyPerson.
 
@@ -99,6 +107,7 @@ Every Person that is not a Parent is a ChildlessPerson.
 No Woman is a Man.
 
 /* unsupported: DisjointClasses([Class(Father),Class(Mother),Class(YoungChild)]) */
+
 John is not Bill.
 
 James is Jim.

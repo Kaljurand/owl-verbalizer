@@ -182,6 +182,7 @@ Tibbs is a cat.
 Q123_ABC is a van.
 
 /* unsupported: DataPropertyRange(DataProperty(http://cohse.semanticweb.org/ontologies/people#service_number),Datatype(http://www.w3.org/2001/XMLSchema#integer)) */
+
 Every truck is a vehicle.
 
 Every tabloid is a newspaper.

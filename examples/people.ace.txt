@@ -186,6 +186,7 @@ Tom is something.
 Walt is a person.
 
 /* unsupported: DifferentIndividuals([NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Dewey),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fido),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Flossie),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fluffy),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fred),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Huey),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Joe),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Kevin),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Louie),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Mick),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Minnie),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Rex),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Sun),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Times),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Tibbs),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Walt)]) */
+
 Fred has_pet Tibbs.
 
 Joe has_pet Fido.

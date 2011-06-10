@@ -20,7 +20,7 @@
 /** <module> OWL 2 verbalizer
 
 @author Kaarel Kaljurand
-@version 2011-06-09
+@version 2011-06-10
 
 */
 
@@ -53,7 +53,7 @@ owlfss_acetext(AxiomList, AxiomSentenceList) :-
 %
 axiomlist_sentencelist([], []).
 
-axiomlist_sentencelist([Axiom | AxiomList], [Axiom-[] | SentenceList]) :-
+axiomlist_sentencelist([Axiom | AxiomList], [Axiom-ignored | SentenceList]) :-
 	is_ignore(Axiom),
 	!,
 	axiomlist_sentencelist(AxiomList, SentenceList).
@@ -99,9 +99,10 @@ axiomlist_sentencelist_x([UnsupportedAxiom | AxiomList], [ErrorMessage | Sentenc
 is_ignore('Declaration'(_)).
 is_ignore('Prefix'(_, _)).
 is_ignore('AnnotationAssertion'(_, _, _)).
-is_ignore('Imports'(_)).
+is_ignore('Import'(_)).
 %is_ignore('SubClassOf'(_, 'Class'('owl:Thing'))).
 
 % @deprecated
 is_ignore('EntityAnnotation'(_, _)).
 is_ignore('Annotation'(_, _)).
+is_ignore('Imports'(_)).

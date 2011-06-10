@@ -51,10 +51,6 @@ output_results(Format, Results) :-
 
 output_results_loop(_Format, []).
 
-output_results_loop(Format, [_-[] | Results]) :-
-	!,
-	output_results_loop(Format, Results).
-
 output_results_loop(Format, [Axiom-Message | Results]) :-
 	atom(Message),
 	!,
@@ -67,8 +63,6 @@ output_results_loop(Format, [Axiom-SentenceList | Results]) :-
 	output_results_loop(Format, Results).
 
 
-
-
 %% format_axiom_separator(+Format:atom)
 %
 format_axiom_separator(ace) :- nl.
@@ -78,11 +72,20 @@ format_axiom_separator(html).
 
 %% format_message(+Format:atom, +Message:term, +Axiom:term)
 %
+% Outputs the message (e.g. error, warning, comment).
+% If some output is generated then we also output the
+% axiom separator symbol (newline).
+%
+format_message(ace, ignored, _Axiom) :- !.
+format_message(html, ignored, _Axiom) :- !.
+
 format_message(ace, Message, Axiom) :-
-	format("/* ~w: ~w */~n", [Message, Axiom]).
+	format("/* ~w: ~w */~n", [Message, Axiom]),
+	format_axiom_separator(ace).
 
 format_message(csv, Message, Axiom) :-
-	format("~w\t~w~n", [Message, Axiom]).
+	format("~w\t~w~n", [Message, Axiom]),
+	format_axiom_separator(csv).
 
 format_message(html, Message, Axiom) :-
 	format("<tr style='color: red'><td>~w</td><td>~w</td></tr>~n", [Axiom, Message]).
