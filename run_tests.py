@@ -31,6 +31,7 @@ curl='curl'
 extension_pattern='\.owl'
 port=5123
 workers=4
+timelimit=5
 server_url="http://localhost:" + str(port)
 
 
@@ -76,7 +77,7 @@ def run_as_script(g):
 	"""
 	"""
 	for path in g:
-		cmd = [owl_to_ace_exe, '-xml', path, '-format', args.fmt]
+		cmd = [owl_to_ace_exe, '-xml', path, '-format', args.fmt, '-timelimit', str(timelimit)]
 		process_file(cmd, path)
 
 
@@ -132,7 +133,7 @@ time_start = None
 
 if args.mode == 'http':
 	print 'Starting the server'
-	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port), '-workers', str(workers)]
+	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port), '-workers', str(workers), '-timelimit', str(timelimit)]
 	print cmd
 	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
 	wait_until_up(server)

@@ -1,23 +1,8 @@
 % OWL 2 XML verbalizer command-line client
+% (See README.txt for installation instructions and usage examples.)
 %
 % Author: Kaarel Kaljurand
 % Version: 2011-06-10
-%
-% Building the command-line client:
-%
-% swipl -O -F none -t halt -g "[owl_to_ace], qsave_program('owl_to_ace.exe', [goal(owl_to_ace), local(25000), global(50000)])."
-%
-% Using the command-line interface:
-%
-% ./owl_to_ace.exe -xml file.owx
-%
-% Starting the verbalizer HTTP service:
-%
-% ./owl_to_ace.exe -httpserver -port 5123
-%
-% Using the verbalizer service by loading e.g. the URL:
-%
-% http://localhost:5123/?xml=...
 %
 
 :- use_module(library('http/thread_httpd')).
@@ -41,6 +26,12 @@
 		init_lexicon/1
 	]).
 
+%
+% Location of the webservice.
+%
+:- http_handler('/', owl_to_ace_handler, []).
+
+:- dynamic(http_server_time_limit/1).
 
 %% default_value(+Key:atom, -Value:atomic)
 %
@@ -49,20 +40,9 @@
 default_value(format, ace).
 default_value(workers, 4).
 default_value(port, 8000).
-
-%
-% Location of the webservice.
-%
-:- http_handler('/', owl_to_ace_handler, []).
-
-
-%% cli_time_limit(?TimeLimit:integer)
-%
-% Command-line interface time limit.
-% The default timelimit is 40 seconds,
-% that should be enough even for large ontologies like GALEN.
-%
-cli_time_limit(40).
+% The default timelimit is 30 seconds,
+% which should be enough even for large ontologies like GALEN.
+default_value(timelimit, 30).
 
 
 %% argument(?Arg, -Value, -Desc)
@@ -74,14 +54,14 @@ argument('-format', 'STRING', 'Specify the output format, one of {ace, html, csv
 argument('-httpserver', '', 'Launch an HTTP interface to OWL verbalizer.').
 argument('-port', 'NUMBER', 'Override the default port (8000) of the HTTP interface.').
 argument('-workers', 'NUMBER', 'Override the default number of workers (4) on the HTTP server.').
+argument('-timelimit', 'NUMBER', 'Time out after this number of seconds.').
 argument('-version', '', 'Show version information.').
 argument('-help', '', 'Show this help page.').
 
 
-%% owl_to_ace
+%% main
 %
-%
-owl_to_ace :-
+main :-
 	current_prolog_flag(argv, RawArgList),
 	get_arglist(RawArgList, ArgList),
 	catch(
@@ -147,15 +127,16 @@ process_input(InputList) :-
 	memberchk(xml=FileName, InputList),
 	!,
 	get_arg(format, InputList, Format),
-	cli_time_limit(TimeLimit),
-	owl_to_ace(FileName, TimeLimit, Format).
+	get_arg(timelimit, InputList, TimeLimit),
+	cli(FileName, TimeLimit, Format).
 
 process_input(InputList) :-
 	memberchk(httpserver=on, InputList),
 	!,
 	get_arg(port, InputList, Port),
 	get_arg(workers, InputList, Workers),
-	start_http_server(Port, Workers).
+	get_arg(timelimit, InputList, TimeLimit),
+	start_http_server(Port, Workers, TimeLimit).
 
 
 %% get_arg(+Key:atom, +InputList:list, -Value:atomic)
@@ -166,6 +147,7 @@ process_input(InputList) :-
 get_arg(Key, InputList, Value) :-
 	memberchk(Key=Value, InputList),
 	!.
+
 get_arg(Key, _, Value) :-
 	default_value(Key, Value).
 
@@ -206,15 +188,18 @@ get_arglist(RawArgList, ArgList) :-
 get_arglist([_|ArgList], ArgList).
 
 
+% cli(+Filename:atom, +Timelimit:number, +Format:atom)
+%
 % This interface is for the commandline.
-owl_to_ace(FileName, TimeLimit, Format) :-
-	call_with_time_limit(TimeLimit, owl_to_ace(FileName, Format)).
+%
+cli(Filename, TimeLimit, Format) :-
+	call_with_time_limit(TimeLimit, owl_to_ace_cli(Filename, Format)).
 
-owl_to_ace(FileName, Format) :-
+owl_to_ace_cli(FileName, Format) :-
 	owlxml_owlfss(FileName, Ontology, _ErrorList),
-	owl_to_ace_x(Ontology, cli, Format).
+	owl_to_ace(Ontology, cli, Format).
 
-owl_to_ace_x('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
+owl_to_ace('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
 	owlfss_acetext(AxiomList, Results),
 	current_stream(1, write, Stream),
 	set_stream(Stream, encoding(utf8)),
@@ -223,6 +208,8 @@ owl_to_ace_x('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
 
 
 %% output_results(+Format:atom, +Results:list)
+%
+% In case of csv-output we do not use the lexicon.
 %
 output_results(csv, _, Results) :-
 	!,
@@ -237,27 +224,30 @@ output_results(Format, AxiomList, Results) :-
 %
 % @bug Make sure I understand what thread_get_message/1 does.
 %
-start_http_server(Port, Workers) :-
-	format("Starting owl_to_ace at port ~w with ~w workers ...~n", [Port, Workers]),
+start_http_server(Port, Workers, TimeLimit) :-
+	format("Starting owl_to_ace at port ~w with ~w workers and ~w sec time limit ...~n", [Port, Workers, TimeLimit]),
+	assert(http_server_time_limit(TimeLimit)),
 	http_server(http_dispatch, [port(Port), workers(Workers)]),
 	thread_get_message(_),
 	format("Stopping owl_to_ace ...~n"),
 	halt.
 
 owl_to_ace_handler(Request) :-
+	default_value(format, DefaultFormat),
+	http_server_time_limit(TimeLimit),
 	catch(
 		call_with_time_limit(
-			20,
+			TimeLimit,
 			(
 				http_parameters(Request, [
 					xml(XmlAtom, []),
-					format(Format, [oneof([ace, csv, html]), default(ace)])
+					format(Format, [oneof([ace, csv, html]), default(DefaultFormat)])
 				]),
 				atom_to_memory_file(XmlAtom, Handle),
 				open_memory_file(Handle, read, InStream),
 				load_structure(InStream, XML, [dialect(xml), space(remove)]),
 				ellist_termlist(XML, []-_ErrorList, [Ontology]),
-				owl_to_ace_x(Ontology, http, Format)
+				owl_to_ace(Ontology, http, Format)
 			)
 		),
 		Exception,
