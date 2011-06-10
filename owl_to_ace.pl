@@ -195,6 +195,7 @@ get_arglist([_|ArgList], ArgList).
 cli(Filename, TimeLimit, Format) :-
 	call_with_time_limit(TimeLimit, owl_to_ace_cli(Filename, Format)).
 
+
 owl_to_ace_cli(FileName, Format) :-
 	owlxml_owlfss(FileName, Ontology, _ErrorList),
 	owl_to_ace(Ontology, cli, Format).
@@ -278,10 +279,15 @@ format_to_mime(html, 'text/html').
 %
 % Pretty-prints the exception term for the terminal.
 %
-% @param Exception is the exception term in the form error(Formal, context(Name/Arity, Message))
+% @param Exception is the exception term in the form
+%        error(Formal, context(Name/Arity, Message))
 %
 format_error_for_terminal(error(Formal, context(_Name/_Arity, Message))) :-
+	!,
 	format(user_error, "ERROR: ~w: ~w~n", [Formal, Message]).
+
+format_error_for_terminal(Error) :-
+	format(user_error, "ERROR: ~w~n", [Error]).
 
 
 %% format_error_for_http(+Exception:term, -ContentType:atom, -Content:term)
@@ -297,4 +303,8 @@ format_error_for_http(error(type_error(_, WrongType), context(_Name/_Arity, Mess
 	with_output_to(atom(Xml), format("<error type=\"Wrong input type\">~w: ~w</error>", [Message, WrongType])).
 
 format_error_for_http(error(Formal, context(_Name/_Arity, Message)), 'text/xml', Xml) :-
+	!,
 	with_output_to(atom(Xml), format("<error type=\"~w\">~w</error>", [Formal, Message])).
+
+format_error_for_http(Error, 'text/xml', Xml) :-
+	with_output_to(atom(Xml), format("<error>~w</error>", [Error])).
