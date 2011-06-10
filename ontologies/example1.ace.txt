@@ -1,0 +1,37 @@
+Every man is known by a woman.
+
+Every man is known by a woman.
+Everything that is known by a woman is a man.
+
+Every man knows something that is not Mary.
+
+Every man knows a woman.
+
+Every man is known by Mary.
+
+Every man is known by something that is not a woman.
+
+Every man is known by something that is not Mary.
+
+Every man knows something that is not a woman.
+
+Every man knows Mary.
+
+Everything that knows a man is a woman.
+
+No man knows Mary.
+
+Everything that is known by a man is a woman.
+
+Everything that knows a man is something that is Mary.
+
+No man is known by a woman.
+
+No man is known by Mary.
+
+No man knows a woman.
+
+Everything that is known by a man is something that is Mary.
+
+Every man knows at least 2 women that own a cat.
+

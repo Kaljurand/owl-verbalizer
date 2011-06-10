@@ -1,0 +1,323 @@
+ignored	Prefix(rdf,http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+
+ignored	Prefix(rdfs,http://www.w3.org/2000/01/rdf-schema#)
+
+ignored	Prefix(xsd,http://www.w3.org/2001/XMLSchema#)
+
+ignored	Prefix(owl,http://www.w3.org/2002/07/owl#)
+
+ignored	Declaration(Class(#fireman))
+
+ignored	Declaration(Class(#man))
+
+ignored	Declaration(Class(#woman))
+
+ignored	Declaration(ObjectProperty(#hate))
+
+ignored	Declaration(ObjectProperty(#like))
+
+ignored	Declaration(ObjectProperty(#love))
+
+ignored	Declaration(ObjectProperty(#see))
+
+ignored	Declaration(DataProperty(#id_code))
+
+ignored	Declaration(NamedIndividual(#John))
+
+ignored	Declaration(NamedIndividual(#Mary))
+
+f	Every
+cn_sg	#man
+tv_sg	#like
+f	at
+f	least
+f	3
+cn_pl	#woman
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	#like
+f	at
+f	least
+f	3
+cn_pl	#woman
+f	is
+f	a
+cn_sg	#man
+f	.
+
+f	Every
+cn_sg	#woman
+tv_sg	#like
+f	itself
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	#like
+f	itself
+f	is
+f	a
+cn_sg	#woman
+f	.
+
+f	Every
+cn_sg	#man
+tv_sg	#man
+f	at
+f	least
+f	3
+f	things
+f	that
+tv_pl	#man
+f	at
+f	least
+f	3
+cn_pl	#man
+f	.
+
+f	Every
+cn_sg	#fireman
+f	is
+f	a
+cn_sg	#man
+f	.
+
+f	Every
+cn_sg	#fireman
+tv_sg	#like
+f	itself
+f	.
+
+f	No
+cn_sg	#woman
+f	is
+f	a
+cn_sg	#man
+f	.
+
+pn_sg	#John
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	#Mary
+f	is
+f	a
+cn_sg	#woman
+f	.
+
+pn_sg	#Mary
+tv_sg	#love
+pn_sg	#John
+f	.
+
+pn_sg	#John
+tv_pl	#id_code
+f	0
+f	.
+
+f	If
+f	X
+tv_sg	#hate
+f	Y
+f	then
+f	X
+tv_sg	#see
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	#like
+f	Y
+f	then
+f	X
+tv_sg	http://www.w3.org/2002/07/owl#topObjectProperty
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	#love
+f	Y
+f	then
+f	X
+tv_sg	#like
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	#see
+f	Y
+f	then
+f	X
+tv_sg	http://www.w3.org/2002/07/owl#topObjectProperty
+f	Y
+f	.
+
+f	Every
+f	thing
+tv_sg	#love
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	#love
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	If
+f	X
+tv_sg	#love
+f	Y
+f	then
+f	Y
+tv_sg	#love
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	#love
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	Y
+tv_sg	#love
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	#love
+f	a
+f	thing
+f	that
+tv_sg	#love
+f	Y
+f	then
+f	X
+tv_sg	#love
+f	Y
+f	.
+
+f	Every
+f	thing
+tv_sg	#love
+f	itself
+f	.
+
+f	No
+f	thing
+tv_sg	#love
+f	itself
+f	.
+
+f	If
+f	X
+tv_sg	#hate
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	#like
+f	Y
+f	.
+
+unsupported	SubDataPropertyOf(DataProperty(#id_code),DataProperty(http://www.w3.org/2002/07/owl#topDataProperty))
+
+unsupported	FunctionalDataProperty(DataProperty(#id_code))
+
+unsupported	HasKey(Class(#fireman),DataProperty(#id_code))
+
+f	Every
+cn_sg	#man
+tv_sg	#know
+f	a
+f	thing
+f	that
+f	is
+f	not
+pn_sg	#Mary
+f	.
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg),IRI(#John),^^(John,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg),IRI(#Leaf),^^(x_Leaf,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl),IRI(#fireman),^^(firemen,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg),IRI(#fireman),^^(fireman,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl),IRI(#leave),^^(x_leave,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg),IRI(#leave),^^(x_leaves,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg),IRI(#leave),^^(x_left,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl),IRI(#like),^^(like,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg),IRI(#like),^^(likes,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg),IRI(#like),^^(liked,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl),IRI(#love),^^(love,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg),IRI(#love),^^(loves,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg),IRI(#love),^^(loved,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl),IRI(#man),^^(men,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg),IRI(#man),^^(man,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl),IRI(#man),^^(man,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg),IRI(#man),^^(mans,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl),IRI(#see),^^(see,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg),IRI(#see),^^(sees,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg),IRI(#see),^^(seen,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl),IRI(#leaf),^^(x_leaves,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg),IRI(#leaf),^^(x_leaf,http://www.w3.org/2001/XMLSchema#string))
+
+pn_sg	#Leaf
+tv_sg	#leave
+f	at
+f	most
+f	3
+cn_pl	#leaf
+f	that
+tv_pl	#leave
+f	a
+cn_sg	#leaf
+f	that
+f	is
+tv_vbg	#leave
+f	by
+pn_sg	#Leaf
+f	.
+

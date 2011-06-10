@@ -1,0 +1,216 @@
+ignored	Declaration(Class(http://www.example.org/ontologies/2007/8/example1.owx#man))
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	is
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.example.org/ontologies/2007/8/example1.owx#know))
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	a
+f	thing
+f	that
+f	is
+f	not
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.example.org/ontologies/2007/8/example1.owx#Mary))
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+f	thing
+f	that
+f	is
+f	not
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+ignored	Declaration(Class(http://www.example.org/ontologies/2007/8/example1.owx#woman))
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.example.org/ontologies/2007/8/example1.owx#know))
+
+f	No
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.example.org/ontologies/2007/8/example1.owx#Mary))
+
+f	No
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	No
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+f	No
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	by
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://www.example.org/ontologies/2007/8/example1.owx#Mary
+f	.
+
+f	Every
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#man
+tv_sg	http://www.example.org/ontologies/2007/8/example1.owx#know
+f	at
+f	least
+f	2
+cn_pl	http://www.example.org/ontologies/2007/8/example1.owx#woman
+f	that
+tv_pl	http://www.example.org/ontologies/2007/8/example1.owx#own
+f	a
+cn_sg	http://www.example.org/ontologies/2007/8/example1.owx#cat
+f	.
+
+ignored	EntityAnnotation(Class(http://www.example.org/ontologies/2007/8/example1.owx#woman),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#pl,^^(women,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.example.org/ontologies/2007/8/example1.owx#know),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#sg,^^(knows,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.example.org/ontologies/2007/8/example1.owx#know),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#vbg,^^(known,)))
+

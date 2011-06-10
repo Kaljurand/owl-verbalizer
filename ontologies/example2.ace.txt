@@ -1,0 +1,56 @@
+Every man likes at least 3 woman.
+Everything that likes at least 3 woman is a man.
+
+Every woman likes itself.
+Everything that likes itself is a woman.
+
+Every man mans at least 3 things that man at least 3 men.
+
+Every fireman is a man.
+
+Every fireman likes itself.
+
+No woman is a man.
+
+John is something.
+
+Mary is a woman.
+
+Mary loves John.
+
+John id_code 0.
+
+If X hate Y then X sees Y.
+
+If X likes Y then X topObjectProperty Y.
+
+If X loves Y then X likes Y.
+
+If X sees Y then X topObjectProperty Y.
+
+Everything loves at most 1 thing.
+
+Everything is loved by at most 1 thing.
+
+If X loves Y then Y loves X.
+
+If X loves Y then it is false that Y loves X.
+
+If X loves something that loves Y then X loves Y.
+
+Everything loves itself.
+
+Nothing loves itself.
+
+If X hate Y then it is false that X likes Y.
+
+/* unsupported: SubDataPropertyOf(DataProperty(#id_code),DataProperty(http://www.w3.org/2002/07/owl#topDataProperty)) */
+
+/* unsupported: FunctionalDataProperty(DataProperty(#id_code)) */
+
+/* unsupported: HasKey(Class(#fireman),DataProperty(#id_code)) */
+
+Every man know something that is not Mary.
+
+x_Leaf x_leaves at most 3 x_leaves that x_leave a x_leaf that is x_left by x_Leaf.
+
