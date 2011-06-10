@@ -13,8 +13,7 @@
 % OWL verbalizer. If not, see http://www.gnu.org/licenses/.
 
 :- module(lexicon, [
-		set_default_ns/1,
-		asserta_lexicon/1,
+		init_lexicon/1,
 		pn_sg/2,
 		cn_sg/2,
 		cn_pl/2,
@@ -27,12 +26,13 @@
 /** <module> Lexicon
 
 @author Kaarel Kaljurand
-@version 2011-06-09
+@version 2011-06-10
 
-Lemma to surface form mapping.
-The mappings must be bidirectional within the same word class.
+Manages the mapping of OWL IRIs to ACE common word surface forms.
+The mapping is instantiated from a list of OWL annotation assertion axioms
+found in the ontology.
 
-The supported surface forms are:
+The supported surface forms are of the following type:
 
 * (singular) proper name,
 * singular noun,
@@ -41,21 +41,20 @@ The supported surface forms are:
 * plural verb (= infinitive verb),
 * past participle (passive participle) verb.
 
-The lexicon is instantiated from a list of OWL annotation assertion axioms.
+This mapping must obey certain rules:
 
-@tbd Cut when first argument is instantiated (?)
-@tbd Add support for checking the bidirectionality of morphological mappings
+- it must be bidirectional within the same word class
+- it must not generate forms which are not legal ACE tokens
+
+We do not check if these rules are followed, it is up to the
+user to make sure that they are.
 
 */
 
-%% asserta_lexicon(+AxiomList:list) is det.
-%% asserta_lexicon_x(+AxiomList:list) is det.
+%% init_lexicon(+AxiomList:list) is det.
+%% init_lexicon_loop(+AxiomList:list) is det.
 %
-% Instantiates the lexicon (mapping from lemmas to surface forms)
-% from a given list of entity annotation axioms.
-%
-% Note we use asserta/1 to override any existing entries for this
-% word and category.
+% Instantiates the lexicon from a given list of entity annotation axioms.
 %
 % Note that the Structural Specification and Functional-Style Syntax says that:
 %
@@ -69,39 +68,37 @@ The lexicon is instantiated from a list of OWL annotation assertion axioms.
 %
 % @param AxiomList is a list of OWL axioms
 %
-asserta_lexicon(AxiomList) :-
-	retract_lexicon,
-	asserta_lexicon_x(AxiomList).
+init_lexicon(AxiomList) :-
+	clear_lexicon,
+	init_lexicon_loop(AxiomList).
 
 
-asserta_lexicon_x([]).
+init_lexicon_loop([]).
 
 % @deprecated (OWL-API 2 style): use AnnotationAssertion
-asserta_lexicon_x(['EntityAnnotation'(Entity, 'Annotation'(Feature, '^^'(Form, _))) | AxiomList]) :-
+init_lexicon_loop(['EntityAnnotation'(Entity, 'Annotation'(Feature, '^^'(Form, _))) | AxiomList]) :-
 	make_lex_entry(Entity, Feature, Form, Entry),
 	!,
 	set_lexicon_entry(Entry),
-	asserta_lexicon_x(AxiomList).
+	init_lexicon_loop(AxiomList).
 
 % AnnotationAssertion(AnnotationProperty(sg), IRI(#John), ^^(John, http://www.w3.org/2001/XMLSchema#string))
-asserta_lexicon_x(['AnnotationAssertion'('AnnotationProperty'(Property), 'IRI'(Iri), '^^'(WordForm, _)) | AxiomList]) :-
+init_lexicon_loop(['AnnotationAssertion'('AnnotationProperty'(Property), 'IRI'(Iri), '^^'(WordForm, _)) | AxiomList]) :-
 	make_lex_entry(Iri, Property, WordForm, Entry),
 	!,
 	set_lexicon_entry(Entry),
-	asserta_lexicon_x(AxiomList).
+	init_lexicon_loop(AxiomList).
 
-asserta_lexicon_x([_Axiom | AxiomList]) :-
+init_lexicon_loop([_Axiom | AxiomList]) :-
 	% format("Ignoring: ~w~n", [Axiom]),
-	asserta_lexicon_x(AxiomList).
+	init_lexicon_loop(AxiomList).
 
 
-%% retract_lexicon is det.
+%% clear_lexicon is det.
 %
-% Removes all dynamic lexicon entries.
+% Removes all the lexicon entries.
 %
-% TODO: not sure we need it
-%
-retract_lexicon :-
+clear_lexicon :-
 	nb_current(N, _), nb_delete(N), fail ; true.
 
 
@@ -124,22 +121,17 @@ make_lex_entry('ObjectProperty'(Lemma), 'http://attempto.ifi.uzh.ch/ace_lexicon#
 
 %% make_lex_entry(+Iri:term, +MorphType:atom, +WordForm:atom, -LexiconEntry:term) is det.
 %
-% @param Iri is an IRI, e.g. 'http://blah':man
+% @param Iri is an IRI, e.g. http://example.org/test#man
 % @param MorphType is an IRI for an ACE morphological type, one of {PN_sg, CN_sg, CN_pl, TV_sg, TV_pl, TV_vbg}
 % @param WordForm is an ACE surface word-form
-% @param LexiconEntry is a lexicon entry, one of {n_pl/2, v_sg/2, v_vbg/2}
+% @param LexiconEntry is a lexicon entry
 %
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg', Form, entry('PN_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg', Form, entry('CN_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl', Form, entry('CN_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg', Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl', Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg', Form, entry('TV_vbg', Lemma, Form)).
-
-% BUG: just for testing, remove these at some point
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#sg', Form, entry('TV_sg', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#pl', Form, entry('TV_pl', Lemma, Form)).
-make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#vbg', Form, entry('TV_vbg', Lemma, Form)).
+make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg', Form, entry('PN_sg', Iri, Form)).
+make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg', Form, entry('CN_sg', Iri, Form)).
+make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl', Form, entry('CN_pl', Iri, Form)).
+make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg', Form, entry('TV_sg', Iri, Form)).
+make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl', Form, entry('TV_pl', Iri, Form)).
+make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg', Form, entry('TV_vbg', Iri, Form)).
 
 
 %% pn_sg(+Iri, +WordForm) is det.
@@ -149,7 +141,7 @@ make_lex_entry(Lemma, 'http://attempto.ifi.uzh.ch/ace_lexicon#vbg', Form, entry(
 %% tv_pl(+Iri, +WordForm) is det.
 %% tv_vbg(+Iri, +WordForm) is det.
 %
-% Interface to the dynamic lexicon
+% Interface to the morph. mapping
 % with a fallback to using the IRI fragment.
 %
 pn_sg(X, Y) :- get_lexicon_entry('PN_sg', X, Y), !.
@@ -230,6 +222,7 @@ get_lexicon_entry(Type, Iri, Form) :-
 
 %% set_default_ns(+NS:atom) is det.
 %
+% TODO: currently not used
 set_default_ns(NS) :-
 	nb_setval(default_ns, NS).
 

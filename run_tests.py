@@ -76,7 +76,7 @@ def run_as_script(g):
 	"""
 	"""
 	for path in g:
-		cmd = [owl_to_ace_exe, '-owlfile', path, '-format', args.fmt]
+		cmd = [owl_to_ace_exe, '-xml', path, '-format', args.fmt]
 		process_file(cmd, path)
 
 

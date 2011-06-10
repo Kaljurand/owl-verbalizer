@@ -1,7 +1,7 @@
 % OWL 2 XML verbalizer command-line client
 %
 % Author: Kaarel Kaljurand
-% Version: 2011-06-06
+% Version: 2011-06-10
 %
 % Building the command-line client:
 %
@@ -38,8 +38,7 @@
 	]).
 
 :- use_module(lexicon, [
-		set_default_ns/1,
-		asserta_lexicon/1
+		init_lexicon/1
 	]).
 
 
@@ -194,7 +193,7 @@ show_help :-
 % Prints the version information.
 %
 show_version :-
-	format("OWL verbalizer, ver ~w~n", ['0.9.2']).
+	format("OWL verbalizer, ver ~w~n", ['0.9.3']).
 
 
 %% get_arglist(+RawArgList, -ArgList)
@@ -213,23 +212,25 @@ owl_to_ace(FileName, TimeLimit, Format) :-
 
 owl_to_ace(FileName, Format) :-
 	owlxml_owlfss(FileName, Ontology, _ErrorList),
-	Ontology = 'Ontology'(_Name, NS, AxiomList),
+	owl_to_ace_x(Ontology, cli, Format).
+
+owl_to_ace_x('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
 	owlfss_acetext(AxiomList, Results),
 	current_stream(1, write, Stream),
 	set_stream(Stream, encoding(utf8)),
-	output_results(Format, NS, AxiomList, Results).
+	output_header(Mode, Format),
+	output_results(Format, AxiomList, Results).
 
 
-%% output_results(+Format:atom, +SentenceList:list)
+%% output_results(+Format:atom, +Results:list)
 %
-output_results(csv, _, _, SentenceList) :-
+output_results(csv, _, Results) :-
 	!,
-	output_results(csv, SentenceList).
+	output_results(csv, Results).
 
-output_results(Format, NS, AxiomList, SentenceList) :-
-	set_default_ns(NS),
-	asserta_lexicon(AxiomList),
-	output_results(Format, SentenceList).
+output_results(Format, AxiomList, Results) :-
+	init_lexicon(AxiomList),
+	output_results(Format, Results).
 
 
 %% http_server(+PortNumber:integer, +WorkerCount:integer)
@@ -256,13 +257,7 @@ owl_to_ace_handler(Request) :-
 				open_memory_file(Handle, read, InStream),
 				load_structure(InStream, XML, [dialect(xml), space(remove)]),
 				ellist_termlist(XML, []-_ErrorList, [Ontology]),
-				Ontology = 'Ontology'(_Name, NS, AxiomList),
-				owlfss_acetext(AxiomList, SentenceList),
-				format_to_mime(Format, Mime),
-				current_stream(1, write, Stream),
-				set_stream(Stream, encoding(utf8)),
-				format('Content-type: ~w\r\n\r\n', [Mime]),
-				output_results(Format, NS, AxiomList, SentenceList)
+				owl_to_ace_x(Ontology, http, Format)
 			)
 		),
 		Exception,
@@ -271,6 +266,15 @@ owl_to_ace_handler(Request) :-
 			format('Content-type: ~w\r\n\r\n~w', [ContentType, Content])
 		)
 	).
+
+
+%% output_header(+Mode:atom, +Format:atom)
+%
+output_header(cli, _Format).
+
+output_header(http, Format) :-
+	format_to_mime(Format, Mime),
+	format('Content-type: ~w\r\n\r\n', [Mime]).
 
 
 %% format_to_mime(+Format:atom, -Mime:atom)
