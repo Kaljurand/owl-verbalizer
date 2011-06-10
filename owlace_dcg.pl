@@ -16,12 +16,10 @@
 		owl_ace/2
 	]).
 
-/** <module> Definite Clause Grammar for an OWL-compatible fragment of ACE
+/** <module> Definite Clause Grammar to transform an OWL axiom into ACE tokens
 
-Converts a sentence in a fragment of ACE into an axiom in
-a syntactic fragment of OWL 2. And vice versa.
-
-_|Note: only the OWL->ACE direction has been tested.|_
+Converts an axiom in a syntactic fragment of OWL into a sentence in a
+fragment of ACE.
 
 Things to discuss:
 
@@ -36,44 +34,13 @@ Things to test:
 * How many solutions from OWL->ACE? Is the first one correct?
 * Compatibility with ACE semantics (i.e. treatment of relative clauses and coordinations)
 
-TEST:
-
-==
-owl_ace(Owl, ['Every', protein, modifies, exactly, 1, protein, that, are, modified, by, a, protein, '.']), write(Owl), nl.
-==
-
-Syntactic roundtripping does not work, e.g. in the case of: 'that' vs 'and that':
-
-==
-[Met, is, a, thing, that, is, a, thing, that, does, not, modify, a, thing, .]
-[Met, is, a, thing, that, is, a, thing, and, that, does, not, modify, a, thing, .]
-==
-
 @author Kaarel Kaljurand
-@version 2011-06-09
+@version 2011-06-10
 
 */
-
-
-%% from_ace_to_owl(+ACE:atom, -OWL:term)
-%
-% Translates ACE to OWL. Experimental.
-%
-% @bug Uses a simple tokenizer to split an atom into a list.
-% One would we need to convert numbers to Prolog numbers
-% (with atom_number/2) afterwards.
-%
-/*
-from_ace_to_owl(ACE, OWL) :-
-	concat_atom(TokenizedACE, ' ', ACE),
-	ace_merge(InternalACE, [], TokenizedACE),
-	owl_ace(OWL, InternalACE).
-*/
-
 
 
 %% owl_ace(+OWL:term, -ACE:list) is nondet.
-%% owl_ace(-OWL:term, +ACE:list) is nondet.
 %
 % Front-end to the DCG.
 %
@@ -82,26 +49,7 @@ from_ace_to_owl(ACE, OWL) :-
 %==
 % ?- owlace_dcg:owl_ace('SubClassOf'('Class'(protein),'ObjectSomeValuesFrom'('ObjectInverseOf'('ObjectProperty'(modify)),'ObjectOneOf'(['NamedIndividual'('Met')]))),ACE).
 %
-%ACE = ['Every', protein, is, modify, by, 'Met', '.'] ;
-%==
-%
-% An example of using ACE to express OWL axioms.
-% Due to coordination ambiguity there can be several solutions. The solution
-% that is compatible with the ACE interpretation rules (i.e. the relative clause
-% modifies to the closest preceding noun) is always the first solution.
-%
-% BUG: this comes out wrong as top-level OR is the first solution. I.e.
-% don't use this grammar to do the ACE->OWL translation, but only the
-% OWL->ACE translation!!!
-%
-%==
-%
-%?- owl_ace(OWL, ['Every', 'protein', 'is', 'a', 'thing', 'that', 'modifies', 'a', 'thing', 'that', 'is', 'Met', 'or', 'that', 'is', 'Met', '.']).
-%
-%OWL = 'SubClassOf'(protein, 'ObjectIntersectionOf'(['owl:Thing', 'ObjectSomeValuesFrom'(modify, 'ObjectIntersectionOf'('owl:Thing', 'ObjectUnionOf'('ObjectOneOf'(['Met']), 'ObjectOneOf'(['Met']))))])) ;
-%
-%OWL = 'SubClassOf'(protein, 'ObjectIntersectionOf'(['owl:Thing', 'ObjectUnionOf'('ObjectSomeValuesFrom'(modify, 'ObjectIntersectionOf'('owl:Thing', 'ObjectOneOf'(['Met']))), 'ObjectOneOf'(['Met']))])) ;
-%No
+%ACE = ['Every', cn_sg(protein), is, tv_vbg(modify), by, pn_sg('Met'), '.']
 %==
 %
 % @param OWL is an OWL axiom in the OWL 2 Functional-Style Syntax (Prolog notation)
@@ -109,7 +57,8 @@ from_ace_to_owl(ACE, OWL) :-
 %
 
 owl_ace(OWL, ACE) :-
-	ip(OWL, ACE, []).
+	ip(OWL, ACE, []),
+	!.
 
 
 %
@@ -121,7 +70,7 @@ ip(
 	TokenList,
 	[]
 ) :-
-	propertychain_verbchain(PropertyChain, [something, that | Tail]),
+	propertychain_verbchain(PropertyChain, [a, thing, that | Tail]),
 	TokenListBeginning = ['If', 'X' | Tail],
 	append(TokenListBeginning, ['Y', then, 'X', tv_sg(S), 'Y', '.'], TokenList).
 
@@ -130,7 +79,7 @@ ip(
 	TokenList,
 	[]
 ) :-
-	propertychain_verbchain(PropertyChain, [something, that | Tail]),
+	propertychain_verbchain(PropertyChain, [a, thing, that | Tail]),
 	TokenListBeginning = ['If', 'X' | Tail],
 	append(TokenListBeginning, ['Y', then, 'X', is, tv_vbg(S), by, 'Y', '.'], TokenList).
 
@@ -177,16 +126,16 @@ ibar(Num, C2) -->
 
 
 cop('ObjectOneOf'([Individual])) -->
-	propn('ObjectOneOf'([Individual])).
+	pn('ObjectOneOf'([Individual])).
 
 cop('ObjectIntersectionOf'([C1, C2])) -->
 	[a],
-	n(num=sg, C1),
+	cn(num=sg, C1),
 	relcoord(num=sg, C2).
 
 cop(C) -->
 	[a],
-	n(num=sg, C).
+	cn(num=sg, C).
 
 
 vp(Num, Neg, Vbn, Restriction) -->
@@ -195,20 +144,20 @@ vp(Num, Neg, Vbn, Restriction) -->
 
 
 np_subj(C, 'SubClassOf'('ObjectOneOf'([Individual]), C)) -->
-	propn('ObjectOneOf'([Individual])).
+	pn('ObjectOneOf'([Individual])).
 
 np_subj(Y, 'SubClassOf'(C, D)) -->
 	det_subj(C, Y, 'SubClassOf'(C, D)),
-	n(num=sg, C).
+	cn(num=sg, C).
 
 np_subj(Y, 'SubClassOf'(C, D)) -->
 	det_subj('ObjectIntersectionOf'([X, Coord]), Y, 'SubClassOf'(C, D)),
-	n(num=sg, X),
+	cn(num=sg, X),
 	relcoord(num=sg, Coord).
 
 
 np_obj(_, R, 'ObjectSomeValuesFrom'(R, 'ObjectOneOf'([Individual]))) -->
-	propn('ObjectOneOf'([Individual])).
+	pn('ObjectOneOf'([Individual])).
 
 np_obj(_, R, 'DataHasValue'(R, '^^'(Integer, 'http://www.w3.org/2001/XMLSchema#integer'))) -->
 	[Integer],
@@ -230,11 +179,11 @@ np_obj(num=pl, R, 'ObjectHasSelf'(R)) -->
 
 np_obj(_, R, Restriction) -->
 	det_obj(Num, R, C, Restriction),
-	n(Num, C).
+	cn(Num, C).
 
 np_obj(_, R, Restriction) -->
 	det_obj(Num, R, 'ObjectIntersectionOf'([C, Coord]), Restriction),
-	n(Num, C),
+	cn(Num, C),
 	relcoord(Num, Coord).
 
 
@@ -391,11 +340,11 @@ or(C1, C2, 'ObjectUnionOf'([C1, C2])) -->
 
 
 %
-% CONTENT LEXICON: propn//1, n//2, tv//4
+% CONTENT LEXICON: pn//1, cn//2, tv//4
 %
 
 % Proper names
-propn('ObjectOneOf'(['NamedIndividual'(Lemma)])) -->
+pn('ObjectOneOf'(['NamedIndividual'(Lemma)])) -->
 	[pn_sg(Lemma)].
 
 /*
@@ -405,19 +354,19 @@ TODO: this way of handling Anonymous individuals does not work:
 sure that a ClassAssertion is verbalized before SubClassOf in case both
 reference the same anonymous individual
 
-propn('ObjectOneOf'(['AnonymousIndividual'(NodeId)])) -->
+pn('ObjectOneOf'(['AnonymousIndividual'(NodeId)])) -->
 	[NodeId].
 */
 
-% Nouns (including `something')
+% Nouns (including `thing')
 % For nouns we have to describe 2 forms: {num=sg, num=pl}
-n(num=sg, 'Class'('http://www.w3.org/2002/07/owl#Thing')) -->
+cn(num=sg, 'Class'('http://www.w3.org/2002/07/owl#Thing')) -->
 	[thing].
-n(num=pl, 'Class'('http://www.w3.org/2002/07/owl#Thing')) -->
+cn(num=pl, 'Class'('http://www.w3.org/2002/07/owl#Thing')) -->
 	[things].
-n(num=sg, 'Class'(Lemma)) -->
+cn(num=sg, 'Class'(Lemma)) -->
 	[cn_sg(Lemma)].
-n(num=pl, 'Class'(Lemma)) -->
+cn(num=pl, 'Class'(Lemma)) -->
 	[cn_pl(Lemma)].
 
 
@@ -469,11 +418,11 @@ tv(num=pl, neg=yes, vbn=no, 'DataProperty'(Lemma)) -->
 %==
 % propertychain_verbchain(['ObjectProperty'(know), 'ObjectInverseOf'('ObjectProperty'(eat))], VerbChain).
 %
-% VerbChain = [something, that, knows, something, that, is, eaten, by] 
+% VerbChain = [a, thing, that, tv_sg(know), a, thing, that, is, tv_vbg(eat), by].
 %==
 %
 % @param PropertyChain is a list of OWL property expressions
-% @param VerbChain is a list of ACE tokens containing `something', `that', and the verb
+% @param VerbChain is a list of ACE tokens containing `a thing', `that', and the verb
 %
 propertychain_verbchain([], []).
 
@@ -485,9 +434,9 @@ propertychain_verbchain([Property | PropertyChainTail], VerbChain) :-
 %% property_verb(+Property:term, ?VerbChainTail:list, -VerbChain:list) is det.
 %
 % @param Property is an OWL property expression
-% @param VerbChainTail is a list of ACE tokens containing `something', `that', and the verb
-% @param VerbChain is a list of ACE tokens containing `something', `that', and the verb
+% @param VerbChainTail is a list of ACE tokens containing `a thing', `that', and the verb
+% @param VerbChain is a list of ACE tokens containing `a thing', `that', and the verb
 %
-property_verb('ObjectProperty'(R), VerbChainTail, [something, that, tv_sg(R) | VerbChainTail]).
+property_verb('ObjectProperty'(R), VerbChainTail, [a, thing, that, tv_sg(R) | VerbChainTail]).
 
-property_verb('ObjectInverseOf'('ObjectProperty'(R)), VerbChainTail, [something, that, is, tv_vbg(R), by | VerbChainTail]).
+property_verb('ObjectInverseOf'('ObjectProperty'(R)), VerbChainTail, [a, thing, that, is, tv_vbg(R), by | VerbChainTail]).
