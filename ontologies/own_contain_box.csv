@@ -1,0 +1,112 @@
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own
+f	by
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+f	is
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	.
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own
+f	a
+f	thing
+f	that
+f	does
+f	not
+tv_pl	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	.
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#own
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain
+f	nothing
+f	but
+cn_pl	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#man
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#contain))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193332409558.owl#box
+f	is
+f	a
+f	thing
+f	.
+

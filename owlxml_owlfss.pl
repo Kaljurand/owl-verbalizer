@@ -89,7 +89,7 @@ el_term(element('Prefix', AttrList, _), E-E, 'Prefix'(Name, IRI)) :-
 	memberchk(name = Name, AttrList),
 	memberchk('IRI' = IRI, AttrList),
 	% BUG: use global variables instead
-	assert(owlverbalizer_Prefix(Name, IRI)),
+	assertz(owlverbalizer_Prefix(Name, IRI)),
 	!.
 
 el_term(element('AbbreviatedIRI', [], [PCDATA]), E-E, 'IRI'(Iri)) :-

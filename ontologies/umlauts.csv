@@ -1,0 +1,11 @@
+pn_sg	http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#Mary
+tv_sg	http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#like
+pn_sg	http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#ÕÄÖÜõäöü
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#like))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#ÕÄÖÜõäöü))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2008/0/Ontology1199316673723.owl#Mary))
+

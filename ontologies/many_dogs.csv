@@ -1,0 +1,65 @@
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#man
+f	is
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#like
+f	at
+f	most
+f	3
+cn_pl	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog
+f	and
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#like
+f	at
+f	least
+f	4
+cn_pl	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog
+f	and
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#like
+f	at
+f	least
+f	11
+cn_pl	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog
+f	and
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#like
+f	at
+f	least
+f	15
+f	things
+f	that
+f	are
+f	not
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#man))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#like))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#man
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#man))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#like))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182269408095.owl#dog))
+

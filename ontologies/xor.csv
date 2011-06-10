@@ -1,0 +1,2 @@
+comment	/* BUG: axiom too complex: SubClassOf(Class(http://www.example.org/xor.owl#pet),ObjectIntersectionOf([ObjectUnionOf([Class(http://www.example.org/xor.owl#cat),Class(http://www.example.org/xor.owl#dog)]),ObjectComplementOf(ObjectIntersectionOf([Class(http://www.example.org/xor.owl#cat),Class(http://www.example.org/xor.owl#dog)]))])) */
+

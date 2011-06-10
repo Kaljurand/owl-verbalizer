@@ -1,0 +1,39 @@
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#dog
+f	is
+f	a
+f	thing
+f	.
+
+f	No
+f	thing
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#dog-cat
+f	.
+
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#cat
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#dog-cat
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#cat
+f	that
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#dog
+f	.
+
+f	No
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#dog
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#cat
+f	.
+

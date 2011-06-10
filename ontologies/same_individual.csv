@@ -1,0 +1,14 @@
+unsupported	SameIndividual([])
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Mary
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Mary
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Mary
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Mary
+f	.
+
+unsupported	DifferentIndividuals([NamedIndividual(http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Mary),NamedIndividual(http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Mary)])
+

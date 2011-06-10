@@ -1,0 +1,178 @@
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	a
+f	thing
+f	that
+f	is
+f	not
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+f	a
+f	thing
+f	that
+f	is
+f	not
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman))
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know))
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary))
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#woman
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know
+f	by
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#man
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#Mary
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://www.semanticweb.org/ontologies/2007/8/Ontology1190715883068.owl#know),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#sg,^^(knowss,)))
+

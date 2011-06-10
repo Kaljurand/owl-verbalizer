@@ -1,0 +1,13 @@
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2008/0/Ontology1201625185673.owl#man))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2008/0/Ontology1201625185673.owl#woman))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2008/0/Ontology1201625185673.owl#man
+tv_sg	http://www.semanticweb.org/ontologies/2008/0/Ontology1201625185673.owl#like
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2008/0/Ontology1201625185673.owl#woman
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2008/0/Ontology1201625185673.owl#like))
+

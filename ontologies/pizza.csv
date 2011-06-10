@@ -1,0 +1,6445 @@
+ignored	Annotation(http://www.w3.org/2002/07/owl#versionInfo,^^(v.1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional,))
+
+ignored	Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(An example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://www.co-ode.org/resources/tutorials/),))
+
+ignored	Annotation(http://www.w3.org/2002/07/owl#versionInfo,^^(version 1.5,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	Annotation(http://www.w3.org/2002/07/owl#versionInfo,^^(v.1.5. Removed protege.owl import and references. Made ontology URI date-independent,))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Note that hasTopping is inverse functional because isToppingOf is functional,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#pl,^^(have_topping,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCalabreza,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(SloppyGiuseppe,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#America
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza that does not have fish topping and does not have meat topping is a VegetarianPizza. Members of this class do not need to have any toppings at all.,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaPrinceCarlo,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmaHamTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePrezuntoParma,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCaper,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#DeepPanBase),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(BaseEspessa,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	nothing
+f	but
+cn_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyPizza
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	nothing
+f	but
+cn_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Cogumelo,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+unsupported	DifferentIndividuals([NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#France),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#America),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#England),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany)])
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(An unclosed Pizza cannot be inferred to be either a VegetarianPizza or a NonVegetarianPizza, because it might have other toppings.,http://www.w3.org/2001/XMLSchema#string)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	a
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	Y
+f	then
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	Y
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCajun,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(LaReine,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeAnchovies,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeLeek,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Media,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaRosemary,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmaHamTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeVegetais,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#America
+f	is
+f	a
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaTemperada,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeParmesao,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Parmense,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeTomateFatiado,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RedOnionTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza that has a spicy topping is a SpicyPizza,)))
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	Y
+f	then
+f	Y
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	Y
+f	then
+f	Y
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	X
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+ignored	Annotation(http://www.w3.org/2002/07/owl#versionInfo,^^(v.1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional,))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaRocket,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaPeperonata,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SultanaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	at
+f	least
+f	3
+f	things
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	at
+f	least
+f	3
+f	things
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A class to demonstrate mistakes made with setting a property domain. The property hasTopping has a domain of Pizza. This means that the reasoner can infer that all individuals using the hasTopping property must be of type Pizza. Because of the restriction on this class, all members of IceCream must use the hasTopping property, and therefore must also be members of Pizza. However, Pizza and IceCream are disjoint, so this causes an inconsistency. If they were not disjoint, IceCream would be inferred to be a subclass of Pizza.,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Fiorentina,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(AmericanaPicante,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeGorgonzola,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A property created to be used with the ValuePartition - Spiciness.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePimentaoDoce,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(BaseDaPizza,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePeixe,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePimentaoVerde,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(An alternative definition for the SpicyPizza which does away with needing a definition of SpicyTopping and uses a slightly more complicated restriction: Pizzas that have at least one topping that is both a PizzaTopping and has spiciness hot are members of this class.,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCamarao,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(FrutosDoMar,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaVegetarianaEquivalente2,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmaHamTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany
+f	is
+f	a
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaEmMolho,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Rosa,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+ignored	Annotation(http://www.w3.org/2002/07/owl#versionInfo,^^(v.1.5. Removed protege.owl import and references. Made ontology URI date-independent,))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(The inverse property tree to hasIngredient - all subproperties and attributes of the properties should reflect those under hasIngredient.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeJalapeno,)))
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	Y
+f	then
+f	Y
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	Y
+f	then
+f	Y
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	X
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaQuatroQueijos,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RedOnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Picante,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeArtichoke,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeQueijoDeCabra,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any Pizza that is not a VegetarianPizza,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza that has at least 1 cheese topping.,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeAspargos,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Siciliana,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(NaoPicante,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#DeepPanBase
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#DomainConcept
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#America
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#England
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#France
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#DomainConcept
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#America
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#England
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#France
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany
+f	or
+f	that
+f	is
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SultanaTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaComQueijo,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePimentaoVerdePicante,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	Annotation(http://www.w3.org/2002/07/owl#versionInfo,^^(version 1.5,http://www.w3.org/2001/XMLSchema#string))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaAberta,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SultanaTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaSultana,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RedOnionTopping
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf
+f	Y
+f	then
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	Y
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Giardiniera,)))
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	a
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	Y
+f	then
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	Y
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeFrango,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaItalianaReal,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza that has at least 3 toppings. Note that this is a cardinality constraint on the hasTopping property and NOT a qualified cardinality constraint (QCR). A QCR would specify from which class the members in this relationship must be. eg has at least 3 toppings from PizzaTopping. This is currently not supported in OWL.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaVegetariana,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(BaseFinaEQuebradica,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	Y
+f	then
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	Y
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeErvas,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Country),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A class that is equivalent to the set of individuals that are described in the enumeration - ie Countries can only be either America, England, France, Germany or Italy and nothing else. Note that these individuals have been asserted to be allDifferent from each other.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza that has at least one meat topping,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isIngredientOf
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#DomainConcept
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaVegetariana,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Veneziana,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeAzeitona,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(An alternative to VegetarianPizzaEquiv1 that does not require a definition of VegetarianTopping. Perhaps more difficult to maintain. Not equivalent to VegetarianPizza,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyBase
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#America
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Caprina,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#France
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#France
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCastanha,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Napoletana,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SultanaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A ValuePartition that describes only values from Hot, Medium or Mild. NB Subclasses can themselves be divided up into further partitions.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+f	does
+f	not
+tv_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+f	does
+f	not
+tv_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeTomateRessecadoAoSol,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Tempero,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(QuatroQueijos,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePresunto,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(An example of a covering axiom. VegetarianTopping is equivalent to the union of all toppings in the given axiom. VegetarianToppings can only be Cheese or Vegetable or....etc.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	Y
+f	then
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	Y
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A ValuePartition is a pattern that describes a restricted set of classes from which a property can be associated. The parent class is used in restrictions, and the covering axiom means that only members of the subclasses may be used as values. The possible subclasses cannot be extended without updating the ValuePartition class.,http://www.w3.org/2001/XMLSchema#string)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaDeCarne,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase
+f	Y
+f	then
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	Y
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza topping that has spiciness Hot,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaVegetarianaEquivalente1,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeEspinafre,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDePimentao,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(NB Transitive - the ingredients of ingredients are ingredients of the whole,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Spiciness
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RosemaryTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#England
+f	is
+f	a
+f	thing
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#America
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDaPizza,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaPineKernels,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaInteressante,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Medium
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeTomate,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	.
+
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	Y
+f	then
+f	Y
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf
+f	Y
+f	then
+f	Y
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	X
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Margherita,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeBifePicante,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Sorvete,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(MolhoTobascoPepper,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeAlho,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourCheesesTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SundriedTomatoTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Pizza,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Country),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Pais,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpinachTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Soho,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeFrutosDoMarMistos,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SweetPepperTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeFrutas,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasIngredient
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Food
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://www.co-ode.org/ontologies/pizza/pizza.owl#isToppingOf),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any given instance of topping should only be added to a single pizza (no cheap half-measures on our pizzas),)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCebola,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCarne,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#American),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Americana,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	.
+
+ignored	Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(An example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://www.co-ode.org/resources/tutorials/),))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MixedSeafoodTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(This class will be inconsistent. This is because we have given it 2 disjoint parents, which means it could never have any members (as nothing can simultaneously be a CheeseTopping and a VegetableTopping). NB Called ProbeInconsistentTopping in the ProtegeOWL Tutorial.,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Capricciosa,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrawnsTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeQueijoComVegetais,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(QuatroQueijos,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	nothing
+f	but
+f	things
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	nothing
+f	but
+f	things
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	or
+f	that
+f	are
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#isBaseOf
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#DomainConcept
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#DeepPanBase
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaBase
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ChickenTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperoniSausageTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeQueijo,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PineKernels
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SultanaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaComUmNome,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Any pizza that only has vegetarian toppings or no toppings is a VegetarianPizzaEquiv1. Should be inferred to be equivalent to VegetarianPizzaEquiv2. Not equivalent to VegetarianPizza because PizzaTopping is not covering,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCogumelo,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+pn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#England
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Country
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PetitPoisTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaPetitPois,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	by
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AnchoviesTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#HamTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ParmesanTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A pizza that can be found on a pizza menu,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PolloAdAstra,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#ArtichokeTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaTemperadaEquivalente,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MushroomTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaTemperada,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeMozzarella,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Hot
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OliveTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#American
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#RedOnionTopping),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(CoberturaDeCebolaVermelha,)))
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FishTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SlicedTomatoTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#LeekTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(ValorDaParticao,)))
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(PizzaNaoVegetariana,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#OnionTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	nothing
+f	but
+cn_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1
+f	.
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza
+f	that
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	nothing
+f	but
+cn_pl	http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GorgonzolaTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#CaperTopping
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#AsparagusTopping
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(This defined class has conditions that are part of the definition: ie any Pizza that has the country of origin, Italy is a RealItalianPizza. It also has conditions that merely describe the members - that all RealItalianPizzas must only have ThinAndCrispy bases. In essence, all pizzas from Italy must have ThinAndCrispy bases.,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping
+f	.
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GoatsCheeseTopping
+f	.
+
+f	No
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons
+f	is
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom
+f	.
+
+ignored	EntityAnnotation(Class(http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Cajun,)))
+
+f	Every
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina
+tv_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping
+f	a
+cn_sg	http://www.co-ode.org/ontologies/pizza/pizza.owl#GarlicTopping
+f	.
+

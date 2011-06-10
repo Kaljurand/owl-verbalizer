@@ -1,0 +1,11 @@
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190717503077.owl#woman
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190717503077.owl#man
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/8/Ontology1190717503077.owl#woman))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/8/Ontology1190717503077.owl#man))
+

@@ -1,0 +1,74 @@
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#protein))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#woman))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#man))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#like))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#gene
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#woman
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#man
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#man
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#man
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#like
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#woman
+f	and
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#gene
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#protein
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#woman
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#protein
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#gene))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#protein))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#woman))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#man))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#like))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/18/Ontology1182182885303.owl#gene))
+

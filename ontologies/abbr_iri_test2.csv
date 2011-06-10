@@ -1,0 +1,17 @@
+ignored	Prefix(,http://www.example.org/test2.owl#)
+
+ignored	Prefix(ace_lexicon,http://attempto.ifi.uzh.ch/ace_lexicon#)
+
+ignored	Prefix(owl,http://www.w3.org/2002/07/owl#)
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg),IRI(http://www.example.org/test1.owl#eat),^^(eats2,))
+
+f	Every
+f	thing
+tv_sg	http://www.example.org/test1.owl#eat
+f	at
+f	least
+f	2
+f	things
+f	.
+

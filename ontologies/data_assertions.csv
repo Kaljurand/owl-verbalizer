@@ -1,0 +1,53 @@
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man
+tv_pl	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age
+f	18.81
+f	.
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age))
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#John
+tv_pl	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age
+f	4
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man
+tv_pl	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age
+f	18
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#John))
+
+comment	/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man),DataHasValue(DataProperty(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age),^^(true,http://www.w3.org/2001/XMLSchema#boolean))) */
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#John
+tv_pl	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age
+qs	three
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#John
+tv_pl	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age
+f	3
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#John
+tv_pl	http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age
+f	12.22
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man))
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#age))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#John))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/5/20/Ontology1182334866498.owl#man))
+

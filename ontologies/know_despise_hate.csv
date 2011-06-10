@@ -1,0 +1,40 @@
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#hate
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#despise
+f	Y
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#know))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#hate))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#despise))
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#know
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#despise
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#hate
+f	Y
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#know))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#hate))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/5/19/Ontology1182277241806.owl#despise))
+

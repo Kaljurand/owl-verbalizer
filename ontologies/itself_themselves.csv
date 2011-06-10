@@ -1,0 +1,22 @@
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#man
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#like
+f	at
+f	least
+f	3
+cn_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#dog
+f	that
+tv_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#like
+f	themselves
+f	.
+
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#woman
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#like
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#cat
+f	that
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#like
+f	itself
+f	.
+

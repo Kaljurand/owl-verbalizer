@@ -1,0 +1,32 @@
+ignored	Declaration(DataProperty(http://attempto.ifi.uzh.ch/ontologies/owl11/test#age))
+
+f	Every
+f	thing
+f	that
+tv_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#age
+f	18
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#teenager
+f	.
+
+f	Every
+f	thing
+f	that
+tv_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#age
+f	18.5
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#teenager
+f	.
+
+f	Every
+f	thing
+f	that
+tv_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#age
+qs	eightteen comma five
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#teenager
+f	.
+

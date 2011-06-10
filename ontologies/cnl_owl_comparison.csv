@@ -1,0 +1,666 @@
+ignored	Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(BUG: the ontology contains no anonymous inverse properties,))
+
+ignored	Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(BUG: Did not know how to enter DisjointUnion,))
+
+unsupported	AntisymmetricObjectProperty(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-near-to))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#pipe))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#mission
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-purpose
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#charitable-activity
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#christian-worship
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#building))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-near-to))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river-stretch
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-part
+f	exactly
+f	1
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#channel
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow-into
+f	itself
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#ring-road
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-connected-to
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#ring-road
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#gas-station))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#charitable-activity
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#manufacturing))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-located-in))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#apply-to))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#building
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#manufacturing
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-connected-to))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#petrol-station
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#gas-station
+f	.
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#gas-station
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#petrol-station
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-part-of
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-part-of
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-part-of
+f	Y
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#bourne
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#apply-to),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#sg,^^(applies-to,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-capital-city-of
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#country
+f	.
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#backwater
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-current
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#current
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river-stretch
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-part
+f	at
+f	least
+f	2
+cn_pl	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#bank
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-assigned-to
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#child
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#christian-worship
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#UK-country
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Hampshire
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-located-in
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Hampshire
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#country
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#confluence
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-connected-to
+f	by
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#basin
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#channel
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#pipe
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#tributary
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#bank))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#bank
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#bourne))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-part))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow-into),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#sg,^^(flows-into,)))
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Hampshire
+f	does
+f	not
+tv_pl	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-located-in
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Scotland
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#christian-worship))
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-adjacent-to
+f	Y
+f	then
+f	Y
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-adjacent-to
+f	X
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#contain))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#England))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#spring))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#child))
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-capital-city-of
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#capital-city
+f	.
+
+ignored	EntityAnnotation(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#bank),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#pl,^^(banks,)))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#gas-station
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Northern-Ireland))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow))
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#contain
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-contained-in
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow-into
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow
+f	Y
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-contained-in))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#loch))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#charitable-activity))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-adjacent-to))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-part-of))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-postcode))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-current))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-purpose))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-assigned-to))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#wetland))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-within))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#education))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Portsmouth))
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-inside
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-within
+f	Y
+f	.
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-within
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-inside
+f	Y
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#factory))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#current))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#floodplain
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#England
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#country
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#current
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Hampshire))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#mission))
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Pompey
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Portsmouth
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#capital-city))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#backwater))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#loch
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-located-in
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Scotland
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow-into))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#basin))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#education
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#source
+f	is
+f	a
+f	thing
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-part
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#contain
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#contain
+f	Y
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#country))
+
+ignored	EntityAnnotation(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#confluence),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#pl,^^(confluences,)))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#tributary))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#feed))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#UK-country
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#England
+f	or
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Northern-Ireland
+f	or
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Scotland
+f	or
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Wales
+f	.
+f	Every
+f	thing
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#England
+f	or
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Northern-Ireland
+f	or
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Scotland
+f	or
+f	that
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Wales
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#UK-country
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#petrol-station
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Scotland
+f	is
+f	not
+pn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#England
+f	.
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Wales))
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#contain
+f	Y
+f	then
+f	Y
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-contained-in
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-contained-in
+f	Y
+f	then
+f	Y
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#contain
+f	X
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#floodplain))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#pipe
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-capital-city-of))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Scotland))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-inside))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#Pompey))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#source))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#channel
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#UK-country))
+
+f	No
+f	thing
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-near-to
+f	itself
+f	.
+
+ignored	EntityAnnotation(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#ring-road),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(BUG: should be is-connected-to SELF, but Protege 4 does not support it yet,)))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#spring
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#school
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-purpose
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#education
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#apply-to
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#child
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-postcode
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#ring-road))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#factory
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-part
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#building
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-purpose
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#manufacturing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river-stretch))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#flow),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#sg,^^(flows,)))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#petrol-station))
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#floodplain
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#capital-city
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#factory
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-purpose
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#manufacturing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#confluence))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#wetland
+f	is
+f	a
+f	thing
+f	.
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#school))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#channel))
+
+comment	/* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#source),ObjectIntersectionOf([ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream)]))])])) */
+comment	/* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#spring),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#wetland)]),ObjectSomeValuesFrom(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#feed),ObjectUnionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river),Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#stream)]))]),ObjectIntersectionOf([Class(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#source)])) */
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#river-stretch
+tv_sg	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#has-part
+f	at
+f	most
+f	2
+cn_pl	http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#confluence
+f	.
+

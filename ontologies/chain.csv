@@ -1,0 +1,30 @@
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#know))
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#eat))
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#know
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#eat
+f	a
+f	thing
+f	that
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#eat
+f	by
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#know
+f	Y
+f	then
+f	X
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/8/Ontology1190711389561.owl#eat
+f	by
+f	Y
+f	.
+

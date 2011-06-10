@@ -1,0 +1,28 @@
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#John))
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#man
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#animal
+f	or
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#know
+f	nothing
+f	but
+f	things
+f	that
+f	are
+pn_sg	http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#John
+f	.
+
+ignored	Declaration(ObjectProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#know))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#animal))
+
+ignored	Declaration(Class(http://www.semanticweb.org/ontologies/2007/9/Ontology1193333797742.owl#man))
+

@@ -1,0 +1,66 @@
+ignored	Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Does it follow from the following ACE text that Bill's parents are John and Mary (who are different from each other)? Everybody is John or is Mary or is Bill. Everybody who is Bill has-parent at most 2 things and has-parent at least 2 things. Bill does not has-parent himself.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Does it follow from the following ACE text that Bill's parents are John and Mary (who are different from each other)? Everybody is John or is Mary or is Bill. Everybody who is Bill has-parent at most 2 things and has-parent at least 2 things. Bill does not has-parent himself.,http://www.w3.org/2001/XMLSchema#string))
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Mary
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Bill
+f	is
+f	a
+f	thing
+f	that
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#has-parent
+f	at
+f	most
+f	2
+f	things
+f	and
+f	that
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#has-parent
+f	at
+f	least
+f	2
+f	things
+f	.
+
+f	Every
+f	thing
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Bill
+f	or
+f	that
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#John
+f	or
+f	that
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Mary
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Bill
+f	does
+f	not
+tv_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#has-parent
+f	itself
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#John
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Bill
+f	is
+f	a
+f	thing
+f	.
+

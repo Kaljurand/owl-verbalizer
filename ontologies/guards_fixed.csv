@@ -1,0 +1,96 @@
+f	Every
+f	thing
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Bill
+f	or
+f	that
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#John
+f	or
+f	that
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Mary
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#genid3
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#first-guard
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#genid3
+f	is
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#John
+f	.
+
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#first-guard
+f	is
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#guard
+f	that
+f	is
+f	not
+tv_vbg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#shield
+f	by
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#guard
+f	.
+
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#guard
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#shield
+f	at
+f	most
+f	3
+cn_pl	http://attempto.ifi.uzh.ch/ontologies/owl11/test#man
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#genid3
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Mary
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#John
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#Bill
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#guard
+f	is
+f	a
+f	thing
+f	that
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#shield
+f	a
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#guard
+f	and
+f	that
+f	is
+tv_vbg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#shield
+f	by
+f	at
+f	most
+f	1
+cn_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#guard
+f	.
+

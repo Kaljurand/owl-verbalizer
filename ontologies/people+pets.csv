@@ -1,0 +1,1603 @@
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#reads
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#publication
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bicycle),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A human propelled vehicle, with two wheels,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bus_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(bus driver,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#reads
+f	by
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#white_van_man
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tabloid
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tree
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#plant
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat_owner
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat_owner
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Walt
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Louie
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#vegetarian),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A vegetarian is defined as an animal that eats no other animals, or parts of animals.,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Walt),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#has_mother
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#woman
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cat_liker),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(cat liker,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#car),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(car,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#old_lady),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(old lady,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bone
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#grass),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(grass,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#truck),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Daily_Mirror),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(The paper read by Mick (a white van man).,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Walt
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Dewey
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#kid),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Huey
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#duck
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Rex),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	No
+cn_sg	http://cohse.semanticweb.org/ontologies/people#broadsheet
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tabloid
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_part),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(has_part,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Joe
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Fido
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Q123_ABC),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A white van,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Flossie
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cow
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The_Sun),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(The Sun,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#animal_lover),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(animal lover,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#eaten_by),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cat),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(cat,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bicycle),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(bicycle,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#young),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(young,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#elderly
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#giraffe
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Kevin),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Walt),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Walt,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The_Guardian),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(The Guardian,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#tree),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(tree,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Fred
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#drives),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#broadsheet),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(broadsheet,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Fido),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Fido,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#vehicle),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(DataProperty(http://cohse.semanticweb.org/ontologies/people#service_number),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#van_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Fred),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Fred,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#broadsheet),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A newspaper. Broadsheets are usually considered to be more "high-brow" than tabloids.,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Fred),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#white_van_man),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(white van man,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Minnie),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Minnie,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The_Times),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Joe),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#The_Times
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#broadsheet
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The_Sun),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat_liker
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#likes
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#likes
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat_liker
+f	.
+
+ignored	Declaration(DataProperty(http://cohse.semanticweb.org/ontologies/people#service_number))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#brain),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#red_top
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tabloid
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Mick),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Mick is male and drives a white van. Due to the axiom concerning drivers, we know that Mick must be a man, and is therefore a white van man. The axiom about the reading material of a white van man then allows us to infer things about the Daily Mirror.,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Tom),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#leaf),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#haulage_company),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The42),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(The42,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#duck),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(duck,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#quality_broadsheet
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#broadsheet
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#duck),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bus_company),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(bus company,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#haulage_truck_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#lorry
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#grownup),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#man
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#male
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#male
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#man
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#haulage_company),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(haulage company,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#driver),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(driver,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#plant),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Rex),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Rex,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#driver
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bicycle
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Huey),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Huey,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#reads),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(reads,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#The42
+tv_pl	http://cohse.semanticweb.org/ontologies/people#service_number
+f	42
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_father),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Louie),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#plant),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(plant,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#works_for),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(works_for,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#female),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The42),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#pet),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Tibbs),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Tibbs,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#grownup
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#grownup
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#brain),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(brain,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#male),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(male,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#woman),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(woman,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The_Guardian),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#old_lady
+f	is
+f	a
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	and
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	nothing
+f	but
+cn_pl	http://cohse.semanticweb.org/ontologies/people#cat
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Daily_Mirror
+f	is
+f	a
+f	thing
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Tibbs),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#eats
+f	by
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#sheep
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#grass
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#kid
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#young
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#young
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#kid
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#sheep
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#eaten_by),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(eaten_by,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#likes),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Flossie),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Flossie,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#The_Guardian
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#broadsheet
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus_driver
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus_driver
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#man
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#white_thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#white_van_man
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#white_van_man
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#man
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#white_thing
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tiger
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	Y
+f	then
+f	Y
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eaten_by
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eaten_by
+f	Y
+f	then
+f	Y
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	X
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#works_for
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	or
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_worker
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_worker
+tv_sg	http://cohse.semanticweb.org/ontologies/people#works_for
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	or
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#white_van_man),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A white van man is a man who drives a white van.,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_mother),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#duck
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+f	thing
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bone),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#woman
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#woman
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#grass),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog_owner
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog_owner
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#tabloid),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A newspaper. Tabloids are usually thought of as more "down-market" than broadsheets.,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#has_father
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#man
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#eats
+f	by
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#giraffe
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#leaf
+f	.
+
+ignored	EntityAnnotation(DataProperty(http://cohse.semanticweb.org/ontologies/people#service_number),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(service_number,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#sheep),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Fido),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#dog),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#tiger),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Walt
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Huey
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#The42
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#reads),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#The_Times),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(The Times,)))
+
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	Y
+f	then
+f	Y
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_part
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_part
+f	Y
+f	then
+f	Y
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	X
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bus_company),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Rex
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_pet_of
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Mick
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#lorry_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(lorry driver,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cat_owner),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(cat owner,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#young),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_parent),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#kid),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(kid,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#pet_owner),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#company
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#eats),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#drives),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(drives,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Fred
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Tibbs
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_truck_driver
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#truck
+f	and
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#works_for
+f	a
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#truck
+f	and
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#works_for
+f	a
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_company
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#haulage_truck_driver
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Mick
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#male
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Louie),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Louie,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_pet),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(has_pet,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#man),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(man,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Flossie),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Louie
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#duck
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Mick
+tv_sg	http://cohse.semanticweb.org/ontologies/people#reads
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Daily_Mirror
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#works_for),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#quality_broadsheet),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#dog_owner),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(dog owner,)))
+
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	Y
+f	then
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#likes
+f	Y
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#elderly
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#old_lady
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#old_lady
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#elderly
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#animal_lover),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Someone who really likes animals,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#leaf),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(leaf,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#newspaper
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#publication
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Dewey),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Dewey,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Q123_ABC
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#white_thing
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bone),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(bone,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cat_liker),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#lorry_driver
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#lorry
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#lorry
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#lorry_driver
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#elderly),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#van),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#car),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Tom),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Tom,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#newspaper),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(newspaper,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#person),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Kevin),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Kevin,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_father),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(has_father,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#vehicle),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(vehicle,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog_liker
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#likes
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#likes
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog_liker
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Kevin
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#giraffe),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#haulage_truck_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(haulage truck driver,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Mick
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Q123_ABC
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#dog_liker),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(dog liker,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#adult),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Things that are adult.,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#person),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(person,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#company),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#grownup),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(grownup,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal_lover
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	at
+f	least
+f	3
+f	things
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	at
+f	least
+f	3
+f	things
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal_lover
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#truck),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(truck,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#red_top),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus_company
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#company
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#pet),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(pet,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#is_pet_of),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(is_pet_of,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#haulage_worker),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(haulage worker,)))
+
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_father
+f	Y
+f	then
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_parent
+f	Y
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#haulage_worker),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bus_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Someone who drives a bus.,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#white_thing),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#car
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#lorry),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#eats),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(eats,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_pet),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Anyone that has a pet must like that pet.,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Mick),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Mick,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#van),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(van,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#dog_liker),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#vegetarian),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(vegetarian,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#publication),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Joe
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cow),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(cow,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Joe),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Joe,)))
+
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	Y
+f	then
+f	Y
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_pet_of
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_pet_of
+f	Y
+f	then
+f	Y
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	X
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Fluffy),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_child),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Fido
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Minnie
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#female
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	or
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#plant
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#plant
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	that
+f	does
+f	not
+tv_pl	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vegetarian
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vegetarian
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	that
+f	does
+f	not
+tv_pl	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Minnie),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#white_thing),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(white thing,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#bus
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#broadsheet
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#newspaper
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Minnie
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Tom
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#is_part_of),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#The_Sun
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tabloid
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#magazine),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	No
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Daily_Mirror),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Daily Mirror,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#likes),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(likes,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Tibbs
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cat
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#van_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(van driver,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cat_owner),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#old_lady),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#man),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_part),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Q123_ABC
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van
+f	.
+
+unsupported	DataPropertyRange(DataProperty(http://cohse.semanticweb.org/ontologies/people#service_number),Datatype(http://www.w3.org/2001/XMLSchema#integer))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#truck
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tabloid
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#newspaper
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#dog_owner),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cat),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#tree),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#sheep),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(sheep,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#animal),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Dewey
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#duck
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van_driver
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van_driver
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#van
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#red_top),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(red top,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#mad_cow),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(A mad cow is a cow that has been eating the brains of sheep.,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#is_pet_of),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Fluffy
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tiger
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#adult),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(adult,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#lorry_driver),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	If
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_mother
+f	Y
+f	then
+f	X
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_parent
+f	Y
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_mother),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(has_mother,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#pet_owner),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(pet owner,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Joe
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#magazine
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#publication
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#is_part_of),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(part_of,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cow
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vegetarian
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#mad_cow
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cow
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#brain
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#sheep
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#cow
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#eats
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#brain
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#sheep
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#mad_cow
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Dewey),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#mad_cow),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(mad cow,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#quality_broadsheet),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(quality broadsheet,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#driver
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#drives
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#vehicle
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#driver
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_pet_of
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#pet
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#pet
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_pet_of
+f	a
+f	thing
+f	.
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_parent),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(has_parent,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#newspaper),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(All newspapers are either broadsheets or tabloids.,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#magazine),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(magazine,)))
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Tom
+f	is
+f	a
+f	thing
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#lorry),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(lorry,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#female),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(female,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#tiger),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(tiger,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#cow),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(Cows are naturally vegetarians.,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Huey),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bus),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#newspaper
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#broadsheet
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tabloid
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#company),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(company,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#male),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(The class of all male things.,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#elderly),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(elderly,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#woman),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#animal),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(animal,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#driver),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://cohse.semanticweb.org/ontologies/people#has_child),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(has_child,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Fluffy),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Fluffy,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#publication),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(publication,)))
+
+ignored	EntityAnnotation(NamedIndividual(http://cohse.semanticweb.org/ontologies/people#Q123_ABC),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(Q123 ABC,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#tabloid),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(tabloid,)))
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#giraffe),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(giraffe,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#grass
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#plant
+f	.
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#pet_owner
+f	.
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#pet_owner
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	that
+tv_sg	http://cohse.semanticweb.org/ontologies/people#has_pet
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#animal
+f	.
+
+f	No
+cn_sg	http://cohse.semanticweb.org/ontologies/people#adult
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#young
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Minnie
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#elderly
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Rex
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#dog
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#bus),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(bus,)))
+
+f	Every
+cn_sg	http://cohse.semanticweb.org/ontologies/people#leaf
+tv_sg	http://cohse.semanticweb.org/ontologies/people#is_part_of
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#tree
+f	.
+
+pn_sg	http://cohse.semanticweb.org/ontologies/people#Walt
+f	is
+f	a
+cn_sg	http://cohse.semanticweb.org/ontologies/people#person
+f	.
+
+ignored	EntityAnnotation(Class(http://cohse.semanticweb.org/ontologies/people#dog),Annotation(http://www.w3.org/2000/01/rdf-schema#label,^^(dog,)))
+

@@ -1,0 +1,296 @@
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#protein
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Methionine
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#dna-region
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#translate-to
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#protein
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#gene
+f	.
+
+f	If
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	then
+f	Y
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	X
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	Y
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	X
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#molecule
+f	is
+f	a
+f	thing
+f	.
+
+f	If
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#like
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	a
+f	thing
+f	that
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	then
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	itself
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#protein
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#amino-acid
+f	that
+f	is
+f	not
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Methionine
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Methionine
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#dna-region
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#region
+f	.
+
+f	No
+f	thing
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	itself
+f	.
+
+f	No
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#gene
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#protein
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#translate-to
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	Y
+f	then
+f	Y
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	Y
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#like
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#translate-to
+f	Y
+f	then
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	.
+
+f	Every
+f	thing
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Methionine
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#amino-acid
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#amino-acid
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#molecule
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	Y
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Methionine
+f	is
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Met
+f	.
+
+f	If
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	a
+f	thing
+f	that
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	Y
+f	then
+f	X
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	Y
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+f	thing
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	itself
+f	.
+
+f	No
+f	thing
+tv_sg	http://attempto.ifi.uzh.ch/ontologies/owl11/test#hate
+f	itself
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#gene
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#region
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#protein
+f	is
+f	a
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#molecule
+f	.
+
+pn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#Met
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#region
+f	is
+f	a
+f	thing
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.semanticweb.org/ontologies/2007/2/demo_molbio.owl#contain
+f	at
+f	most
+f	1
+f	thing
+f	.
+

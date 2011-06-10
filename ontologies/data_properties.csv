@@ -1,0 +1,26 @@
+unsupported	DisjointDataProperties([DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#phone-number)])
+
+unsupported	EquivalentDataProperties([DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#vanus)])
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#small-age))
+
+unsupported	SubDataPropertyOf(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#small-age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age))
+
+unsupported	EquivalentDataProperties([DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#alter)])
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#phone-number))
+
+ignored	EntityAnnotation(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),Annotation(http://www.w3.org/2000/01/rdf-schema#comment,^^(This is a comment.,http://www.w3.org/2001/XMLSchema#string)))
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#vanus))
+
+unsupported	FunctionalDataProperty(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age))
+
+ignored	EntityAnnotation(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age),^^(element(Individual,[URI=http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#genid1193305962004851000],[]),))
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#alter))
+
+ignored	Declaration(DataProperty(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#age))
+
+ignored	Declaration(NamedIndividual(http://www.semanticweb.org/ontologies/2007/9/Ontology1193305925829.owl#John))
+
