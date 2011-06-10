@@ -13,14 +13,13 @@
 % OWL verbalizer. If not, see http://www.gnu.org/licenses/.
 
 :- module(owlxml_owlfss, [
-		owlxml_owlfss/3,
-		ellist_termlist/3
+		owlxml_owlfss/3
 	]).
 
 /** <module> owlxml_owlfss
 
 @author Kaarel Kaljurand
-@version 2011-06-06
+@version 2011-06-11
 
 TODO:
 
@@ -30,12 +29,14 @@ i.e. XML<->FSS and use it in ACE->OWL to generate XML output.
 */
 
 
-%% owlxml_owlfss(+FileName:atom, -Ontology:term, -ErrorList:list) is det.
+%% owlxml_owlfss(+Stream:stream, -Ontology:term, -ErrorList:list) is det.
 %
-% Translates an XML file that represents OWL 2 XML serialization
+% Translates OWL 2 XML serialization syntax
 % into a Prolog term that represents this OWL ontology
 % in Functional-Style Syntax. Unsupported XML elements are collected
-% into ErrorList.
+% into ErrorList. Abbreviated IRIs are expanded into full IRIs.
+%
+% Closes the stream after reading it into the XML term.
 %
 % Note that the following are equivalent:
 %
@@ -44,16 +45,16 @@ i.e. XML<->FSS and use it in ACE->OWL to generate XML output.
 %
 % We use the general rule in order to be able to remove whitespace.
 %
-% @param FileName is a name of a file that contains OWL 2 XML
+% @param Stream is a stream that contains OWL 2 XML
 % @param Ontology is an OWL ontology in OWL 2 Functional-Style Syntax
 % @param ErrorList is a list of encountered errors
 %
 % @bug Seems to normalize whitespace within PCDATA which we do not actually want.
 %
-owlxml_owlfss(FileName, Ontology, ErrorList) :-
-	open(FileName, read, Stream),
+owlxml_owlfss(Stream, Ontology, ErrorList) :-
 	load_structure(Stream, XML, [dialect(xml), space(remove)]),
-	close(Stream),
+	% We sometimes got an existence error, force(true) should avoid that
+	close(Stream, [force(true)]),
 	ellist_termlist(XML, []-ErrorList, [Ontology]).
 
 
@@ -87,6 +88,7 @@ el_term(element('Ontology', AttrList, ElList), E1-E2, 'Ontology'(_, XmlBase, Ter
 el_term(element('Prefix', AttrList, _), E-E, 'Prefix'(Name, IRI)) :-
 	memberchk(name = Name, AttrList),
 	memberchk('IRI' = IRI, AttrList),
+	% BUG: use global variables instead
 	assert(owlverbalizer_Prefix(Name, IRI)),
 	!.
 
@@ -290,7 +292,7 @@ is_owl_unary('ObjectExistsSelf').
 
 %% airi_name(+AbbreviatedIri:atom, -Iri:atom) is det.
 %
-% Mapping of abbreviated IRIs to names and their namespace identifiers.
+% Expands abbreviated IRIs.
 %
 airi_name(AbbreviatedIri, Iri) :-
 	concat_atom([Prefix, Name], ':', AbbreviatedIri),

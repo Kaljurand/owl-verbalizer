@@ -2,7 +2,7 @@
 % (See README.txt for installation instructions and usage examples.)
 %
 % Author: Kaarel Kaljurand
-% Version: 2011-06-10
+% Version: 2011-06-11
 %
 
 :- use_module(library('http/thread_httpd')).
@@ -10,7 +10,6 @@
 :- use_module(library('http/http_parameters')).
 
 :- use_module(owlxml_owlfss, [
-		ellist_termlist/3,
 		owlxml_owlfss/3
 	]).
 
@@ -197,7 +196,9 @@ cli(Filename, TimeLimit, Format) :-
 
 
 owl_to_ace_cli(FileName, Format) :-
-	owlxml_owlfss(FileName, Ontology, _ErrorList),
+	open(FileName, read, Stream),
+	% this closes the stream as well
+	owlxml_owlfss(Stream, Ontology, _ErrorList),
 	owl_to_ace(Ontology, cli, Format).
 
 owl_to_ace('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
@@ -245,9 +246,9 @@ owl_to_ace_handler(Request) :-
 					format(Format, [oneof([ace, csv, html]), default(DefaultFormat)])
 				]),
 				atom_to_memory_file(XmlAtom, Handle),
-				open_memory_file(Handle, read, InStream),
-				load_structure(InStream, XML, [dialect(xml), space(remove)]),
-				ellist_termlist(XML, []-_ErrorList, [Ontology]),
+				open_memory_file(Handle, read, Stream),
+				% this closes the stream as well
+				owlxml_owlfss(Stream, Ontology, _Errors),
 				owl_to_ace(Ontology, http, Format)
 			)
 		),
