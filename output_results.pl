@@ -93,43 +93,54 @@ format_message(html, Message, Axiom) :-
 
 %% format_sentences(+Format:atom, +Axiom:term, +Sentences:list)
 %
-format_sentences(html, Axiom, Sentences) :-
-	!,
-	with_output_to(atom(AceText), format_sentences_x(ace, Sentences)),
-	format("<tr><td>~w</td><td>~w</td></tr>~n", [Axiom, AceText]).
-
-format_sentences(Format, _Axiom, Sentences) :-
-	format_sentences_x(Format, Sentences).
+format_sentences(Format, Axiom, Sentences) :-
+	with_output_to(atom(AceText), format_sentences(Format, Sentences)),
+	print_axiom_sentences(Format, Axiom, AceText).
 
 
-format_sentences_x(_, []).
+%% format_sentences(+Format:atom, +Sentences:list)
+%
+format_sentences(_, []).
 
-format_sentences_x(Format, [Sentence | Sentences]) :-
+format_sentences(Format, [Sentence | Sentences]) :-
 	format_sentence(Format, Sentence),
-	format_sentences_x(Format, Sentences).
+	format_sentences(Format, Sentences).
 
 
-%% format_sentence(+Format:atom, +Sentence:list)
+%% print_axiom_sentences(+Format:atom, +Axiom:term, +Sentences:atom)
 %
-% @param Sentence is an ACE sentence
-%
-format_sentence(ace, Comment) :-
-	atom(Comment),
+print_axiom_sentences(html, Axiom, Sentences) :-
 	!,
-	format("~w~n", [Comment]).
+	format("<tr><td>~w</td><td>~w</td></tr>~n", [Axiom, Sentences]).
 
-format_sentence(ace, RawSentence) :-
-	ace_niceace(RawSentence, Sentence),
-	concat_atom(Sentence, ' ', SentenceAtom),
-	format("~w~n", [SentenceAtom]).
+print_axiom_sentences(_, _Axiom, Sentences) :-
+	write(Sentences).
 
+
+
+%% format_sentence(+Format:atom, +Sentence:term)
+%
+% @param Format is one of {ace, csv, html}
+% @param Sentence is an ACE sentence (list) or Comment (atom)
+%
 format_sentence(csv, Comment) :-
 	atom(Comment),
 	!,
 	format("comment\t~w~n", [Comment]).
 
 format_sentence(csv, RawSentence) :-
+	!,
 	maplist(format_as_csv, RawSentence).
+
+format_sentence(_, Comment) :-
+	atom(Comment),
+	!,
+	format("~w~n", [Comment]).
+
+format_sentence(_, RawSentence) :-
+	ace_niceace(RawSentence, Sentence),
+	concat_atom(Sentence, ' ', SentenceAtom),
+	format("~w~n", [SentenceAtom]).
 
 
 format_as_csv(Term) :-
