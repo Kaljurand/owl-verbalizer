@@ -64,7 +64,7 @@ axiomlist_sentencelist([Axiom | AxiomList], [Axiom-SentenceList1 | SentenceList]
 	axiomlist_sentencelist_x(EquivalentAxioms, SentenceList1),
 	axiomlist_sentencelist(AxiomList, SentenceList).
 
-axiomlist_sentencelist([UnsupportedAxiom | AxiomList], [UnsupportedAxiom-'BUG: axiom unsupported' | SentenceList]) :-
+axiomlist_sentencelist([UnsupportedAxiom | AxiomList], [UnsupportedAxiom-unsupported | SentenceList]) :-
 	axiomlist_sentencelist(AxiomList, SentenceList).
 
 
@@ -98,15 +98,10 @@ axiomlist_sentencelist_x([UnsupportedAxiom | AxiomList], [ErrorMessage | Sentenc
 %
 is_ignore('Declaration'(_)).
 is_ignore('Prefix'(_, _)).
-
 is_ignore('AnnotationAssertion'(_, _, _)).
+is_ignore('Imports'(_)).
+%is_ignore('SubClassOf'(_, 'Class'('owl:Thing'))).
 
 % @deprecated
 is_ignore('EntityAnnotation'(_, _)).
-
-% @deprecated
 is_ignore('Annotation'(_, _)).
-
-is_ignore('Imports'(_)).
-
-%is_ignore('SubClassOf'(_, 'Class'('owl:Thing'))).

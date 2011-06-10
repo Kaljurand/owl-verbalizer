@@ -87,7 +87,7 @@ No PolloAdAstra is a Siciliana.
 
 No SloppyGiuseppe is an American.
 
-/* BUG: axiom unsupported: DifferentIndividuals([NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#France),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#America),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#England),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany)]) */
+/* unsupported: DifferentIndividuals([NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#France),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#America),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#England),NamedIndividual(http://www.co-ode.org/ontologies/pizza/pizza.owl#Germany)]) */
 Germany is a Country.
 
 No PolloAdAstra is a SloppyGiuseppe.

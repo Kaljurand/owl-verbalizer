@@ -8,29 +8,29 @@ Every test is something.
 
 /* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#test),ObjectIntersectionOf([DataAllValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#integer),DatatypeFacetRestriction(http://www.w3.org/2006/12/owl11#minExclusive,^^(10,http://www.w3.org/2001/XMLSchema#int)),DatatypeFacetRestriction(http://www.w3.org/2006/12/owl11#maxExclusive,^^(10,http://www.w3.org/2001/XMLSchema#int))])),DataSomeValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),Datatype(http://www.w3.org/2001/XMLSchema#integer))])) */
 
-/* BUG: axiom unsupported: DataPropertyDomain(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#post-it)) */
+/* unsupported: DataPropertyDomain(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#post-it)) */
 Every man that age 10 is a teenager.
 
 Every man is something.
 
 /* BUG: axiom too complex: SubClassOf(ObjectIntersectionOf([Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#man),DataSomeValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),Datatype(http://www.w3.org/2001/XMLSchema#integer))]),Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#teenager)) */
 
-/* BUG: axiom unsupported: FunctionalDataProperty(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age)) */
+/* unsupported: FunctionalDataProperty(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age)) */
 Every man that age 232.334 is a teenager.
 
 /* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#post-it),DataAllValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#string),DatatypeFacetRestriction(http://www.w3.org/2006/12/owl11#pattern,^^(true,http://www.w3.org/2001/XMLSchema#boolean))]))) */
 
-/* BUG: axiom unsupported: DataPropertyRange(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),Datatype(http://www.w3.org/2001/XMLSchema#string)) */
+/* unsupported: DataPropertyRange(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),Datatype(http://www.w3.org/2001/XMLSchema#string)) */
 P writing "blah".
 
 Everything that is not a man is a man.
 
-/* BUG: axiom unsupported: DataPropertyRange(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),Datatype(http://www.w3.org/2001/XMLSchema#integer)) */
+/* unsupported: DataPropertyRange(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),Datatype(http://www.w3.org/2001/XMLSchema#integer)) */
 Every man is a man.
 
 /* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#post-it),DataSomeValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#string),DatatypeFacetRestriction(http://www.w3.org/2006/12/owl11#length,^^(4,http://www.w3.org/2001/XMLSchema#int))]))) */
 
-/* BUG: axiom unsupported: DataPropertyDomain(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#man)) */
+/* unsupported: DataPropertyDomain(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#age),Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#man)) */
 /* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#post-it),DataAllValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#string),DatatypeFacetRestriction(http://www.w3.org/2006/12/owl11#pattern,^^(3.333,http://www.w3.org/2001/XMLSchema#float))]))) */
 
 /* BUG: axiom too complex: SubClassOf(Class(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#post-it),DataAllValuesFrom(DataProperty(http://www.semanticweb.org/ontologies/2007/5/Ontology1181052506695.owl#writing),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#string),DatatypeFacetRestriction(http://www.w3.org/2006/12/owl11#minExclusive,^^(10,http://www.w3.org/2001/XMLSchema#int))]))) */

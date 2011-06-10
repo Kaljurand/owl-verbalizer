@@ -1,4 +1,4 @@
-/* BUG: axiom unsupported: AntisymmetricObjectProperty(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-near-to)) */
+/* unsupported: AntisymmetricObjectProperty(ObjectProperty(http://www.semanticweb.org/ontologies/2007/10/cnl_comparison_v2.owl#is-near-to)) */
 Every mission has-purpose something that is a charitable-activity or that is a christian-worship.
 
 Every river-stretch has-part exactly 1 channel.
