@@ -21,6 +21,10 @@
 @author Kaarel Kaljurand
 @version 2011-06-11
 
+In OWLFSS lists and sets are marked up as Prolog lists.
+Also, capitalized atoms must be in quotation marks and
+other such Prolog-specific escaping is needed.
+
 TODO:
 
 * Make the code bidirectional,
