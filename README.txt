@@ -78,28 +78,14 @@ First, make sure that the SWI-Prolog executable is on the PATH,
 i.e. that you can execute `swipl' in any directory.
 (Note: the executable of older versions of SWI-Prolog is called `plcon' on Windows).
 
-In order to compile the OWL verbalizer executable, proceed as follows.
-
-On Unix/Mac, execute
+In order to compile the OWL verbalizer executable, execute:
 
 ==
-swipl -O -F none -g "[owl_to_ace], qsave_program('owl_to_ace.exe', [goal(main), toplevel(halt), local(25600), global(25600)])." -t halt
+swipl -O -f owl_to_ace.pl -g "qsave_program('owl_to_ace.exe', [goal(main), toplevel(halt), local(25600), global(25600)])." -t halt
 ==
 
-Alternatively, given that you have `bash' installed, you can just execute
-the following command.
-
-==
-sh make_exe.sh
-==
-
-On Windows, execute:
-
-==
-plcon -O -f owl_to_ace.pl -g "qsave_program('owl_to_ace.exe', [goal(main), toplevel(halt), local(25600), global(25600)])." -t halt
-==
-
-or, alternatively, just click on =|make_exe.bat|=.
+or, alternatively, just click on =|make_exe.bat|= (on Windows) or
+type =|sh make_exe.sh|= (on Unix/Linux/Mac).
 As a result, an EXE-file (the command-line client) is created.
 
 
