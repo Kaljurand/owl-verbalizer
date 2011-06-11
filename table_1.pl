@@ -21,7 +21,7 @@
 /** <module> Table 1
 
 @author Kaarel Kaljurand
-@version 2011-06-09
+@version 2011-06-11
 @license LGPLv3
 
 TODO:
@@ -231,7 +231,7 @@ table_1('NegativeDataPropertyAssertion'(DataProperty, Individual, DataValue), [
 	)
 	]).
 
-
+% Classes that are equivalent to owl:Nothing
 table_1_x('EquivalentClasses'(ClassSet), SubClassOfList) :-
 	ClassSet = [_, _ | _],
 	select('Class'('http://www.w3.org/2002/07/owl#Nothing'), ClassSet, ClassSetWithoutNothing),
@@ -242,6 +242,7 @@ table_1_x('EquivalentClasses'(ClassSet), SubClassOfList) :-
 		SubClassOfList
 	).
 
+% Classes that are equivalent to owl:Thing
 table_1_x('EquivalentClasses'(ClassSet), SubClassOfList) :-
 	ClassSet = [_, _ | _],
 	select('Class'('http://www.w3.org/2002/07/owl#Thing'), ClassSet, ClassSetWithoutThing),
@@ -301,9 +302,9 @@ axiom_with_list_to_axiom_with_set('EquivalentClasses'(ClassList), 'EquivalentCla
 axiom_with_list_to_axiom_with_set('SameIndividual'(IndividualList), 'SameIndividual'(IndividualSet)) :-
 	list_to_set(IndividualList, IndividualSet).
 
-% BUG: backwards compatibility: SameIndividuals -> SameIndividual
-axiom_with_list_to_axiom_with_set('SameIndividuals'(IndividualList), 'SameIndividual'(IndividualSet)) :-
+axiom_with_list_to_axiom_with_set('DifferentIndividuals'(IndividualList), 'DifferentIndividuals'(IndividualSet)) :-
 	list_to_set(IndividualList, IndividualSet).
 
-axiom_with_list_to_axiom_with_set('DifferentIndividuals'(IndividualList), 'DifferentIndividuals'(IndividualSet)) :-
+% @deprecated: use: SameIndividual
+axiom_with_list_to_axiom_with_set('SameIndividuals'(IndividualList), 'SameIndividual'(IndividualSet)) :-
 	list_to_set(IndividualList, IndividualSet).

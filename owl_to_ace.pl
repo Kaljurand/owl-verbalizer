@@ -281,11 +281,12 @@ format_to_mime(html, 'text/html').
 % Pretty-prints the exception term for the terminal.
 %
 % @param Exception is the exception term in the form
-%        error(Formal, context(Name/Arity, Message))
+%        error(Formal, context(Module:Name/Arity, Message))
 %
-format_error_for_terminal(error(Formal, context(_Name/_Arity, Message))) :-
+format_error_for_terminal(error(Formal, context(Predicate, Message))) :-
 	!,
-	format(user_error, "ERROR: ~w: ~w~n", [Formal, Message]).
+	format_message(Message, FMessage),
+	format(user_error, "ERROR: ~w: ~w: ~w~n", [Formal, Predicate, FMessage]).
 
 format_error_for_terminal(Error) :-
 	format(user_error, "ERROR: ~w~n", [Error]).
@@ -295,17 +296,25 @@ format_error_for_terminal(Error) :-
 %
 % Generates an error message from the exception term.
 %
-% @param Exception is the exception term in the form error(Formal, context(Name/Arity, Message))
+% @param Exception is the exception term in the form
+%        error(Formal, context(Module:Name/Arity, Message))
 % @param ContentType is the content type that message is formated into, e.g. text/xml
 % @param Content is the actual error message
 %
-format_error_for_http(error(type_error(_, WrongType), context(_Name/_Arity, Message)), 'text/xml', Xml) :-
+format_error_for_http(error(Formal, context(Predicate, Message)), 'text/xml', Xml) :-
 	!,
-	with_output_to(atom(Xml), format("<error type=\"Wrong input type\">~w: ~w</error>", [Message, WrongType])).
-
-format_error_for_http(error(Formal, context(_Name/_Arity, Message)), 'text/xml', Xml) :-
-	!,
-	with_output_to(atom(Xml), format("<error type=\"~w\">~w</error>", [Formal, Message])).
+	functor(Formal, Name, _),
+	format_message(Message, FMessage),
+	with_output_to(atom(Xml), format("<error type=\"~w\">~w: ~w: ~w</error>", [Name, Formal, Predicate, FMessage])).
 
 format_error_for_http(Error, 'text/xml', Xml) :-
 	with_output_to(atom(Xml), format("<error>~w</error>", [Error])).
+
+
+%% format_message(+Message:term, -FormattedMessage:atom)
+%
+format_message(Message, '') :-
+	var(Message),
+	!.
+
+format_message(Message, Message).

@@ -182,6 +182,7 @@ el_term(element(Term, [], ElList), E1-E2, Return) :-
 	ellist_termlist(ElList, E1-E2, TermList),
 	Return =.. [Term | TermList].
 
+% @deprecated
 el_term(element(Term, ['annotationURI' = Uri], ElList), E1-E2, Return) :-
 	Return =.. [Term, Uri, Term1],
 	ellist_termlist(ElList, E1-E2, [Term1]).
@@ -202,20 +203,20 @@ is_cardinality(Atom, Number) :-
 	atom_number(Atom, Number).
 
 
-%% is_base(+OWLEntityName:atom, +URIName:atom, -OWLEntity:term) is det.
+%% is_base(+OWLEntityName:atom, +Iri:atom, -OWLEntity:term) is det.
 %
 %
-is_base('Class', Name, 'Class'(Name)).
-is_base('ObjectProperty', Name, 'ObjectProperty'(Name)).
-is_base('DataProperty', Name, 'DataProperty'(Name)).
-is_base('AnnotationProperty', Name, 'AnnotationProperty'(Name)).
-is_base('NamedIndividual', Name, 'NamedIndividual'(Name)).
-is_base('Datatype', Name, 'Datatype'(Name)).
+is_base('Class', Iri, 'Class'(Iri)).
+is_base('ObjectProperty', Iri, 'ObjectProperty'(Iri)).
+is_base('DataProperty', Iri, 'DataProperty'(Iri)).
+is_base('AnnotationProperty', Iri, 'AnnotationProperty'(Iri)).
+is_base('NamedIndividual', Iri, 'NamedIndividual'(Iri)).
+is_base('Datatype', Iri, 'Datatype'(Iri)).
 
 % @deprecated, use 'Class'
-is_base('OWLClass', Name, 'Class'(Name)).
+is_base('OWLClass', Iri, 'Class'(Iri)).
 % @deprecated (OWL-API 2), use 'NamedIndividual' or 'AnonymousIndividual'
-is_base('Individual', Name, 'NamedIndividual'(Name)).
+is_base('Individual', Iri, 'NamedIndividual'(Iri)).
 
 
 %% is_owl_list(+ElementName:atom) is det.
