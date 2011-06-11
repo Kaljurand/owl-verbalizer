@@ -20,25 +20,22 @@
 /** <module> Rewrite SubClassOf
 
 Rewrites OWL SubClassOf-axioms into a form that is
-more suitable for direct verbalization.
+suitable for direct verbalization.
 
-Checks:
-
-1. Can all OWL axioms be rewritten? (Check by testing.)
-2. Is rewriting correct? (This is checked by proof.)
-3. Can all OWL rewritten axioms be verbalized? (Check by testing.)
+TODO: this code needs some cleanup to be more manageable
 
 @author Kaarel Kaljurand
-@version 2011-06-06
+@version 2011-06-11
 
 */
 
 %% rewrite_subclassof(+Axiom1:term, -Axiom2:term) is det.
 %
 % Rewriting the SubClassOf axioms in a semantics-preserving way.
-% Changes are needed to handle complex structures which without
-% changes could not be handled. Changes are also needed to be able
-% to verbalize the axioms later into a more natural ACE sentences.
+% Rewriting is needed to handle complex structures which without
+% changes could not be verbalized.
+% Rewriting is also needed to be able to verbalize an axiom
+% into more natural ACE sentences.
 %
 % @param Axiom1 is an OWL axiom
 % @param Axiom2 is an OWL axiom
@@ -269,9 +266,9 @@ rewrite_class('ObjectIntersectionOf'([C]), NewC) :-
 % 0 or more elements. Each element in this list should be rewritten
 % and the resulting elements should be reordered.
 % BUG: In the end we should pack the list into a binary representation, e.g.
-% and(x, and(y, and(z))) to be compatible with the current OWLACE->OWL DCG.
+% and(x, and(y, and(z))) to be compatible with OWLACE->OWL DCG.
 % (Or maybe we should change the DCG to support lists...)
-
+%
 rewrite_class('ObjectIntersectionOf'(Classes), Return) :-
 	!,
 	% BUG: Do we need the first flattening?
@@ -306,7 +303,6 @@ rewrite_class('ObjectUnionOf'(Classes), Return) :-
 	make_flat('ObjectUnionOf'(_), RewrittenClasses, FlatRewrittenClasses),
 	order_classes(FlatRewrittenClasses, OrderedClasses),
 	prune_union('ObjectUnionOf'(OrderedClasses), FinalClass),
-	%format("union: ~w~n", [FinalClass]),
 	(
 		FinalClass = 'ObjectUnionOf'(FinalClassList)
 	->
@@ -366,9 +362,9 @@ rewrite_class_complement(Class, 'ObjectComplementOf'(Class)).
 
 %% prune_intersection
 %
-% Note that we insert 'http://www.w3.org/2002/07/owl#Thing') as the first element in case the
-% ClassList starts with a complex class. This is to make the verbalization
-% more direct.
+% Note that we insert 'http://www.w3.org/2002/07/owl#Thing' as the first element
+% in case the ClassList starts with a complex class.
+% This is to make the verbalization more direct.
 %
 
 % Note: OWL 2 spec allows only 2..*
@@ -468,7 +464,6 @@ make_flat(CoordinationTemplate, [Class | ClassList], [Class | FlatClassList]) :-
 	make_flat(CoordinationTemplate, ClassList, FlatClassList).
 
 
-
 %% order_classes(+Classes:list, -OrderedClasses:list) is det.
 %
 % @param Classes is a list of OWL classes
@@ -480,7 +475,7 @@ order_classes(Classes, OrderedClasses) :-
 
 %% natural_order(-Delta:atom, +E1:term, +E2:term) is det.
 %
-% A custom comparison of two terms, to be applied to sorting of the Classes to
+% A custom comparator of two terms, to be applied to sorting of the Classes to
 % get a more readable order.
 % Note that =|predsort/3|= which calls =|natural_order/3|= will remove the
 % dublicates. But this is OK, since we only apply it to =|ObjectIntersectionOf|= and
@@ -520,12 +515,13 @@ natural_order(<, 'ObjectOneOf'(_), 'ObjectHasSelf'(_)) :- !.
 natural_order(<, 'ObjectOneOf'(_), 'ObjectIntersectionOf'(_)) :- !.
 natural_order(<, 'ObjectOneOf'(_), 'ObjectUnionOf'(_)) :- !.
 
-natural_order(<, 'ObjectHasSelf'(_), 'ObjectComplementOf'(_)) :- !.
 natural_order(>, 'ObjectComplementOf'(_), 'ObjectOneOf'(_)) :- !.
-natural_order(>, 'ObjectComplementOf'(_), 'ObjectHasSelf'(_)) :- !.
 natural_order(>, 'ObjectHasSelf'(_), 'ObjectOneOf'(_)) :- !.
 natural_order(>, 'ObjectIntersectionOf'(_), 'ObjectOneOf'(_)) :- !.
 natural_order(>, 'ObjectUnionOf'(_), 'ObjectOneOf'(_)) :- !.
+
+natural_order(<, 'ObjectHasSelf'(_), 'ObjectComplementOf'(_)) :- !.
+natural_order(>, 'ObjectComplementOf'(_), 'ObjectHasSelf'(_)) :- !.
 
 % All atomic terms (i.e. atoms, strings, integers, and floating-point numbers) are equal.
 /*
@@ -616,6 +612,12 @@ embedded_class('ObjectExactCardinality'(_, _, Class), Class).
 % sube(p, and([or([a, b]), not(some(x, y))]))
 %==
 %
+% TODO: If check_classlist fails then the rewriting of the axiom fails, and
+% as a result also the verbalization fails. We could alternatively just
+% tag the axiom as unverbalizable but rewrite it anyway. We could also use
+% some sort of bracket notation as an extension of ACE and verbalize it
+% using this bracket notation.
+%
 check_classlist(ClassList) :-
 	classlist_complicationdegree(ClassList, Length),
 	Length =< 1,
@@ -638,22 +640,13 @@ classlist_complicationdegree(ClassList, Length) :-
 %
 % @param Class is a class expression
 %
-is_complicated('ObjectIntersectionOf'(_)).
+is_complicated('ObjectIntersectionOf'(_)) :- !.
 
-is_complicated('ObjectUnionOf'(_)).
+is_complicated('ObjectUnionOf'(_)) :- !.
 
-is_complicated('ObjectSomeValuesFrom'(_, 'ObjectIntersectionOf'(_))).
-
-is_complicated('ObjectAllValuesFrom'(_, 'ObjectIntersectionOf'(_))).
-
-is_complicated('ObjectMinCardinality'(_, _, 'ObjectIntersectionOf'(_))).
-
-is_complicated('ObjectMaxCardinality'(_, _, 'ObjectIntersectionOf'(_))).
-
-is_complicated('ObjectExactCardinality'(_, _, 'ObjectIntersectionOf'(_))).
-
-is_complicated('ObjectComplementOf'(Class)) :-
-	is_complicated(Class).
+is_complicated(Class) :-
+	embedded_class(Class, EmbeddedClass),
+	is_complicated(EmbeddedClass).
 
 
 %% datatype_castdatatype(+DataType:atom, -CastDataType:atom) is det.
