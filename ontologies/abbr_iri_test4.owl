@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+This testcase tries to declare a lexicon mapping by using Prefix-declarations.
+Because both prefixes and the lexicon mapping are stored as global
+variables which are not module internal, this will work, unless the
+lexicon mapping wipes out all the existing globals before it starts.
+It currently does this wiping out and the expected output of this
+test is "Every man is a man.".
+-->
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.example.org/"
+	 xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+    <Prefix name="" IRI="http://www.example.org/test4.owl#"/>
+    <Prefix name="CN_sghttp://www.example.org/test4.owl#man" IRI="prefix_man"/>
+
+    <SubClassOf>
+        <Class abbreviatedIRI=":man"/>
+        <Class abbreviatedIRI=":man"/>
+    </SubClassOf>
+</Ontology>

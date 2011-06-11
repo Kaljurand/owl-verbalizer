@@ -85,11 +85,17 @@ el_term(element('Ontology', AttrList, ElList), E1-E2, 'Ontology'(_, XmlBase, Ter
 	get_xmlbase(AttrList, XmlBase),
 	ellist_termlist(ElList, E1-E2, TermList).
 
-el_term(element('Prefix', AttrList, _), E-E, 'Prefix'(Name, IRI)) :-
+% Note: we use the name-attribute value as the name of the
+% global variable to store the prefix expansion. Since global variables
+% are not module internal (as of SWI-Prolog 5.11.19) and we
+% also use global variables in the lexicon-module we might get
+% a clash although it is very unlikely. This clash does not matter though
+% because the XML->Prolog conversion happens strictly before the lexicon
+% generation, and the lexicon generator wipes out all the globals before it starts.
+el_term(element('Prefix', AttrList, _), E-E, 'Prefix'(Name, Iri)) :-
 	memberchk(name = Name, AttrList),
-	memberchk('IRI' = IRI, AttrList),
-	% BUG: use global variables instead
-	assertz(owlverbalizer_Prefix(Name, IRI)),
+	memberchk('IRI' = Iri, AttrList),
+	nb_setval(Name, Iri),
 	!.
 
 el_term(element('AbbreviatedIRI', [], [PCDATA]), E-E, 'IRI'(Iri)) :-
@@ -300,16 +306,14 @@ airi_name(AbbreviatedIri, Iri) :-
 	concat_atom([Expansion, Name], Iri).
 
 
-%% abbr_expansion
+%% abbr_expansion(+Name:atom, -Iri:atom)
 %
-% Front-end to Prefix-declarations
+% Front-end to Prefix-declarations.
 %
-% abbr_expansion(ace_lexicon, 'http://attempto.ifi.uzh.ch/ace_lexicon') :- !.
-abbr_expansion(Name, IRI) :-
-	owlverbalizer_Prefix(Name, IRI),
-	!.
-% BUG: throw exception instead
-abbr_expansion(_, 'http://attempto.ifi.uzh.ch/default').
+% @throws Exception if Name is not defined
+%
+abbr_expansion(Name, Iri) :-
+	nb_getval(Name, Iri).
 
 
 %% parse_literal

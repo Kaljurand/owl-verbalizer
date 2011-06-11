@@ -1,0 +1,11 @@
+ignored	Prefix(,http://www.example.org/test4.owl#)
+
+ignored	Prefix(CN_sghttp://www.example.org/test4.owl#man,prefix_man)
+
+f	Every
+cn_sg	http://www.example.org/test4.owl#man
+f	is
+f	a
+cn_sg	http://www.example.org/test4.owl#man
+f	.
+

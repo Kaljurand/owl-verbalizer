@@ -26,7 +26,7 @@
 /** <module> Lexicon
 
 @author Kaarel Kaljurand
-@version 2011-06-10
+@version 2011-06-11
 
 Manages the mapping of OWL IRIs to ACE common word surface forms.
 The mapping is instantiated from a list of OWL annotation assertion axioms
@@ -69,7 +69,10 @@ user to make sure that they are.
 % @param AxiomList is a list of OWL axioms
 %
 init_lexicon(AxiomList) :-
-	clear_lexicon,
+	% Removes all the global variables set by the
+	% preceding modules,
+	% e.g. prefix declarations set in owlxml_owlfss.
+	clear_globals,
 	init_lexicon_loop(AxiomList).
 
 
@@ -94,11 +97,11 @@ init_lexicon_loop([_Axiom | AxiomList]) :-
 	init_lexicon_loop(AxiomList).
 
 
-%% clear_lexicon is det.
+%% clear_globals is det.
 %
-% Removes all the lexicon entries.
+% Removes all the global variables.
 %
-clear_lexicon :-
+clear_globals :-
 	nb_current(N, _), nb_delete(N), fail ; true.
 
 
