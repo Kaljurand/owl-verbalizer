@@ -174,7 +174,7 @@ show_help :-
 % Prints the version information.
 %
 show_version :-
-	format("OWL verbalizer, ver ~w~n", ['0.9.3']).
+	format("OWL verbalizer, ver ~w~n", ['0.9.4']).
 
 
 %% get_arglist(+RawArgList, -ArgList)
