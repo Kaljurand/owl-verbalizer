@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="OWL verbalizer Java" default="buildeverything" basedir=".">
+
+    <property name="name" value="OWL verbalizer Java"/>
+    <property name="version" value="20110612"/>
+    <property name="libs" value="lib/httpcore-4.1.1.jar;lib/httpclient-4.1.1.jar;lib/commons-logging-1.1.jar"/>
+    <property name="classes" location="classes/"/>
+    <property name="test_src" location="test/"/>
+    <property name="test_report" location="test_report/"/>
+
+    <target name="compile"
+            description="Compile the Java files">
+        <mkdir dir="${classes}"/>
+        <javac
+        	target="1.5"
+        	includeantruntime="false"
+            srcdir="src/"
+        	excludes="**/test/**"
+            classpath="${libs}"
+            destdir="${classes}"
+        />
+    </target>
+
+    <target name="createjars"
+            description="Create JAR files"
+            depends="compile">
+        <jar
+            destfile="attempto-owl.jar"
+            basedir="${classes}"
+            includes="ch/uzh/ifi/attempto/owl/**"
+        />
+    </target>
+
+    <target name="createjavadoc"
+            description="Create the Javadoc files">
+         <javadoc
+             sourcepath="src/"
+             packagenames="*"
+        	 excludepackagenames="**.test"
+             destdir="docs/"
+             extdirs="lib/"
+             windowtitle="${name}, version ${version}"
+             doctitle="${name}, version ${version}"
+             overview="src/overview.html"
+             linksource="on">
+            <bottom><![CDATA[<em>Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com></em>]]></bottom>
+        </javadoc>
+    </target>
+
+    <target name="clean"
+            description="Clean up">
+        <delete file="attempto-owl.jar"/>
+        <delete dir="${classes}"/>
+        <delete dir="docs/"/>
+    </target>
+
+    <target name="buildeverything"
+            depends="clean, createjars, createjavadoc"
+            description="Clean up, create JAR files and create Javadoc"
+    />
+
+    <target name="test" depends="compile" description="Unit test">
+        <javac srcdir="${test_src}" destdir="${classes}">
+            <classpath>
+                <fileset dir="lib" >
+                    <include name="*.jar" />
+                </fileset>
+                <pathelement location="${classes}"/>
+            </classpath>
+        </javac>
+        <mkdir dir="${test_report}"/>
+        <junit printsummary="yes" haltonfailure="no" fork="on">
+            <classpath>
+                <fileset dir="lib" >
+                    <include name="*.jar" />
+                </fileset>
+                <pathelement location="${classes}"/>
+            </classpath>
+            <formatter type="plain"/>
+            <batchtest fork="yes" todir="${test_report}">
+                <fileset dir="${test_src}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+</project>
