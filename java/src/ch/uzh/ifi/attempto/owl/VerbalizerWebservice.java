@@ -21,19 +21,17 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
 /**
- * This is a simple interface to the OWL verbalizer.
- * OWL verbalizer is a tool that translates an OWL 2 ontology into an ACE text.
- * It expects the ontology to be represented in the OWL 2 XML serialization syntax, see
+ * <p>This is a simple interface to the OWL verbalizer webservice.</p>
  * 
- * <blockquote>
- * <a href="http://www.w3.org/TR/owl-xml-serialization/">http://www.w3.org/TR/owl-xml-serialization/</a>
- * </blockquote>
+ * <p>The OWL verbalizer takes one obligatory parameter, <code>xml</code>, the value of which
+ * is the complete ontology as string. An optional parameter <code>format</code> specifies
+ * the desired output format.</p>
  * 
- * The OWL verbalizer accepts one parameter, <code>xml</code>, the value of which
- * is the complete ontology as string.
- * The OWL verbalizer returns the ACE representation of the ontology as plain text (string).
+ * <p>The OWL verbalizer returns the input ontology represented in ACE, in the specified format.
  * In case the verbalizer fails to process an OWL axiom in the ontology,
- * an error message is returned between ACE comment symbols.
+ * an error message is returned.</p>
+ * 
+ * TODO: improve error message processing
  * 
  * @author Kaarel Kaljurand
  *
@@ -43,22 +41,40 @@ public class VerbalizerWebservice {
 	private static final int MAX_HTTP_GET_LENGTH = 1000;
 	private static final String ERROR_MESSAGE = "Accessing OWL->ACE webservice failed";
 
-	private final String wsUrl;
+	private final String mWsUrl;
 
 	/**
-	 * Constructs a new <code>VerbalizerWebservice</code> object
-	 * on the basis of the URL of the OWL verbalizer webservice.
+	 * <p>Constructs a new <code>VerbalizerWebservice</code> object
+	 * on the basis of the URL of the OWL verbalizer webservice.</p>
 	 * 
 	 * @param wsUrl The URL of the OWL verbalizer webservice.
 	 */
 	public VerbalizerWebservice(String wsUrl) {
-		this.wsUrl = wsUrl;
+		mWsUrl = wsUrl;
 	}
 
+
 	/**
-	 * Calls the OWL verbalizer webservice by giving the string representation of
+	 * <p>Calls the OWL verbalizer webservice by giving the string representation of
 	 * an XML-formatted ontology as input. Returns the corresponding ACE text
-	 * with possible error messages as comments.
+	 * with possible error messages as comments.</p>
+	 * 
+	 * @param xml XML-representation of an OWL ontology.
+	 * @param outputType Desired output format
+	 * @return ACE text that corresponds to the ontology.
+	 */
+	public String call(String xml, OutputType outputType) {
+		List <NameValuePair> nvps = new ArrayList <NameValuePair>();
+		nvps.add(new BasicNameValuePair("xml", xml));
+		nvps.add(new BasicNameValuePair("format", outputType.toString().toLowerCase()));
+		return getResponseAsString(nvps);
+	}
+
+
+	/**
+	 * <p>Calls the OWL verbalizer webservice by giving the string representation of
+	 * an XML-formatted ontology as input. Returns the corresponding ACE text
+	 * in the default output format.</p>
 	 * 
 	 * @param xml XML-representation of an OWL ontology.
 	 * @return ACE text that corresponds to the ontology.
@@ -69,6 +85,7 @@ public class VerbalizerWebservice {
 		return getResponseAsString(nvps);
 	}
 
+
 	private String getResponseAsString(List<NameValuePair> nvps) {
 		DefaultHttpClient httpclient = new DefaultHttpClient();
 		HttpUriRequest request = getHttpUriRequest(nvps);
@@ -76,17 +93,17 @@ public class VerbalizerWebservice {
 	}
 
 	/**
-	 * We create an HTTP GET query from the given parameters. If it turns out to be
+	 * <p>We create an HTTP GET query from the given parameters. If it turns out to be
 	 * too long (which we expect to happen very infrequently) then we fall back to creating
-	 * HTTP POST.
+	 * HTTP POST.</p>
 	 * 
 	 * @param nvps List of name-value pairs
 	 * @return HTTP request (either GET or POST)
 	 */
 	private HttpUriRequest getHttpUriRequest(List<NameValuePair> nvps) {
-		String getQuery = wsUrl + "?" + URLEncodedUtils.format(nvps, HTTP.UTF_8);
+		String getQuery = mWsUrl + "?" + URLEncodedUtils.format(nvps, HTTP.UTF_8);
 		if (getQuery.length() > MAX_HTTP_GET_LENGTH) {
-			HttpPost httppost = new HttpPost(wsUrl);
+			HttpPost httppost = new HttpPost(mWsUrl);
 			try {
 				httppost.setEntity(new UrlEncodedFormEntity(nvps, HTTP.UTF_8));
 			} catch (UnsupportedEncodingException e) {
