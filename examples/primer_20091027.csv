@@ -1,0 +1,801 @@
+ignored	Prefix(owl,http://www.w3.org/2002/07/owl#)
+
+ignored	Prefix(otherOnt,http://example.org/otherOntologies/families/)
+
+ignored	Import(http://example.org/otherOntologies/families.owl)
+
+ignored	Declaration(NamedIndividual(John))
+
+ignored	Declaration(NamedIndividual(Mary))
+
+ignored	Declaration(NamedIndividual(Jim))
+
+ignored	Declaration(NamedIndividual(James))
+
+ignored	Declaration(NamedIndividual(Jack))
+
+ignored	Declaration(NamedIndividual(Bill))
+
+ignored	Declaration(NamedIndividual(Susan))
+
+ignored	Declaration(NamedIndividual(Meg))
+
+ignored	Declaration(Class(Person))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(Person),^^(Represents the set of all people.,))
+
+ignored	Declaration(Class(Woman))
+
+ignored	Declaration(Class(Parent))
+
+ignored	Declaration(Class(Father))
+
+ignored	Declaration(Class(Mother))
+
+ignored	Declaration(Class(SocialRole))
+
+ignored	Declaration(Class(Man))
+
+ignored	Declaration(Class(Teenager))
+
+ignored	Declaration(Class(ChildlessPerson))
+
+ignored	Declaration(Class(Human))
+
+ignored	Declaration(Class(Female))
+
+ignored	Declaration(Class(HappyPerson))
+
+ignored	Declaration(Class(JohnsChildren))
+
+ignored	Declaration(Class(NarcisticPerson))
+
+ignored	Declaration(Class(MyBirthdayGuests))
+
+ignored	Declaration(Class(Dead))
+
+ignored	Declaration(Class(Orphan))
+
+ignored	Declaration(Class(Adult))
+
+ignored	Declaration(Class(YoungChild))
+
+ignored	Declaration(ObjectProperty(hasWife))
+
+ignored	Declaration(ObjectProperty(hasChild))
+
+ignored	Declaration(ObjectProperty(hasDaughter))
+
+ignored	Declaration(ObjectProperty(loves))
+
+ignored	Declaration(ObjectProperty(hasSpouse))
+
+ignored	Declaration(ObjectProperty(hasGrandparent))
+
+ignored	Declaration(ObjectProperty(hasParent))
+
+ignored	Declaration(ObjectProperty(hasBrother))
+
+ignored	Declaration(ObjectProperty(hasUncle))
+
+ignored	Declaration(ObjectProperty(hasSon))
+
+ignored	Declaration(ObjectProperty(hasAncestor))
+
+ignored	Declaration(ObjectProperty(hasHusband))
+
+ignored	Declaration(DataProperty(hasAge))
+
+ignored	Declaration(DataProperty(hasSSN))
+
+ignored	Declaration(Datatype(personAge))
+
+ignored	Declaration(Datatype(majorAge))
+
+ignored	Declaration(Datatype(toddlerAge))
+
+unsupported	DatatypeDefinition(Datatype(personAge),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#integer),FacetRestriction(http://www.w3.org/2001/XMLSchema#minInclusive,^^(0,http://www.w3.org/2001/XMLSchema#integer)),FacetRestriction(http://www.w3.org/2001/XMLSchema#maxInclusive,^^(150,http://www.w3.org/2001/XMLSchema#integer))]))
+
+unsupported	DatatypeDefinition(Datatype(majorAge),DataIntersectionOf(Datatype(personAge),DataComplementOf(Datatype(minorAge))))
+
+unsupported	DatatypeDefinition(Datatype(toddlerAge),DataOneOf([^^(1,http://www.w3.org/2001/XMLSchema#integer),^^(2,http://www.w3.org/2001/XMLSchema#integer)]))
+
+f	If
+f	X
+tv_sg	hasSpouse
+f	Y
+f	then
+f	Y
+tv_sg	hasSpouse
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	hasChild
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	Y
+tv_sg	hasChild
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	hasParent
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	hasSpouse
+f	Y
+f	.
+
+f	Every
+f	thing
+tv_sg	hasRelative
+f	itself
+f	.
+
+f	No
+f	thing
+tv_sg	parentOf
+f	itself
+f	.
+
+f	Every
+f	thing
+tv_sg	hasHusband
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	hasHusband
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	If
+f	X
+tv_sg	hasAncestor
+f	a
+f	thing
+f	that
+tv_sg	hasAncestor
+f	Y
+f	then
+f	X
+tv_sg	hasAncestor
+f	Y
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	hasWife
+f	a
+f	thing
+f	is
+f	a
+cn_sg	Man
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	hasWife
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	Woman
+f	.
+
+f	If
+f	X
+tv_sg	hasParent
+f	Y
+f	then
+f	Y
+tv_sg	hasChild
+f	X
+f	.
+f	If
+f	X
+tv_sg	hasChild
+f	Y
+f	then
+f	Y
+tv_sg	hasParent
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	hasSon
+f	Y
+f	then
+f	it
+f	is
+f	false
+f	that
+f	X
+tv_sg	hasDaughter
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	hasChild
+f	Y
+f	then
+f	X
+tv_sg	http://example.org/otherOntologies/families/child
+f	Y
+f	.
+f	If
+f	X
+tv_sg	http://example.org/otherOntologies/families/child
+f	Y
+f	then
+f	X
+tv_sg	hasChild
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	hasWife
+f	Y
+f	then
+f	X
+tv_sg	hasSpouse
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	hasFather
+f	Y
+f	then
+f	X
+tv_sg	hasParent
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	hasParent
+f	a
+f	thing
+f	that
+tv_sg	hasParent
+f	Y
+f	then
+f	X
+tv_sg	hasGrandparent
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	hasFather
+f	a
+f	thing
+f	that
+tv_sg	hasBrother
+f	Y
+f	then
+f	X
+tv_sg	hasUncle
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	hasFather
+f	a
+f	thing
+f	that
+tv_sg	hasBrother
+f	Y
+f	then
+f	X
+tv_sg	hasUncle
+f	Y
+f	.
+
+unsupported	HasKey(Class(Person),ObjectProperty(hasSSN))
+
+unsupported	DataPropertyDomain(DataProperty(hasAge),Class(Person))
+
+unsupported	DataPropertyRange(DataProperty(hasAge),Datatype(http://www.w3.org/2001/XMLSchema#nonNegativeInteger))
+
+unsupported	FunctionalDataProperty(DataProperty(hasHusband))
+
+unsupported	EquivalentDataProperties([DataProperty(hasAge),DataProperty(http://example.org/otherOntologies/families/age)])
+
+f	Every
+cn_sg	Woman
+f	is
+f	a
+cn_sg	Person
+f	.
+
+f	Every
+cn_sg	Mother
+f	is
+f	a
+cn_sg	Woman
+f	.
+
+f	Every
+cn_sg	Grandfather
+f	is
+f	a
+cn_sg	Man
+f	that
+f	is
+f	a
+cn_sg	Parent
+f	.
+
+f	Every
+cn_sg	Father
+f	is
+f	a
+cn_sg	Man
+f	that
+f	is
+f	a
+cn_sg	Parent
+f	.
+
+f	Every
+cn_sg	ChildlessPerson
+f	is
+f	a
+cn_sg	Person
+f	that
+f	is
+f	not
+tv_vbg	hasParent
+f	by
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	Female
+f	that
+f	is
+pn_sg	Bill
+f	or
+f	that
+f	is
+pn_sg	Mary
+f	or
+f	that
+f	is
+pn_sg	Meg
+f	is
+f	a
+cn_sg	Parent
+f	that
+tv_sg	hasChild
+f	at
+f	most
+f	1
+f	thing
+f	and
+f	that
+tv_sg	hasChild
+f	nothing
+f	but
+cn_pl	Female
+f	.
+
+comment	/* BUG: axiom too complex: SubClassOf(Class(Teenager),DataSomeValuesFrom(DataProperty(hasAge),DatatypeRestriction([Datatype(http://www.w3.org/2001/XMLSchema#integer),FacetRestriction(http://www.w3.org/2001/XMLSchema#minExclusive,^^(12,http://www.w3.org/2001/XMLSchema#integer)),FacetRestriction(http://www.w3.org/2001/XMLSchema#maxInclusive,^^(19,http://www.w3.org/2001/XMLSchema#integer))]))) */
+
+unsupported	SubClassOf(Annotation(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),^^("States that every man is a person.",xsd:string)),Class(Man),Class(Person))
+
+f	Every
+cn_sg	HappyPerson
+f	is
+f	a
+f	thing
+f	that
+tv_sg	hasChild
+f	nothing
+f	but
+cn_pl	HappyPerson
+f	and
+f	that
+tv_sg	hasChild
+f	a
+cn_sg	HappyPerson
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	hasChild
+f	nothing
+f	but
+cn_pl	HappyPerson
+f	and
+f	that
+tv_sg	hasChild
+f	a
+cn_sg	HappyPerson
+f	is
+f	a
+cn_sg	HappyPerson
+f	.
+
+f	Every
+cn_sg	JohnsChildren
+tv_sg	hasParent
+pn_sg	John
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	hasParent
+pn_sg	John
+f	is
+f	a
+cn_sg	JohnsChildren
+f	.
+
+f	Every
+cn_sg	NarcisticPerson
+tv_sg	loves
+f	itself
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	loves
+f	itself
+f	is
+f	a
+cn_sg	NarcisticPerson
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	hasChild
+f	a
+cn_sg	Orphan
+f	is
+f	a
+cn_sg	Dead
+f	.
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	hasChild
+f	by
+f	nothing
+f	but
+cn_pl	Dead
+f	is
+f	a
+cn_sg	Orphan
+f	.
+
+f	Every
+cn_sg	MyBirthdayGuests
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	Bill
+f	or
+f	that
+f	is
+pn_sg	John
+f	or
+f	that
+f	is
+pn_sg	Mary
+f	.
+f	Every
+f	thing
+f	that
+f	is
+pn_sg	Bill
+f	or
+f	that
+f	is
+pn_sg	John
+f	or
+f	that
+f	is
+pn_sg	Mary
+f	is
+f	a
+cn_sg	MyBirthdayGuests
+f	.
+
+f	Every
+cn_sg	Adult
+f	is
+f	a
+cn_sg	http://example.org/otherOntologies/families/Grownup
+f	.
+f	Every
+cn_sg	http://example.org/otherOntologies/families/Grownup
+f	is
+f	a
+cn_sg	Adult
+f	.
+
+f	Every
+cn_sg	Parent
+tv_sg	hasChild
+f	a
+cn_sg	Person
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	hasChild
+f	a
+cn_sg	Person
+f	is
+f	a
+cn_sg	Parent
+f	.
+
+f	Every
+cn_sg	Parent
+tv_sg	hasChild
+f	a
+cn_sg	Person
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	hasChild
+f	a
+cn_sg	Person
+f	is
+f	a
+cn_sg	Parent
+f	.
+
+f	Every
+cn_sg	Person
+f	is
+f	a
+cn_sg	Human
+f	.
+f	Every
+cn_sg	Human
+f	is
+f	a
+cn_sg	Person
+f	.
+
+f	Every
+cn_sg	Mother
+f	is
+f	a
+cn_sg	Parent
+f	that
+f	is
+f	a
+cn_sg	Woman
+f	.
+f	Every
+cn_sg	Parent
+f	that
+f	is
+f	a
+cn_sg	Woman
+f	is
+f	a
+cn_sg	Mother
+f	.
+
+f	Every
+cn_sg	Parent
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	Father
+f	or
+f	that
+f	is
+f	a
+cn_sg	Mother
+f	.
+f	Every
+f	thing
+f	that
+f	is
+f	a
+cn_sg	Father
+f	or
+f	that
+f	is
+f	a
+cn_sg	Mother
+f	is
+f	a
+cn_sg	Parent
+f	.
+
+f	Every
+cn_sg	ChildlessPerson
+f	is
+f	a
+cn_sg	Person
+f	that
+f	is
+f	not
+f	a
+cn_sg	Parent
+f	.
+f	Every
+cn_sg	Person
+f	that
+f	is
+f	not
+f	a
+cn_sg	Parent
+f	is
+f	a
+cn_sg	ChildlessPerson
+f	.
+
+f	No
+cn_sg	Woman
+f	is
+f	a
+cn_sg	Man
+f	.
+
+unsupported	DisjointClasses([Class(Father),Class(Mother),Class(YoungChild)])
+
+pn_sg	John
+f	is
+f	not
+pn_sg	Bill
+f	.
+
+pn_sg	James
+f	is
+pn_sg	Jim
+f	.
+
+pn_sg	John
+f	is
+pn_sg	http://example.org/otherOntologies/families/JohnBrown
+f	.
+
+pn_sg	Mary
+f	is
+pn_sg	http://example.org/otherOntologies/families/MaryBrown
+f	.
+
+pn_sg	John
+tv_sg	hasWife
+pn_sg	Mary
+f	.
+
+pn_sg	John
+tv_pl	hasAge
+f	51
+f	.
+
+pn_sg	Mary
+f	is
+f	a
+cn_sg	Person
+f	.
+
+pn_sg	Mary
+f	is
+f	a
+cn_sg	Woman
+f	.
+
+pn_sg	Jack
+f	is
+f	a
+cn_sg	Person
+f	that
+f	is
+f	not
+f	a
+cn_sg	Parent
+f	.
+
+pn_sg	John
+tv_sg	hasChild
+f	at
+f	most
+f	4
+cn_pl	Parent
+f	.
+
+pn_sg	John
+tv_sg	hasChild
+f	at
+f	least
+f	2
+cn_pl	Parent
+f	.
+
+pn_sg	John
+tv_sg	hasChild
+f	exactly
+f	3
+cn_pl	Parent
+f	.
+
+pn_sg	John
+tv_sg	hasChild
+f	exactly
+f	5
+f	things
+f	.
+
+pn_sg	John
+f	is
+f	a
+cn_sg	Father
+f	.
+
+pn_sg	Father
+f	is
+f	a
+cn_sg	SocialRole
+f	.
+
+pn_sg	Bill
+f	does
+f	not
+tv_pl	hasWife
+pn_sg	Mary
+f	.
+
+pn_sg	Jack
+f	does
+f	not
+tv_pl	hasAge
+f	53
+f	.
+
+pn_sg	Bill
+f	does
+f	not
+tv_pl	hasDaughter
+pn_sg	Susan
+f	.
+

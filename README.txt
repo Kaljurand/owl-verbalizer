@@ -25,17 +25,36 @@ or via Protege 4.1 (<http://protege.stanford.edu/>).
 ---+++ Input
 
 ==
-<SubClassOf>
-	<Class IRI="#man"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Ontology
+    xmlns="http://www.w3.org/2002/07/owl#"
+    xml:base="http://www.w3.org/2002/07/owl#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
+  <Prefix name="" IRI="http://www.example.org/test#"/>
+  <SubClassOf>
+    <ObjectIntersectionOf>
+      <Class abbreviatedIRI=":man"/>
+      <ObjectSomeValuesFrom>
+	<ObjectProperty abbreviatedIRI=":own"/>
+	<Class abbreviatedIRI=":bike"/>
+      </ObjectSomeValuesFrom>
+      <ObjectComplementOf>
 	<ObjectSomeValuesFrom>
-		<ObjectProperty IRI="#know"/>
-		<ObjectComplementOf>
-			<ObjectOneOf>
-				<NamedIndividual IRI="#Mary"/>
-			</ObjectOneOf>
-		</ObjectComplementOf>
+	  <ObjectProperty abbreviatedIRI=":own"/>
+	  <Class abbreviatedIRI=":car"/>
 	</ObjectSomeValuesFrom>
-</SubClassOf>
+      </ObjectComplementOf>
+    </ObjectIntersectionOf>
+    <ObjectSomeValuesFrom>
+      <ObjectInverseOf>
+	<ObjectProperty abbreviatedIRI=":like"/>
+      </ObjectInverseOf>
+      <ObjectOneOf>
+	<NamedIndividual abbreviatedIRI=":Mary"/>
+      </ObjectOneOf>
+    </ObjectSomeValuesFrom>
+  </SubClassOf>
+</Ontology>
 ==
 
 ---+++ Output
@@ -43,21 +62,31 @@ or via Protege 4.1 (<http://protege.stanford.edu/>).
 In ace-format:
 
 ==
-Every man knows something that is not Mary.
+Every man that own a bike and that does not own a car is like by Mary.
 ==
 
 In csv-format:
 
 ==
+ignored	Prefix(,http://www.example.org/test#)
+
 f	Every
-cn_sg	#man
-tv_sg	#know
-f	a
-f	thing
+cn_sg	http://www.example.org/test#man
 f	that
-f	is
+tv_sg	http://www.example.org/test#own
+f	a
+cn_sg	http://www.example.org/test#bike
+f	and
+f	that
+f	does
 f	not
-pn_sg	#Mary
+tv_pl	http://www.example.org/test#own
+f	a
+cn_sg	http://www.example.org/test#car
+f	is
+tv_vbg	http://www.example.org/test#like
+f	by
+pn_sg	http://www.example.org/test#Mary
 f	.
 ==
 
@@ -67,6 +96,8 @@ The OWL verbalizer depends on a reasonably recent version of SWI-Prolog
 (<http://www.swi-prolog.org/>), e.g. 5.10 or higher.
 SWI-Prolog must be installed together with the packages
 =|clib|=, =|sgml|=, and =|http|=.
+
+See also: docs/installing_swipl_on_linux.txt
 
 ---++ Compiling the OWL verbalizer command-line client
 
@@ -81,7 +112,7 @@ swipl -O -f owl_to_ace.pl -g "qsave_program('owl_to_ace.exe', [goal(main), tople
 ==
 
 or, alternatively, just click on =|make_exe.bat|= (on Windows) or
-type =|sh make_exe.sh|= (on Unix/Linux/Mac).
+type =|sh make_exe.sh|= (on Unix / Linux / MacOS X).
 As a result, an EXE-file (the command-line client) is created.
 
 
@@ -153,33 +184,41 @@ Posting from Java: use the OWL verbalizer Java interface (in directory java/).
 
 ---++ How are OWL entity IRIs verbalized?
 
+The OWL verbalizer maps OWL entity IRIs to ACE content words such that
+
+ * OWL individuals map to ACE proper names (PN)
+ * OWL classes map to ACE common nouns (CN)
+ * OWL properties map to ACE transitive verbs (TV)
+
+There are 6 morphological categories that determine the surface form of an IRI:
+
+ * singular form of a proper name (e.g. `John')
+ * singular form of a common noun (`man')
+ * plural form of a common noun (`men')
+ * singular form of a transitive verb (`mans')
+ * plural form of a transitive verb (`man')
+ * past participle form a transitive verb (`manned')
+
+The user has full control over the eventual surface forms of the IRIs but
+has to choose them in terms of the above categories. Furthermore,
+
+ * the surface forms must be legal ACE content words (e.g. they should not contain punctuation symbols);
+ * the mapping of IRIs to surface forms must be bidirectional within the same word class, in order to be able to (if needed) parse the verbalization back into OWL in a semantics preserving way.
+
 ---+++ Using the lexicon
 
 It is possible to specify the mapping of IRIs to surface forms
 using the following annotation properties:
 
-==
-* http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg
-* http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg
-* http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl
-* http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg
-* http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl
-* http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg
-==
+ * http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg
+ * http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg
+ * http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl
+ * http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg
+ * http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl
+ * http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg
 
-which stand for
-
-==
-* singular form of a proper name (e.g. `John')
-* singular form of a common noun (`man')
-* plural form of a common noun (`men')
-* singular form of a transitive verb (`mans')
-* plural form of a transitive verb (`man')
-* past participle form a transitive verb (`manned')
-==
-
-The following axioms state that if the IRI "#man" is used as a plural common noun,
-then the wordform `men' must be used by the verbalizer. If, however, it
+For example, the following axioms state that if the IRI "#man" is used as a plural
+common noun, then the wordform `men' must be used by the verbalizer. If, however, it
 is used as a singular transitive verb, then `mans' must be used.
 
 ==
@@ -207,8 +246,8 @@ Note that this means that different IRIs are not necessarily verbalized as diffe
 ---+++ Not using the lexicon (and leaving the IRIs as they are)
 
 If the output-mode is "csv", then each ACE token is output on a separate line
-and morphological mappings are left to the user to be applied. An example of
-csv-output is:
+and morphological mappings are left to the user to be applied after the verbalization.
+An example of csv-output is:
 
 ==
 pn_sg	http://www.example.org/story.owl#John
@@ -234,8 +273,14 @@ cn_sg	http://www.example.org/story.owl#food
 f	.
 ==
 
-The columns are tab-separated. The first column specifies the type of the token
-(f = function word, qs = quoted string, comment = comment, cn_sg = singular common noun, ...),
+The columns are tab-separated. The first column specifies the type of the token, e.g.
+
+ * f = function word
+ * qs = quoted string
+ * comment = comment
+ * cn_sg = singular common noun
+ * ...
+
 and the 2nd column contains ACE tokens and OWL IRIs. Empty line denotes axiom
 borders (each OWL axiom in the input ontology is verbalized by 0 or more ACE
 sentences).
@@ -261,11 +306,13 @@ which converts an input OWL axiom
 (Prolog term in OWL FSS) to a list of ACE sentences (where each sentence is a Prolog
 list of ACE tokens, where each token is a Prolog atom, number, or unary ground term).
 This module calls three further rules from three separate modules:
-table_1/2 rewrites axioms (except for SubClassOf-, SubPropertyOf-, and DisjointProperties-axioms);
-rewrite_subclassof/2 rewrites SubClassOf-axioms; and
-owl_ace/2 verbalizes the rewritten axioms with a Definite Clause Grammar.
+
+ * [[table_1/2]]
+ * [[rewrite_subclassof/2]]
+ * [[owl_ace/2]]
 
 
----++ Known issues
+---++ Known issues etc.
 
-See: http://code.google.com/p/owlverbalizer/issues/list
+For known issues and feature requests see
+http://code.google.com/p/owlverbalizer/issues/list

@@ -1,0 +1,184 @@
+ignored	EntityAnnotation(ObjectProperty(http://www.example.org/story.owl#eat),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#sg,^^(eats,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.example.org/story.owl#eat),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#pl,^^(eat,)))
+
+ignored	EntityAnnotation(ObjectProperty(http://www.example.org/story.owl#eat),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#vbg,^^(eaten,)))
+
+ignored	EntityAnnotation(Class(http://www.example.org/story.owl#leaf),Annotation(http://attempto.ifi.uzh.ch/ace_lexicon#pl,^^(leaves,)))
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+f	a
+cn_sg	http://www.example.org/story.owl#goat
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	http://www.example.org/story.owl#eat
+f	nothing
+f	but
+cn_pl	http://www.example.org/story.owl#leaf
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#goat
+f	.
+
+f	Every
+cn_sg	http://www.example.org/story.owl#animal
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#cat
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#goat
+f	.
+
+pn_sg	http://www.example.org/story.owl#John
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#man
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#food
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.example.org/story.owl#automobile
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#apple
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#food
+f	.
+
+f	Every
+cn_sg	http://www.example.org/story.owl#human
+f	is
+f	a
+f	thing
+f	that
+f	is
+pn_sg	http://www.example.org/story.owl#John
+f	or
+f	that
+f	is
+pn_sg	http://www.example.org/story.owl#Mary
+f	.
+
+f	Every
+cn_sg	http://www.example.org/story.owl#man
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#person
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.example.org/story.owl#eat
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	Every
+cn_sg	http://www.example.org/story.owl#human
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#person
+f	that
+tv_sg	http://www.example.org/story.owl#own
+f	a
+cn_sg	http://www.example.org/story.owl#automobile
+f	.
+
+f	If
+f	X
+tv_sg	http://www.example.org/story.owl#eat
+f	a
+f	thing
+f	that
+tv_sg	http://www.example.org/story.owl#eat
+f	Y
+f	then
+f	X
+tv_sg	http://www.example.org/story.owl#eat
+f	Y
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://www.example.org/story.owl#eat
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#animal
+f	.
+
+f	If
+f	X
+tv_sg	http://www.example.org/story.owl#eat
+f	Y
+f	then
+f	Y
+tv_sg	http://www.example.org/story.owl#hate
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://www.example.org/story.owl#hate
+f	Y
+f	then
+f	Y
+tv_sg	http://www.example.org/story.owl#eat
+f	X
+f	.
+

@@ -16,23 +16,27 @@
 		owl_ace/2
 	]).
 
-/** <module> Definite Clause Grammar to transform an OWL axiom into ACE tokens
+/** <module> Definite Clause Grammar to transform an OWL axiom into an ACE sentence
 
 Converts an axiom in a syntactic fragment of OWL into a sentence in a
 fragment of ACE.
 
 Things to discuss:
 
+==
 * Ambiguity of RelCl and coordination.
 * Comma-and vs and. Use comma-and only when disjunction is around.
+==
 
 Things to test:
 
+==
 * Roundtripping OWL->ACE->OWL (generate OWL with owl_generator.pl)
 * Roundtripping ACE->OWL->ACE (generate ACE with this grammar)
 * How many solutions from ACE->OWL? Is the first one correct?
 * How many solutions from OWL->ACE? Is the first one correct?
 * Compatibility with ACE semantics (i.e. treatment of relative clauses and coordinations)
+==
 
 @author Kaarel Kaljurand
 @version 2011-06-10
@@ -42,7 +46,11 @@ Things to test:
 
 %% owl_ace(+OWL:term, -ACE:list) is nondet.
 %
-% Front-end to the DCG.
+% Verbalizes an OWL axiom as an ACE sentence. Assumes that the OWL axiom comes
+% from a certain syntactic fragment of OWL, e.g. where all the intersections
+% are binary, which does not contain any EquivalentClasses-axioms, etc. etc.
+% So, calling this module must be preceeded by the heavy axiom rewriting performed
+% by table_1/2 and rewrite_subclassof/2.
 %
 % An example of verbalizing an OWL axiom as an ACE sentence.
 %

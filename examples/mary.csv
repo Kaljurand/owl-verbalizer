@@ -1,0 +1,21 @@
+ignored	Prefix(,http://www.example.org/test#)
+
+f	Every
+cn_sg	http://www.example.org/test#man
+f	that
+tv_sg	http://www.example.org/test#own
+f	a
+cn_sg	http://www.example.org/test#bike
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://www.example.org/test#own
+f	a
+cn_sg	http://www.example.org/test#car
+f	is
+tv_vbg	http://www.example.org/test#like
+f	by
+pn_sg	http://www.example.org/test#Mary
+f	.
+

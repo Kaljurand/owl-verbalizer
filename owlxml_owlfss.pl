@@ -16,10 +16,10 @@
 		owlxml_owlfss/3
 	]).
 
-/** <module> From OWLXML to OWLFSS
+/** <module> Converter from OWLXML to OWLFSS
 
 Converts OWL 2 XML into OWL 2 Functional-Style Syntax (in Prolog notation),
-which is used by all the following modules
+which is used by all the following modules.
 In OWLFSS lists and sets are marked up as Prolog lists.
 Also, capitalized atoms must be in quotation marks and
 other such Prolog-specific escaping is needed.

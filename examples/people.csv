@@ -1,0 +1,1821 @@
+ignored	Prefix(rdf,http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+
+ignored	Prefix(rdfs,http://www.w3.org/2000/01/rdf-schema#)
+
+ignored	Prefix(xsd,http://www.w3.org/2001/XMLSchema#)
+
+ignored	Prefix(owl,http://www.w3.org/2002/07/owl#)
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#adult))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#animal))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#animal_lover))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#bicycle))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#bone))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#brain))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#broadsheet))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#bus))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#bus_company))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#bus_driver))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#car))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#cat))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#cat_liker))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#cat_owner))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#company))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#cow))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#dog))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#dog_liker))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#dog_owner))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#driver))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#duck))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#elderly))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#female))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#giraffe))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#grass))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#grownup))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#haulage_company))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#kid))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#leaf))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#lorry))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#mad_cow))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#magazine))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#male))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#man))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#newspaper))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#old_lady))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#person))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#pet))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#pet_owner))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#plant))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#publication))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#red_top))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#sheep))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#tabloid))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#tiger))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#tree))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#truck))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#van))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#van_driver))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#vegetarian))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#vehicle))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#white_thing))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#white_van_man))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#woman))
+
+ignored	Declaration(Class(http://owl.man.ac.uk/2005/07/sssw/people#young))
+
+ignored	Declaration(Class(http://www.w3.org/2002/07/owl#Thing))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#drives))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#eaten_by))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#eats))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#has_child))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#has_father))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#has_mother))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#has_parent))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#has_part))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#has_pet))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#likes))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#part_of))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#reads))
+
+ignored	Declaration(ObjectProperty(http://owl.man.ac.uk/2005/07/sssw/people#works_for))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Dewey))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fido))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Flossie))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fluffy))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fred))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Huey))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Joe))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Kevin))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Louie))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Mick))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Minnie))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Pete))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Rex))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Spike))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Sun))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Times))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Tibbs))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Tom))
+
+ignored	Declaration(NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Walt))
+
+ignored	Declaration(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment))
+
+ignored	Declaration(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label))
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal_lover
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	at
+f	least
+f	3
+f	things
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	at
+f	least
+f	3
+f	things
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal_lover
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bus_driver
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bus
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bus
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bus_driver
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat_liker
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#likes
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#likes
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat_liker
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat_owner
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat_owner
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog_liker
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#likes
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#likes
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog_liker
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog_owner
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog_owner
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#driver
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#driver
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#grownup
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#grownup
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#truck
+f	and
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#works_for
+f	a
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#truck
+f	and
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#works_for
+f	a
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#works_for
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	or
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#works_for
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	or
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#kid
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#young
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#young
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#kid
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#lorry
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#lorry
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#mad_cow
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cow
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#brain
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#sheep
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cow
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#brain
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#sheep
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#mad_cow
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#man
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#male
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#male
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#man
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#old_lady
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#elderly
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#elderly
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#old_lady
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#pet
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of
+f	a
+f	thing
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#pet
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#pet_owner
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#pet_owner
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van_driver
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van_driver
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vegetarian
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	that
+f	does
+f	not
+tv_pl	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	that
+f	does
+f	not
+tv_pl	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vegetarian
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#white_van_man
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#man
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#white_thing
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#man
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#white_thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#white_van_man
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#woman
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#female
+f	and
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#woman
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+f	thing
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bicycle
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#broadsheet
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#newspaper
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bus
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bus_company
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#company
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#car
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cow
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vegetarian
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#bone
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#driver
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#duck
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#elderly
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#giraffe
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	by
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#giraffe
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#leaf
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#grass
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#plant
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#haulage_company
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#company
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#leaf
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tree
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#lorry
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#magazine
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#publication
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#newspaper
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#publication
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#newspaper
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#broadsheet
+f	or
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tabloid
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#old_lady
+f	is
+f	a
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	and
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	nothing
+f	but
+cn_pl	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#broadsheet
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#red_top
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tabloid
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#sheep
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	by
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#sheep
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#grass
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tabloid
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#newspaper
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tiger
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tree
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#plant
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#truck
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+
+f	Every
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#vehicle
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#reads
+f	by
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#white_van_man
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tabloid
+f	.
+
+f	No
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#adult
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#young
+f	.
+
+f	No
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#broadsheet
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tabloid
+f	.
+
+f	No
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	or
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	is
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#plant
+f	and
+f	that
+f	does
+f	not
+tv_pl	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#plant
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Dewey
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#duck
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Fido
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Flossie
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cow
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Fluffy
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tiger
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Fred
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Huey
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#duck
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Joe
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Joe
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Kevin
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Louie
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#duck
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Mick
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#male
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Minnie
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#elderly
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Minnie
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#female
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Pete
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#van
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#white_thing
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Rex
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#dog
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Spike
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#broadsheet
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#The_Sun
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#tabloid
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#The_Times
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#broadsheet
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Tibbs
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#cat
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Tom
+f	is
+f	a
+f	thing
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Walt
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+
+unsupported	DifferentIndividuals([NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Dewey),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fido),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Flossie),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fluffy),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Fred),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Huey),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Joe),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Kevin),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Louie),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Mick),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Minnie),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Rex),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Sun),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#The_Times),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Tibbs),NamedIndividual(http://owl.man.ac.uk/2005/07/sssw/people#Walt)])
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Fred
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Tibbs
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Joe
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Fido
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Kevin
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Flossie
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Kevin
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Fluffy
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Mick
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#drives
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Mick
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#reads
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Minnie
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Tom
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Rex
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Mick
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Spike
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Pete
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Walt
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Louie
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Walt
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Huey
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Walt
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Dewey
+f	.
+
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_father
+f	Y
+f	then
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_parent
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_mother
+f	Y
+f	then
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_parent
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	Y
+f	then
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#likes
+f	Y
+f	.
+
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eaten_by
+f	Y
+f	then
+f	Y
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	Y
+f	then
+f	Y
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eaten_by
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_part
+f	Y
+f	then
+f	Y
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#part_of
+f	Y
+f	then
+f	Y
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_part
+f	X
+f	.
+
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	Y
+f	then
+f	Y
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of
+f	X
+f	.
+f	If
+f	X
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of
+f	Y
+f	then
+f	Y
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	X
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#eats
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+f	thing
+f	that
+tv_sg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#person
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#has_father
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#man
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#has_mother
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#woman
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#has_pet
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#animal
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://owl.man.ac.uk/2005/07/sssw/people#reads
+f	by
+f	a
+f	thing
+f	is
+f	a
+cn_sg	http://owl.man.ac.uk/2005/07/sssw/people#publication
+f	.
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror),^^(The paper read by Mick (a white van man).,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Daily_Mirror),^^(Daily Mirror,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Dewey),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Dewey),^^(Dewey,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Fido),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Fido),^^(Fido,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Flossie),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Flossie),^^(Flossie,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Fluffy),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Fluffy),^^(Fluffy,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Fred),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Fred),^^(Fred,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Huey),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Huey),^^(Huey,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Joe),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Joe),^^(Joe,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Kevin),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Kevin),^^(Kevin,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Louie),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Louie),^^(Louie,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Mick),^^(Mick is male and drives a white van. Due to the axiom concerning drivers, we know that Mick must be a man, and is therefore a white van man. The axiom about the reading material of a white van man then allows us to infer things about the Daily Mirror.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Mick),^^(Mick,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Minnie),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Minnie),^^(Minnie,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Pete),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Pete),^^(Pete,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC),^^(A white van,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Q123_ABC),^^(Q123 ABC,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Rex),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Rex),^^(Rex,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Spike),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Spike),^^(Spike,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#The_Guardian),^^(The Guardian,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#The_Sun),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#The_Sun),^^(The Sun,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#The_Times),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#The_Times),^^(The Times,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Tibbs),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Tibbs),^^(Tibbs,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Tom),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Tom),^^(Tom,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Walt),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#Walt),^^(Walt,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#adult),^^(Things that are adult.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#adult),^^(adult,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#animal),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#animal),^^(animal,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#animal_lover),^^(Someone who really likes animals,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#animal_lover),^^(animal lover,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bicycle),^^(A human propelled vehicle, with two wheels,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bicycle),^^(bicycle,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bone),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bone),^^(bone,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#brain),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#brain),^^(brain,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#broadsheet),^^(A newspaper. Broadsheets are usually considered to be more "high-brow" than tabloids.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#broadsheet),^^(broadsheet,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bus),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bus),^^(bus,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bus_company),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bus_company),^^(bus company,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bus_driver),^^(Someone who drives a bus.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#bus_driver),^^(bus driver,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#car),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#car),^^(car,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cat),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cat),^^(cat,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cat_liker),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cat_liker),^^(cat liker,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cat_owner),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cat_owner),^^(cat owner,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#company),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#company),^^(company,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cow),^^(Cows are naturally vegetarians.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#cow),^^(cow,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#dog),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#dog),^^(dog,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#dog_liker),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#dog_liker),^^(dog liker,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#dog_owner),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#dog_owner),^^(dog owner,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#driver),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#driver),^^(driver,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#drives),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#drives),^^(drives,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#duck),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#duck),^^(duck,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#eaten_by),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#eaten_by),^^(eaten_by,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#eats),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#eats),^^(eats,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#elderly),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#elderly),^^(elderly,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#female),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#female),^^(female,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#giraffe),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#giraffe),^^(giraffe,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#grass),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#grass),^^(grass,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#grownup),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#grownup),^^(grownup,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_child),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_child),^^(has_child,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_father),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_father),^^(has_father,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_mother),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_mother),^^(has_mother,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_parent),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_parent),^^(has_parent,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_part),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_part),^^(has_part,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_pet),^^(Anyone that has a pet must like that pet.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#has_pet),^^(has_pet,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#haulage_company),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#haulage_company),^^(haulage company,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#haulage_truck_driver),^^(haulage truck driver,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#haulage_worker),^^(haulage worker,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#is_pet_of),^^(is_pet_of,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#kid),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#kid),^^(kid,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#leaf),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#leaf),^^(leaf,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#likes),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#likes),^^(likes,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#lorry),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#lorry),^^(lorry,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#lorry_driver),^^(lorry driver,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#mad_cow),^^(A mad cow is a cow that has been eating the brains of sheep.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#mad_cow),^^(mad cow,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#magazine),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#magazine),^^(magazine,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#male),^^(The class of all male things.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#male),^^(male,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#man),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#man),^^(man,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#newspaper),^^(All newspapers are either broadsheets or tabloids.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#newspaper),^^(newspaper,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#old_lady),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#old_lady),^^(old lady,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#part_of),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#part_of),^^(part_of,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#person),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#person),^^(person,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#pet),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#pet),^^(pet,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#pet_owner),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#pet_owner),^^(pet owner,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#plant),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#plant),^^(plant,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#publication),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#publication),^^(publication,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#quality_broadsheet),^^(quality broadsheet,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#reads),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#reads),^^(reads,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#red_top),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#red_top),^^(red top,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#sheep),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#sheep),^^(sheep,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#tabloid),^^(A newspaper. Tabloids are usually thought of as more "down-market" than broadsheets.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#tabloid),^^(tabloid,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#tiger),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#tiger),^^(tiger,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#tree),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#tree),^^(tree,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#truck),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#truck),^^(truck,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#van),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#van),^^(van,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#van_driver),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#van_driver),^^(van driver,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#vegetarian),^^(A vegetarian is defined as an animal that eats no other animals, or parts of animals.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#vegetarian),^^(vegetarian,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#vehicle),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#vehicle),^^(vehicle,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#white_thing),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#white_thing),^^(white thing,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#white_van_man),^^(A white van man is a man who drives a white van.,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#white_van_man),^^(white van man,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#woman),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#woman),^^(woman,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#works_for),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#works_for),^^(works_for,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#comment),IRI(http://owl.man.ac.uk/2005/07/sssw/people#young),^^(,http://www.w3.org/2001/XMLSchema#string))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://www.w3.org/2000/01/rdf-schema#label),IRI(http://owl.man.ac.uk/2005/07/sssw/people#young),^^(young,http://www.w3.org/2001/XMLSchema#string))
+

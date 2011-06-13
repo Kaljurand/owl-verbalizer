@@ -14,6 +14,6 @@ This file was generated like this:
 
 === Website example ===
 
-example.owl is the example that is featured on the OWL verbalizer website.
+example.owl is the example that is featured on the OWL verbalizer demo page.
 
 example_old.owl is the same example but in the old OWL 2 syntax (supported by OWL-API 2).
