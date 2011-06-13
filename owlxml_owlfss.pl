@@ -44,8 +44,10 @@ i.e. XML<->FSS and use it in ACE->OWL to generate XML output.
 %
 % Note that the following are equivalent:
 %
+%==
 % load_xml_file(Stream, XML)
 % load_structure(Stream, XML, [dialect(xml)])
+%==
 %
 % We use the general rule in order to be able to remove whitespace.
 %

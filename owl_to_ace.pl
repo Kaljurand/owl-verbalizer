@@ -2,7 +2,7 @@
 % (See README.txt for installation instructions and usage examples.)
 %
 % Author: Kaarel Kaljurand
-% Version: 2011-06-11
+% Version: 2011-06-13
 %
 
 :- use_module(library('http/thread_httpd')).
@@ -14,7 +14,7 @@
 	]).
 
 :- use_module(owlfss_acetext, [
-		owlfss_acetext/2
+		axiomlist_sentencelist/2
 	]).
 
 :- use_module(output_results, [
@@ -202,7 +202,7 @@ owl_to_ace_cli(FileName, Format) :-
 	owl_to_ace(Ontology, cli, Format).
 
 owl_to_ace('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
-	owlfss_acetext(AxiomList, Results),
+	axiomlist_sentencelist(AxiomList, Results),
 	current_stream(1, write, Stream),
 	set_stream(Stream, encoding(utf8)),
 	output_header(Mode, Format),

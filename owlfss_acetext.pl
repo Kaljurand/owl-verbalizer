@@ -13,14 +13,15 @@
 % OWL verbalizer. If not, see http://www.gnu.org/licenses/.
 
 :- module(owlfss_acetext, [
-		owlfss_acetext/2
+		axiomlist_sentencelist/2,
+		axiom_sentencelist/2
 	]).
 
 
 /** <module> OWL 2 verbalizer
 
 @author Kaarel Kaljurand
-@version 2011-06-10
+@version 2011-06-13
 
 */
 
@@ -37,15 +38,6 @@
 	]).
 
 
-%% owlfss_acetext(+AxiomList:list, -AxiomSentenceList:list) is det.
-%
-% @param AxiomList is a list of axioms in OWL 2 Functional-Style Syntax (Prolog notation)
-% @param AxiomSentenceList is a list of Axiom-SentenceList pairs
-%
-owlfss_acetext(AxiomList, AxiomSentenceList) :-
-	axiomlist_sentencelist(AxiomList, AxiomSentenceList).
-
-
 %% axiomlist_sentencelist(+AxiomList:list, -AxiomSentenceList:list) is det.
 %
 % @param AxiomList is a list of OWL axioms
@@ -53,19 +45,32 @@ owlfss_acetext(AxiomList, AxiomSentenceList) :-
 %
 axiomlist_sentencelist([], []).
 
-axiomlist_sentencelist([Axiom | AxiomList], [Axiom-ignored | SentenceList]) :-
-	is_ignore(Axiom),
-	!,
-	axiomlist_sentencelist(AxiomList, SentenceList).
+axiomlist_sentencelist([Axiom | AxiomList], [Axiom-SentenceList | AxiomSentenceList]) :-
+	axiom_sentencelist(Axiom, SentenceList),
+	axiomlist_sentencelist(AxiomList, AxiomSentenceList).
 
-axiomlist_sentencelist([Axiom | AxiomList], [Axiom-SentenceList1 | SentenceList]) :-
+
+%% axiom_sentencelist(+Axiom:term, -SentenceList:list) is det.
+%
+% Maps the given axiom to its verbalization (list of ACE sentences).
+% If the axiom is non-logical then returns 'ignored', if the verbalization
+% fails then returns 'unsupported'.
+%
+% @param Axiom is an OWL axiom
+% @param SentenceList is a list of ACE sentences
+%
+% @bug instead of returning atoms throw exceptions instead
+%
+axiom_sentencelist(Axiom, ignored) :-
+	is_ignore(Axiom),
+	!.
+
+axiom_sentencelist(Axiom, SentenceList) :-
 	table_1(Axiom, EquivalentAxioms),
 	!,
-	axiomlist_sentencelist_x(EquivalentAxioms, SentenceList1),
-	axiomlist_sentencelist(AxiomList, SentenceList).
+	axiomlist_sentencelist_x(EquivalentAxioms, SentenceList).
 
-axiomlist_sentencelist([UnsupportedAxiom | AxiomList], [UnsupportedAxiom-unsupported | SentenceList]) :-
-	axiomlist_sentencelist(AxiomList, SentenceList).
+axiom_sentencelist(_Axiom, unsupported).
 
 
 %% axiomlist_sentencelist_x(+AxiomList:list, -SentenceList:list) is det.
