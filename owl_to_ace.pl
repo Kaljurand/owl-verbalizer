@@ -13,7 +13,7 @@
 		owlxml_owlfss/3
 	]).
 
-:- use_module(owlfss_acetext, [
+:- use_module(axiom_sentencelist, [
 		axiomlist_sentencelist/2
 	]).
 

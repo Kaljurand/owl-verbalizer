@@ -1,0 +1,27 @@
+Most Linux distributions (such as Ubuntu) provide SWI-Prolog as precompiled packages,
+i.e. SWI-Prolog and its extra packages (e.g. 'http', 'sgml') can be installed
+using the distribution package manager. The following instructs how to install
+SWI-Prolog from the sources. Installing from the sources is simple and gives you
+better control over which version with which packages is installed.
+
+Assuming that you are in the root directory of the uncompressed SWI tarball
+(e.g. pl-5.11.22/), execute the following commands.
+Note that /home/myname/Apps/ is the directory where the
+bin/, lib/ etc. subdirectories are (or are to be created),
+if you want to install under /usr/local/
+and have rights to do so, then do not specify the 'prefix' flag.
+In this case you probably have to install using sudo (sudo make install).
+
+cd src/
+./configure --prefix=/home/myname/Apps/
+make
+make install
+cd ..
+cd packages/
+env PKG="clib sgml http pldoc" ./configure
+make
+make install
+
+Note that to run the OWL verbalizer you only need the packages 'clib', 'sgml'.
+To run the verbalizer as the HTTP-server you additionally need the package 'http'.
+To view the documentation embedded in the source files you need 'pldoc'.

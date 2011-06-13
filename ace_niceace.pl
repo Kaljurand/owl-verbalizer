@@ -21,20 +21,22 @@
 The ACE beautifier does the following modifications to a list
 of ACE tokens.
 
+==
 * a -> an (if appropriate)
 * a thing -> something
 * every thing -> everything
 * no thing -> nothing
 * connect every comma and a period to the preceding word
 * glue the quotes to the quoted strings
+==
 
 This code is not called in the csv-mode, i.e. it is left to the user
 to perform these beautification transformations.
 
-BUG: this module calls the lexicon-module but does not explicitly import it.
-
 @author Kaarel Kaljurand
 @version 2011-06-11
+
+@bug this module calls the lexicon-module but does not explicitly import it.
 
 */
 

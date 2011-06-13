@@ -25,29 +25,33 @@
 
 /** <module> Lexicon
 
-@author Kaarel Kaljurand
-@version 2011-06-11
-
 Manages the mapping of OWL IRIs to ACE common word surface forms.
 The mapping is instantiated from a list of OWL annotation assertion axioms
 found in the ontology.
 
 The supported surface forms are of the following type:
 
+==
 * (singular) proper name,
 * singular noun,
 * plural noun,
 * singular verb,
 * plural verb (= infinitive verb),
 * past participle (passive participle) verb.
+==
 
 This mapping must obey certain rules:
 
-- it must be bidirectional within the same word class
-- it must not generate forms which are not legal ACE tokens
+==
+* it must be bidirectional within the same word class
+* it must not generate forms which are not legal ACE tokens
+==
 
 We do not check if these rules are followed, it is up to the
 user to make sure that they are.
+
+@author Kaarel Kaljurand
+@version 2011-06-11
 
 */
 

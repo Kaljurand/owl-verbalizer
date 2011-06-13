@@ -22,6 +22,7 @@
 This module defines various ways of presenting the results.
 Currently defined output formats are:
 
+==
 * ace: Paragraphs of ACE sentences (each corresponding to an OWL axiom),
 	separated by double newline;
 
@@ -31,6 +32,7 @@ Currently defined output formats are:
 	axiom/paragraph border denoted by an empty line, common word tokens are
 	represented by IRIs (i.e. no surface form has been calculated),
 	`everything' (similarly `something') is represented as two tokens `every' and `thing'.
+==
 
 @author Kaarel Kaljurand
 @version 2011-06-11

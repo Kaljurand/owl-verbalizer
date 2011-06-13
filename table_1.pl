@@ -24,13 +24,11 @@
 @version 2011-06-11
 @license LGPLv3
 
-TODO:
-
-* Handle inv(inv(...))
-* Handle different orderings of arguments in some axioms, e.g. ClassAssertion,
-Domain, Range, property assertions
-* Apply list_to_set/2 where appropriate
-* check the cases where a set/list must have more than 1 element according to the spec
+@tbd Handle inv(inv(...))
+@tbd Handle different orderings of arguments in some axioms,
+e.g. ClassAssertion, Domain, Range, property assertions
+@tbd Apply list_to_set/2 where appropriate
+@tbd Check the cases where a set/list must have more than 1 element according to the spec
 */
 
 

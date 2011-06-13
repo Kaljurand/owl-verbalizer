@@ -16,18 +16,18 @@
 		owlxml_owlfss/3
 	]).
 
-/** <module> owlxml_owlfss
+/** <module> From OWLXML to OWLFSS
 
-@author Kaarel Kaljurand
-@version 2011-06-11
-
+Converts OWL 2 XML into OWL 2 Functional-Style Syntax (in Prolog notation),
+which is used by all the following modules
 In OWLFSS lists and sets are marked up as Prolog lists.
 Also, capitalized atoms must be in quotation marks and
 other such Prolog-specific escaping is needed.
 
-TODO:
+@author Kaarel Kaljurand
+@version 2011-06-11
 
-* Make the code bidirectional,
+@tbd Make the code bidirectional,
 i.e. XML<->FSS and use it in ACE->OWL to generate XML output.
 
 */

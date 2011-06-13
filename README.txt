@@ -2,7 +2,7 @@
 
 Author: Kaarel Kaljurand
 
-Version: 2011-06-11
+Version: 2011-06-13
 
 
 ---++ Introduction
@@ -16,9 +16,8 @@ Note that the input must be in OWL 2 XML (<http://www.w3.org/TR/owl2-xml-seriali
 No RDF-based format is supported as input.
 You can convert OWL RDF/XML into OWL 2 XML using the OWL-API v3
 (<http://owlapi.sourceforge.net/>), e.g.
-
-* via the online tool <http://owl.cs.manchester.ac.uk/converter/>
-* via Protege 4.1 (<http://protege.stanford.edu/>)
+via the online tool <http://owl.cs.manchester.ac.uk/converter/>
+or via Protege 4.1 (<http://protege.stanford.edu/>).
 
 
 ---++ Example
@@ -66,11 +65,8 @@ f	.
 
 The OWL verbalizer depends on a reasonably recent version of SWI-Prolog
 (<http://www.swi-prolog.org/>), e.g. 5.10 or higher.
-SWI-Prolog must be installed together with the following packages:
-
-* clib
-* sgml
-* http
+SWI-Prolog must be installed together with the packages
+=|clib|=, =|sgml|=, and =|http|=.
 
 ---++ Compiling the OWL verbalizer command-line client
 
@@ -115,7 +111,7 @@ If executing the EXE-file results in an "out of stack" error, then increase the 
 options local/1 and global/1, and recompile.
 
 
----++ Using OWL verbalizer webservice
+---++ Using the OWL verbalizer webservice
 
 The OWL verbalizer webservice is launched on the command-line, e.g.:
 
@@ -152,45 +148,35 @@ curl 'http://owl.cs.manchester.ac.uk/repository/download?ontology=http://www.co-
 
 Posting from an HTML page: look at the source code of <docs/owl_to_ace.html>.
 
-Posting from Java: use the Attempto Java Packages
-(see e.g. <http://attempto.ifi.uzh.ch/site/docs/java/ch/uzh/ifi/attempto/owl/VerbalizerWebservice.html>).
+Posting from Java: use the OWL verbalizer Java interface (in directory java/).
 
 
----++ API-level access to the OWL verbalizer
+---++ How are OWL entity IRIs verbalized?
 
-The API-level access to the OWL verbalizer is only documented with SWI-Prolog's PlDoc.
-The entry point is the module =|owlfss_acetext.pl|= which exports the rule owlfss_acetext/2.
-This rule expects an OWL ontology (as a Prolog term) as input and returns a (Prolog) list of
-Axiom-SentenceList pairs as output, where Axiom is an OWL axiom and SentenceList is a list
-of corresponding ACE sentences, where each sentence is a list of tokens.
-This module calls three further rules from three separate modules.
-
-* table_1/2: rewrites axioms (except for SubClassOf-, SubPropertyOf-, and DisjointProperties-axioms)
-
-* rewrite_subclassof/2: rewrites SubClassOf-axioms
-
-* owl_ace/2: verbalizes the rewritten axioms with a Definite Clause Grammar
-
----++ Using the lexicon
+---+++ Using the lexicon
 
 It is possible to specify the mapping of IRIs to surface forms
 using the following annotation properties:
 
+==
 * http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg
 * http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg
 * http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl
 * http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg
 * http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl
 * http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg
+==
 
 which stand for
 
+==
 * singular form of a proper name (e.g. `John')
 * singular form of a common noun (`man')
 * plural form of a common noun (`men')
 * singular form of a transitive verb (`mans')
 * plural form of a transitive verb (`man')
 * past participle form a transitive verb (`manned')
+==
 
 The following axioms state that if the IRI "#man" is used as a plural common noun,
 then the wordform `men' must be used by the verbalizer. If, however, it
@@ -218,7 +204,7 @@ If the mapping of an IRI is missing then its fragment is used in the output.
 The fragment is the part that comes after '#' or the last '/'.
 Note that this means that different IRIs are not necessarily verbalized as different.
 
----++ Leaving the IRIs as they are
+---+++ Not using the lexicon (and leaving the IRIs as they are)
 
 If the output-mode is "csv", then each ACE token is output on a separate line
 and morphological mappings are left to the user to be applied. An example of
@@ -254,78 +240,32 @@ and the 2nd column contains ACE tokens and OWL IRIs. Empty line denotes axiom
 borders (each OWL axiom in the input ontology is verbalized by 0 or more ACE
 sentences).
 
-In this mode the AnnotationAssertions are ignored and fragments are not generated.
+In this mode the AnnotationAssertions are ignored and IRI fragments are not generated.
 As a result this mode is about 3x faster.
 
 
----++ Files
+---++ API-level access to the OWL verbalizer
 
----+++ Prolog modules
+The API-level access to the OWL verbalizer is only documented with SWI-Prolog's PlDoc.
+Provided that you have PlDoc installed (SWI-Prolog package 'pldoc'),
+you can view the documentation by:
 
-* owl_to_ace.pl: command-line client + HTTP-interface to the OWL verbalizer
-* owlxml_owlfss.pl: converts OWL 2 XML into OWL 2 Functional-Style Syntax (in Prolog notation), which is used by all the following modules
-* owlfss_acetext.pl: main interface to the verbalizer
-* table_1.pl: axiom rewriting
-* rewrite_subclassof.pl: SubClassOf-axiom rewriting
-* owlace_dcg.pl: ACE2 grammar in DCG (used to generate ACE sentences)
-* output_results.pl: different ways to output the results (ace, csv, html)
-* ace_niceace.pl: some post-processing of the verbalization (not used in csv-mode)
-* lexicon.pl: lexicon lookup + generation on the basis of AnnotationAssertion-axioms (not used in the csv-mode)
+==
+?- doc_server(8000).
+?- [owl_to_ace].
+?- doc_browser.
+==
+
+The main entry point to the verbalizer is the module axiom_sentencelist.pl
+which converts an input OWL axiom
+(Prolog term in OWL FSS) to a list of ACE sentences (where each sentence is a Prolog
+list of ACE tokens, where each token is a Prolog atom, number, or unary ground term).
+This module calls three further rules from three separate modules:
+table_1/2 rewrites axioms (except for SubClassOf-, SubPropertyOf-, and DisjointProperties-axioms);
+rewrite_subclassof/2 rewrites SubClassOf-axioms; and
+owl_ace/2 verbalizes the rewritten axioms with a Definite Clause Grammar.
 
 
----+++ Other
-
-* examples/: some examples of OWL 2 XML files
-* docs/: some docs and demos
-
-
----++ Issues
+---++ Known issues
 
 See: http://code.google.com/p/owlverbalizer/issues/list
-
----+++ Issues not yet migrated to Google Code
-
-* Some OWL 2 logical constructs are not supported, e.g.
-some data property constructs.
-
-* Axioms that contain annotations are rejected.
-
-* All white-space in the input XML-file is normalized,
-e.g. newlines inside annotations will be mapped to spaces.
-
-* The OWL 2 XML processor has been tested only on the files generated by Protege 4.1.
-
-* The input OWL 2 XML cannot have elements/attributes from other namespaces than OWL.
-
-* Very complex class descriptions are rejected, i.e. they are not verbalized.
-
-* DisjointClasses and other similar list/set constructs could be handled in a shorter way.
-
-* Only the logical content of an OWL ontology is verbalized,
-and not the information about annotations, versioning, import-structure, etc.
-
-* Check if the verbalizer and its webservice are Unicode-aware.
-
-* Rewrite: (R some C) and (R only C) --> (R some Thing) and (R only C)
-	-- This should be semantics preserving
-	-- This would simplify the structure of the axiom in case C is complex
-	-- This seems to violate a Gricean maxim
-
-* dog and cat = Nothing  -->  dog -> not cat
-
-* Test ordering of OneOf
-
-* Think: does it make sense to push negation into UnionOf or IntersectionOf
-
-* OneOf wrapped in UnionOf creates complex class which could be simplified
-
-* Think about the wrapping of complex classes (don't wrap OneOf, because it's just like an atomic noun?)
-
-* Is this a problem?
-==
-Everything is an a.  # function word used as content word
-==
-
-* NamedIndividual should not be verbalized into `itself' or `themselves', because
-in some positions it would not be an ACE proper name but an anaphoric reference.
-(e.g.: Nothing sees itself.)

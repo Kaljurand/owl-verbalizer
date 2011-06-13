@@ -22,10 +22,10 @@
 Rewrites OWL SubClassOf-axioms into a form that is
 suitable for direct verbalization.
 
-TODO: this code needs some cleanup to be more manageable
-
 @author Kaarel Kaljurand
 @version 2011-06-11
+
+@tbd this code needs some cleanup to be more manageable
 
 */
 
