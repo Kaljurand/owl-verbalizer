@@ -65,7 +65,7 @@ Things to test:
 %
 
 owl_ace(OWL, ACE) :-
-	ip(OWL, ACE, []),
+	phrase(ip(OWL), ACE),
 	!.
 
 
@@ -307,13 +307,13 @@ det_obj(num=sg, R, C, 'ObjectExactCardinality'(1, R, C)) -->
 	[exactly, 1].
 det_obj(num=pl, R, C, 'ObjectMinCardinality'(Integer, R, C)) -->
 	[at, least, Integer],
-	{ between(2, infinite, Integer) }.
+	{ at_least_2(Integer) }.
 det_obj(num=pl, R, C, 'ObjectMaxCardinality'(Integer, R, C)) -->
 	[at, most, Integer],
-	{ between(2, infinite, Integer) }.
+	{ at_least_2(Integer) }.
 det_obj(num=pl, R, C, 'ObjectExactCardinality'(Integer, R, C)) -->
 	[exactly, Integer],
-	{ between(2, infinite, Integer) }.
+	{ at_least_2(Integer) }.
 
 auxc(num=sg, C, C) -->
 	[is].
@@ -448,3 +448,15 @@ propertychain_verbchain([Property | PropertyChainTail], VerbChain) :-
 property_verb('ObjectProperty'(R), VerbChainTail, [a, thing, that, tv_sg(R) | VerbChainTail]).
 
 property_verb('ObjectInverseOf'('ObjectProperty'(R)), VerbChainTail, [a, thing, that, is, tv_vbg(R), by | VerbChainTail]).
+
+
+%% at_least_2(?Integer:integer)
+%
+% Generates integers that are larger than 1.
+%
+at_least_2(Integer) :-
+	between(2, infinite, Integer).
+
+% length/2 can be used in Prologs which do not provide between/3 (with infinite)
+%at_least_2(Integer) :-
+%	length([_,_|_], Integer).

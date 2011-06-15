@@ -21,13 +21,12 @@
 /** <module> Table 1
 
 @author Kaarel Kaljurand
-@version 2011-06-11
+@version 2011-06-15
 @license LGPLv3
 
 @tbd Handle inv(inv(...))
 @tbd Handle different orderings of arguments in some axioms,
 e.g. ClassAssertion, Domain, Range, property assertions
-@tbd Apply list_to_set/2 where appropriate
 @tbd Check the cases where a set/list must have more than 1 element according to the spec
 */
 
@@ -38,13 +37,13 @@ e.g. ClassAssertion, Domain, Range, property assertions
 % while preserving their meaning. For example
 %
 %==
-% EquivalentClasses'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C])
+% 'EquivalentClasses'(['Class'('http://www.w3.org/2002/07/owl#Thing'), C])
 %==
 %
 % is rewritten into
 %
 %==
-% SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), C)
+% 'SubClassOf'('Class'('http://www.w3.org/2002/07/owl#Thing'), C)
 %==
 %
 % Note that sometimes we need to make several axioms from one,
@@ -295,14 +294,23 @@ table_1_x('DifferentIndividuals'(IndividualSet), AxiomList) :-
 % @param AxiomWithSet is the given axiom with its argument list converted into set
 %
 axiom_with_list_to_axiom_with_set('EquivalentClasses'(ClassList), 'EquivalentClasses'(ClassSet)) :-
-	list_to_set(ClassList, ClassSet).
+	remove_duplicates(ClassList, ClassSet).
 
 axiom_with_list_to_axiom_with_set('SameIndividual'(IndividualList), 'SameIndividual'(IndividualSet)) :-
-	list_to_set(IndividualList, IndividualSet).
+	remove_duplicates(IndividualList, IndividualSet).
 
 axiom_with_list_to_axiom_with_set('DifferentIndividuals'(IndividualList), 'DifferentIndividuals'(IndividualSet)) :-
-	list_to_set(IndividualList, IndividualSet).
+	remove_duplicates(IndividualList, IndividualSet).
 
 % @deprecated: use: SameIndividual
 axiom_with_list_to_axiom_with_set('SameIndividuals'(IndividualList), 'SameIndividual'(IndividualSet)) :-
-	list_to_set(IndividualList, IndividualSet).
+	remove_duplicates(IndividualList, IndividualSet).
+
+
+remove_duplicates(List1, List2) :-
+	list_to_set(List1, List2).
+
+% sort/2 can be used in Prologs which do not have list_to_set/2.
+% This is semantically correct, although it does have an effect on the test cases.
+%remove_duplicates(List1, List2) :-
+%	sort(List1, List2).
