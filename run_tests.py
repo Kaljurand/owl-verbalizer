@@ -2,7 +2,7 @@
 
 # OWL verbalizer tester
 # Kaarel Kaljurand
-# 2011-06-09
+# 2012-07-30
 #
 # Verbalizes all the OWL files in a given directory either
 # using the OWL verbalizer commandline script or the HTTP server (via curl).
@@ -11,7 +11,9 @@
 #
 # Example:
 #
-# python run_tests.py -i ontologies/ -m http -p -f csv -o ontologies/csv/
+# python run_tests.py -i ontologies/ -p -f csv -o ontologies/csv/
+# python run_tests.py -i ontologies/ -p --service "localhost:5123"
+# python run_tests.py -i ontologies/ -p --launch 8123
 #
 # TODO:
 # * separate performance measurement for each input
@@ -29,11 +31,7 @@ from os.path import join
 owl_to_ace_exe="./owl_to_ace.exe"
 curl='curl'
 extension_pattern='\.owl'
-port=5123
-workers=4
 timelimit=5
-server_url="http://localhost:" + str(port)
-
 
 def wait_until_up(server):
 	"""
@@ -43,11 +41,11 @@ def wait_until_up(server):
 	time.sleep(2)
 
 
-def post_files_with_curl(g):
+def post_files_with_curl(g, service_url):
 	"""
 	"""
 	for path in g:
-		cmd = [curl, '-s', '-S', '-F', "format=" + args.fmt, '-F', "xml=@" + path, server_url]
+		cmd = [curl, '-s', '-S', '-F', "format=" + args.fmt, '-F', "xml=@" + path, service_url]
 		process_file(cmd, path)
 
 
@@ -99,10 +97,6 @@ parser = argparse.ArgumentParser(description='Run OWL verbalizer tests.')
 parser.add_argument('-i', '--in', type=str, action='store', dest='dir_in',
                    help='set the directory that contains the input OWL/XML files (OBLIGATORY)')
 
-parser.add_argument('-m', '--mode', type=str, action='store', dest='mode',
-                   default="cli",
-                   help='set the service mode, one of {cli, http} (default: cli)')
-
 parser.add_argument('-p', '--parallel', action='store_true', dest='parallel', default=False,
                    help='run the tests in parallel (default: false)')
 
@@ -110,10 +104,16 @@ parser.add_argument('-f', '--format', type=str, action='store', dest='fmt',
                    default="ace",
                    help='set the output format, one of {ace, csv, html} (default: ace)')
 
+parser.add_argument('-s', '--service', type=str, action='store', dest='service',
+                   help='set the service, e.g. "localhost:4321/verbalizer"')
+
+parser.add_argument('-l', '--launch', type=int, action='store', dest='port',
+                   help='launch the service on localhost at the given port, overrides the --service parameter')
+
 parser.add_argument('-o', '--out', type=str, action='store', dest='dir_out',
                    help='set the directory where the output files are stored (default: same as "in")')
 
-parser.add_argument('-v', '--version', action='version', version='%(prog)s v0.1')
+parser.add_argument('-v', '--version', action='version', version='%(prog)s v0.2')
 
 args = parser.parse_args()
 
@@ -130,15 +130,25 @@ g = owl_file_generator(args.dir_in)
 
 server = None
 time_start = None
+service_url = None
 
-if args.mode == 'http':
+# If the port number is given then we start a local service
+# and override the service URL.
+if args.port is not None:
 	print 'Starting the server'
-	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(port), '-workers', str(workers), '-timelimit', str(timelimit)]
+	workers=4
+	cmd = [owl_to_ace_exe, '-httpserver', '-port', str(args.port), '-workers', str(workers), '-timelimit', str(timelimit)]
 	print cmd
 	server = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
 	wait_until_up(server)
+	service_url = "http://localhost:" + str(args.port)
+
+if service_url is None and args.service is not None:
+	service_url = "http://" + args.service
+
+if service_url is not None:
 	time_start = time.time()
-	post_files_with_curl(g)
+	post_files_with_curl(g, service_url)
 else:
 	time_start = time.time()
 	run_as_script(g)
