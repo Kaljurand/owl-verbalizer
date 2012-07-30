@@ -7,7 +7,7 @@ import org.junit.Test;
 public class VerbalizerWebserviceTest {
 
 	private static final String OWL_TO_ACE_WS_URL = "http://attempto.ifi.uzh.ch/service/owl_verbalizer/owl_to_ace";
-	private static final String OWL_TO_ACE_WS_URL_LOCALHOST = "http://localhost:8001";
+	private static final String OWL_TO_ACE_WS_URL_LOCALHOST = "http://localhost:5123";
 
 	private static final String IN = "<?xml version=\"1.0\"?>\n" +
 	"<Ontology\n" +
