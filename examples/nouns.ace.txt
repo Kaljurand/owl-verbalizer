@@ -1,0 +1,22 @@
+Rex is not an eater of Mick.
+
+No goat is an eater of something that is not a leaf.
+
+Everything whose eater is a goat is a leaf.
+Everything that is an eater of nothing but leaves is a goat.
+
+Everything is an eater of at most 1 thing.
+
+Everything 's eater is at most 1 thing.
+
+If X is an eater of something that is an eater of Y then X is an eater of Y.
+
+Everything that is an eater of something is an animal.
+
+Everything whose eater is something is a food that is not an automobile.
+
+If X is a hater of Y then Y is an eater of X.
+If X is an eater of Y then Y is a hater of X.
+
+If X is a hater of Y then it is false that X is an eater of Y.
+

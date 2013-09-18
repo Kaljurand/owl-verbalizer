@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2013, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -34,11 +34,16 @@ This code is not called in the csv-mode, i.e. it is left to the user
 to perform these beautification transformations.
 
 @author Kaarel Kaljurand
-@version 2011-06-11
+@version 2013-09-18
 
 @bug this module calls the lexicon-module but does not explicitly import it.
 
 */
+
+:- use_module(lexicon, [
+		iri_fragment/2,
+		get_lexicon_entry/3
+	]).
 
 %% ace_niceace(+TokenListIn:list, -TokenListOut:list) is det.
 %
@@ -51,7 +56,7 @@ ace_niceace([], []) :-
 ace_niceace(In, Out) :-
 	ace_merge(In, Prefix, Rest),
 	ace_niceace(Rest, RestOut),
-	simple_append(Prefix, RestOut, Out).
+	append(Prefix, RestOut, Out).
 
 
 %% ace_merge(+TokenList:list, -Prefix:list, -NewTokenList:list) is nondet.
@@ -71,7 +76,13 @@ ace_merge([a, thing | Rest], [], [something | Rest]) :-
 
 ace_merge([a, cn_sg(Iri) | Rest], [Article], [SurfaceForm | Rest]) :-
 	!,
-	lexicon:call(cn_sg(Iri), SurfaceForm),
+	(
+		lexicon:call(cn_sg(Iri), SurfaceForm)
+	->
+		true
+	;
+		lexicon:iri_fragment(Iri, SurfaceForm)
+	),
 	word_article(SurfaceForm, Article).
 
 ace_merge([qs(Token) | Rest], [], [TokenQuotes | Rest]) :-
@@ -87,26 +98,60 @@ ace_merge([Token, ',' | Rest], [TokenComma], Rest) :-
 	!,
 	my_concat_atom([Token, ','], TokenComma).
 
+ace_merge([does, not, tv_pl(Iri) | Rest], [is, not, Article, SurfaceForm, of], Rest) :-
+	verb_as_noun(Iri, Article, SurfaceForm),
+	!.
+
+ace_merge([do, not, tv_pl(Iri) | Rest], [are, not, Article, SurfaceForm, of], Rest) :-
+	verb_as_noun(Iri, Article, SurfaceForm),
+	!.
+
+ace_merge([tv_sg(Iri) | Rest], [is, Article, SurfaceForm, of], Rest) :-
+	verb_as_noun(Iri, Article, SurfaceForm),
+	!.
+
+ace_merge([tv_pl(Iri) | Rest], [are, Article, SurfaceForm, of], Rest) :-
+	verb_as_noun(Iri, Article, SurfaceForm),
+	!.
+
+ace_merge([that, _, not, tv_vbg(Iri), by | Rest], [whose, SurfaceForm, is, not], Rest) :-
+	verb_as_noun(Iri, _Article, SurfaceForm),
+	!.
+
+ace_merge([_, not, tv_vbg(Iri), by | Rest], ['\'s', SurfaceForm, is, not], Rest) :-
+	verb_as_noun(Iri, _Article, SurfaceForm),
+	!.
+
+ace_merge([that, _, tv_vbg(Iri), by | Rest], [whose, SurfaceForm, is], Rest) :-
+	verb_as_noun(Iri, _Article, SurfaceForm),
+	!.
+
+ace_merge([_, tv_vbg(Iri), by | Rest], ['\'s', SurfaceForm, is], Rest) :-
+	verb_as_noun(Iri, _Article, SurfaceForm),
+	!.
+
 ace_merge([Token | Rest], [Token], Rest) :-
 	atomic(Token),
 	!.
 
 ace_merge([Token | Rest], [SurfaceForm], Rest) :-
 	functor(Token, _, 1),
-	lexicon:call(Token, SurfaceForm).
+	lexicon:call(Token, SurfaceForm),
+	!.
+
+ace_merge([Token | Rest], [SurfaceForm], Rest) :-
+	functor(Token, _, 1),
+	arg(1, Token, Iri),
+	lexicon:iri_fragment(Iri, SurfaceForm).
 
 
-%% simple_append(?List1:list, ?List2:list, ?List3:list) is nondet.
+%%
 %
-% @param List1 is an empty list or a list of one element
-% @param List2 is a list
-% @param List3 is a list
 %
-% This is a special case of append/2
-%
-simple_append([], List, List).
-simple_append([X], List, [X | List]).
-
+verb_as_noun(Iri, Article, SurfaceForm) :-
+	get_lexicon_entry('CN_sg', Iri, SurfaceForm),
+	!,
+	word_article(SurfaceForm, Article).
 
 %% word_article(+Word:atom, -Article:atom) is det.
 %
