@@ -114,44 +114,63 @@ ace_merge([tv_pl(Iri) | Rest], [are, Article, SurfaceForm, of], Rest) :-
 	verb_as_noun(Iri, Article, SurfaceForm),
 	!.
 
-ace_merge([that, _, not, tv_vbg(Iri), by | Rest], [whose, SurfaceForm, is, not], Rest) :-
+ace_merge([that, _IsAre, not, tv_vbg(Iri), by | Rest], [whose, SurfaceForm, is, not], Rest) :-
 	verb_as_noun(Iri, _Article, SurfaceForm),
 	!.
 
-ace_merge([_, not, tv_vbg(Iri), by | Rest], ['\'s', SurfaceForm, is, not], Rest) :-
+ace_merge([Noun, _IsAre, not, tv_vbg(Iri), by | Rest], [SaxonGen, SurfaceForm, is, not], Rest) :-
+	rewrite_as_saxon_genitive(Noun, Iri, SaxonGen, SurfaceForm),
+	!.
+
+ace_merge([that, _IsAre, tv_vbg(Iri), by | Rest], [whose, SurfaceForm, is], Rest) :-
 	verb_as_noun(Iri, _Article, SurfaceForm),
 	!.
 
-ace_merge([that, _, tv_vbg(Iri), by | Rest], [whose, SurfaceForm, is], Rest) :-
-	verb_as_noun(Iri, _Article, SurfaceForm),
+ace_merge([Noun, _IsAre, tv_vbg(Iri), by | Rest], [SaxonGen, SurfaceForm, is], Rest) :-
+	rewrite_as_saxon_genitive(Noun, Iri, SaxonGen, SurfaceForm),
 	!.
 
-ace_merge([_, tv_vbg(Iri), by | Rest], ['\'s', SurfaceForm, is], Rest) :-
-	verb_as_noun(Iri, _Article, SurfaceForm),
-	!.
-
+% Consume atomic tokens.
+% Every token will be turned into an atomic one, thus the procedure finishes.
 ace_merge([Token | Rest], [Token], Rest) :-
 	atomic(Token),
 	!.
 
-ace_merge([Token | Rest], [SurfaceForm], Rest) :-
+ace_merge([Token | Rest], [], [SurfaceForm | Rest]) :-
 	functor(Token, _, 1),
 	lexicon:call(Token, SurfaceForm),
 	!.
 
-ace_merge([Token | Rest], [SurfaceForm], Rest) :-
+ace_merge([Token | Rest], [], [SurfaceForm | Rest]) :-
 	functor(Token, _, 1),
 	arg(1, Token, Iri),
 	lexicon:iri_fragment(Iri, SurfaceForm).
 
 
-%%
+%% verb_as_noun(+Iri:atom, -Article:atom, -SurfaceForm:atom)
 %
+% If the IRI is found in the lexicon as a singular noun
+% then look up its surface form and generate the appropriate
+% indefinite determiner.
 %
 verb_as_noun(Iri, Article, SurfaceForm) :-
 	get_lexicon_entry('CN_sg', Iri, SurfaceForm),
 	!,
 	word_article(SurfaceForm, Article).
+
+
+%% rewrite_as_saxon_genitive(+Noun:atom, +Iri:atom, -SaxonGen:atom, -SurfaceForm:atom)
+%
+% @param Noun, e.g. John
+% @param Iri of an object property, e.g. http://father
+% @param SaxonGen, e.g. John's
+% @param SurfaceForm, e.g. father
+%
+rewrite_as_saxon_genitive(Noun, Iri, SaxonGen, SurfaceForm) :-
+	verb_as_noun(Iri, _Article, SurfaceForm),
+	atomic(Noun),
+	atom_concat(Noun, '\'s', SaxonGen).
+
 
 %% word_article(+Word:atom, -Article:atom) is det.
 %

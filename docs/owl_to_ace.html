@@ -13,7 +13,6 @@
 
 <style type="text/css">
 .form { border: silver 1px solid; background-color: #fff090; padding: 0em 1em 0em 1em }
-.formitem { border: silver 1px solid; background-color: #ffe090; padding: .2em .2em .2em .2em }
 </style>
 </head>
 
@@ -42,15 +41,16 @@ are available at
 <!-- <form action="http://attempto.ifi.uzh.ch/service/owl_verbalizer/owl_to_ace" method="post"> -->
 <form action="http://localhost:8000" method="post">
 
-<p>Enter the content of an OWL ontology. (You can use
+<p>Enter the content of an OWL ontology in the OWL 2 XML format.
+<br/>(You can use
 <a href="http://owl.cs.manchester.ac.uk/converter/">OWL Syntax Converter</a>
 to convert from RDF/XML, Turtle, etc. into OWL 2 XML.)</p>
 
-<div class="formitem">
+<div>
 <textarea name="xml" title="OWL ontology in XML syntax" rows="24" cols="80">
 &lt;?xml version="1.0"?>
 &lt;Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://org.semanticweb.ontologies/Ontology1256143016364769000"
+     xml:base="http://org.semanticweb.ontologies/test"
          xmlns:xml="http://www.w3.org/XML/1998/namespace">
 
     &lt;Prefix name="story" IRI="http://www.example.org/story.owl#"/>
@@ -72,6 +72,12 @@ to convert from RDF/XML, Turtle, etc. into OWL 2 XML.)</p>
         &lt;AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
                 &lt;IRI>http://www.example.org/story.owl#eat&lt;/IRI>
         &lt;Literal>eaten&lt;/Literal>
+    &lt;/AnnotationAssertion>
+
+    &lt;AnnotationAssertion>
+        &lt;AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+                &lt;IRI>http://www.example.org/story.owl#hate&lt;/IRI>
+        &lt;Literal>hater&lt;/Literal>
     &lt;/AnnotationAssertion>
 
     &lt;AnnotationAssertion>
@@ -156,22 +162,24 @@ to convert from RDF/XML, Turtle, etc. into OWL 2 XML.)</p>
 </textarea>
 </div>
 
-<p>Specify whether the output is
-plain ACE text (text/plain),
-Axiom-Sentences mapping table (text/html), or
-tokenized and without lexicon lookup in 2-column CSV (text/plain):</p>
+<p>Specify the output format</p>
 
-<div class="formitem">
-<input type="radio" name="format" value="ace" checked="checked"/> ACE
-<input type="radio" name="format" value="html"/> HTML
-<input type="radio" name="format" value="csv"/> CSV
+<div>
+<input type="radio" name="format" value="ace" checked="checked"/>
+plain ACE text (text/plain)
+<br/>
+<input type="radio" name="format" value="html"/>
+HTML table of Axiom-Sentences mappings (text/html)
+<br/>
+<input type="radio" name="format" value="csv"/>
+tokenized and without lexicon lookup in 2-column CSV (text/plain)
 </div>
 
 <p>... and press <input type="submit" value="Verbalize" title="Verbalize the ontology!"/></p>
 </form>
 
-<p>There is a 10-second timelimit. In case the ontology cannot be verbalized within
-this time-period, an error message is returned.</p>
+<p>If the ontology contains a syntax error or
+takes too long to verbalize then an error message is returned.</p>
 </div>
 
 
@@ -189,7 +197,8 @@ ObjectPropertyDomain(R C)
 like `domain'.</p>
 
 <p>The remaining class expressions are mapped to ACE noun phrases and the remaining
-axioms to ACE sentences. OWL properties are ACE verbs and OWL individuals are
+axioms to ACE sentences. OWL properties are ACE verbs or <em>of</em>-constructs
+and OWL individuals are
 ACE proper names. The following table shows an example
 how the OWL constructs are mapped to ACE constructs.</p>
 
@@ -204,11 +213,11 @@ how the OWL constructs are mapped to ACE constructs.</p>
 	<tbody>
 		<tr>
 			<td><em>Named property</em></td>
-			<td><em>Transitive verb, e.g.</em> own</td>
+			<td><em>Transitive verb, e.g.</em> own<em>; or of-construct, e.g.</em> father of</td>
 		</tr>
 		<tr>
 			<td>ObjectInverseOf(R)</td>
-			<td><em>Passive verb, e.g.</em> is owned by</td>
+			<td><em>Passive verb, e.g.</em> is owned by<em>; or Saxon genitive, e.g.</em> X's father</td>
 		</tr>
 		<tr>
 			<td><em>Named class</em></td>
@@ -302,11 +311,8 @@ nature of the names
 used for individuals, classes and properties in the input ontology. The verbalizer assumes
 that all individuals are denoted by singular proper names (preferably capitalized),
 classes by singular common nouns, and properties by transitive verbs in
-their infinitive form.
-Examples of individual names are `John', `London'; examples of class names
-are `person', `body-of-water'; examples of property names are `own', `border', `look-at'.</p>
-
-<p>These restrictions are needed because the names will be used in certain
+their infinitive form or as singular nouns.
+These restrictions are needed because the names will be used in certain
 syntactic constructions or will undergo certain morphological changes.</p>
 
 <ul>
@@ -401,9 +407,21 @@ cn_sg	http://www.example.org/story.owl#man
 f	.
 </pre>
 
+<p>In the ace-mode, in case an object property has the <code>CN_sg</code> annotation
+then the property is verbalized as a relational noun, using an <em>of</em>-construct,
+Saxon genitive, or the <em>whose</em> relative pronoun. Examples:</p>
+
+<pre>
+John is a father of Mary.
+Mary's father is John.
+Everything whose father is John ...
+</pre>
+
+<p>This is an experimental feature which does not always work correctly.</p>
+
 <address>
 Kaarel Kaljurand
-2011-06-11
+2013-09-20
 </address>
 
 </body>
