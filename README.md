@@ -4,21 +4,63 @@ OWL verbalizer
 Introduction
 ------------
 
+OWL verbalizer is a tool that converts an OWL ontology into an Attempto Controlled English (ACE) text.
+
+It can handle complex OWL formulas such as
+
+
+	man
+		and (not (own some car))
+		and (own some bike)
+	SubClassOf inverse (likes) some ({Mary})
+
+by turning them into natural English sentences such as:
+
+
+	Every man
+		that owns a bike
+		and
+		that does not own a car
+	is liked by Mary .
+
+This conversion is designed to be reversible, i.e. one can convert the ACE representation back into OWL so that
+no loss in meaning occurs. For more of the theory and design choices behind the verbalization read section
+__5.6 Verbalizing OWL in ACE__ of
+
+> Kaarel Kaljurand. Attempto Controlled English as a Semantic Web Language.
+> PhD thesis, Faculty of Mathematics and Computer Science, University of Tartu, 2007.
+> <http://attempto.ifi.uzh.ch/site/pubs/papers/phd_kaljurand.pdf>
+
+For a demo visit the [OWL verbalizer demo page](http://attempto.ifi.uzh.ch/site/docs/owl_to_ace.html).
+
+OWL verbalizer is implemented in SWI-Prolog.
+It offers a command-line front-end and can also be run as an HTTP server.
+The following example demonstrates launching the server and using it to verbalize an OWL/XML
+ontology from a remote repository.
+
+
+	$ ./owl_to_ace.exe -httpserver -port 5123 &
+
+	$ curl 'http://owl.cs.manchester.ac.uk/repository/download?
+		ontology=http://www.co-ode.org/ontologies/pizza/pizza.owl&format=OWL/XML'
+	| curl -F "xml=<-" http://localhost:5123
+
+
+The resulting ACE text will appear in STDOUT.
+
+
+Example
+-------
+
 The OWL verbalizer takes its input in OWL 2 XML
 and produces an output in a fragment of Attempto Controlled English (ACE).
-This fragment is described in Kaarel Kaljurand's PhD thesis as ACE2
-(see <http://attempto.ifi.uzh.ch/site/pubs/papers/phd_kaljurand.pdf>).
 
 Note that the input must be in OWL 2 XML (<http://www.w3.org/TR/owl2-xml-serialization/>).
 No RDF-based format is supported as input.
 You can convert OWL RDF/XML into OWL 2 XML using the OWL-API v3
 (<http://owlapi.sourceforge.net/>), e.g.
 via the online tool <http://owl.cs.manchester.ac.uk/converter/>
-or via Protege 4.1 (<http://protege.stanford.edu/>).
-
-
-Example
--------
+or via Protege 4.1+ (<http://protege.stanford.edu/>).
 
 ### Input
 
@@ -180,11 +222,11 @@ The OWL verbalizer maps OWL entity IRIs to ACE content words such that
 There are 6 morphological categories that determine the surface form of an IRI:
 
   - singular form of a proper name (e.g. _John_)
-  - singular form of a common noun (_man_)
-  - plural form of a common noun (_men_)
-  - singular form of a transitive verb (_mans_)
-  - plural form of a transitive verb (_man_)
-  - past participle form a transitive verb (_manned_)
+  - singular form of a common noun (e.g. _man_)
+  - plural form of a common noun (e.g. _men_)
+  - singular form of a transitive verb (e.g. _mans_)
+  - plural form of a transitive verb (e.g. _man_)
+  - past participle form a transitive verb (e.g. _manned_)
 
 The user has full control over the eventual surface forms of the IRIs but
 has to choose them in terms of the above categories. Furthermore,
@@ -197,12 +239,12 @@ has to choose them in terms of the above categories. Furthermore,
 It is possible to specify the mapping of IRIs to surface forms
 using the following annotation properties:
 
-  - <http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg>
-  - <http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg>
-  - <http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl>
-  - <http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg>
-  - <http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl>
-  - <http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg>
+  - `http://attempto.ifi.uzh.ch/ace_lexicon#PN_sg`
+  - `http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg`
+  - `http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl`
+  - `http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg`
+  - `http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl`
+  - `http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg`
 
 For example, the following axioms state that if the IRI "#man" is used as a plural
 common noun, then the wordform _men_ must be used by the verbalizer. If, however, it
@@ -220,7 +262,7 @@ is used as a singular transitive verb, then _mans_ must be used.
 		<Literal datatypeIRI="&xsd;string">mans</Literal>
 	</AnnotationAssertion>
 
-For example, these axioms support the generation of the sentence ``John mans at most 3 men.''
+For example, these axioms support the generation of the sentence `John mans at most 3 men.`
 from an axiom that uses the IRI "#man" via punning once as an object property name,
 and once as a class name.
 
@@ -258,10 +300,10 @@ An example of csv-output is:
 
 The columns are tab-separated. The first column specifies the type of the token, e.g.
 
-  - f = function word
-  - qs = quoted string
-  - comment = comment
-  - cn_sg = singular common noun
+  - `f` = function word
+  - `qs` = quoted string
+  - `comment` = comment
+  - `cn_sg` = singular common noun
   - ...
 
 and the 2nd column contains ACE tokens and OWL IRIs. Empty line denotes axiom
