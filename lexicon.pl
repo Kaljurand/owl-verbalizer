@@ -1,5 +1,5 @@
 % This file is part of the OWL verbalizer.
-% Copyright 2008-2011, Kaarel Kaljurand <kaljurand@gmail.com>.
+% Copyright 2008-2013, Kaarel Kaljurand <kaljurand@gmail.com>.
 %
 % The OWL verbalizer is free software: you can redistribute it and/or modify it
 % under the terms of the GNU Lesser General Public License as published by the
@@ -14,6 +14,8 @@
 
 :- module(lexicon, [
 		init_lexicon/1,
+		iri_fragment/2,
+		get_lexicon_entry/3,
 		pn_sg/2,
 		cn_sg/2,
 		cn_pl/2,
@@ -51,7 +53,7 @@ We do not check if these rules are followed, it is up to the
 user to make sure that they are.
 
 @author Kaarel Kaljurand
-@version 2011-06-11
+@version 2013-09-18
 
 */
 
@@ -151,6 +153,8 @@ make_lex_entry(Iri, 'http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg', Form, entry
 % Interface to the morph. mapping
 % with a fallback to using the IRI fragment.
 %
+% TODO: remove calls to iri_fragment/2
+%
 pn_sg(X, Y) :- get_lexicon_entry('PN_sg', X, Y), !.
 pn_sg(Iri, F) :-
 	iri_fragment(Iri, F).
@@ -184,18 +188,11 @@ cn_pl(X, Y) :- get_lexicon_entry('CN_pl', X, Y), !.
 cn_pl(Iri, F) :-
 	iri_fragment(Iri, F).
 
-
 tv_sg(X, Y) :- get_lexicon_entry('TV_sg', X, Y), !.
-tv_sg(Iri, F) :-
-	iri_fragment(Iri, F).
 
 tv_pl(X, Y) :- get_lexicon_entry('TV_pl', X, Y), !.
-tv_pl(Iri, F) :-
-	iri_fragment(Iri, F).
 
 tv_vbg(X, Y) :- get_lexicon_entry('TV_vbg', X, Y), !.
-tv_vbg(Iri, F) :-
-	iri_fragment(Iri, F).
 
 
 %% iri_fragment(+Iri:atom, -Fragment:atom)

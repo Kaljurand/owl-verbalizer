@@ -1,0 +1,23 @@
+Every goat is a leaf whose parent is not something.
+
+Rex is not an eater of Mick.
+
+No goat is an eater of something that is not a leaf.
+
+Everything is an eater of at most 1 thing.
+
+If X is an eater of something that is an eater of Y then X is an eater of Y.
+
+Everything whose eater is a goat is a leaf.
+Everything that is an eater of nothing but leaves is a goat.
+
+Everything's eater is at most 1 thing.
+
+John is a parent of at most 2 things that are a parent of a leaf.
+
+John is a parent of at most 3 things that are not a parent of a leaf.
+
+Rex's eater is not Mick.
+
+Everything whose eater is Mick's eater is Rex.
+
