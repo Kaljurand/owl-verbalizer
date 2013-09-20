@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#" xml:base="http://org.semanticweb.ontologies/test">
+  <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+  <Prefix name="story" IRI="http://www.example.org/story.owl#"/>
+  <Prefix name="ace_lexicon" IRI="http://attempto.ifi.uzh.ch/ace_lexicon#"/>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+    <IRI>http://www.example.org/story.owl#eat</IRI>
+    <Literal>eater</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+    <IRI>http://www.example.org/story.owl#parent</IRI>
+    <Literal>parent</Literal>
+  </AnnotationAssertion>
+  <AnnotationAssertion>
+    <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+    <IRI>http://www.example.org/story.owl#leaf</IRI>
+    <Literal>leaves</Literal>
+  </AnnotationAssertion>
+  <!-- that is/are not VBG by / whose VBG is not -->
+  <SubClassOf>
+    <Class abbreviatedIRI="story:goat"/>
+    <ObjectIntersectionOf>
+      <Class abbreviatedIRI="story:leaf"/>
+      <ObjectComplementOf>
+        <ObjectSomeValuesFrom>
+          <ObjectInverseOf>
+            <ObjectProperty abbreviatedIRI="story:parent"/>
+          </ObjectInverseOf>
+          <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+      </ObjectComplementOf>
+    </ObjectIntersectionOf>
+  </SubClassOf>
+  <!-- does not PL / is not a PL of -->
+  <NegativeObjectPropertyAssertion>
+    <ObjectProperty abbreviatedIRI="story:eat"/>
+    <NamedIndividual abbreviatedIRI="story:Rex"/>
+    <NamedIndividual abbreviatedIRI="story:Mick"/>
+  </NegativeObjectPropertyAssertion>
+  <!-- SG / is a SG of -->
+  <DisjointClasses>
+    <Class abbreviatedIRI="story:goat"/>
+    <ObjectSomeValuesFrom>
+      <ObjectProperty abbreviatedIRI="story:eat"/>
+      <ObjectComplementOf>
+        <Class abbreviatedIRI="story:leaf"/>
+      </ObjectComplementOf>
+    </ObjectSomeValuesFrom>
+  </DisjointClasses>
+  <FunctionalObjectProperty>
+    <ObjectProperty abbreviatedIRI="story:eat"/>
+  </FunctionalObjectProperty>
+  <TransitiveObjectProperty>
+    <ObjectProperty abbreviatedIRI="story:eat"/>
+  </TransitiveObjectProperty>
+  <!-- that is/are VBG by / whose VBG is -->
+  <EquivalentClasses>
+    <Class abbreviatedIRI="story:goat"/>
+    <ObjectAllValuesFrom>
+      <ObjectProperty abbreviatedIRI="story:eat"/>
+      <Class abbreviatedIRI="story:leaf"/>
+    </ObjectAllValuesFrom>
+  </EquivalentClasses>
+  <!-- is/are VBG by / 's VBG is -->
+  <InverseFunctionalObjectProperty>
+    <ObjectProperty abbreviatedIRI="story:eat"/>
+  </InverseFunctionalObjectProperty>
+  <!-- PL / are a PL of -->
+  <ClassAssertion>
+    <ObjectMaxCardinality cardinality="2">
+      <ObjectProperty abbreviatedIRI="story:parent"/>
+      <ObjectSomeValuesFrom>
+        <ObjectProperty abbreviatedIRI="story:parent"/>
+        <Class abbreviatedIRI="story:leaf"/>
+      </ObjectSomeValuesFrom>
+    </ObjectMaxCardinality>
+    <NamedIndividual IRI="John"/>
+  </ClassAssertion>
+  <!-- do not PL / are not a PL of -->
+  <ClassAssertion>
+    <ObjectMaxCardinality cardinality="3">
+      <ObjectProperty abbreviatedIRI="story:parent"/>
+      <ObjectComplementOf>
+        <ObjectSomeValuesFrom>
+          <ObjectProperty abbreviatedIRI="story:parent"/>
+          <Class abbreviatedIRI="story:leaf"/>
+        </ObjectSomeValuesFrom>
+      </ObjectComplementOf>
+    </ObjectMaxCardinality>
+    <NamedIndividual IRI="John"/>
+  </ClassAssertion>
+  <!-- not VBG by / 's VBG is not -->
+  <NegativeObjectPropertyAssertion>
+    <ObjectInverseOf>
+      <ObjectProperty abbreviatedIRI="story:eat"/>
+    </ObjectInverseOf>
+    <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Rex"/>
+    <NamedIndividual IRI="http://owl.man.ac.uk/2005/07/sssw/people#Mick"/>
+  </NegativeObjectPropertyAssertion>
+  <!--
+    TODO: the simple TV->CN_sg rewriting fails with more complex sentences, e.g.
+      Everything that is eaten by Mick is eaten by Rex.
+    gets rewritten as
+      Everything whose eater is Mick's eater is Rex.
+    which does not preserve the meaning.
+    Essentially the rewriting naively generates: {Everything whose eater is Mick}'s eater is Rex.
+  -->
+  <SubClassOf>
+    <ObjectSomeValuesFrom>
+      <ObjectInverseOf>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+      </ObjectInverseOf>
+      <ObjectOneOf>
+        <NamedIndividual abbreviatedIRI="story:Mick"/>
+      </ObjectOneOf>
+    </ObjectSomeValuesFrom>
+    <ObjectSomeValuesFrom>
+      <ObjectInverseOf>
+        <ObjectProperty abbreviatedIRI="story:eat"/>
+      </ObjectInverseOf>
+      <ObjectOneOf>
+        <NamedIndividual abbreviatedIRI="story:Rex"/>
+      </ObjectOneOf>
+    </ObjectSomeValuesFrom>
+  </SubClassOf>
+</Ontology>

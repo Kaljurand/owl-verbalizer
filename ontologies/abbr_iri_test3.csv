@@ -1,1 +1,1 @@
-<error type="existence_error">existence_error(variable,undef): system:nb_getval/2: </error>
+ERROR: existence_error(variable,undef): system:nb_getval/2: 

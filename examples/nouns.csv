@@ -1,0 +1,150 @@
+ignored	Prefix(owl,http://www.w3.org/2002/07/owl#)
+
+ignored	Prefix(story,http://www.example.org/story.owl#)
+
+ignored	Prefix(ace_lexicon,http://attempto.ifi.uzh.ch/ace_lexicon#)
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg),IRI(http://www.example.org/story.owl#eat),^^(eater,))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_sg),IRI(http://www.example.org/story.owl#parent),^^(parent,))
+
+ignored	AnnotationAssertion(AnnotationProperty(http://attempto.ifi.uzh.ch/ace_lexicon#CN_pl),IRI(http://www.example.org/story.owl#leaf),^^(leaves,))
+
+f	Every
+cn_sg	http://www.example.org/story.owl#goat
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	that
+f	is
+f	not
+tv_vbg	http://www.example.org/story.owl#parent
+f	by
+f	a
+f	thing
+f	.
+
+pn_sg	http://www.example.org/story.owl#Rex
+f	does
+f	not
+tv_pl	http://www.example.org/story.owl#eat
+pn_sg	http://www.example.org/story.owl#Mick
+f	.
+
+f	No
+cn_sg	http://www.example.org/story.owl#goat
+tv_sg	http://www.example.org/story.owl#eat
+f	a
+f	thing
+f	that
+f	is
+f	not
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	.
+
+f	Every
+f	thing
+tv_sg	http://www.example.org/story.owl#eat
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+f	If
+f	X
+tv_sg	http://www.example.org/story.owl#eat
+f	a
+f	thing
+f	that
+tv_sg	http://www.example.org/story.owl#eat
+f	Y
+f	then
+f	X
+tv_sg	http://www.example.org/story.owl#eat
+f	Y
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+f	a
+cn_sg	http://www.example.org/story.owl#goat
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	.
+f	Every
+f	thing
+f	that
+tv_sg	http://www.example.org/story.owl#eat
+f	nothing
+f	but
+cn_pl	http://www.example.org/story.owl#leaf
+f	is
+f	a
+cn_sg	http://www.example.org/story.owl#goat
+f	.
+
+f	Every
+f	thing
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+f	at
+f	most
+f	1
+f	thing
+f	.
+
+pn_sg	John
+tv_sg	http://www.example.org/story.owl#parent
+f	at
+f	most
+f	2
+f	things
+f	that
+tv_pl	http://www.example.org/story.owl#parent
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	.
+
+pn_sg	John
+tv_sg	http://www.example.org/story.owl#parent
+f	at
+f	most
+f	3
+f	things
+f	that
+f	do
+f	not
+tv_pl	http://www.example.org/story.owl#parent
+f	a
+cn_sg	http://www.example.org/story.owl#leaf
+f	.
+
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Rex
+f	is
+f	not
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+pn_sg	http://owl.man.ac.uk/2005/07/sssw/people#Mick
+f	.
+
+f	Every
+f	thing
+f	that
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+pn_sg	http://www.example.org/story.owl#Mick
+f	is
+tv_vbg	http://www.example.org/story.owl#eat
+f	by
+pn_sg	http://www.example.org/story.owl#Rex
+f	.
+
