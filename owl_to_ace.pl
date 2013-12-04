@@ -61,8 +61,7 @@ argument('-help', '', 'Show this help page.').
 %% main
 %
 main :-
-	current_prolog_flag(argv, RawArgList),
-	get_arglist(RawArgList, ArgList),
+	get_arglist(ArgList),
 	catch(
 		( arglist_namevaluelist(ArgList, InputList), process_input(InputList) ),
 		Exception,
@@ -177,14 +176,37 @@ show_version :-
 	format("OWL verbalizer, ver ~w~n", ['0.9.4']).
 
 
-%% get_arglist(+RawArgList, -ArgList)
+%% get_arglist(-ArgList)
 %
+% Returns the list of arguments.
+% In SWI v6.6.0+ this can be achieved simply by:
 %
-get_arglist(RawArgList, ArgList) :-
+% get_arglist(ArgList) :-
+%	current_prolog_flag(argv, ArgList).
+%
+% For backwards compatibility we assume that the argument
+% list can contain '--' or something (the name of the program)
+% before the first flag (which starts with '-').
+%
+get_arglist(ArgList) :-
+	current_prolog_flag(argv, RawArgList),
+	get_arglist_x(RawArgList, ArgList).
+
+get_arglist_x(RawArgList, ArgList) :-
 	append(_, ['--'|ArgList], RawArgList),
 	!.
 
-get_arglist([_|ArgList], ArgList).
+get_arglist_x(ArgList, Suffix) :-
+	get_suffix(ArgList, Suffix).
+
+get_suffix([], []).
+
+get_suffix([Arg | ArgList], [Arg | ArgList]) :-
+	atom_concat('-', _, Arg),
+	!.
+
+get_suffix([_ | ArgList1], ArgList2) :-
+	get_suffix(ArgList1, ArgList2).
 
 
 % cli(+Filename:atom, +Timelimit:number, +Format:atom)
