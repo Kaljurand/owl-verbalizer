@@ -156,7 +156,7 @@ get_arg(Key, _, Value) :-
 %
 show_help :-
 	show_version,
-	write('Copyright 2008-2011 Kaarel Kaljurand <kaljurand@gmail.com>\n'),
+	write('Copyright 2008-2013 Kaarel Kaljurand <kaljurand@gmail.com>\n'),
 	write('This program comes with ABSOLUTELY NO WARRANTY.\n'),
 	write('This is free software, and you are welcome to redistribute it under certain conditions.\n'),
 	write('Please visit http://code.google.com/p/owlverbalizer/ for details.\n'),
@@ -173,7 +173,7 @@ show_help :-
 % Prints the version information.
 %
 show_version :-
-	format("OWL verbalizer, ver ~w~n", ['0.9.4']).
+	format("OWL verbalizer, ver ~w~n", ['0.9.5']).
 
 
 %% get_arglist(-ArgList)
