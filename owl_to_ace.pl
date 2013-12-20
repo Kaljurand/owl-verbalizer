@@ -226,7 +226,10 @@ owl_to_ace_cli(FileName, Format) :-
 owl_to_ace('Ontology'(_Name, _NS, AxiomList), Mode, Format) :-
 	axiomlist_sentencelist(AxiomList, Results),
 	current_stream(1, write, Stream),
-	set_stream(Stream, encoding(utf8)),
+	% TODO: maybe this should not be called at all, because
+	% the user should be able to influence the encoding by
+	% configuring the environment.
+	set_utf8_encoding(Stream),
 	output_header(Mode, Format),
 	output_results(Format, AxiomList, Results).
 
@@ -340,3 +343,16 @@ format_message(Message, '') :-
 	!.
 
 format_message(Message, Message).
+
+
+%% set_utf8_encoding(+Stream)
+%
+% Sets the encoding of the given stream to UTF-8. For some unknown reason, an error is sometimes
+% thrown under Windows XP (and Windows 7) when calling set_stream/2, and this error is caught here.
+
+set_utf8_encoding(Stream) :-
+	catch(
+		set_stream(Stream, encoding(utf8)),
+		_,
+		true
+	).
