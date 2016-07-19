@@ -1,0 +1,1442 @@
+Every CheeseyPizza is a Pizza that hasTopping a CheeseTopping.
+Every Pizza that hasTopping a CheeseTopping is a CheeseyPizza.
+
+Every Country is a DomainConcept that is America or that is England or that is France or that is Germany or that is Italy.
+Every DomainConcept that is America or that is England or that is France or that is Germany or that is Italy is a Country.
+
+Every InterestingPizza is a Pizza that hasTopping at least 3 things.
+Every Pizza that hasTopping at least 3 things is an InterestingPizza.
+
+Every MeatyPizza is a Pizza that hasTopping a MeatTopping.
+Every Pizza that hasTopping a MeatTopping is a MeatyPizza.
+
+Every NonVegetarianPizza is a Pizza that is not a VegetarianPizza.
+Every Pizza that is not a VegetarianPizza is a NonVegetarianPizza.
+
+Every RealItalianPizza is a Pizza that hasCountryOfOrigin Italy.
+Every Pizza that hasCountryOfOrigin Italy is a RealItalianPizza.
+
+Every Spiciness is something that is a Hot or that is a Medium or that is a Mild.
+Everything that is a Hot or that is a Medium or that is a Mild is a Spiciness.
+
+Every SpicyPizza is a Pizza that hasTopping a SpicyTopping.
+Every Pizza that hasTopping a SpicyTopping is a SpicyPizza.
+
+Every SpicyPizzaEquivalent is a Pizza that hasTopping a PizzaTopping that hasSpiciness a Hot.
+Every Pizza that hasTopping a PizzaTopping that hasSpiciness a Hot is a SpicyPizzaEquivalent.
+
+Every SpicyTopping is a PizzaTopping that hasSpiciness a Hot.
+Every PizzaTopping that hasSpiciness a Hot is a SpicyTopping.
+
+Every ThinAndCrispyPizza is a Pizza that hasBase nothing but ThinAndCrispyBase.
+Every Pizza that hasBase nothing but ThinAndCrispyBase is a ThinAndCrispyPizza.
+
+Every VegetarianPizza is a Pizza that does not hasTopping a FishTopping and that does not hasTopping a MeatTopping.
+Every Pizza that does not hasTopping a FishTopping and that does not hasTopping a MeatTopping is a VegetarianPizza.
+
+Every VegetarianPizzaEquivalent1 is a Pizza that hasTopping nothing but VegetarianTopping.
+Every Pizza that hasTopping nothing but VegetarianTopping is a VegetarianPizzaEquivalent1.
+
+Every VegetarianPizzaEquivalent2 is a Pizza that hasTopping nothing but things that are a CheeseTopping or that are a FruitTopping or that are a HerbSpiceTopping or that are a NutTopping or that are a SauceTopping or that are a VegetableTopping.
+Every Pizza that hasTopping nothing but things that are a CheeseTopping or that are a FruitTopping or that are a HerbSpiceTopping or that are a NutTopping or that are a SauceTopping or that are a VegetableTopping is a VegetarianPizzaEquivalent2.
+
+Every VegetarianTopping is a PizzaTopping that is a CheeseTopping or that is a FruitTopping or that is a HerbSpiceTopping or that is a NutTopping or that is a SauceTopping or that is a VegetableTopping.
+Every PizzaTopping that is a CheeseTopping or that is a FruitTopping or that is a HerbSpiceTopping or that is a NutTopping or that is a SauceTopping or that is a VegetableTopping is a VegetarianTopping.
+
+Every American is a NamedPizza.
+
+Every American hasTopping a MozzarellaTopping.
+
+Every American hasTopping a PeperoniSausageTopping.
+
+Every American hasTopping a TomatoTopping.
+
+Everything that is hasTopping by an American is something that is a MozzarellaTopping or that is a PeperoniSausageTopping or that is a TomatoTopping.
+
+Every American hasCountryOfOrigin America.
+
+Every AmericanHot is a NamedPizza.
+
+Every AmericanHot hasTopping a HotGreenPepperTopping.
+
+Every AmericanHot hasTopping a JalapenoPepperTopping.
+
+Every AmericanHot hasTopping a MozzarellaTopping.
+
+Every AmericanHot hasTopping a PeperoniSausageTopping.
+
+Every AmericanHot hasTopping a TomatoTopping.
+
+Everything that is hasTopping by an AmericanHot is something that is a HotGreenPepperTopping or that is a JalapenoPepperTopping or that is a MozzarellaTopping or that is a PeperoniSausageTopping or that is a TomatoTopping.
+
+Every AmericanHot hasCountryOfOrigin America.
+
+Every AnchoviesTopping is a FishTopping.
+
+Every ArtichokeTopping is a VegetableTopping.
+
+Every ArtichokeTopping hasSpiciness a Mild.
+
+Every AsparagusTopping is a VegetableTopping.
+
+Every AsparagusTopping hasSpiciness a Mild.
+
+Every Cajun is a NamedPizza.
+
+Every Cajun hasTopping a MozzarellaTopping.
+
+Every Cajun hasTopping an OnionTopping.
+
+Every Cajun hasTopping a PeperonataTopping.
+
+Every Cajun hasTopping a PrawnsTopping.
+
+Every Cajun hasTopping a TobascoPepperSauce.
+
+Every Cajun hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Cajun is something that is a MozzarellaTopping or that is an OnionTopping or that is a PeperonataTopping or that is a PrawnsTopping or that is a TobascoPepperSauce or that is a TomatoTopping.
+
+Every CajunSpiceTopping is a HerbSpiceTopping.
+
+Every CajunSpiceTopping hasSpiciness a Hot.
+
+Every CaperTopping is a VegetableTopping.
+
+Every CaperTopping hasSpiciness a Mild.
+
+Every Capricciosa is a NamedPizza.
+
+Every Capricciosa hasTopping an AnchoviesTopping.
+
+Every Capricciosa hasTopping a CaperTopping.
+
+Every Capricciosa hasTopping a HamTopping.
+
+Every Capricciosa hasTopping a MozzarellaTopping.
+
+Every Capricciosa hasTopping an OliveTopping.
+
+Every Capricciosa hasTopping a PeperonataTopping.
+
+Every Capricciosa hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Capricciosa is something that is an AnchoviesTopping or that is a CaperTopping or that is a HamTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a PeperonataTopping or that is a TomatoTopping.
+
+Every Caprina is a NamedPizza.
+
+Every Caprina hasTopping a GoatsCheeseTopping.
+
+Every Caprina hasTopping a MozzarellaTopping.
+
+Every Caprina hasTopping a SundriedTomatoTopping.
+
+Every Caprina hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Caprina is something that is a GoatsCheeseTopping or that is a MozzarellaTopping or that is a SundriedTomatoTopping or that is a TomatoTopping.
+
+Every CheeseTopping is a PizzaTopping.
+
+Every CheeseyVegetableTopping is a CheeseTopping.
+
+Every CheeseyVegetableTopping is a VegetableTopping.
+
+Every ChickenTopping is a MeatTopping.
+
+Every ChickenTopping hasSpiciness a Mild.
+
+Every DeepPanBase is a PizzaBase.
+
+Every Fiorentina is a NamedPizza.
+
+Every Fiorentina hasTopping a GarlicTopping.
+
+Every Fiorentina hasTopping a MozzarellaTopping.
+
+Every Fiorentina hasTopping an OliveTopping.
+
+Every Fiorentina hasTopping a ParmesanTopping.
+
+Every Fiorentina hasTopping a SpinachTopping.
+
+Every Fiorentina hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Fiorentina is something that is a GarlicTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a ParmesanTopping or that is a SpinachTopping or that is a TomatoTopping.
+
+Every FishTopping is a PizzaTopping.
+
+Every FishTopping hasSpiciness a Mild.
+
+Every Food is a DomainConcept.
+
+Every FourCheesesTopping is a CheeseTopping.
+
+Every FourCheesesTopping hasSpiciness a Mild.
+
+Every FourSeasons is a NamedPizza.
+
+Every FourSeasons hasTopping an AnchoviesTopping.
+
+Every FourSeasons hasTopping a CaperTopping.
+
+Every FourSeasons hasTopping a MozzarellaTopping.
+
+Every FourSeasons hasTopping a MushroomTopping.
+
+Every FourSeasons hasTopping an OliveTopping.
+
+Every FourSeasons hasTopping a PeperoniSausageTopping.
+
+Every FourSeasons hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a FourSeasons is something that is an AnchoviesTopping or that is a CaperTopping or that is a MozzarellaTopping or that is a MushroomTopping or that is an OliveTopping or that is a PeperoniSausageTopping or that is a TomatoTopping.
+
+Every FruitTopping is a PizzaTopping.
+
+Every FruttiDiMare is a NamedPizza.
+
+Every FruttiDiMare hasTopping a GarlicTopping.
+
+Every FruttiDiMare hasTopping a MixedSeafoodTopping.
+
+Every FruttiDiMare hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a FruttiDiMare is something that is a GarlicTopping or that is a MixedSeafoodTopping or that is a TomatoTopping.
+
+Every GarlicTopping is a VegetableTopping.
+
+Every GarlicTopping hasSpiciness a Medium.
+
+Every Giardiniera is a NamedPizza.
+
+Every Giardiniera hasTopping a LeekTopping.
+
+Every Giardiniera hasTopping a MozzarellaTopping.
+
+Every Giardiniera hasTopping a MushroomTopping.
+
+Every Giardiniera hasTopping an OliveTopping.
+
+Every Giardiniera hasTopping a PeperonataTopping.
+
+Every Giardiniera hasTopping a PetitPoisTopping.
+
+Every Giardiniera hasTopping a SlicedTomatoTopping.
+
+Every Giardiniera hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Giardiniera is something that is a LeekTopping or that is a MozzarellaTopping or that is a MushroomTopping or that is an OliveTopping or that is a PeperonataTopping or that is a PetitPoisTopping or that is a SlicedTomatoTopping or that is a TomatoTopping.
+
+Every GoatsCheeseTopping is a CheeseTopping.
+
+Every GoatsCheeseTopping hasSpiciness a Mild.
+
+Every GorgonzolaTopping is a CheeseTopping.
+
+Every GorgonzolaTopping hasSpiciness a Mild.
+
+Every GreenPepperTopping is a PepperTopping.
+
+Every HamTopping is a MeatTopping.
+
+Every HerbSpiceTopping is a PizzaTopping.
+
+Every Hot is a Spiciness.
+
+Every HotGreenPepperTopping is a GreenPepperTopping.
+
+Every HotGreenPepperTopping hasSpiciness a Hot.
+
+Every HotSpicedBeefTopping is a MeatTopping.
+
+Every HotSpicedBeefTopping hasSpiciness a Hot.
+
+Every IceCream is a Food.
+
+Every IceCream hasTopping a FruitTopping.
+
+Every JalapenoPepperTopping is a PepperTopping.
+
+Every JalapenoPepperTopping hasSpiciness a Hot.
+
+Every LaReine is a NamedPizza.
+
+Every LaReine hasTopping a HamTopping.
+
+Every LaReine hasTopping a MozzarellaTopping.
+
+Every LaReine hasTopping a MushroomTopping.
+
+Every LaReine hasTopping an OliveTopping.
+
+Every LaReine hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a LaReine is something that is a HamTopping or that is a MozzarellaTopping or that is a MushroomTopping or that is an OliveTopping or that is a TomatoTopping.
+
+Every LeekTopping is a VegetableTopping.
+
+Every LeekTopping hasSpiciness a Mild.
+
+Every Margherita is a NamedPizza.
+
+Every Margherita hasTopping a MozzarellaTopping.
+
+Every Margherita hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Margherita is something that is a MozzarellaTopping or that is a TomatoTopping.
+
+Every MeatTopping is a PizzaTopping.
+
+Every Medium is a Spiciness.
+
+Every Mild is a Spiciness.
+
+Every MixedSeafoodTopping is a FishTopping.
+
+Every MozzarellaTopping is a CheeseTopping.
+
+Every MozzarellaTopping hasSpiciness a Mild.
+
+Every MozzarellaTopping hasCountryOfOrigin Italy.
+
+Every Mushroom is a NamedPizza.
+
+Every Mushroom hasTopping a MozzarellaTopping.
+
+Every Mushroom hasTopping a MushroomTopping.
+
+Every Mushroom hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Mushroom is something that is a MozzarellaTopping or that is a MushroomTopping or that is a TomatoTopping.
+
+Every MushroomTopping is a VegetableTopping.
+
+Every MushroomTopping hasSpiciness a Mild.
+
+Every NamedPizza is a Pizza.
+
+Every Napoletana is a NamedPizza.
+
+Every Napoletana hasTopping an AnchoviesTopping.
+
+Every Napoletana hasTopping a CaperTopping.
+
+Every Napoletana hasTopping a MozzarellaTopping.
+
+Every Napoletana hasTopping an OliveTopping.
+
+Every Napoletana hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Napoletana is something that is an AnchoviesTopping or that is a CaperTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a TomatoTopping.
+
+Every Napoletana hasCountryOfOrigin Italy.
+
+Every NutTopping is a PizzaTopping.
+
+Every NutTopping hasSpiciness a Mild.
+
+Every OliveTopping is a VegetableTopping.
+
+Every OliveTopping hasSpiciness a Mild.
+
+Every OnionTopping is a VegetableTopping.
+
+Every OnionTopping hasSpiciness a Medium.
+
+Every ParmaHamTopping is a HamTopping.
+
+Every ParmaHamTopping hasSpiciness a Mild.
+
+Every Parmense is a NamedPizza.
+
+Every Parmense hasTopping an AsparagusTopping.
+
+Every Parmense hasTopping a HamTopping.
+
+Every Parmense hasTopping a MozzarellaTopping.
+
+Every Parmense hasTopping a ParmesanTopping.
+
+Every Parmense hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Parmense is something that is an AsparagusTopping or that is a HamTopping or that is a MozzarellaTopping or that is a ParmesanTopping or that is a TomatoTopping.
+
+Every ParmesanTopping is a CheeseTopping.
+
+Every ParmesanTopping hasSpiciness a Mild.
+
+Every PeperonataTopping is a PepperTopping.
+
+Every PeperonataTopping hasSpiciness a Medium.
+
+Every PeperoniSausageTopping is a MeatTopping.
+
+Every PeperoniSausageTopping hasSpiciness a Medium.
+
+Every PepperTopping is a VegetableTopping.
+
+Every PetitPoisTopping is a VegetableTopping.
+
+Every PetitPoisTopping hasSpiciness a Mild.
+
+Every PineKernels is a NutTopping.
+
+Every Pizza is a Food.
+
+Every Pizza hasBase a PizzaBase.
+
+Every PizzaBase is a Food.
+
+Every PizzaTopping is a Food.
+
+Every PolloAdAstra is a NamedPizza.
+
+Every PolloAdAstra hasTopping a CajunSpiceTopping.
+
+Every PolloAdAstra hasTopping a ChickenTopping.
+
+Every PolloAdAstra hasTopping a GarlicTopping.
+
+Every PolloAdAstra hasTopping a MozzarellaTopping.
+
+Every PolloAdAstra hasTopping a RedOnionTopping.
+
+Every PolloAdAstra hasTopping a SweetPepperTopping.
+
+Every PolloAdAstra hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a PolloAdAstra is something that is a CajunSpiceTopping or that is a ChickenTopping or that is a GarlicTopping or that is a MozzarellaTopping or that is a RedOnionTopping or that is a SweetPepperTopping or that is a TomatoTopping.
+
+Every PrawnsTopping is a FishTopping.
+
+Every PrinceCarlo is a NamedPizza.
+
+Every PrinceCarlo hasTopping a LeekTopping.
+
+Every PrinceCarlo hasTopping a MozzarellaTopping.
+
+Every PrinceCarlo hasTopping a ParmesanTopping.
+
+Every PrinceCarlo hasTopping a RosemaryTopping.
+
+Every PrinceCarlo hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a PrinceCarlo is something that is a LeekTopping or that is a MozzarellaTopping or that is a ParmesanTopping or that is a RosemaryTopping or that is a TomatoTopping.
+
+Every QuattroFormaggi is a NamedPizza.
+
+Every QuattroFormaggi hasTopping a FourCheesesTopping.
+
+Every QuattroFormaggi hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a QuattroFormaggi is something that is a FourCheesesTopping or that is a TomatoTopping.
+
+Everything that is hasBase by a RealItalianPizza is a ThinAndCrispyBase.
+
+Every RedOnionTopping is an OnionTopping.
+
+Every RocketTopping is a VegetableTopping.
+
+Every RocketTopping hasSpiciness a Medium.
+
+Every Rosa is a NamedPizza.
+
+Every Rosa hasTopping a GorgonzolaTopping.
+
+Every Rosa hasTopping a MozzarellaTopping.
+
+Every Rosa hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Rosa is something that is a GorgonzolaTopping or that is a MozzarellaTopping or that is a TomatoTopping.
+
+Every RosemaryTopping is a HerbSpiceTopping.
+
+Every RosemaryTopping hasSpiciness a Mild.
+
+Every SauceTopping is a PizzaTopping.
+
+Every Siciliana is a NamedPizza.
+
+Every Siciliana hasTopping an AnchoviesTopping.
+
+Every Siciliana hasTopping an ArtichokeTopping.
+
+Every Siciliana hasTopping a GarlicTopping.
+
+Every Siciliana hasTopping a HamTopping.
+
+Every Siciliana hasTopping a MozzarellaTopping.
+
+Every Siciliana hasTopping an OliveTopping.
+
+Every Siciliana hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Siciliana is something that is an AnchoviesTopping or that is an ArtichokeTopping or that is a GarlicTopping or that is a HamTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a TomatoTopping.
+
+Every SlicedTomatoTopping is a TomatoTopping.
+
+Every SlicedTomatoTopping hasSpiciness a Mild.
+
+Every SloppyGiuseppe is a NamedPizza.
+
+Every SloppyGiuseppe hasTopping a GreenPepperTopping.
+
+Every SloppyGiuseppe hasTopping a HotSpicedBeefTopping.
+
+Every SloppyGiuseppe hasTopping a MozzarellaTopping.
+
+Every SloppyGiuseppe hasTopping an OnionTopping.
+
+Every SloppyGiuseppe hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a SloppyGiuseppe is something that is a GreenPepperTopping or that is a HotSpicedBeefTopping or that is a MozzarellaTopping or that is an OnionTopping or that is a TomatoTopping.
+
+Every Soho is a NamedPizza.
+
+Every Soho hasTopping a GarlicTopping.
+
+Every Soho hasTopping a MozzarellaTopping.
+
+Every Soho hasTopping an OliveTopping.
+
+Every Soho hasTopping a ParmesanTopping.
+
+Every Soho hasTopping a RocketTopping.
+
+Every Soho hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Soho is something that is a GarlicTopping or that is a MozzarellaTopping or that is an OliveTopping or that is a ParmesanTopping or that is a RocketTopping or that is a TomatoTopping.
+
+Every Spiciness is a ValuePartition.
+
+Every SpinachTopping is a VegetableTopping.
+
+Every SpinachTopping hasSpiciness a Mild.
+
+Every SultanaTopping is a FruitTopping.
+
+Every SultanaTopping hasSpiciness a Medium.
+
+Every SundriedTomatoTopping is a TomatoTopping.
+
+Every SundriedTomatoTopping hasSpiciness a Mild.
+
+Every SweetPepperTopping is a PepperTopping.
+
+Every SweetPepperTopping hasSpiciness a Mild.
+
+Every ThinAndCrispyBase is a PizzaBase.
+
+Every TobascoPepperSauce is a SauceTopping.
+
+Every TobascoPepperSauce hasSpiciness a Hot.
+
+Every TomatoTopping is a VegetableTopping.
+
+Every TomatoTopping hasSpiciness a Mild.
+
+Every UnclosedPizza is a NamedPizza.
+
+Every UnclosedPizza hasTopping a MozzarellaTopping.
+
+Every VegetableTopping is a PizzaTopping.
+
+Every Veneziana is a NamedPizza.
+
+Every Veneziana hasTopping a CaperTopping.
+
+Every Veneziana hasTopping a MozzarellaTopping.
+
+Every Veneziana hasTopping an OliveTopping.
+
+Every Veneziana hasTopping an OnionTopping.
+
+Every Veneziana hasTopping a PineKernels.
+
+Every Veneziana hasTopping a SultanaTopping.
+
+Every Veneziana hasTopping a TomatoTopping.
+
+Everything that is hasTopping by a Veneziana is something that is a CaperTopping or that is a MozzarellaTopping or that is an OliveTopping or that is an OnionTopping or that is a PineKernels or that is a SultanaTopping or that is a TomatoTopping.
+
+Every Veneziana hasCountryOfOrigin Italy.
+
+No American is an AmericanHot.
+
+No American is a Cajun.
+
+No American is a Capricciosa.
+
+No American is a Caprina.
+
+No American is a Fiorentina.
+
+No American is a FourSeasons.
+
+No American is a FruttiDiMare.
+
+No American is a Giardiniera.
+
+No American is a LaReine.
+
+No American is a Margherita.
+
+No American is a Mushroom.
+
+No American is a Napoletana.
+
+No American is a Parmense.
+
+No American is a PolloAdAstra.
+
+No American is a PrinceCarlo.
+
+No American is a QuattroFormaggi.
+
+No American is a Rosa.
+
+No American is a Siciliana.
+
+No American is a SloppyGiuseppe.
+
+No American is a Soho.
+
+No American is an UnclosedPizza.
+
+No American is a Veneziana.
+
+No AmericanHot is a Cajun.
+
+No AmericanHot is a Capricciosa.
+
+No AmericanHot is a Caprina.
+
+No AmericanHot is a Fiorentina.
+
+No AmericanHot is a FourSeasons.
+
+No AmericanHot is a FruttiDiMare.
+
+No AmericanHot is a Giardiniera.
+
+No AmericanHot is a LaReine.
+
+No AmericanHot is a Margherita.
+
+No AmericanHot is a Mushroom.
+
+No AmericanHot is a Napoletana.
+
+No AmericanHot is a Parmense.
+
+No AmericanHot is a PolloAdAstra.
+
+No AmericanHot is a PrinceCarlo.
+
+No AmericanHot is a QuattroFormaggi.
+
+No AmericanHot is a Rosa.
+
+No AmericanHot is a Siciliana.
+
+No AmericanHot is a SloppyGiuseppe.
+
+No AmericanHot is a Soho.
+
+No AmericanHot is an UnclosedPizza.
+
+No AmericanHot is a Veneziana.
+
+No AnchoviesTopping is a MixedSeafoodTopping.
+
+No AnchoviesTopping is a PrawnsTopping.
+
+No ArtichokeTopping is an AsparagusTopping.
+
+No ArtichokeTopping is a CaperTopping.
+
+No ArtichokeTopping is a GarlicTopping.
+
+No ArtichokeTopping is a LeekTopping.
+
+No ArtichokeTopping is a MushroomTopping.
+
+No ArtichokeTopping is an OliveTopping.
+
+No ArtichokeTopping is an OnionTopping.
+
+No ArtichokeTopping is a PepperTopping.
+
+No ArtichokeTopping is a PetitPoisTopping.
+
+No ArtichokeTopping is a RocketTopping.
+
+No ArtichokeTopping is a SpinachTopping.
+
+No ArtichokeTopping is a TomatoTopping.
+
+No AsparagusTopping is a CaperTopping.
+
+No AsparagusTopping is a GarlicTopping.
+
+No AsparagusTopping is a LeekTopping.
+
+No AsparagusTopping is a MushroomTopping.
+
+No AsparagusTopping is an OliveTopping.
+
+No AsparagusTopping is an OnionTopping.
+
+No AsparagusTopping is a PepperTopping.
+
+No AsparagusTopping is a PetitPoisTopping.
+
+No AsparagusTopping is a RocketTopping.
+
+No AsparagusTopping is a SpinachTopping.
+
+No AsparagusTopping is a TomatoTopping.
+
+No Cajun is a Capricciosa.
+
+No Cajun is a Caprina.
+
+No Cajun is a Fiorentina.
+
+No Cajun is a FourSeasons.
+
+No Cajun is a FruttiDiMare.
+
+No Cajun is a Giardiniera.
+
+No Cajun is a LaReine.
+
+No Cajun is a Margherita.
+
+No Cajun is a Mushroom.
+
+No Cajun is a Napoletana.
+
+No Cajun is a Parmense.
+
+No Cajun is a PolloAdAstra.
+
+No Cajun is a PrinceCarlo.
+
+No Cajun is a QuattroFormaggi.
+
+No Cajun is a Rosa.
+
+No Cajun is a Siciliana.
+
+No Cajun is a SloppyGiuseppe.
+
+No Cajun is a Soho.
+
+No Cajun is an UnclosedPizza.
+
+No Cajun is a Veneziana.
+
+No CajunSpiceTopping is a RosemaryTopping.
+
+No CaperTopping is a GarlicTopping.
+
+No CaperTopping is a LeekTopping.
+
+No CaperTopping is a MushroomTopping.
+
+No CaperTopping is an OliveTopping.
+
+No CaperTopping is an OnionTopping.
+
+No CaperTopping is a PepperTopping.
+
+No CaperTopping is a PetitPoisTopping.
+
+No CaperTopping is a RocketTopping.
+
+No CaperTopping is a SpinachTopping.
+
+No CaperTopping is a TomatoTopping.
+
+No Capricciosa is a Caprina.
+
+No Capricciosa is a Fiorentina.
+
+No Capricciosa is a FourSeasons.
+
+No Capricciosa is a FruttiDiMare.
+
+No Capricciosa is a Giardiniera.
+
+No Capricciosa is a LaReine.
+
+No Capricciosa is a Margherita.
+
+No Capricciosa is a Mushroom.
+
+No Capricciosa is a Napoletana.
+
+No Capricciosa is a Parmense.
+
+No Capricciosa is a PolloAdAstra.
+
+No Capricciosa is a PrinceCarlo.
+
+No Capricciosa is a QuattroFormaggi.
+
+No Capricciosa is a Rosa.
+
+No Capricciosa is a Siciliana.
+
+No Capricciosa is a SloppyGiuseppe.
+
+No Capricciosa is a Soho.
+
+No Capricciosa is an UnclosedPizza.
+
+No Capricciosa is a Veneziana.
+
+No Caprina is a Fiorentina.
+
+No Caprina is a FourSeasons.
+
+No Caprina is a FruttiDiMare.
+
+No Caprina is a Giardiniera.
+
+No Caprina is a LaReine.
+
+No Caprina is a Margherita.
+
+No Caprina is a Mushroom.
+
+No Caprina is a Napoletana.
+
+No Caprina is a Parmense.
+
+No Caprina is a PolloAdAstra.
+
+No Caprina is a PrinceCarlo.
+
+No Caprina is a QuattroFormaggi.
+
+No Caprina is a Rosa.
+
+No Caprina is a Siciliana.
+
+No Caprina is a SloppyGiuseppe.
+
+No Caprina is a Soho.
+
+No Caprina is an UnclosedPizza.
+
+No Caprina is a Veneziana.
+
+No CheeseTopping is a FishTopping.
+
+No CheeseTopping is a FruitTopping.
+
+No CheeseTopping is a HerbSpiceTopping.
+
+No CheeseTopping is a MeatTopping.
+
+No CheeseTopping is a NutTopping.
+
+No CheeseTopping is a SauceTopping.
+
+No CheeseTopping is a VegetableTopping.
+
+No ChickenTopping is a HamTopping.
+
+No ChickenTopping is a HotSpicedBeefTopping.
+
+No ChickenTopping is a PeperoniSausageTopping.
+
+No DeepPanBase is a ThinAndCrispyBase.
+
+No DomainConcept is a ValuePartition.
+
+No Fiorentina is a FourSeasons.
+
+No Fiorentina is a FruttiDiMare.
+
+No Fiorentina is a Giardiniera.
+
+No Fiorentina is a LaReine.
+
+No Fiorentina is a Margherita.
+
+No Fiorentina is a Mushroom.
+
+No Fiorentina is a Napoletana.
+
+No Fiorentina is a Parmense.
+
+No Fiorentina is a PolloAdAstra.
+
+No Fiorentina is a PrinceCarlo.
+
+No Fiorentina is a QuattroFormaggi.
+
+No Fiorentina is a Rosa.
+
+No Fiorentina is a Siciliana.
+
+No Fiorentina is a SloppyGiuseppe.
+
+No Fiorentina is a Soho.
+
+No Fiorentina is an UnclosedPizza.
+
+No Fiorentina is a Veneziana.
+
+No FishTopping is a FruitTopping.
+
+No FishTopping is a HerbSpiceTopping.
+
+No FishTopping is a MeatTopping.
+
+No FishTopping is a NutTopping.
+
+No FishTopping is a SauceTopping.
+
+No FishTopping is a VegetableTopping.
+
+No FourCheesesTopping is a GoatsCheeseTopping.
+
+No FourCheesesTopping is a GorgonzolaTopping.
+
+No FourCheesesTopping is a MozzarellaTopping.
+
+No FourCheesesTopping is a ParmesanTopping.
+
+No FourSeasons is a FruttiDiMare.
+
+No FourSeasons is a Giardiniera.
+
+No FourSeasons is a LaReine.
+
+No FourSeasons is a Margherita.
+
+No FourSeasons is a Mushroom.
+
+No FourSeasons is a Napoletana.
+
+No FourSeasons is a Parmense.
+
+No FourSeasons is a PolloAdAstra.
+
+No FourSeasons is a PrinceCarlo.
+
+No FourSeasons is a QuattroFormaggi.
+
+No FourSeasons is a Rosa.
+
+No FourSeasons is a Siciliana.
+
+No FourSeasons is a SloppyGiuseppe.
+
+No FourSeasons is a Soho.
+
+No FourSeasons is an UnclosedPizza.
+
+No FourSeasons is a Veneziana.
+
+No FruitTopping is a HerbSpiceTopping.
+
+No FruitTopping is a MeatTopping.
+
+No FruitTopping is a NutTopping.
+
+No FruitTopping is a SauceTopping.
+
+No FruitTopping is a VegetableTopping.
+
+No FruttiDiMare is a Giardiniera.
+
+No FruttiDiMare is a LaReine.
+
+No FruttiDiMare is a Margherita.
+
+No FruttiDiMare is a Mushroom.
+
+No FruttiDiMare is a Napoletana.
+
+No FruttiDiMare is a Parmense.
+
+No FruttiDiMare is a PolloAdAstra.
+
+No FruttiDiMare is a PrinceCarlo.
+
+No FruttiDiMare is a QuattroFormaggi.
+
+No FruttiDiMare is a Rosa.
+
+No FruttiDiMare is a Siciliana.
+
+No FruttiDiMare is a SloppyGiuseppe.
+
+No FruttiDiMare is a Soho.
+
+No FruttiDiMare is an UnclosedPizza.
+
+No FruttiDiMare is a Veneziana.
+
+No GarlicTopping is a LeekTopping.
+
+No GarlicTopping is a MushroomTopping.
+
+No GarlicTopping is an OliveTopping.
+
+No GarlicTopping is an OnionTopping.
+
+No GarlicTopping is a PepperTopping.
+
+No GarlicTopping is a PetitPoisTopping.
+
+No GarlicTopping is a RocketTopping.
+
+No GarlicTopping is a SpinachTopping.
+
+No GarlicTopping is a TomatoTopping.
+
+No Giardiniera is a LaReine.
+
+No Giardiniera is a Margherita.
+
+No Giardiniera is a Mushroom.
+
+No Giardiniera is a Napoletana.
+
+No Giardiniera is a Parmense.
+
+No Giardiniera is a PolloAdAstra.
+
+No Giardiniera is a PrinceCarlo.
+
+No Giardiniera is a QuattroFormaggi.
+
+No Giardiniera is a Rosa.
+
+No Giardiniera is a Siciliana.
+
+No Giardiniera is a SloppyGiuseppe.
+
+No Giardiniera is a Soho.
+
+No Giardiniera is an UnclosedPizza.
+
+No Giardiniera is a Veneziana.
+
+No GoatsCheeseTopping is a GorgonzolaTopping.
+
+No GoatsCheeseTopping is a MozzarellaTopping.
+
+No GoatsCheeseTopping is a ParmesanTopping.
+
+No GorgonzolaTopping is a MozzarellaTopping.
+
+No GorgonzolaTopping is a ParmesanTopping.
+
+No GreenPepperTopping is a JalapenoPepperTopping.
+
+No GreenPepperTopping is a PeperonataTopping.
+
+No GreenPepperTopping is a SweetPepperTopping.
+
+No HamTopping is a HotSpicedBeefTopping.
+
+No HamTopping is a PeperoniSausageTopping.
+
+No HerbSpiceTopping is a MeatTopping.
+
+No HerbSpiceTopping is a NutTopping.
+
+No HerbSpiceTopping is a SauceTopping.
+
+No HerbSpiceTopping is a VegetableTopping.
+
+No Hot is a Medium.
+
+No Hot is a Mild.
+
+No HotSpicedBeefTopping is a PeperoniSausageTopping.
+
+No IceCream is a Pizza.
+
+No IceCream is a PizzaBase.
+
+No IceCream is a PizzaTopping.
+
+No JalapenoPepperTopping is a PeperonataTopping.
+
+No JalapenoPepperTopping is a SweetPepperTopping.
+
+No LaReine is a Margherita.
+
+No LaReine is a Mushroom.
+
+No LaReine is a Napoletana.
+
+No LaReine is a Parmense.
+
+No LaReine is a PolloAdAstra.
+
+No LaReine is a PrinceCarlo.
+
+No LaReine is a QuattroFormaggi.
+
+No LaReine is a Rosa.
+
+No LaReine is a Siciliana.
+
+No LaReine is a SloppyGiuseppe.
+
+No LaReine is a Soho.
+
+No LaReine is an UnclosedPizza.
+
+No LaReine is a Veneziana.
+
+No LeekTopping is a MushroomTopping.
+
+No LeekTopping is an OliveTopping.
+
+No LeekTopping is an OnionTopping.
+
+No LeekTopping is a PepperTopping.
+
+No LeekTopping is a PetitPoisTopping.
+
+No LeekTopping is a RocketTopping.
+
+No LeekTopping is a SpinachTopping.
+
+No LeekTopping is a TomatoTopping.
+
+No Margherita is a Mushroom.
+
+No Margherita is a Napoletana.
+
+No Margherita is a Parmense.
+
+No Margherita is a PolloAdAstra.
+
+No Margherita is a PrinceCarlo.
+
+No Margherita is a QuattroFormaggi.
+
+No Margherita is a Rosa.
+
+No Margherita is a Siciliana.
+
+No Margherita is a SloppyGiuseppe.
+
+No Margherita is a Soho.
+
+No Margherita is an UnclosedPizza.
+
+No Margherita is a Veneziana.
+
+No MeatTopping is a NutTopping.
+
+No MeatTopping is a SauceTopping.
+
+No MeatTopping is a VegetableTopping.
+
+No Medium is a Mild.
+
+No MixedSeafoodTopping is a PrawnsTopping.
+
+No MozzarellaTopping is a ParmesanTopping.
+
+No Mushroom is a Napoletana.
+
+No Mushroom is a Parmense.
+
+No Mushroom is a PolloAdAstra.
+
+No Mushroom is a PrinceCarlo.
+
+No Mushroom is a QuattroFormaggi.
+
+No Mushroom is a Rosa.
+
+No Mushroom is a Siciliana.
+
+No Mushroom is a SloppyGiuseppe.
+
+No Mushroom is a Soho.
+
+No Mushroom is an UnclosedPizza.
+
+No Mushroom is a Veneziana.
+
+No MushroomTopping is an OliveTopping.
+
+No MushroomTopping is an OnionTopping.
+
+No MushroomTopping is a PepperTopping.
+
+No MushroomTopping is a PetitPoisTopping.
+
+No MushroomTopping is a RocketTopping.
+
+No MushroomTopping is a SpinachTopping.
+
+No MushroomTopping is a TomatoTopping.
+
+No Napoletana is a Parmense.
+
+No Napoletana is a PolloAdAstra.
+
+No Napoletana is a PrinceCarlo.
+
+No Napoletana is a QuattroFormaggi.
+
+No Napoletana is a Rosa.
+
+No Napoletana is a Siciliana.
+
+No Napoletana is a SloppyGiuseppe.
+
+No Napoletana is a Soho.
+
+No Napoletana is an UnclosedPizza.
+
+No Napoletana is a Veneziana.
+
+No NonVegetarianPizza is a VegetarianPizza.
+
+No NutTopping is a SauceTopping.
+
+No NutTopping is a VegetableTopping.
+
+No OliveTopping is an OnionTopping.
+
+No OliveTopping is a PepperTopping.
+
+No OliveTopping is a PetitPoisTopping.
+
+No OliveTopping is a RocketTopping.
+
+No OliveTopping is a SpinachTopping.
+
+No OliveTopping is a TomatoTopping.
+
+No OnionTopping is a PepperTopping.
+
+No OnionTopping is a PetitPoisTopping.
+
+No OnionTopping is a RocketTopping.
+
+No OnionTopping is a SpinachTopping.
+
+No OnionTopping is a TomatoTopping.
+
+No Parmense is a PolloAdAstra.
+
+No Parmense is a PrinceCarlo.
+
+No Parmense is a QuattroFormaggi.
+
+No Parmense is a Rosa.
+
+No Parmense is a Siciliana.
+
+No Parmense is a SloppyGiuseppe.
+
+No Parmense is a Soho.
+
+No Parmense is an UnclosedPizza.
+
+No Parmense is a Veneziana.
+
+No PeperonataTopping is a SweetPepperTopping.
+
+No PepperTopping is a PetitPoisTopping.
+
+No PepperTopping is a RocketTopping.
+
+No PepperTopping is a SpinachTopping.
+
+No PepperTopping is a TomatoTopping.
+
+No PetitPoisTopping is a RocketTopping.
+
+No PetitPoisTopping is a SpinachTopping.
+
+No PetitPoisTopping is a TomatoTopping.
+
+No Pizza is a PizzaBase.
+
+No Pizza is a PizzaTopping.
+
+No PizzaBase is a PizzaTopping.
+
+No PolloAdAstra is a PrinceCarlo.
+
+No PolloAdAstra is a QuattroFormaggi.
+
+No PolloAdAstra is a Rosa.
+
+No PolloAdAstra is a Siciliana.
+
+No PolloAdAstra is a SloppyGiuseppe.
+
+No PolloAdAstra is a Soho.
+
+No PolloAdAstra is an UnclosedPizza.
+
+No PolloAdAstra is a Veneziana.
+
+No PrinceCarlo is a QuattroFormaggi.
+
+No PrinceCarlo is a Rosa.
+
+No PrinceCarlo is a Siciliana.
+
+No PrinceCarlo is a SloppyGiuseppe.
+
+No PrinceCarlo is a Soho.
+
+No PrinceCarlo is an UnclosedPizza.
+
+No PrinceCarlo is a Veneziana.
+
+No QuattroFormaggi is a Rosa.
+
+No QuattroFormaggi is a Siciliana.
+
+No QuattroFormaggi is a SloppyGiuseppe.
+
+No QuattroFormaggi is a Soho.
+
+No QuattroFormaggi is an UnclosedPizza.
+
+No QuattroFormaggi is a Veneziana.
+
+No RocketTopping is a SpinachTopping.
+
+No RocketTopping is a TomatoTopping.
+
+No Rosa is a Siciliana.
+
+No Rosa is a SloppyGiuseppe.
+
+No Rosa is a Soho.
+
+No Rosa is an UnclosedPizza.
+
+No Rosa is a Veneziana.
+
+No SauceTopping is a VegetableTopping.
+
+No Siciliana is a SloppyGiuseppe.
+
+No Siciliana is a Soho.
+
+No Siciliana is an UnclosedPizza.
+
+No Siciliana is a Veneziana.
+
+No SlicedTomatoTopping is a SundriedTomatoTopping.
+
+No SloppyGiuseppe is a Soho.
+
+No SloppyGiuseppe is an UnclosedPizza.
+
+No SloppyGiuseppe is a Veneziana.
+
+No Soho is an UnclosedPizza.
+
+No Soho is a Veneziana.
+
+No SpinachTopping is a TomatoTopping.
+
+No UnclosedPizza is a Veneziana.
+
+America is a Country.
+
+America is something.
+
+England is a Country.
+
+England is something.
+
+France is a Country.
+
+France is something.
+
+Germany is a Country.
+
+Germany is something.
+
+Italy is a Country.
+
+Italy is something.
+
+/* unsupported: DifferentIndividuals([NamedIndividual(#America),NamedIndividual(#England),NamedIndividual(#France),NamedIndividual(#Germany),NamedIndividual(#Italy)]) */
+
+If X hasBase Y then X hasIngredient Y.
+
+If X hasTopping Y then X hasIngredient Y.
+
+If X isBaseOf Y then X isIngredientOf Y.
+
+If X isToppingOf Y then X isIngredientOf Y.
+
+If X hasBase Y then Y isBaseOf X.
+If X isBaseOf Y then Y hasBase X.
+
+If X hasIngredient Y then Y isIngredientOf X.
+If X isIngredientOf Y then Y hasIngredient X.
+
+If X hasTopping Y then Y isToppingOf X.
+If X isToppingOf Y then Y hasTopping X.
+
+Everything hasBase at most 1 thing.
+
+Everything hasSpiciness at most 1 thing.
+
+Everything isBaseOf at most 1 thing.
+
+Everything isToppingOf at most 1 thing.
+
+Everything is hasBase by at most 1 thing.
+
+Everything is hasTopping by at most 1 thing.
+
+Everything is isBaseOf by at most 1 thing.
+
+If X hasIngredient something that hasIngredient Y then X hasIngredient Y.
+
+If X isIngredientOf something that isIngredientOf Y then X isIngredientOf Y.
+
+Everything that hasBase something is a Pizza.
+
+Everything that hasIngredient something is a Food.
+
+Everything that hasTopping something is a Pizza.
+
+Everything that isBaseOf something is a PizzaBase.
+
+Everything that isIngredientOf something is a Food.
+
+Everything that isToppingOf something is a PizzaTopping.
+
+Everything that is hasBase by something is a PizzaBase.
+
+Everything that is hasIngredient by something is a Food.
+
+Everything that is hasSpiciness by something is a Spiciness.
+
+Everything that is hasTopping by something is a PizzaTopping.
+
+Everything that is isBaseOf by something is a Pizza.
+
+Everything that is isIngredientOf by something is a Food.
+
+Everything that is isToppingOf by something is a Pizza.
+
