@@ -39,10 +39,10 @@ The following example demonstrates launching the server and using it to verbaliz
 ontology from a remote repository.
 
 
-	$ ./owl_to_ace.exe -httpserver -port 5123 &
+    $ ./owl_to_ace.exe -httpserver -port 5123 &
 
-	$ curl 'http://owl.cs.manchester.ac.uk/repository/download?
-		ontology=http://www.co-ode.org/ontologies/pizza/pizza.owl&format=OWL/XML'
+    $ curl 'http://mowl-power.cs.man.ac.uk:8080/converter/convert?
+        ontology=http://protege.stanford.edu/ontologies/pizza/pizza.owl&format=OWL/XML'
 	| curl -F "xml=<-" http://localhost:5123
 
 
