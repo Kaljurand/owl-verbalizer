@@ -145,7 +145,7 @@ i.e. that you can execute `swipl` in any directory.
 
 In order to compile the OWL verbalizer executable, execute:
 
-    swipl -O -f owl_to_ace.pl -g "qsave_program('owl_to_ace.exe', [goal(main), toplevel(halt), local(25600), global(25600)])." -t halt
+    swipl -O -f owl_to_ace.pl -g "qsave_program('owl_to_ace.exe', [goal(main), toplevel(halt)])." -t halt
 
 or, alternatively, just click on `make_exe.bat` (on Windows) or
 type `sh make_exe.sh` (on Unix / Linux / MacOS X).
@@ -171,8 +171,8 @@ Note that this command can be also executed as:
 This you can use on computers where the path to SWI-Prolog is different than the
 one that you used during building.
 
-If executing the EXE-file results in an "out of stack" error, then increase the stack sizes via
-options `local/1` and `global/1`, and recompile.
+If executing the EXE-file results in an "out of stack" error, then increase the stack sizes
+and recompile.
 
 
 Using the OWL verbalizer webservice
