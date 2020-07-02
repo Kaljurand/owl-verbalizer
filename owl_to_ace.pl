@@ -159,7 +159,7 @@ show_help :-
 	write('Copyright 2008-2013 Kaarel Kaljurand <kaljurand@gmail.com>\n'),
 	write('This program comes with ABSOLUTELY NO WARRANTY.\n'),
 	write('This is free software, and you are welcome to redistribute it under certain conditions.\n'),
-	write('Please visit http://code.google.com/p/owlverbalizer/ for details.\n'),
+	write('Please visit https://github.com/Kaljurand/owl-verbalizer for details.\n'),
 	nl,
 	write('Command-line arguments:\n'),
 	argument(Arg, Value, Desc),
