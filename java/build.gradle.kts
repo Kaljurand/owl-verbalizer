@@ -11,11 +11,11 @@ java {
 }
 
 dependencies {
-    implementation("commons-logging:commons-logging:1.2")
-    implementation("org.apache.httpcomponents:httpclient:4.5.13")
-    implementation("org.apache.httpcomponents:httpcore:4.4.15")
+    implementation("commons-logging:commons-logging:1.1")
+    implementation("org.apache.httpcomponents:httpclient:4.1.1")
+    implementation("org.apache.httpcomponents:httpcore:4.1.1")
 
-    testImplementation("junit:junit:4.13.2")
+    testImplementation("junit:junit:4.5")
 }
 
 repositories {
