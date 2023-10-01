@@ -1,0 +1,37 @@
+h1, h2, h3, h4, h5, h6 { font-family: sans-serif }
+
+span.textit { font-style: italic }
+span.textbf { font-weight: bold }
+span.arabic { background-color: #90a3b3 }
+
+.bug { background-color: #fdd }
+
+.wip {
+	border: 2px solid red;
+	margin: 1em 1em 1em 1em;
+	padding: 1em 1em 1em 1em;
+	font-size: 110%;
+}
+
+table { font-size: 90%; empty-cells: show; border-collapse: collapse; margin-left: 1em }
+
+thead { font-weight: bold; background-color: #dde; font-variant: small-caps }
+
+td { border: 1px solid black; padding: 0.3em 0.3em 0.3em 0.3em; vertical-align: top }
+
+tbody tr:nth-child(even) td { background-color: #eff1f3 }
+
+pre { padding: 1em 1em 1em 1em; background-color: #eee; border: 1px solid silver }
+
+address { border-top: 1px solid black; margin-top: 2em; padding-top: 0.5em }
+
+body { font-family: serif; }
+
+p.note { border-left: 0.4em solid #fbb; padding: 0.4em 0.4em 0.4em 0.4em }
+span.note { background-color: #fbb }
+
+blockquote { margin-left: 1em; }
+
+span.acetext { font-family: Monaco, monospace }
+span.acetext:before { content: "“" }
+span.acetext:after { content: "”" }
